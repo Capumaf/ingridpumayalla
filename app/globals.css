@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-black font-normal tracking-wide;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  /* Body text editorial (Bio ES / EN) */
+  .body-text {
+    @apply text-[15px] leading-7 text-neutral-600;
+    max-width: 640px;
+  }
+
+  .body-text p {
+    @apply mb-7;
+  }
+}
