@@ -1,7 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="text-center py-4 text-black w-full">
-      <p className="text-lg">IngridPumayalla.com © All Rights Reserved.</p>
+    <footer className="w-full py-6 text-center">
+      <p className="text-sm tracking-wide text-neutral-500">
+        IngridPumayalla.com © All Rights Reserved.
+      </p>
+      <p className="text-sm tracking-wide text-neutral-400">
+        Powered by NinanStudio
+      </p>
     </footer>
   );
 }
