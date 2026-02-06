@@ -13,3 +13,4 @@ build
 *.zip
 *.mp4
 *.mp3
+git-filter-repo
