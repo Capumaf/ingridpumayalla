@@ -5,7 +5,7 @@ export default function HomePage() {
     <div className="w-full max-w-[550px] px-6">
       <div className="relative w-full aspect-[3/4]">
         <Image
-          src="/Curiwarmilunar2.jpg"
+          src="/CuriwarmiLunar2.png"
           alt=""
           fill
           priority

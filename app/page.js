@@ -11,7 +11,7 @@ export default function Page() {
       aria-label="Entrar al sitio"
     >
       <Image
-        src="/caratula.jpg"
+        src="/caratula.webp"
         alt="Ingrid Pumayalla"
         fill
         priority

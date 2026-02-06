@@ -39,14 +39,14 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
     imageData: [
       {
         id: "img1",
-        src: "/Bosque.jpg",
+        src: "/Bosque.webp",
         description: { es: "Bosque silencioso, 2019.", en: "Silent forest, 2019." },
         width: 1200,
         height: 1000,
       },
       {
         id: "img2",
-        src: "/Bosque2.jpg",
+        src: "/Bosque2.webp",
         description: {
           es: "Presencias invisibles entre árboles.",
           en: "Invisible presences among the trees.",
@@ -56,7 +56,7 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
       },
       {
         id: "img3",
-        src: "/Bosque3.jpg",
+        src: "/Bosque3.webp",
         description: {
           es: "Presencias invisibles entre árboles.",
           en: "Invisible presences among the trees.",
@@ -84,12 +84,12 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
     },
 
     imageData: [
-      { id: "img1", src: "/Curiwarmilunar1.jpg", width: 600, height: 800 },
-      { id: "img2", src: "/Curiwarmilunar2.jpg", width: 600, height: 800 },
-      { id: "img3", src: "/Curiwarmilunar3.jpg", width: 600, height: 800 },
+      { id: "img1", src: "/Curiwarmi_Lunar.png", width: 600, height: 800 },
+      { id: "img2", src: "/CuriwarmiLunar2.png", width: 600, height: 800 },
+      { id: "img3", src: "/Curiwarmilunar3.png", width: 600, height: 800 },
       {
         id: "img4",
-        src: "/Instalacion2024.jpg",
+        src: "/Instalacion2024.webp",
         width: 600,
         height: 800,
         onlyViewer: true,
@@ -108,16 +108,16 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
       en: "A poetic exploration of sound and voice.",
     },
 
-    images: [{ src: "/cantos6.jpg", width: 1000, height: 600 }],
+    images: [{ src: "/cantos6.webp", width: 1000, height: 600 }],
 
     imageData: [
-      { id: "img1", src: "/cantos6.jpg", width: 1000, height: 600 },
-      { id: "img2", src: "/cantos2.jpg", width: 1000, height: 600 },
-      { id: "img3", src: "/cantos3.jpg", width: 1000, height: 600 },
-      { id: "img4", src: "/cantos4.jpg", width: 1000, height: 600 },
+      { id: "img1", src: "/cantos6.webp", width: 1000, height: 600 },
+      { id: "img2", src: "/cantos2.webp", width: 1000, height: 600 },
+      { id: "img3", src: "/cantos3.webp", width: 1000, height: 600 },
+      { id: "img4", src: "/cantos4.webp", width: 1000, height: 600 },
       {
         id: "img5",
-        src: "/cantos1.jpg",
+        src: "/cantos1.webp",
         width: 1000,
         height: 600,
         audio: "/Audio7.mp3",
@@ -140,11 +140,11 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
     },
 
     imageData: [
-      { id: "img1", src: "/pomade5.jpg", width: 500, height: 700 },
-      { id: "img2", src: "/pomade1.jpg", width: 800, height: 700 },
-      { id: "img3", src: "/pomade3.jpg", width: 1000, height: 700 },
-      { id: "img4", src: "/pomade4.jpg", width: 1000, height: 700 },
-      { id: "img5", src: "/pomade2.jpg", width: 1000, height: 700 },
+      { id: "img1", src: "/pomade5.webp", width: 500, height: 700 },
+      { id: "img2", src: "/pomade1.webp", width: 800, height: 700 },
+      { id: "img3", src: "/pomade3.webp", width: 1000, height: 700 },
+      { id: "img4", src: "/pomade4.webp", width: 1000, height: 700 },
+      { id: "img5", src: "/pomade2.webp", width: 1000, height: 700 },
     ],
   },
 
@@ -154,7 +154,7 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
   "takij-pupu": {
     title: { es: "Takij Pupu", en: "Takij Pupu" },
 
-    images: [{ src: "/Takijpupu.jpg", width: 900, height: 600 }],
+    images: [{ src: "/Takijpupu.webp", width: 900, height: 600 }],
 
     coverDisplay: {
       maxWidth: 420,
@@ -164,7 +164,7 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
     imageData: [
       {
         id: "img1",
-        src: "/Takijpupu.jpg",
+        src: "/Takijpupu.webp",
         width: 900,
         height: 600,
       },
