@@ -34,7 +34,7 @@ In Germany she emerges from Markkleeberger Lake. In England she visits the Westb
 Curiwarmi’s story reminds us that recalibrating our relationship with nature is a slow journey. This multimedia project was presented as a solo exhibition in Lima in 2022. Curated by Gisselle Girón Casas.`,
     },
 
-    images: [{ src: "/Bosque.jpg", width: 760, height: 500 }],
+    images: [{ src: "/Bosque.webp", width: 760, height: 500 }],
 
     imageData: [
       {
@@ -154,7 +154,7 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
   "takij-pupu": {
     title: { es: "Takij Pupu", en: "Takij Pupu" },
 
-    images: [{ src: "/Takijpupu.webp", width: 900, height: 600 }],
+    images: [{ src: "/TakijPupu.webp", width: 900, height: 600 }],
 
     coverDisplay: {
       maxWidth: 420,
@@ -164,7 +164,7 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
     imageData: [
       {
         id: "img1",
-        src: "/Takijpupu.webp",
+        src: "/TakijPupu.webp",
         width: 900,
         height: 600,
       },

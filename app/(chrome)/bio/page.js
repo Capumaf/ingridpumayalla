@@ -70,7 +70,7 @@ export default function Bio() {
             <figure className="my-12">
               <div className="flex justify-start">
                 <Image
-                  src="/SelfportraitWithHugstone.jpg"
+                  src="/SelfportraitWithHugstone.webp"
                   alt="Selfportrait with Hugstone"
                   width={720}
                   height={480}
