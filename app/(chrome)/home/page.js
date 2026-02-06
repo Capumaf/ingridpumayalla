@@ -9,7 +9,7 @@ export default function HomePage() {
           alt=""
           fill
           priority
-          className="object-contain"
+          className="object-contain scale-90"
         />
       </div>
     </div>
