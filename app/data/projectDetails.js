@@ -108,16 +108,16 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
       en: "A poetic exploration of sound and voice.",
     },
 
-    images: [{ src: "/cantos6.webp", width: 1000, height: 600 }],
+    images: [{ src: "/Cantos6.webp", width: 1000, height: 600 }],
 
     imageData: [
-      { id: "img1", src: "/cantos6.webp", width: 1000, height: 600 },
-      { id: "img2", src: "/cantos2.webp", width: 1000, height: 600 },
-      { id: "img3", src: "/cantos3.webp", width: 1000, height: 600 },
-      { id: "img4", src: "/cantos4.webp", width: 1000, height: 600 },
+      { id: "img1", src: "/Cantos6.webp", width: 1000, height: 600 },
+      { id: "img2", src: "/Cantos2.webp", width: 1000, height: 600 },
+      { id: "img3", src: "/Cantos3.webp", width: 1000, height: 600 },
+      { id: "img4", src: "/Cantos4.webp", width: 1000, height: 600 },
       {
         id: "img5",
-        src: "/cantos1.webp",
+        src: "/Cantos1.webp",
         width: 1000,
         height: 600,
         audio: "/Audio7.mp3",
