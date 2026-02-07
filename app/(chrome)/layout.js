@@ -6,7 +6,7 @@ import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 
 const EDGE_PX = 140;
-const AUTOHIDE_MS = 2500; // más sutil
+const AUTOHIDE_MS = 2500;
 
 export default function ChromeLayout({ children }) {
   const pathname = usePathname();
@@ -17,7 +17,10 @@ export default function ChromeLayout({ children }) {
   const showMenuRef = useRef(false);
   const hideMenuTimerRef = useRef(null);
 
-  const isNearLeftEdge = useCallback((x) => typeof x === "number" && x <= EDGE_PX, []);
+  const isNearLeftEdge = useCallback(
+    (x) => typeof x === "number" && x <= EDGE_PX,
+    []
+  );
 
   const hideMenu = useCallback(() => {
     showMenuRef.current = false;
@@ -37,6 +40,7 @@ export default function ChromeLayout({ children }) {
     }, AUTOHIDE_MS);
   }, []);
 
+  // Solo desktop: listeners (mouse)
   useEffect(() => {
     const onMouseMove = (e) => {
       if (!isNearLeftEdge(e.clientX)) return;
@@ -44,6 +48,7 @@ export default function ChromeLayout({ children }) {
     };
 
     const onMouseDown = (e) => {
+      // Si está abierto y clic fuera, cerrar
       if (showMenuRef.current) {
         if (menuRef.current && !menuRef.current.contains(e.target)) hideMenu();
         return;
@@ -68,16 +73,27 @@ export default function ChromeLayout({ children }) {
     };
   }, [hideMenu, isNearLeftEdge, showMenuWithAutoHide]);
 
+  // Al navegar, cierra el menú (desktop)
+  useEffect(() => {
+    hideMenu();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
   return (
     <div className="min-h-dvh bg-white text-black">
-      {/* Zona de borde */}
-      <div className="fixed left-0 top-0 h-dvh w-[140px] z-10" />
+      {/* MOBILE: sidebar horizontal dentro del flujo */}
+      <div className="md:hidden">
+        <Sidebar />
+      </div>
 
-      {/* Sidebar flotante (sutil: fade + micro-slide, sin caja) */}
+      {/* DESKTOP: zona de borde */}
+      <div className="hidden md:block fixed left-0 top-0 h-dvh w-[140px] z-10" />
+
+      {/* DESKTOP: sidebar flotante */}
       <div
         ref={menuRef}
         className={`
-          fixed top-6 left-8 z-50
+          hidden md:block fixed top-6 left-8 z-50
           transition-all duration-300 ease-out
           ${showMenu ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-3 pointer-events-none"}
         `}
@@ -85,10 +101,10 @@ export default function ChromeLayout({ children }) {
         <Sidebar />
       </div>
 
-      {/* HOME: centrado en pantalla */}
+      {/* HOME: centrado */}
       {isHome ? (
         <div className="min-h-dvh flex flex-col">
-          <div className="flex-1 grid place-items-center">
+          <div className="flex-1 grid place-items-center pt-4 md:pt-0">
             {children}
           </div>
           <div className="pb-6 pt-2 text-center">
@@ -96,7 +112,7 @@ export default function ChromeLayout({ children }) {
           </div>
         </div>
       ) : (
-        /* OTRAS PÁGINAS: contenedor centrado + scroll normal */
+        /* Otras páginas */
         <div className="min-h-dvh flex flex-col">
           <main className="flex-1">
             <div className="mx-auto max-w-4xl px-6 py-10">
