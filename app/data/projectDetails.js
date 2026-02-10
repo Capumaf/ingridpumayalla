@@ -20,7 +20,6 @@ Curiwarmi, que en quechua significa “mujer dorada”, es la protagonista de es
 En Alemania emerge del lago Markkleeberger, antiguamente una mina de carbón. En Inglaterra visita el Westbury White Horse. En Pucallpa y Contumazá escucha relatos sobre textiles y realiza sesiones colaborativas de tejido.
 
 La historia de Curiwarmi nos recuerda que recalibrar nuestra relación con la naturaleza es una tarea lenta. Este proyecto fue presentado como exposición individual en el Museo de San Marcos, Lima, en 2022. Curaduría: Gisselle Girón Casas.`,
-
       en: `About Where Did the Forest Creatures Go?
 
 In a dream brought about by ayahuasca, Ingrid received a visit from the grandmother of the Amazon, appearing as songs and pleas against oblivion.
@@ -33,6 +32,9 @@ In Germany she emerges from Markkleeberger Lake. In England she visits the Westb
 
 Curiwarmi’s story reminds us that recalibrating our relationship with nature is a slow journey. This multimedia project was presented as a solo exhibition in Lima in 2022. Curated by Gisselle Girón Casas.`,
     },
+
+    // Mobile: grande pero proporcional (no full width)
+    coverDisplay: { maxWidth: 560, maxHeightVh: 72 },
 
     images: [{ src: "/Bosque.webp", width: 760, height: 500 }],
 
@@ -83,7 +85,11 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
       en: "A visual series evoking Andean feminine spirituality.",
     },
 
+    // Vertical: menos ancho, más altura (ideal para PNG también)
+    coverDisplay: { maxWidth: 460, maxHeightVh: 80 },
+
     imageData: [
+      // OJO: en Vercel el nombre debe coincidir EXACTO (mayúsculas/minúsculas)
       { id: "img1", src: "/Curiwarmi_Lunar.png", width: 600, height: 800 },
       { id: "img2", src: "/CuriwarmiLunar2.png", width: 600, height: 800 },
       { id: "img3", src: "/Curiwarmilunar3.png", width: 600, height: 800 },
@@ -107,6 +113,8 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
       es: "Exploración poética del sonido y la voz.",
       en: "A poetic exploration of sound and voice.",
     },
+
+    coverDisplay: { maxWidth: 600, maxHeightVh: 70 },
 
     images: [{ src: "/Cantos6.webp", width: 1000, height: 600 }],
 
@@ -139,6 +147,9 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
       en: "A series on symbolic birth.",
     },
 
+    // Primera imagen vertical-ish → más altura
+    coverDisplay: { maxWidth: 480, maxHeightVh: 78 },
+
     imageData: [
       { id: "img1", src: "/pomade5.webp", width: 500, height: 700 },
       { id: "img2", src: "/pomade1.webp", width: 800, height: 700 },
@@ -156,18 +167,10 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
 
     images: [{ src: "/TakijPupu.webp", width: 900, height: 600 }],
 
-    coverDisplay: {
-      maxWidth: 420,
-      maxHeightVh: 62,
-    },
+    coverDisplay: { maxWidth: 420, maxHeightVh: 62 },
 
     imageData: [
-      {
-        id: "img1",
-        src: "/TakijPupu.webp",
-        width: 900,
-        height: 600,
-      },
+      { id: "img1", src: "/TakijPupu.webp", width: 900, height: 600 },
     ],
   },
 
@@ -180,13 +183,16 @@ Curiwarmi’s story reminds us that recalibrating our relationship with nature i
       es: "Proyecto sobre memoria y desplazamiento.",
       en: "A project about memory and displacement.",
     },
+    coverDisplay: { maxWidth: 520, maxHeightVh: 72 },
   },
 
   "la-quinta-piedra": {
     title: { es: "La Quinta Piedra", en: "The Fifth Stone" },
+    coverDisplay: { maxWidth: 520, maxHeightVh: 72 },
   },
 
   ofrendas: {
     title: { es: "Ofrendas", en: "Offerings" },
+    coverDisplay: { maxWidth: 520, maxHeightVh: 72 },
   },
 };
