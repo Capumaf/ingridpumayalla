@@ -5,8 +5,7 @@ import { usePathname } from "next/navigation";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 
-const EDGE_PX = 140;
-const AUTOHIDE_MS = 2500;
+const AUTOHIDE_MS = 10000;
 
 export default function ChromeLayout({ children }) {
   const pathname = usePathname();
@@ -17,43 +16,55 @@ export default function ChromeLayout({ children }) {
   const showMenuRef = useRef(false);
   const hideMenuTimerRef = useRef(null);
 
-  const isNearLeftEdge = useCallback(
-    (x) => typeof x === "number" && x <= EDGE_PX,
-    []
-  );
+  // throttle suave para mousemove (evita re-render por cada pixel)
+  const mouseRafRef = useRef(null);
 
-  const hideMenu = useCallback(() => {
-    showMenuRef.current = false;
-    setShowMenu(false);
+  const clearHideTimer = useCallback(() => {
     if (hideMenuTimerRef.current) clearTimeout(hideMenuTimerRef.current);
     hideMenuTimerRef.current = null;
   }, []);
 
-  const showMenuWithAutoHide = useCallback(() => {
-    showMenuRef.current = true;
-    setShowMenu(true);
-
-    if (hideMenuTimerRef.current) clearTimeout(hideMenuTimerRef.current);
+  const startHideTimer = useCallback(() => {
+    clearHideTimer();
     hideMenuTimerRef.current = setTimeout(() => {
       showMenuRef.current = false;
       setShowMenu(false);
     }, AUTOHIDE_MS);
-  }, []);
+  }, [clearHideTimer]);
 
-  // Solo desktop: listeners (mouse)
+  const hideMenu = useCallback(() => {
+    showMenuRef.current = false;
+    setShowMenu(false);
+    clearHideTimer();
+  }, [clearHideTimer]);
+
+  const showMenuWithAutoHide = useCallback(() => {
+    showMenuRef.current = true;
+    setShowMenu(true);
+    startHideTimer();
+  }, [startHideTimer]);
+
+  // Desktop interactions: cualquier movimiento del mouse muestra el menú
   useEffect(() => {
-    const onMouseMove = (e) => {
-      if (!isNearLeftEdge(e.clientX)) return;
-      showMenuWithAutoHide();
+    const mql = window.matchMedia("(min-width: 768px)");
+    if (!mql.matches) return;
+
+    const onMouseMove = () => {
+      // 1 update por frame como máximo
+      if (mouseRafRef.current) return;
+      mouseRafRef.current = requestAnimationFrame(() => {
+        mouseRafRef.current = null;
+        showMenuWithAutoHide();
+      });
     };
 
     const onMouseDown = (e) => {
-      // Si está abierto y clic fuera, cerrar
+      // si está abierto y clic fuera, cerrar
       if (showMenuRef.current) {
         if (menuRef.current && !menuRef.current.contains(e.target)) hideMenu();
         return;
       }
-      if (!isNearLeftEdge(e.clientX)) return;
+      // si está cerrado y haces click, lo mostramos (comportamiento “general”)
       showMenuWithAutoHide();
     };
 
@@ -66,14 +77,16 @@ export default function ChromeLayout({ children }) {
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
-      if (hideMenuTimerRef.current) clearTimeout(hideMenuTimerRef.current);
+      clearHideTimer();
+      if (mouseRafRef.current) cancelAnimationFrame(mouseRafRef.current);
+
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mousedown", onMouseDown);
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [hideMenu, isNearLeftEdge, showMenuWithAutoHide]);
+  }, [clearHideTimer, hideMenu, showMenuWithAutoHide]);
 
-  // Al navegar, cierra el menú (desktop)
+  // Al navegar, cierra el menú
   useEffect(() => {
     hideMenu();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -81,27 +94,30 @@ export default function ChromeLayout({ children }) {
 
   return (
     <div className="min-h-dvh bg-white text-black">
-      {/* MOBILE: sidebar horizontal dentro del flujo */}
+      {/* MOBILE */}
       <div className="md:hidden">
         <Sidebar />
       </div>
 
-      {/* DESKTOP: zona de borde */}
-      <div className="hidden md:block fixed left-0 top-0 h-dvh w-[140px] z-10" />
-
-      {/* DESKTOP: sidebar flotante */}
+      {/* DESKTOP: sidebar flotante (sin “edge zone”) */}
       <div
         ref={menuRef}
+        onMouseEnter={clearHideTimer} // mientras lo usas, no se auto-oculta
+        onMouseLeave={startHideTimer} // al salir, empieza el countdown
         className={`
           hidden md:block fixed top-6 left-8 z-50
           transition-all duration-300 ease-out
-          ${showMenu ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-3 pointer-events-none"}
+          ${
+            showMenu
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-3 pointer-events-none"
+          }
         `}
       >
         <Sidebar />
       </div>
 
-      {/* HOME: centrado */}
+      {/* HOME */}
       {isHome ? (
         <div className="min-h-dvh flex flex-col">
           <div className="flex-1 grid place-items-center pt-4 md:pt-0">
@@ -112,12 +128,9 @@ export default function ChromeLayout({ children }) {
           </div>
         </div>
       ) : (
-        /* Otras páginas */
         <div className="min-h-dvh flex flex-col">
           <main className="flex-1">
-            <div className="mx-auto max-w-4xl px-6 py-10">
-              {children}
-            </div>
+            <div className="mx-auto max-w-4xl px-6 py-10">{children}</div>
           </main>
           <div className="pb-6 pt-2 text-center">
             <Footer />

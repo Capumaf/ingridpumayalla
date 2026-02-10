@@ -85,9 +85,7 @@ export default function ProjectPage() {
     };
   }, [id]);
 
-  const cover =
-    project.images?.[0] || project.imageData?.[0] || null;
-
+  const cover = project.images?.[0] || project.imageData?.[0] || null;
   const firstImageId = project.imageData?.[0]?.id ?? null;
 
   const title = pickLang(project.title, lang);
@@ -100,45 +98,25 @@ export default function ProjectPage() {
     <div className="w-full flex justify-center">
       <div className="w-full max-w-screen-lg px-4 pt-6 pb-10 flex flex-col items-center gap-6">
 
-        {/* top left controls */}
-        <div className="w-full flex items-center gap-4">
-          <button
-            onClick={() => {
-              const l = lang === "es" ? "en" : "es";
-              setLang(l);
-              router.push(`/works/${id}?lang=${l}`);
-            }}
-            className="text-xs tracking-widest text-gray-500 hover:text-black"
-          >
-            {lang === "es" ? "EN" : "ES"}
-          </button>
-
-          <button
-            onClick={() => router.push(`/works?lang=${lang}`)}
-            className="text-xl text-gray-400 hover:text-black"
-            aria-label="Back to works"
-          >
-            ←
-          </button>
-        </div>
-
         {/* title */}
         <h1 className="text-2xl md:text-3xl font-bold text-center">
           {title}
         </h1>
 
-        {/* cover + arrows */}
+        {/* cover */}
         <div className="w-full flex justify-center">
           <div
-            className="relative w-full flex justify-center"
+            className="relative w-full flex flex-col items-center"
             style={{ maxWidth: `${maxWidth}px` }}
           >
+            {/* DESKTOP arrows (unchanged) */}
             {prevWorkId && (
               <button
                 onClick={() =>
                   router.push(`/works/${prevWorkId}?lang=${lang}`)
                 }
-                className="absolute left-[-70px] top-1/2 -translate-y-1/2 text-6xl text-gray-600 hover:text-black"
+                className="hidden md:block absolute left-[-70px] top-1/2 -translate-y-1/2 text-6xl text-gray-600 hover:text-black"
+                aria-label={lang === "es" ? "Anterior" : "Previous"}
               >
                 ‹
               </button>
@@ -146,13 +124,16 @@ export default function ProjectPage() {
 
             {cover ? (
               firstImageId ? (
-                <Link href={`/works/${id}/${firstImageId}?lang=${lang}`}>
+                <Link
+                  href={`/works/${id}/${firstImageId}?lang=${lang}`}
+                  className="w-full"
+                >
                   <Image
                     src={cover.src}
                     alt={title}
                     width={cover.width ?? 1200}
                     height={cover.height ?? 800}
-                    className="rounded-lg object-contain cursor-pointer"
+                    className="w-full rounded-lg object-contain"
                     style={{ maxHeight: `${maxHeightVh}vh` }}
                     priority
                   />
@@ -163,7 +144,7 @@ export default function ProjectPage() {
                   alt={title}
                   width={cover.width ?? 1200}
                   height={cover.height ?? 800}
-                  className="rounded-lg object-contain"
+                  className="w-full rounded-lg object-contain"
                   style={{ maxHeight: `${maxHeightVh}vh` }}
                   priority
                 />
@@ -177,25 +158,45 @@ export default function ProjectPage() {
                 onClick={() =>
                   router.push(`/works/${nextWorkId}?lang=${lang}`)
                 }
-                className="absolute right-[-70px] top-1/2 -translate-y-1/2 text-6xl text-gray-600 hover:text-black"
+                className="hidden md:block absolute right-[-70px] top-1/2 -translate-y-1/2 text-6xl text-gray-600 hover:text-black"
+                aria-label={lang === "es" ? "Siguiente" : "Next"}
               >
                 ›
               </button>
             )}
+
+            {/* MOBILE arrows BELOW image */}
+            <div className="flex md:hidden w-full justify-between px-12 mt-4">
+              {prevWorkId ? (
+                <button
+                  onClick={() =>
+                    router.push(`/works/${prevWorkId}?lang=${lang}`)
+                  }
+                  className="text-5xl font-light text-gray-600 hover:text-black transition-colors"
+                  aria-label={lang === "es" ? "Anterior" : "Previous"}
+                >
+                  ‹
+                </button>
+              ) : (
+                <span />
+              )}
+
+              {nextWorkId ? (
+                <button
+                  onClick={() =>
+                    router.push(`/works/${nextWorkId}?lang=${lang}`)
+                  }
+                  className="text-5xl font-light text-gray-600 hover:text-black transition-colors"
+                  aria-label={lang === "es" ? "Siguiente" : "Next"}
+                >
+                  ›
+                </button>
+              ) : (
+                <span />
+              )}
+            </div>
           </div>
         </div>
-
-        {/* videos only for criaturas */}
-        {id === "criaturas-del-bosque" &&
-          project.videoClips?.length > 0 && (
-            <div className="w-full max-w-4xl mt-2 p-4 bg-white rounded-lg shadow-md">
-              <div className="flex flex-col md:flex-row gap-4 justify-center">
-                {project.videoClips.map((clip, i) => (
-                  <VideoClip key={i} clip={clip} />
-                ))}
-              </div>
-            </div>
-          )}
 
         {/* introduction */}
         {intro && (
