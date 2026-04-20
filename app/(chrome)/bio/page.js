@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { pages } from "../../data/pages";
 
-export default function Bio() {
+function BioContent() {
   const searchParams = useSearchParams();
   const lang = searchParams.get("lang") || "en";
 
@@ -55,5 +56,13 @@ export default function Bio() {
 
       </div>
     </article>
+  );
+}
+
+export default function Bio() {
+  return (
+    <Suspense fallback={null}>
+      <BioContent />
+    </Suspense>
   );
 }
