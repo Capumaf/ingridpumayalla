@@ -1,14 +1,18 @@
+import { pages } from "@/data/pages";
+
 export default function CV() {
+  const { title, downloadLabel, downloadHref } = pages.cv;
+
   return (
     <div className="mt-40">
-      <h1 className="text-2xl mb-10">Curriculum Vitae</h1>
+      <h1 className="text-2xl mb-10">{title.en}</h1>
 
       <a
-        href="/CVPumayalla2025English.pdf"
+        href={downloadHref}
         download
         className="text-black tracking-wide transition-opacity hover:opacity-70"
       >
-        Download my CV (English — 2025)
+        {downloadLabel.en}
       </a>
     </div>
   );

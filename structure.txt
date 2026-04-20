@@ -1,0 +1,23 @@
+
+C:\Users\CESAR\OneDrive\Escritorio\ingridpumayalla
+├── app
+├── eslint.config.mjs
+├── git-filter-repo
+├── jsconfig.json
+├── next.config.mjs
+├── node_modules
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── postcss.config.mjs
+├── public
+├── README.md
+├── structure.txt
+├── tailwind.config.js
+└── tailwind.config.mjs
+
+directory: 3 file: 12
+
+
+
+[2K[1G

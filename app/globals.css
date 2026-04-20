@@ -13,11 +13,12 @@
 
   /* Body text editorial (Bio ES / EN) */
   .body-text {
-    @apply text-[15px] leading-7 text-neutral-600;
-    max-width: 640px;
-  }
+  @apply text-[15px] md:text-[16px] text-neutral-700;
+  line-height: 1.7;
+  max-width: 560px;
+}
 
-  .body-text p {
-    @apply mb-7;
-  }
+.body-text p {
+  margin-bottom: 1.2em;
+}
 }

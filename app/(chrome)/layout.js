@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import React from "react";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 
@@ -9,14 +10,27 @@ const AUTOHIDE_MS = 10000;
 
 export default function ChromeLayout({ children }) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const urlLang = searchParams.get("lang") || "en";
+  const [lang, setLang] = useState(urlLang);
+
+  useEffect(() => {
+    setLang(urlLang);
+  }, [urlLang]);
+
+  const toggleLang = () => {
+    const newLang = lang === "es" ? "en" : "es";
+    router.push(`${pathname}?lang=${newLang}`);
+  };
+
   const isHome = pathname === "/home";
 
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef(null);
   const showMenuRef = useRef(false);
   const hideMenuTimerRef = useRef(null);
-
-  // throttle suave para mousemove (evita re-render por cada pixel)
   const mouseRafRef = useRef(null);
 
   const clearHideTimer = useCallback(() => {
@@ -44,13 +58,11 @@ export default function ChromeLayout({ children }) {
     startHideTimer();
   }, [startHideTimer]);
 
-  // Desktop interactions: cualquier movimiento del mouse muestra el menú
   useEffect(() => {
     const mql = window.matchMedia("(min-width: 768px)");
     if (!mql.matches) return;
 
     const onMouseMove = () => {
-      // 1 update por frame como máximo
       if (mouseRafRef.current) return;
       mouseRafRef.current = requestAnimationFrame(() => {
         mouseRafRef.current = null;
@@ -59,12 +71,10 @@ export default function ChromeLayout({ children }) {
     };
 
     const onMouseDown = (e) => {
-      // si está abierto y clic fuera, cerrar
       if (showMenuRef.current) {
         if (menuRef.current && !menuRef.current.contains(e.target)) hideMenu();
         return;
       }
-      // si está cerrado y haces click, lo mostramos (comportamiento “general”)
       showMenuWithAutoHide();
     };
 
@@ -86,42 +96,43 @@ export default function ChromeLayout({ children }) {
     };
   }, [clearHideTimer, hideMenu, showMenuWithAutoHide]);
 
-  // Al navegar, cierra el menú
   useEffect(() => {
     hideMenu();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (
     <div className="min-h-dvh bg-white text-black">
+
       {/* MOBILE */}
       <div className="md:hidden">
-        <Sidebar />
+        <Sidebar lang={lang} toggleLang={toggleLang} />
       </div>
 
-      {/* DESKTOP: sidebar flotante (sin “edge zone”) */}
+      {/* DESKTOP */}
       <div
         ref={menuRef}
-        onMouseEnter={clearHideTimer} // mientras lo usas, no se auto-oculta
-        onMouseLeave={startHideTimer} // al salir, empieza el countdown
+        onMouseEnter={clearHideTimer}
+        onMouseLeave={startHideTimer}
         className={`
           hidden md:block fixed top-6 left-8 z-50
           transition-all duration-300 ease-out
           ${
             showMenu
               ? "opacity-100 translate-x-0"
-              : "opacity-0 -translate-x-3 pointer-events-none"
+              : "opacity-90 -translate-x-[2px]" // 🔥 SOLO CAMBIO AQUÍ
           }
         `}
       >
-        <Sidebar />
+        <Sidebar lang={lang} toggleLang={toggleLang} />
       </div>
 
       {/* HOME */}
       {isHome ? (
         <div className="min-h-dvh flex flex-col">
           <div className="flex-1 grid place-items-center pt-4 md:pt-0">
-            {children}
+            {React.isValidElement(children)
+              ? React.cloneElement(children, { lang })
+              : children}
           </div>
           <div className="pb-6 pt-2 text-center">
             <Footer />
@@ -130,7 +141,11 @@ export default function ChromeLayout({ children }) {
       ) : (
         <div className="min-h-dvh flex flex-col">
           <main className="flex-1">
-            <div className="mx-auto max-w-4xl px-6 py-10">{children}</div>
+            <div className="mx-auto max-w-4xl px-6 py-10">
+              {React.isValidElement(children)
+                ? React.cloneElement(children, { lang })
+                : children}
+            </div>
           </main>
           <div className="pb-6 pt-2 text-center">
             <Footer />

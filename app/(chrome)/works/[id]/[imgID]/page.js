@@ -5,8 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { WORK_ORDER } from "../../../data/worksOrder";
-import { projectDetails } from "../../../data/projectDetails";
+import { WORK_ORDER } from "../../../../data/worksOrder";
+import { projectDetails } from "../../../../data/projectDetails";
 
 export default function ImagePage() {
   const { id, imgID } = useParams();
@@ -53,8 +53,8 @@ export default function ImagePage() {
     (typeof img.description === "string" ? img.description : "");
 
   const labels = {
-    backToWork: lang === "es" ? "← Volver al proyecto" : "← Back to Work",
-    backToWorks: lang === "es" ? "← Volver a trabajos" : "← Back to Works",
+    backToWork: lang === "es" ? "← Volver al proyecto" : "← Back to project",
+    backToWorks: lang === "es" ? "← Volver a trabajos" : "← Back to works",
   };
 
   return (
@@ -75,17 +75,6 @@ export default function ImagePage() {
             </h2>
 
             <p className="mb-6">{description}</p>
-
-            <button
-              onClick={() => {
-                const newLang = lang === "es" ? "en" : "es";
-                setLang(newLang);
-                router.push(`/works/${id}/${imgID}?lang=${newLang}`);
-              }}
-              className="text-xs tracking-widest text-gray-500 hover:text-black transition-colors"
-            >
-              {lang === "es" ? "EN" : "ES"}
-            </button>
           </div>
 
           <Link
@@ -98,12 +87,9 @@ export default function ImagePage() {
 
         {/* IMAGE COLUMN */}
         <div className="relative w-full max-w-[720px] flex justify-center flex-col">
-          {/* Desktop arrows (only md+) */}
           {prevImg && (
             <button
-              onClick={() =>
-                router.push(`/works/${id}/${prevImg.id}?lang=${lang}`)
-              }
+              onClick={() => router.push(`/works/${id}/${prevImg.id}?lang=${lang}`)}
               className="hidden md:block absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl font-light text-gray-600 hover:text-black transition-colors"
               aria-label={lang === "es" ? "Anterior" : "Previous image"}
             >
@@ -134,7 +120,6 @@ export default function ImagePage() {
             </button>
           )}
 
-          {/* Mobile arrows (below image, no overlay) */}
           <div className="flex md:hidden w-full items-center justify-between mt-3 px-1">
             <button
               onClick={() =>

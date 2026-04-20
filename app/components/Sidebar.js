@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { pages } from "@/data/pages";
 
 const navItems = [
-  { href: "/bio", label: "Bio" },
-  { href: "/works", label: "Works" },
-  { href: "/press", label: "Press" },
-  { href: "/cv", label: "CV" },
-  { href: "/contact", label: "Contact" },
+  { href: "/bio", key: "bio" },
+  { href: "/works", key: "works" },
+  { href: "/press", key: "press" },
+  { href: "/cv", key: "cv" },
+  { href: "/contact", key: "contact" },
 ];
 
 function isActive(pathname, href) {
@@ -17,12 +18,15 @@ function isActive(pathname, href) {
   return pathname === href || pathname.startsWith(href + "/");
 }
 
-export default function Sidebar() {
+function withLang(href, lang) {
+  return `${href}?lang=${lang}`;
+}
+
+export default function Sidebar({ lang = "en", toggleLang }) {
   const pathname = usePathname();
   const [indexOpen, setIndexOpen] = useState(false);
 
-  // ===== Auto-hide config =====
-  const AUTO_CLOSE_MS = 4000; // <-- 4 segundos
+  const AUTO_CLOSE_MS = 4000;
   const closeTimerRef = useRef(null);
 
   const clearCloseTimer = () => {
@@ -40,19 +44,15 @@ export default function Sidebar() {
     }, AUTO_CLOSE_MS);
   };
 
-  // Si el usuario navega, cierra el índice
   useEffect(() => {
     setIndexOpen(false);
     clearCloseTimer();
   }, [pathname]);
 
-  // Cuando abre el índice, programa autocierre
   useEffect(() => {
     if (indexOpen) scheduleAutoClose();
     else clearCloseTimer();
-
     return () => clearCloseTimer();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [indexOpen]);
 
   return (
@@ -60,14 +60,22 @@ export default function Sidebar() {
       {/* ================= MOBILE ================= */}
       <div className="md:hidden px-5 pt-6">
         <Link
-          href="/home"
+          href={withLang("/home", lang)}
           className="block text-base tracking-wide text-black hover:opacity-70 transition-opacity"
         >
           Ingrid Pumayalla
         </Link>
 
         <div className="mt-1 text-xs text-neutral-500">
-          Visual artist · Archive
+          {lang === "es"
+            ? "Artista visual · Archivo"
+            : "Visual artist · Archive"}
+        </div>
+
+        <div className="mt-2 text-[11px] text-neutral-400 hover:text-neutral-700">
+          <button onClick={toggleLang}>
+            {lang === "es" ? "EN" : "ES"}
+          </button>
         </div>
 
         {/* INDEX toggle */}
@@ -77,65 +85,51 @@ export default function Sidebar() {
             onClick={() => setIndexOpen((v) => !v)}
             aria-expanded={indexOpen}
             aria-controls="mobile-index"
-            className={[
-              "group inline-flex items-center gap-2", // <-- flecha pegada a Index
-              "text-xs tracking-[0.16em] uppercase",
-              "text-neutral-500 hover:text-black transition-colors",
-              "focus:outline-none focus-visible:ring-1 focus-visible:ring-neutral-300",
-              "focus-visible:ring-offset-2 focus-visible:ring-offset-white",
-            ].join(" ")}
+            className="group inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase text-neutral-400 hover:text-neutral-700 transition-colors"
           >
-            <span>Index</span>
+            <span>{lang === "es" ? "Índice" : "Index"}</span>
             <span
-              aria-hidden="true"
-              className={[
-                "leading-none text-neutral-400 transition-transform duration-200",
-                indexOpen ? "rotate-90" : "rotate-0",
-              ].join(" ")}
+              className={`leading-none transition-transform duration-200 ${
+                indexOpen ? "rotate-90" : ""
+              }`}
             >
               →
             </span>
           </button>
 
-          {/* Micro separador */}
           <div className="mt-3 h-px w-full bg-neutral-200/60" />
 
-          {/* Panel horizontal */}
           <div
             id="mobile-index"
-            className={[
-              "overflow-hidden transition-[max-height,opacity] duration-300 ease-out",
-              indexOpen ? "max-h-28 opacity-100" : "max-h-0 opacity-0",
-            ].join(" ")}
-            // si el usuario toca el panel, reinicia el timer (opcional pero recomendado)
+            className={`overflow-hidden transition-all duration-300 ${
+              indexOpen ? "max-h-28 opacity-100" : "max-h-0 opacity-0"
+            }`}
             onPointerDown={() => {
               if (indexOpen) scheduleAutoClose();
             }}
           >
-            <nav aria-label="Primary" className="pt-4 pb-2">
+            <nav className="pt-4 pb-2">
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 {navItems.map((item) => {
                   const active = isActive(pathname, item.href);
                   return (
                     <li key={item.href}>
                       <Link
-                        href={item.href}
-                        aria-current={active ? "page" : undefined}
-                        className={[
-                          "text-sm tracking-wide transition-colors",
+                        href={withLang(item.href, lang)}
+                        className={`text-sm tracking-wide ${
                           active
                             ? "text-black"
-                            : "text-neutral-500 hover:text-black",
-                        ].join(" ")}
+                            : "text-neutral-400 hover:text-neutral-700"
+                        }`}
                         onClick={() => {
                           clearCloseTimer();
                           setIndexOpen(false);
                         }}
                       >
-                        {active ? (
-                          <span className="mr-2 text-neutral-400">—</span>
-                        ) : null}
-                        {item.label}
+                        {active && (
+                          <span className="mr-2 text-neutral-300">—</span>
+                        )}
+                        {pages[item.key].title[lang]}
                       </Link>
                     </li>
                   );
@@ -148,45 +142,63 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* ================= DESKTOP (intacto) ================= */}
-      <nav aria-label="Primary" className="hidden md:block">
-        <ul className="flex flex-col gap-5">
-          <li className="mt-14 mb-12">
-            <Link
-              href="/home"
-              className="text-lg md:text-2xl tracking-wide text-black transition-opacity hover:opacity-70"
-            >
-              Ingrid Pumayalla
-            </Link>
-
-            <div className="mt-2 text-xs text-neutral-500">
-              Visual artist · Archive
-            </div>
-          </li>
-
-          {navItems.map((item) => {
-            const active = isActive(pathname, item.href);
-
-            return (
-              <li key={item.href}>
+      {/* ================= DESKTOP ================= */}
+      <div className="hidden md:flex flex-col w-[220px] shrink-0">
+        <div className="sticky top-0 h-screen">
+          <nav>
+            <ul className="flex flex-col gap-4">
+              <li className="mt-16 mb-14">
                 <Link
-                  href={item.href}
-                  aria-current={active ? "page" : undefined}
-                  className={[
-                    "text-sm tracking-wide transition-colors",
-                    active ? "text-black" : "text-neutral-500 hover:text-black",
-                  ].join(" ")}
+                  href={withLang("/home", lang)}
+                  className="text-xl md:text-[22px] tracking-wide text-black hover:opacity-70"
                 >
-                  <span className={active ? "inline-flex items-center gap-2" : ""}>
-                    {active ? <span className="text-neutral-400">—</span> : null}
-                    {item.label}
-                  </span>
+                  Ingrid Pumayalla
                 </Link>
+
+                <div className="mt-2 text-xs text-neutral-500">
+                  {lang === "es"
+                    ? "Artista visual · Archivo"
+                    : "Visual artist · Archive"}
+                </div>
+
+                <div className="mt-2 text-[11px] text-neutral-400 hover:text-neutral-700">
+                  <button onClick={toggleLang}>
+                    {lang === "es" ? "EN" : "ES"}
+                  </button>
+                </div>
               </li>
-            );
-          })}
-        </ul>
-      </nav>
+
+              {navItems.map((item) => {
+                const active = isActive(pathname, item.href);
+
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={withLang(item.href, lang)}
+                      className={`text-[13px] tracking-[0.02em] ${
+                        active
+                          ? "text-black"
+                          : "text-neutral-400 hover:text-neutral-700"
+                      }`}
+                    >
+                      <span
+                        className={
+                          active ? "inline-flex items-center gap-2" : ""
+                        }
+                      >
+                        {active && (
+                          <span className="text-neutral-300">—</span>
+                        )}
+                        {pages[item.key].title[lang]}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+      </div>
     </>
   );
 }
