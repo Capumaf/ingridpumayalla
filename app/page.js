@@ -2,10 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Page() {
-  const { lang } = useParams();
+  const [lang, setLang] = useState("es");
+
+  useEffect(() => {
+    const browserLang = navigator.language?.startsWith("es") ? "es" : "en";
+    setLang(browserLang);
+  }, []);
 
   return (
     <Link
