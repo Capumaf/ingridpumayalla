@@ -2,13 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export default function Page() {
+  const { lang } = useParams();
+
   return (
     <Link
-      href="/home"
+      href={`/${lang}/home`}
       className="fixed inset-0 overflow-hidden cursor-pointer block"
-      aria-label="Entrar al sitio"
+      aria-label={lang === "es" ? "Entrar al sitio" : "Enter site"}
     >
       <Image
         src="/caratula.webp"
@@ -25,7 +28,7 @@ export default function Page() {
       </h1>
 
       <span className="absolute bottom-6 left-8 text-white/70 text-xs pointer-events-none">
-        Click para entrar
+        {lang === "es" ? "Click para entrar" : "Click to enter"}
       </span>
     </Link>
   );

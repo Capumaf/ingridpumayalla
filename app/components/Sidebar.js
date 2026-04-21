@@ -14,12 +14,12 @@ const navItems = [
 ];
 
 function isActive(pathname, href) {
-  if (href === "/") return pathname === "/";
-  return pathname === href || pathname.startsWith(href + "/");
+  const cleanPath = pathname.replace(/^\/(en|es)/, "");
+  return cleanPath === href || cleanPath.startsWith(href + "/");
 }
 
 function withLang(href, lang) {
-  return `${href}?lang=${lang}`;
+  return `/${lang}${href}`; // ✅ SIN ?lang
 }
 
 export default function Sidebar({ lang = "en", toggleLang }) {
@@ -83,13 +83,11 @@ export default function Sidebar({ lang = "en", toggleLang }) {
           <button
             type="button"
             onClick={() => setIndexOpen((v) => !v)}
-            aria-expanded={indexOpen}
-            aria-controls="mobile-index"
-            className="group inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase text-neutral-400 hover:text-neutral-700 transition-colors"
+            className="group inline-flex items-center gap-2 text-xs uppercase text-neutral-400 hover:text-neutral-700"
           >
             <span>{lang === "es" ? "Índice" : "Index"}</span>
             <span
-              className={`leading-none transition-transform duration-200 ${
+              className={`transition-transform ${
                 indexOpen ? "rotate-90" : ""
               }`}
             >
@@ -100,13 +98,9 @@ export default function Sidebar({ lang = "en", toggleLang }) {
           <div className="mt-3 h-px w-full bg-neutral-200/60" />
 
           <div
-            id="mobile-index"
-            className={`overflow-hidden transition-all duration-300 ${
+            className={`overflow-hidden transition-all ${
               indexOpen ? "max-h-28 opacity-100" : "max-h-0 opacity-0"
             }`}
-            onPointerDown={() => {
-              if (indexOpen) scheduleAutoClose();
-            }}
           >
             <nav className="pt-4 pb-2">
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
@@ -116,7 +110,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                     <li key={item.href}>
                       <Link
                         href={withLang(item.href, lang)}
-                        className={`text-sm tracking-wide ${
+                        className={`text-sm ${
                           active
                             ? "text-black"
                             : "text-neutral-400 hover:text-neutral-700"
@@ -126,9 +120,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                           setIndexOpen(false);
                         }}
                       >
-                        {active && (
-                          <span className="mr-2 text-neutral-300">—</span>
-                        )}
+                        {active && <span className="mr-2 text-neutral-300">—</span>}
                         {pages[item.key].title[lang]}
                       </Link>
                     </li>
@@ -150,7 +142,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
               <li className="mt-16 mb-14">
                 <Link
                   href={withLang("/home", lang)}
-                  className="text-xl md:text-[22px] tracking-wide text-black hover:opacity-70"
+                  className="text-xl text-black hover:opacity-70"
                 >
                   Ingrid Pumayalla
                 </Link>
@@ -175,22 +167,14 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                   <li key={item.href}>
                     <Link
                       href={withLang(item.href, lang)}
-                      className={`text-[13px] tracking-[0.02em] ${
+                      className={`text-[13px] ${
                         active
                           ? "text-black"
                           : "text-neutral-400 hover:text-neutral-700"
                       }`}
                     >
-                      <span
-                        className={
-                          active ? "inline-flex items-center gap-2" : ""
-                        }
-                      >
-                        {active && (
-                          <span className="text-neutral-300">—</span>
-                        )}
-                        {pages[item.key].title[lang]}
-                      </span>
+                      {active && <span className="mr-2 text-neutral-300">—</span>}
+                      {pages[item.key].title[lang]}
                     </Link>
                   </li>
                 );
