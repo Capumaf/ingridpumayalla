@@ -5,8 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { WORK_ORDER } from "../../../../data/worksOrder";
-import { projectDetails } from "../../../../data/projectDetails";
+import { WORK_ORDER } from "../../../../../data/worksOrder";
+import { projectDetails } from "../../../../../data/projectDetails";
 
 export default function ImagePage() {
   const { id, imgID } = useParams();

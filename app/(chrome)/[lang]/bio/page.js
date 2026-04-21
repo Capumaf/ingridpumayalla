@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { pages } from "../../data/pages";
+import { pages } from "../../../data/pages";
 
-export default function Bio() {
-  const lang = "en"; // idioma fijo para evitar error en build
+export default function Bio({ params }) {
+  const lang = params.lang; // ✅ idioma desde la URL
 
   const bio = pages.bio;
 

@@ -1,6 +1,8 @@
 import Image from "next/image";
 
-export default function HomePage() {
+export default function HomePage({ params }) {
+  const lang = params.lang; // ✅ preparado para idioma (aunque no lo uses aún)
+
   return (
     <div className="w-full flex justify-center items-center h-full">
       
