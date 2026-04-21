@@ -9,7 +9,7 @@ export const projectDetails = {
       en: "Project about the relationship between nature, memory, and territory."
     },
     imageData: [
-      { id: "1", src: "/Bosque.webp",  width: 1200, height: 800 },
+      { id: "1", src: "/Bosque.webp", width: 1200, height: 800 },
       { id: "2", src: "/Bosque2.webp", width: 1200, height: 800 },
       { id: "3", src: "/Bosque3.webp", width: 1200, height: 800 }
     ]
@@ -25,7 +25,7 @@ export const projectDetails = {
       en: "Visual exploration of landscape and symbolism."
     },
     imageData: [
-      { id: "1", src: "/Curiwarmi_Lunar.png",  width: 1200, height: 800 },
+      { id: "1", src: "/Curiwarmi_Lunar.png", width: 1200, height: 800 },
       { id: "2", src: "/Curiwarmilunar2.png", width: 1200, height: 800 },
       { id: "3", src: "/Curiwarmilunar3.png", width: 1200, height: 800 }
     ]
@@ -125,6 +125,64 @@ export const projectDetails = {
       { id: "3", src: "/pomade3.webp", width: 1200, height: 800 },
       { id: "4", src: "/pomade4.webp", width: 1200, height: 800 },
       { id: "5", src: "/pomade5.webp", width: 1200, height: 800 }
+    ]
+  },
+
+  // 🔥 NUEVOS PROYECTOS
+
+  "matoaka-2022": {
+    title: {
+      es: "Matoaka 2022",
+      en: "Matoaka 2022"
+    },
+    introduction: {
+      es: "Descripción del proyecto.",
+      en: "Project description."
+    },
+    imageData: [
+      { id: "1", src: "/matoaka.webp", width: 1200, height: 800 }
+    ]
+  },
+
+  "las-dos-fridas": {
+    title: {
+      es: "Las dos Fridas",
+      en: "The Two Fridas"
+    },
+    introduction: {
+      es: "Descripción del proyecto.",
+      en: "Project description."
+    },
+    imageData: [
+      { id: "1", src: "/fridas.webp", width: 1200, height: 800 }
+    ]
+  },
+
+  "dar-a-luz-a-una-granada": {
+    title: {
+      es: "Dar a luz a una granada",
+      en: "Giving Birth to a Pomegranate"
+    },
+    introduction: {
+      es: "Descripción del proyecto.",
+      en: "Project description."
+    },
+    imageData: [
+      { id: "1", src: "/granada.webp", width: 1200, height: 800 }
+    ]
+  },
+
+  "residencias": {
+    title: {
+      es: "Residencias",
+      en: "Residencies"
+    },
+    introduction: {
+      es: "Proyectos realizados en residencias artísticas.",
+      en: "Projects developed during artistic residencies."
+    },
+    imageData: [
+      { id: "1", src: "/residencias.webp", width: 1200, height: 800 }
     ]
   }
 };
