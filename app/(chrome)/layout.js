@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
@@ -10,19 +10,14 @@ const AUTOHIDE_MS = 10000;
 
 export default function ChromeLayout({ children }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const router = useRouter();
 
-  const urlLang = searchParams.get("lang") || "en";
-  const [lang, setLang] = useState(urlLang);
-
-  useEffect(() => {
-    setLang(urlLang);
-  }, [urlLang]);
+  // ✅ idioma simple (sin URL)
+  const [lang, setLang] = useState("en");
 
   const toggleLang = () => {
     const newLang = lang === "es" ? "en" : "es";
-    router.push(`${pathname}?lang=${newLang}`);
+    setLang(newLang);
   };
 
   const isHome = pathname === "/home";
@@ -98,7 +93,7 @@ export default function ChromeLayout({ children }) {
 
   useEffect(() => {
     hideMenu();
-  }, [pathname]);
+  }, [pathname, hideMenu]);
 
   return (
     <div className="min-h-dvh bg-white text-black">
@@ -119,7 +114,7 @@ export default function ChromeLayout({ children }) {
           ${
             showMenu
               ? "opacity-100 translate-x-0"
-              : "opacity-90 -translate-x-[2px]" // 🔥 SOLO CAMBIO AQUÍ
+              : "opacity-90 -translate-x-[2px]"
           }
         `}
       >
