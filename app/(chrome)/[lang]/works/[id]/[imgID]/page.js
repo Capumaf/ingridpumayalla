@@ -13,7 +13,6 @@ export default function ImagePage() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // ✅ idioma correcto desde la URL
   const lang = pathname.startsWith("/es") ? "es" : "en";
 
   const project = projectDetails[id];
@@ -59,7 +58,11 @@ export default function ImagePage() {
 
         {/* LEFT */}
         <div className="relative w-[220px] text-sm text-gray-800 flex flex-col">
-          <Link href={`/${lang}/works/${id}`}>
+
+          <Link
+            href={`/${lang}/works/${id}`}
+            className="text-xs tracking-widest text-gray-500 hover:text-black"
+          >
             {labels.backToWork}
           </Link>
 
@@ -67,12 +70,17 @@ export default function ImagePage() {
             <h2 className="text-base font-semibold mb-1">
               {lang === "es" ? "Descripción técnica" : "Technical description"}
             </h2>
+
             <p className="mb-6">{description}</p>
           </div>
 
-          <Link href={`/${lang}/works`}>
+          <Link
+            href={`/${lang}/works`}
+            className="absolute left-0 -bottom-2 text-xs tracking-widest text-gray-500 hover:text-black"
+          >
             {labels.backToWorks}
           </Link>
+
         </div>
 
         {/* IMAGE */}
@@ -81,7 +89,7 @@ export default function ImagePage() {
           {prevImg && (
             <button
               onClick={() => router.push(`/${lang}/works/${id}/${prevImg.id}`)}
-              className="absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl"
+              className="hidden md:block absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black"
             >
               ‹
             </button>
@@ -92,7 +100,7 @@ export default function ImagePage() {
             alt={description || "Artwork image"}
             width={img.width ?? 1200}
             height={img.height ?? 800}
-            className="object-contain max-h-[85vh] w-full"
+            className="object-contain max-h-[85vh] rounded-lg w-full"
             priority
           />
 
@@ -103,13 +111,47 @@ export default function ImagePage() {
                   ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
                   : router.push(`/${lang}/works/${nextWorkId}`)
               }
-              className="absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl"
+              className="hidden md:block absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black"
             >
               ›
             </button>
           )}
 
+          {/* MOBILE NAV */}
+          <div className="flex md:hidden w-full items-center justify-between mt-3 px-1">
+
+            <button
+              onClick={() =>
+                prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
+              }
+              className={`text-5xl text-gray-600 ${
+                prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+            >
+              ‹
+            </button>
+
+            <button
+              onClick={() =>
+                nextImg
+                  ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
+                  : nextWorkId
+                  ? router.push(`/${lang}/works/${nextWorkId}`)
+                  : null
+              }
+              className={`text-5xl text-gray-600 ${
+                nextImg || nextWorkId
+                  ? "opacity-100"
+                  : "opacity-0 pointer-events-none"
+              }`}
+            >
+              ›
+            </button>
+
+          </div>
+
         </div>
+
       </div>
     </div>
   );

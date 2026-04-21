@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,14 +13,13 @@
     @apply transition-colors;
   }
 
-  /* Body text editorial (Bio ES / EN) */
   .body-text {
-  @apply text-[15px] md:text-[16px] text-neutral-700;
-  line-height: 1.7;
-  max-width: 560px;
-}
+    @apply text-[15px] md:text-[16px] text-neutral-700;
+    line-height: 1.7;
+    max-width: 560px;
+  }
 
-.body-text p {
-  margin-bottom: 1.2em;
-}
+  .body-text p {
+    margin-bottom: 1.2em;
+  }
 }

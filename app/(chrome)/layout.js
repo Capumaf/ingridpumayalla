@@ -12,7 +12,6 @@ export default function ChromeLayout({ children }) {
   const pathname = usePathname();
   const router = useRouter();
 
-  // ✅ FIX REAL: obtener idioma desde la URL
   const lang = pathname.startsWith("/es") ? "es" : "en";
 
   const toggleLang = () => {
@@ -22,6 +21,7 @@ export default function ChromeLayout({ children }) {
   };
 
   const isHome = pathname.endsWith("/home");
+  const isWorkDetail = /\/(en|es)\/works\/[^/]+$/.test(pathname);
 
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef(null);
@@ -85,7 +85,6 @@ export default function ChromeLayout({ children }) {
     return () => {
       clearHideTimer();
       if (mouseRafRef.current) cancelAnimationFrame(mouseRafRef.current);
-
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mousedown", onMouseDown);
       window.removeEventListener("keydown", onKeyDown);
@@ -112,11 +111,7 @@ export default function ChromeLayout({ children }) {
         className={`
           hidden md:block fixed top-6 left-8 z-50
           transition-all duration-300 ease-out
-          ${
-            showMenu
-              ? "opacity-100 translate-x-0"
-              : "opacity-90 -translate-x-[2px]"
-          }
+          ${showMenu ? "opacity-100 translate-x-0" : "opacity-90 -translate-x-[2px]"}
         `}
       >
         <Sidebar lang={lang} toggleLang={toggleLang} />
@@ -134,6 +129,19 @@ export default function ChromeLayout({ children }) {
             <Footer />
           </div>
         </div>
+
+      ) : isWorkDetail ? (
+        <div className="h-dvh flex flex-col overflow-hidden">
+          <main className="flex-1 overflow-hidden">
+            {React.isValidElement(children)
+              ? React.cloneElement(children, { lang })
+              : children}
+          </main>
+          <div className="pb-6 pt-2 text-center">
+            <Footer />
+          </div>
+        </div>
+
       ) : (
         <div className="min-h-dvh flex flex-col">
           <main className="flex-1">

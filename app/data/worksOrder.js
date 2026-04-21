@@ -7,8 +7,6 @@ export const WORK_ORDER = [
   "la-quinta-piedra",
   "ofrendas",
   "giving-birth-to-a-pomadegranade",
-
-  // 🔥 NUEVOS
   "matoaka-2022",
   "las-dos-fridas",
   "linea-roja-paracas",

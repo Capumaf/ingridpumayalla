@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { pages } from "../../../data/pages";
 
-export default function Bio({ params }) {
-  const lang = params.lang;
+export default async function Bio({ params }) {
+  const { lang } = await params;
 
   const bio = pages.bio;
 
@@ -10,15 +10,18 @@ export default function Bio({ params }) {
     <article className="mt-32">
       <div className="px-6 md:pl-40 md:pr-0">
 
+        {/* TITLE */}
         <h1 className="text-[20px] md:text-[22px] tracking-wide text-black mb-12">
           {bio.title[lang]}
         </h1>
 
+        {/* BIO TEXT */}
         <div
           className="body-text"
           dangerouslySetInnerHTML={{ __html: bio.text[lang] }}
         />
 
+        {/* IMAGE */}
         <figure className="mt-16 mb-20">
           <div className="w-full max-w-[460px]">
             <Image
@@ -35,6 +38,7 @@ export default function Bio({ params }) {
           </figcaption>
         </figure>
 
+        {/* STATEMENT */}
         <h2 className="text-[20px] md:text-[22px] tracking-wide text-black mb-12">
           {bio.statementTitle[lang]}
         </h2>
