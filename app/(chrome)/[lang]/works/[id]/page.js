@@ -1,124 +1,54 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
-import { useEffect, useMemo } from "react";
-import Image from "next/image";
+import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
 
-import { WORK_ORDER } from "../../../../data/worksOrder";
 import { projectDetails } from "../../../../data/projectDetails";
 
-export default function ImagePage() {
-  const { id, imgID, lang } = useParams(); // ✅ CLAVE
+export default function WorkDetailPage() {
+  const { id } = useParams();
+  const pathname = usePathname();
 
-  const router = useRouter();
+  const lang = pathname.startsWith("/es") ? "es" : "en";
 
   const project = projectDetails[id];
 
-  useEffect(() => {
-    const footer = document.querySelector("footer");
-    if (footer) footer.style.display = "none";
-    document.body.style.overflow = "hidden";
-    return () => {
-      if (footer) footer.style.display = "";
-      document.body.style.overflow = "";
-    };
-  }, []);
-
-  if (!project || !project.imageData) {
-    return <div>Proyecto no encontrado.</div>;
+  if (!project) {
+    return <div>Project not found</div>;
   }
 
-  const images = project.imageData;
-  const currentIndex = images.findIndex((i) => i.id === imgID);
-
-  if (currentIndex === -1) {
-    return <div>Imagen no encontrada.</div>;
-  }
-
-  const img = images[currentIndex];
-  const prevImg = images[currentIndex - 1] || null;
-  const nextImg = images[currentIndex + 1] || null;
-
-  const nextWorkId = useMemo(() => {
-    const i = WORK_ORDER.indexOf(id);
-    if (i === -1 || i === WORK_ORDER.length - 1) return null;
-    return WORK_ORDER[i + 1];
-  }, [id]);
-
-  const description =
-    img.description?.[lang] ??
-    (typeof img.description === "string" ? img.description : "");
-
-  const labels = {
-    backToWork: lang === "es" ? "← Volver al proyecto" : "← Back to project",
-    backToWorks: lang === "es" ? "← Volver a trabajos" : "← Back to works",
-  };
+  const title =
+    typeof project.title === "string"
+      ? project.title
+      : project.title?.[lang];
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white">
-      <div className="w-full max-w-6xl px-10 flex items-stretch gap-14">
+    <div className="w-full flex justify-center mt-32">
+      <div className="w-full max-w-2xl px-6">
 
-        {/* LEFT */}
-        <div className="relative w-[220px] text-sm text-gray-800 flex flex-col">
-          <Link
-            href={`/${lang}/works/${id}`}
-            className="text-xs tracking-widest text-gray-500 hover:text-black"
-          >
-            {labels.backToWork}
-          </Link>
+        <Link
+          href={`/${lang}/works`}
+          className="text-sm text-neutral-400 hover:text-black mb-6 block"
+        >
+          ← {lang === "es" ? "Volver" : "Back"}
+        </Link>
 
-          <div className="mt-6">
-            <h2 className="text-base font-semibold mb-1">
-              {lang === "es" ? "Descripción técnica" : "Technical description"}
-            </h2>
+        <h1 className="text-2xl mb-10">{title}</h1>
 
-            <p className="mb-6">{description}</p>
+        {project.description && (
+          <p className="text-neutral-500 mb-10">
+            {typeof project.description === "string"
+              ? project.description
+              : project.description?.[lang]}
+          </p>
+        )}
+
+        {/* ejemplo imágenes */}
+        {project.imageData?.map((img) => (
+          <div key={img.id} className="mb-6">
+            <img src={img.src} alt="" className="w-full object-contain" />
           </div>
-
-          <Link
-            href={`/${lang}/works`}
-            className="absolute left-0 -bottom-2 text-xs tracking-widest text-gray-500 hover:text-black"
-          >
-            {labels.backToWorks}
-          </Link>
-        </div>
-
-        {/* IMAGE */}
-        <div className="relative w-full max-w-[720px] flex justify-center flex-col">
-
-          {prevImg && (
-            <button
-              onClick={() => router.push(`/${lang}/works/${id}/${prevImg.id}`)}
-              className="hidden md:block absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black"
-            >
-              ‹
-            </button>
-          )}
-
-          <Image
-            src={img.src}
-            alt={description || "Artwork image"}
-            width={img.width ?? 1200}
-            height={img.height ?? 800}
-            className="object-contain max-h-[85vh] rounded-lg w-full"
-            priority
-          />
-
-          {(nextImg || nextWorkId) && (
-            <button
-              onClick={() =>
-                nextImg
-                  ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
-                  : router.push(`/${lang}/works/${nextWorkId}`)
-              }
-              className="hidden md:block absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black"
-            >
-              ›
-            </button>
-          )}
-
-        </div>
+        ))}
 
       </div>
     </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { usePathname, useRouter, useParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
@@ -11,7 +11,9 @@ const AUTOHIDE_MS = 10000;
 export default function ChromeLayout({ children }) {
   const pathname = usePathname();
   const router = useRouter();
-  const { lang } = useParams(); // ✅ idioma desde URL
+
+  // ✅ FIX REAL: obtener idioma desde la URL
+  const lang = pathname.startsWith("/es") ? "es" : "en";
 
   const toggleLang = () => {
     const newLang = lang === "es" ? "en" : "es";

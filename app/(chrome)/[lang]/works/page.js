@@ -1,20 +1,24 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+
 import { WORK_ORDER } from "../../../data/worksOrder";
 import { projectDetails } from "../../../data/projectDetails";
-import { pages } from "../../../data/pages";
 
 export default function WorksPage() {
-  const { lang } = useParams(); // ✅ FIX
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // ✅ idioma desde la URL (/en /es)
+  const lang = pathname.startsWith("/es") ? "es" : "en";
 
   return (
     <div className="w-full flex justify-center mt-32">
       <div className="w-full max-w-md px-6">
 
         <h1 className="text-2xl mb-12">
-          {pages.works.title[lang]}
+          {lang === "es" ? "Trabajos" : "Works"}
         </h1>
 
         <ul className="space-y-4">
