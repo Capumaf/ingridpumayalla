@@ -20,10 +20,9 @@ export default function WorkPage() {
   const description = project.description?.[lang] || "";
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center px-6 py-8">
-
+    <div className="h-full flex flex-col items-center justify-center px-6 gap-4">
       {/* BACK */}
-      <div className="w-full max-w-2xl mb-4">
+      <div className="w-full max-w-2xl">
         <Link
           href={`/${lang}/works`}
           className="text-xs text-neutral-400 hover:text-black"
@@ -33,7 +32,7 @@ export default function WorkPage() {
       </div>
 
       {/* TITLE */}
-      <h1 className="text-2xl font-normal tracking-[0.15em] text-center mb-4">
+      <h1 className="text-2xl font-normal tracking-[0.15em] text-center">
         {project.title?.[lang]}
       </h1>
 
@@ -44,14 +43,16 @@ export default function WorkPage() {
           alt={project.title?.[lang] || ""}
           width={1200}
           height={800}
-          className="w-full max-h-[55vh] object-contain"
+          className="w-full max-h-[70vh] object-contain"
         />
       </Link>
 
       {/* DESCRIPTION */}
-      <p className="text-xs text-neutral-500 text-center max-w-lg mt-4">
-        {description}
-      </p>
+      {description && (
+        <p className="text-xs text-neutral-500 text-center max-w-lg">
+          {description}
+        </p>
+      )}
 
     </div>
   );

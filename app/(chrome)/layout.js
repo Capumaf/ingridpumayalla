@@ -21,7 +21,7 @@ export default function ChromeLayout({ children }) {
   };
 
   const isHome = pathname.endsWith("/home");
-  const isWorkDetail = /\/(en|es)\/works\/[^/]+$/.test(pathname);
+  const isWorkDetail = /\/(en|es)\/works\/[^/]+/.test(pathname);
 
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef(null);
@@ -98,8 +98,8 @@ export default function ChromeLayout({ children }) {
   return (
     <div className="min-h-dvh bg-white text-black">
 
-      {/* MOBILE */}
-      <div className="md:hidden">
+      {/* MOBILE — oculto en work detail */}
+      <div className={`md:hidden ${isWorkDetail ? "hidden" : ""}`}>
         <Sidebar lang={lang} toggleLang={toggleLang} />
       </div>
 
@@ -132,7 +132,7 @@ export default function ChromeLayout({ children }) {
 
       ) : isWorkDetail ? (
         <div className="h-dvh flex flex-col overflow-hidden">
-          <main className="flex-1 overflow-hidden">
+          <main className="flex-1 overflow-hidden min-h-0">
             {React.isValidElement(children)
               ? React.cloneElement(children, { lang })
               : children}

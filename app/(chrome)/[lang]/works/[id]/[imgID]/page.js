@@ -47,14 +47,84 @@ export default function ImagePage() {
     img.description?.[lang] ??
     (typeof img.description === "string" ? img.description : "");
 
-  const labels = {
-    backToWork: lang === "es" ? "← Volver al proyecto" : "← Back to project",
-    backToWorks: lang === "es" ? "← Volver a trabajos" : "← Back to works",
-  };
-
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-white">
-      <div className="w-full max-w-6xl px-10 flex items-stretch gap-14">
+
+     {/* ── MOBILE ── */}
+<div className="flex md:hidden flex-col w-full h-full px-5 pt-6 pb-8 justify-center gap-3">
+
+  {/* Fila superior: volver al proyecto + ← prev */}
+  <div className="flex items-center justify-between">
+    <Link
+      href={`/${lang}/works/${id}`}
+      className="text-xs tracking-widest text-gray-500 hover:text-black"
+    >
+      ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
+    </Link>
+    <button
+      onClick={() =>
+        prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
+      }
+      className={`text-xs tracking-widest text-gray-500 hover:text-black ${
+        prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      ←
+    </button>
+  </div>
+
+  {/* Imagen */}
+  <div className="w-full">
+    <Image
+      src={img.src}
+      alt={description || "Artwork image"}
+      width={img.width ?? 1200}
+      height={img.height ?? 800}
+      className="object-contain w-full max-h-[55vh]"
+      priority
+    />
+  </div>
+
+
+  {/* Fila inferior: volver a trabajos + → next */}
+  <div className="flex items-center justify-between">
+    <Link
+      href={`/${lang}/works`}
+      className="text-xs tracking-widest text-gray-500 hover:text-black"
+    >
+      ← {lang === "es" ? "Volver a trabajos" : "Back to works"}
+    </Link>
+    <button
+      onClick={() =>
+        nextImg
+          ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
+          : nextWorkId
+          ? router.push(`/${lang}/works/${nextWorkId}`)
+          : null
+      }
+      className={`text-xs tracking-widest text-gray-500 hover:text-black ${
+        nextImg || nextWorkId ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      →
+    </button>
+  </div>
+
+
+{/* Descripción técnica */}
+<div>
+  <p className="text-xs text-neutral-400 tracking-widest mb-1">
+    {lang === "es" ? "Descripción técnica" : "Technical description"}
+  </p>
+  <p className="text-xs text-neutral-600 leading-relaxed">{description}</p>
+</div>
+
+
+
+</div>
+
+      {/* ── DESKTOP ── intacto */}
+      <div className="hidden md:flex w-full max-w-6xl px-10 items-stretch gap-14">
 
         {/* LEFT */}
         <div className="relative w-[220px] text-sm text-gray-800 flex flex-col">
@@ -63,14 +133,13 @@ export default function ImagePage() {
             href={`/${lang}/works/${id}`}
             className="text-xs tracking-widest text-gray-500 hover:text-black"
           >
-            {labels.backToWork}
+            ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
           </Link>
 
           <div className="mt-6">
             <h2 className="text-base font-semibold mb-1">
               {lang === "es" ? "Descripción técnica" : "Technical description"}
             </h2>
-
             <p className="mb-6">{description}</p>
           </div>
 
@@ -78,7 +147,7 @@ export default function ImagePage() {
             href={`/${lang}/works`}
             className="absolute left-0 -bottom-2 text-xs tracking-widest text-gray-500 hover:text-black"
           >
-            {labels.backToWorks}
+            ← {lang === "es" ? "Volver a trabajos" : "Back to works"}
           </Link>
 
         </div>
@@ -86,14 +155,16 @@ export default function ImagePage() {
         {/* IMAGE */}
         <div className="relative w-full max-w-[720px] flex justify-center flex-col">
 
-          {prevImg && (
-            <button
-              onClick={() => router.push(`/${lang}/works/${id}/${prevImg.id}`)}
-              className="hidden md:block absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black"
-            >
-              ‹
-            </button>
-          )}
+          <button
+            onClick={() =>
+              prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
+            }
+            className={`absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
+              prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+          >
+            ‹
+          </button>
 
           <Image
             src={img.src}
@@ -104,55 +175,25 @@ export default function ImagePage() {
             priority
           />
 
-          {(nextImg || nextWorkId) && (
-            <button
-              onClick={() =>
-                nextImg
-                  ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
-                  : router.push(`/${lang}/works/${nextWorkId}`)
-              }
-              className="hidden md:block absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black"
-            >
-              ›
-            </button>
-          )}
-
-          {/* MOBILE NAV */}
-          <div className="flex md:hidden w-full items-center justify-between mt-3 px-1">
-
-            <button
-              onClick={() =>
-                prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
-              }
-              className={`text-5xl text-gray-600 ${
-                prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
-              }`}
-            >
-              ‹
-            </button>
-
-            <button
-              onClick={() =>
-                nextImg
-                  ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
-                  : nextWorkId
-                  ? router.push(`/${lang}/works/${nextWorkId}`)
-                  : null
-              }
-              className={`text-5xl text-gray-600 ${
-                nextImg || nextWorkId
-                  ? "opacity-100"
-                  : "opacity-0 pointer-events-none"
-              }`}
-            >
-              ›
-            </button>
-
-          </div>
+          <button
+            onClick={() =>
+              nextImg
+                ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
+                : nextWorkId
+                ? router.push(`/${lang}/works/${nextWorkId}`)
+                : null
+            }
+            className={`absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
+              nextImg || nextWorkId ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+          >
+            ›
+          </button>
 
         </div>
 
       </div>
+
     </div>
   );
 }

@@ -112,7 +112,7 @@ export const projectDetails = {
 
   "giving-birth-to-a-pomadegranade": {
     title: {
-      es: "Giving Birth to a Pomadegranade",
+      es: "Dar luz a un Granada",
       en: "Giving Birth to a Pomadegranade"
     },
     introduction: {
@@ -127,6 +127,24 @@ export const projectDetails = {
       { id: "5", src: "/pomade5.webp", width: 1200, height: 800 }
     ]
   },
+
+
+  "paracas": {
+  title: {
+    es: "Dibujando una línea roja en el desierto de Paracas",
+    en: "Drawing a Red Line in the Paracas Desert"
+  },
+  introduction: {
+    es: "Descripción del proyecto.",
+    en: "Project description."
+  },
+  imageData: [
+    { id: "1", src: "/Paracas.webp", width: 1200, height: 800 },
+    { id: "2", src: "/paracas1.webp", width: 1200, height: 800 },
+    { id: "3", src: "/paracas2.webp", width: 1200, height: 800 },
+    { id: "4", src: "/paracas3.webp", width: 1200, height: 800 }
+  ]
+},
 
   // 🔥 NUEVOS PROYECTOS
 
@@ -158,19 +176,6 @@ export const projectDetails = {
     ]
   },
 
-  "dar-a-luz-a-una-granada": {
-    title: {
-      es: "Dar a luz a una granada",
-      en: "Giving Birth to a Pomegranate"
-    },
-    introduction: {
-      es: "Descripción del proyecto.",
-      en: "Project description."
-    },
-    imageData: [
-      { id: "1", src: "/granada.webp", width: 1200, height: 800 }
-    ]
-  },
 
   "residencias": {
     title: {

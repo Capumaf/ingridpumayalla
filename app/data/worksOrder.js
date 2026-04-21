@@ -7,6 +7,7 @@ export const WORK_ORDER = [
   "la-quinta-piedra",
   "ofrendas",
   "giving-birth-to-a-pomadegranade",
+  "paracas",
   "matoaka-2022",
   "las-dos-fridas",
   "linea-roja-paracas",
