@@ -25,9 +25,9 @@ export const projectDetails = {
       en: "Visual exploration of landscape and symbolism."
     },
     imageData: [
-      { id: "1", src: "/Curiwarmi_Lunar.png", width: 1200, height: 800 },
-      { id: "2", src: "/Curiwarmilunar2.png", width: 1200, height: 800 },
-      { id: "3", src: "/Curiwarmilunar3.png", width: 1200, height: 800 }
+      { id: "1", src: "/Curiwarmi_Lunar.webp", width: 1200, height: 800 },
+      { id: "2", src: "/Curiwarmilunar2.webp", width: 1200, height: 800 },
+      { id: "3", src: "/Curiwarmilunar3.webp", width: 1200, height: 800 }
     ]
   },
 
