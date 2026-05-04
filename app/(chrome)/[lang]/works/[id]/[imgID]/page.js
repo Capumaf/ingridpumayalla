@@ -2,7 +2,6 @@
 
 import { useParams, useRouter, usePathname } from "next/navigation";
 import { useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { projectDetails } from "../../../../../data/projectDetails";
@@ -45,13 +44,8 @@ export default function ImagePage() {
   }, [prevImg?.src, nextImg?.src]);
 
   useEffect(() => {
-    if (prevImg) {
-      router.prefetch(`/${lang}/works/${id}/${prevImg.id}`);
-    }
-
-    if (nextImg) {
-      router.prefetch(`/${lang}/works/${id}/${nextImg.id}`);
-    }
+    if (prevImg) router.prefetch(`/${lang}/works/${id}/${prevImg.id}`);
+    if (nextImg) router.prefetch(`/${lang}/works/${id}/${nextImg.id}`);
   }, [router, lang, id, prevImg, nextImg]);
 
   const description =
@@ -72,11 +66,9 @@ export default function ImagePage() {
         </div>
 
         <div className="w-full">
-          <Image
+          <img
             src={img.src}
             alt={description || "Artwork image"}
-            width={img.width ?? 1200}
-            height={img.height ?? 800}
             className="object-contain w-full max-h-[55vh]"
           />
         </div>
@@ -150,11 +142,9 @@ export default function ImagePage() {
             ‹
           </button>
 
-          <Image
+          <img
             src={img.src}
             alt={description || "Artwork image"}
-            width={img.width ?? 1200}
-            height={img.height ?? 800}
             className="object-contain max-h-[85vh] rounded-lg w-full"
           />
 
