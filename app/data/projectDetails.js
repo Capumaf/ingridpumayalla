@@ -1,8 +1,8 @@
 export const projectDetails = {
-  "criaturas-del-bosque": {
+  "A-donde-fueron-las-criaturas-del-bosque": {
     title: {
-      es: "Criaturas del bosque",
-      en: "Creatures of the Forest"
+      es: "A Donde fueron las Criaturas del bosque",
+      en: "Where Did the Forest Creatures Go? "
     },
     introduction: {
       es: "Proyecto sobre la relación entre naturaleza, memoria y territorio.",
@@ -26,7 +26,7 @@ export const projectDetails = {
     },
     imageData: [
       { id: "1", src: "/Curiwarmi_Lunar.webp", width: 1200, height: 800 },
-      { id: "2", src: "/Curiwarmilunar2.webp", width: 1200, height: 800 },
+      { id: "2", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
       { id: "3", src: "/Curiwarmilunar3.webp", width: 1200, height: 800 }
     ]
   },

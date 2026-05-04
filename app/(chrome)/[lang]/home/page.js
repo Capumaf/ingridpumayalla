@@ -10,7 +10,7 @@ export default async function HomePage({ params }) {
         
         <div className="relative w-full aspect-[3/4] max-h-[75vh] mx-auto">
           <Image
-            src="/curiwarmiLunar2.png"
+            src="/CuriwarmiLunar2.webp"
             alt=""
             fill
             priority

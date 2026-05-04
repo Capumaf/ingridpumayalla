@@ -1,5 +1,5 @@
 export const WORK_ORDER = [
-  "criaturas-del-bosque",
+  "A-donde-fueron-las-criaturas-del-bosque",
   "curiwarmi-lunar",
   "cantos-matrios",
   "takij-pupu",
@@ -12,5 +12,4 @@ export const WORK_ORDER = [
   "las-dos-fridas",
   "linea-roja-paracas",
   "dar-a-luz-a-una-granada",
-  "residencias"
 ];
