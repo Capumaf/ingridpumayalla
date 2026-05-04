@@ -20,6 +20,7 @@ export default function ImagePage() {
     const footer = document.querySelector("footer");
     if (footer) footer.style.display = "none";
     document.body.style.overflow = "hidden";
+
     return () => {
       if (footer) footer.style.display = "";
       document.body.style.overflow = "";
@@ -36,16 +37,22 @@ export default function ImagePage() {
   const prevImg = images[currentIndex - 1] || null;
   const nextImg = images[currentIndex + 1] || null;
 
+  useEffect(() => {
+    [prevImg?.src, nextImg?.src].forEach((src) => {
+      if (!src) return;
+      const image = new window.Image();
+      image.src = src;
+    });
+  }, [prevImg?.src, nextImg?.src]);
+
   const description =
     img.description?.[lang] ??
     (typeof img.description === "string" ? img.description : "");
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-white">
-
       {/* ── MOBILE ── */}
       <div className="flex md:hidden flex-col w-full h-full px-5 pt-6 pb-8 justify-center gap-3">
-
         <div className="flex items-center justify-between">
           <Link
             href={`/${lang}/works/${id}`}
@@ -98,16 +105,15 @@ export default function ImagePage() {
           <p className="text-xs text-neutral-400 tracking-widest mb-1">
             {lang === "es" ? "Descripción técnica" : "Technical description"}
           </p>
-          <p className="text-xs text-neutral-600 leading-relaxed">{description}</p>
+          <p className="text-xs text-neutral-600 leading-relaxed">
+            {description}
+          </p>
         </div>
-
       </div>
 
       {/* ── DESKTOP ── */}
       <div className="hidden md:flex w-full max-w-6xl px-10 items-stretch gap-14">
-
         <div className="w-[220px] text-sm text-gray-800 flex flex-col">
-
           <Link
             href={`/${lang}/works/${id}`}
             className="text-xs tracking-widest text-gray-500 hover:text-black"
@@ -121,11 +127,9 @@ export default function ImagePage() {
             </h2>
             <p className="mb-6">{description}</p>
           </div>
-
         </div>
 
         <div className="relative w-full max-w-[720px] flex justify-center flex-col">
-
           <button
             onClick={() =>
               prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
@@ -166,11 +170,8 @@ export default function ImagePage() {
               {lang === "es" ? "Volver a trabajos" : "Back to works"} →
             </Link>
           )}
-
         </div>
-
       </div>
-
     </div>
   );
 }

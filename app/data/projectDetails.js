@@ -124,7 +124,11 @@ export const projectDetails = {
       { id: "2", src: "/pomade2.webp", width: 1200, height: 800 },
       { id: "3", src: "/pomade3.webp", width: 1200, height: 800 },
       { id: "4", src: "/pomade4.webp", width: 1200, height: 800 },
-      { id: "5", src: "/pomade5.webp", width: 1200, height: 800 }
+      { id: "5", src: "/pomade5.webp", width: 1200, height: 800 },
+      { id: "6", src: "/pomade6.webp", width: 1200, height: 800 },
+      { id: "7", src: "/pomade7.webp", width: 1200, height: 800 },
+      { id: "8", src: "/pomade8.webp", width: 1200, height: 800 },
+      { id: "9", src: "/pomade9.webp", width: 1200, height: 800 }
     ]
   },
 

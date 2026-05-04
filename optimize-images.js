@@ -17,17 +17,10 @@ files.forEach(async (file) => {
   const inputPath = path.join(inputDir, file);
   const outputPath = path.join(outputDir, file);
 
-  try {
-    await sharp(inputPath)
-      .resize({
-        width: 1600,
-        withoutEnlargement: true,
-      })
-      .webp({ quality: 70 })
-      .toFile(outputPath);
-
-    console.log(`✅ ${file} optimizado`);
-  } catch (err) {
-    console.error(`❌ error en ${file}`, err);
-  }
+  sharp(inputPath)
+    .resize({ width: 1600, withoutEnlargement: true })
+    .webp({ quality: 70 })
+    .toFile(outputPath)
+    .then(() => console.log(`✅ ${file}`))
+    .catch((err) => console.error(`❌ ${file}`, err));
 });
