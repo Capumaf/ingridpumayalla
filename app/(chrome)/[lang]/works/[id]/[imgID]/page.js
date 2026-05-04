@@ -13,7 +13,6 @@ export default function ImagePage() {
   const router = useRouter();
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
-
   const project = projectDetails[id];
 
   useEffect(() => {
@@ -45,13 +44,23 @@ export default function ImagePage() {
     });
   }, [prevImg?.src, nextImg?.src]);
 
+  useEffect(() => {
+    if (prevImg) {
+      router.prefetch(`/${lang}/works/${id}/${prevImg.id}`);
+    }
+
+    if (nextImg) {
+      router.prefetch(`/${lang}/works/${id}/${nextImg.id}`);
+    }
+  }, [router, lang, id, prevImg, nextImg]);
+
   const description =
     img.description?.[lang] ??
     (typeof img.description === "string" ? img.description : "");
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-white">
-      {/* ── MOBILE ── */}
+      {/* MOBILE */}
       <div className="flex md:hidden flex-col w-full h-full px-5 pt-6 pb-8 justify-center gap-3">
         <div className="flex items-center justify-between">
           <Link
@@ -111,7 +120,7 @@ export default function ImagePage() {
         </div>
       </div>
 
-      {/* ── DESKTOP ── */}
+      {/* DESKTOP */}
       <div className="hidden md:flex w-full max-w-6xl px-10 items-stretch gap-14">
         <div className="w-[220px] text-sm text-gray-800 flex flex-col">
           <Link

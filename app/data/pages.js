@@ -115,7 +115,7 @@ export const pages = {
       es: "Obras"
     },
     projects: [
-      { id: "criaturas-del-bosque", title: "¿A dónde fueron las criaturas del bosque?" },
+      { id: "A-donde-fueron-las-criaturas-del-bosque", title: "¿A dónde fueron las criaturas del bosque?" },
       { id: "curiwarmi-lunar", title: "Curiwarmi Lunar" },
       { id: "cantos-matrios", title: "Cantos Matrios" },
       { id: "takij-pupu", title: "Takij Pupu" },
