@@ -62,7 +62,6 @@ export default function ImagePage() {
             width={img.width ?? 1200}
             height={img.height ?? 800}
             className="object-contain w-full max-h-[55vh]"
-            priority
           />
         </div>
 
@@ -144,7 +143,6 @@ export default function ImagePage() {
             width={img.width ?? 1200}
             height={img.height ?? 800}
             className="object-contain max-h-[85vh] rounded-lg w-full"
-            priority
           />
 
           <button
