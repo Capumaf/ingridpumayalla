@@ -2,7 +2,6 @@
 
 import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { projectDetails } from "../../../../data/projectDetails";
 
 export default function WorkPage() {
@@ -21,7 +20,6 @@ export default function WorkPage() {
 
   return (
     <div className="h-full flex flex-col items-center justify-center px-6 gap-4">
-      {/* BACK */}
       <div className="w-full max-w-2xl">
         <Link
           href={`/${lang}/works`}
@@ -31,29 +29,23 @@ export default function WorkPage() {
         </Link>
       </div>
 
-      {/* TITLE */}
       <h1 className="text-2xl font-normal tracking-[0.15em] text-center">
         {project.title?.[lang]}
       </h1>
 
-      {/* IMAGE */}
       <Link href={`/${lang}/works/${id}/${cover.id}`} className="w-full max-w-2xl">
-        <Image
+        <img
           src={cover.src}
           alt={project.title?.[lang] || ""}
-          width={1200}
-          height={800}
           className="w-full max-h-[70vh] object-contain"
         />
       </Link>
 
-      {/* DESCRIPTION */}
       {description && (
         <p className="text-xs text-neutral-500 text-center max-w-lg">
           {description}
         </p>
       )}
-
     </div>
   );
 }
