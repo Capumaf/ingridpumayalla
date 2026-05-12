@@ -1,10 +1,10 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import { WORK_ORDER } from "../../../data/worksOrder";
-import { projectDetails } from "../../../data/projectDetails";
+import { projectDetails } from "@/data/projectDetails";
+import { WORK_ORDER } from "@/data/worksOrder";
 
 export default function WorksPage() {
   const pathname = usePathname();
@@ -13,8 +13,7 @@ export default function WorksPage() {
   return (
     <div className="w-full flex justify-center">
       <div className="w-full max-w-md px-6">
-
-          <h1 className="text-2xl font-normal tracking-[0.15em] mb-12 mt-16">
+        <h1 className="text-2xl font-normal tracking-[0.15em] mb-12 mt-16">
           {lang === "es" ? "Trabajos" : "Works"}
         </h1>
 
@@ -23,10 +22,7 @@ export default function WorksPage() {
             const project = projectDetails[id];
             if (!project) return null;
 
-            const title =
-              typeof project.title === "string"
-                ? project.title
-                : project.title?.[lang];
+            const sections = project.sections || [];
 
             return (
               <li key={id}>
@@ -34,13 +30,27 @@ export default function WorksPage() {
                   href={`/${lang}/works/${id}`}
                   className="text-xs text-neutral-600 hover:text-black transition-colors"
                 >
-                  {title}
+                  {project.title}
                 </Link>
+
+                {sections.length > 0 && (
+                  <ul className="mt-2 ml-4 space-y-1">
+                    {sections.map((section) => (
+                      <li key={section.id}>
+                        <Link
+                          href={`/${lang}/works/${id}/${section.id}`}
+                          className="text-[11px] text-neutral-400 hover:text-black transition-colors"
+                        >
+                          {section.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             );
           })}
         </ul>
-
       </div>
     </div>
   );

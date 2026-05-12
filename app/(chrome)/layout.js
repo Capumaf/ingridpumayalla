@@ -130,17 +130,17 @@ export default function ChromeLayout({ children }) {
           </div>
         </div>
 
-      ) : isWorkDetail ? (
-        <div className="h-dvh flex flex-col overflow-hidden">
-          <main className="flex-1 overflow-hidden min-h-0">
-            {React.isValidElement(children)
-              ? React.cloneElement(children, { lang })
-              : children}
-          </main>
-          <div className="pb-6 pt-2 text-center">
-            <Footer />
-          </div>
-        </div>
+              ) : isWorkDetail ? (
+  <div className="min-h-dvh flex flex-col">
+    <main className="flex-1">
+      {React.isValidElement(children)
+        ? React.cloneElement(children, { lang })
+        : children}
+    </main>
+    <div className="pb-6 pt-2 text-center">
+      <Footer />
+    </div>
+  </div>
 
       ) : (
         <div className="min-h-dvh flex flex-col">

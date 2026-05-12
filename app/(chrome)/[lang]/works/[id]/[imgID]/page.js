@@ -104,7 +104,7 @@ export default function ImagePage() {
 
         <div>
           <p className="text-xs text-neutral-400 tracking-widest mb-1">
-            {lang === "es" ? "Descripción técnica" : "Technical description"}
+            {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
           </p>
           <p className="text-xs text-neutral-600 leading-relaxed">
             {description}
@@ -124,7 +124,7 @@ export default function ImagePage() {
 
           <div className="mt-6">
             <h2 className="text-base font-semibold mb-1">
-              {lang === "es" ? "Descripción técnica" : "Technical description"}
+              {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
             </h2>
             <p className="mb-6">{description}</p>
           </div>

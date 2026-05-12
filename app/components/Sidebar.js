@@ -6,11 +6,12 @@ import { useEffect, useRef, useState } from "react";
 import { pages } from "@/data/pages";
 
 const navItems = [
-  { href: "/bio", key: "bio" },
-  { href: "/works", key: "works" },
-  { href: "/press", key: "press" },
-  { href: "/cv", key: "cv" },
-  { href: "/contact", key: "contact" },
+  { href: "/bio", label: { en: "Biography", es: "Biografía" } },
+  { href: "/works", label: { en: "Works", es: "Obras" } },
+  { href: "/press", label: { en: "Press & Publications", es: "Prensa & Publicaciones" } },
+  { href: "/residencies", label: { en: "Residencies", es: "Residencias" } },
+  { href: "/cv", label: { en: "CV", es: "CV" } },
+  { href: "/contact", label: { en: "Contact", es: "Contacto" } },
 ];
 
 function isActive(pathname, href) {
@@ -19,7 +20,7 @@ function isActive(pathname, href) {
 }
 
 function withLang(href, lang) {
-  return `/${lang}${href}`; // ✅ SIN ?lang
+  return `/${lang}${href}`;
 }
 
 export default function Sidebar({ lang = "en", toggleLang }) {
@@ -38,6 +39,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
 
   const scheduleAutoClose = () => {
     clearCloseTimer();
+
     closeTimerRef.current = setTimeout(() => {
       setIndexOpen(false);
       closeTimerRef.current = null;
@@ -52,6 +54,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
   useEffect(() => {
     if (indexOpen) scheduleAutoClose();
     else clearCloseTimer();
+
     return () => clearCloseTimer();
   }, [indexOpen]);
 
@@ -78,7 +81,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
           </button>
         </div>
 
-        {/* INDEX toggle */}
+        {/* INDEX */}
         <div className="mt-4">
           <button
             type="button"
@@ -86,6 +89,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
             className="group inline-flex items-center gap-2 text-xs uppercase text-neutral-400 hover:text-neutral-700"
           >
             <span>{lang === "es" ? "Índice" : "Index"}</span>
+
             <span
               className={`transition-transform ${
                 indexOpen ? "rotate-90" : ""
@@ -99,13 +103,14 @@ export default function Sidebar({ lang = "en", toggleLang }) {
 
           <div
             className={`overflow-hidden transition-all ${
-              indexOpen ? "max-h-28 opacity-100" : "max-h-0 opacity-0"
+              indexOpen ? "max-h-52 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <nav className="pt-4 pb-2">
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 {navItems.map((item) => {
                   const active = isActive(pathname, item.href);
+
                   return (
                     <li key={item.href}>
                       <Link
@@ -120,8 +125,11 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                           setIndexOpen(false);
                         }}
                       >
-                        {active && <span className="mr-2 text-neutral-300">—</span>}
-                        {pages[item.key].title[lang]}
+                        {active && (
+                          <span className="mr-2 text-neutral-300">—</span>
+                        )}
+
+                        {item.label[lang]}
                       </Link>
                     </li>
                   );
@@ -173,8 +181,11 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                           : "text-neutral-400 hover:text-neutral-700"
                       }`}
                     >
-                      {active && <span className="mr-2 text-neutral-300">—</span>}
-                      {pages[item.key].title[lang]}
+                      {active && (
+                        <span className="mr-2 text-neutral-300">—</span>
+                      )}
+
+                      {item.label[lang]}
                     </Link>
                   </li>
                 );

@@ -7,46 +7,34 @@ export default async function Bio({ params }) {
   const bio = pages.bio;
 
   return (
-    <article className="mt-32">
-      <div className="px-6 md:pl-40 md:pr-0">
-
-        {/* TITLE */}
-        <h1 className="text-[20px] md:text-[22px] tracking-wide text-black mb-12">
-          {bio.title[lang]}
-        </h1>
-
-        {/* BIO TEXT */}
-        <div
-          className="body-text"
-          dangerouslySetInnerHTML={{ __html: bio.text[lang] }}
-        />
-
+    <article className="pt-14 md:pt-16">
+      <div className="px-6 md:px-0 max-w-[760px] mx-auto">
+        
         {/* IMAGE */}
-        <figure className="mt-16 mb-20">
-          <div className="w-full max-w-[460px]">
+        <figure className="mb-24 flex flex-col items-center">
+          <div className="w-full max-w-[520px]">
             <Image
               src="/SelfportraitWithHugstone.webp"
-              alt=""
+              alt="Selfportrait with Hugstone"
               width={720}
               height={480}
+              priority
               className="w-full h-auto object-contain"
             />
           </div>
 
-          <figcaption className="mt-3 text-[11px] text-neutral-400">
+          <figcaption className="mt-4 w-full max-w-[520px] text-right text-[11px] tracking-wide text-neutral-400">
             Selfportrait with Hugstone, 2018.
           </figcaption>
         </figure>
 
-        {/* STATEMENT */}
-        <h2 className="text-[20px] md:text-[22px] tracking-wide text-black mb-12">
-          {bio.statementTitle[lang]}
-        </h2>
-
-        <div
-          className="body-text"
-          dangerouslySetInnerHTML={{ __html: bio.statement[lang] }}
-        />
+        {/* BIO TEXT */}
+        <div className="flex justify-center">
+          <div
+            className="body-text max-w-[520px]"
+            dangerouslySetInnerHTML={{ __html: bio.text[lang] }}
+          />
+        </div>
 
       </div>
     </article>
