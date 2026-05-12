@@ -193,7 +193,9 @@ Curator of the exhibition
     },
 
     imageData: [
-      { id: "1", src: "/Curiwarmi_Lunar.webp", width: 1200, height: 800 }
+      { id: "1", src: "/Curiwarmi_Lunar.webp", width: 1200, height: 800 },
+      { id: "1", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
+      { id: "1", src: "/CuriwarmiLunar3.webp", width: 1200, height: 800 }
     ]
   },
 
