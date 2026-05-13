@@ -269,22 +269,23 @@ export default function WorkCover({ id, lang, cover, title }) {
             }}
           >
             <svg
-              width="96"
-              height="22"
-              viewBox="0 0 96 22"
-              fill="none"
-              className="shrink-0"
-              aria-hidden="true"
-            >
-              <path
-                ref={curveRef}
-                d="M2 14 C14 3, 25 3, 36 12 C47 21, 63 16, 94 6"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
+  width="112"
+  height="28"
+  viewBox="0 0 112 28"
+  fill="none"
+  className="shrink-0"
+  aria-hidden="true"
+>
+  <path
+    ref={curveRef}
+    d="M2 18 L18 18 L18 12 L34 12 L34 19 L52 19 L52 10 L70 10 L70 16 L88 16 L88 8 L110 8"
+    stroke="currentColor"
+    strokeWidth="1.4"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    fill="none"
+  />
+</svg>
 
             <span
               className={`
