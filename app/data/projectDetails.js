@@ -194,8 +194,8 @@ Curator of the exhibition
 
     imageData: [
       { id: "1", src: "/Curiwarmi_Lunar.webp", width: 1200, height: 800 },
-      { id: "1", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
-      { id: "1", src: "/CuriwarmiLunar3.webp", width: 1200, height: 800 }
+      { id: "2", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
+      { id: "3", src: "/CuriwarmiLunar3.webp", width: 1200, height: 800 }
     ]
   },
 
@@ -434,7 +434,6 @@ Curator of the exhibition
       { id: "7", src: "/camino7.webp", width: 1200, height: 800 },
       { id: "8", src: "/camino8.webp", width: 1200, height: 800 },
       { id: "9", src: "/camino9.webp", width: 1200, height: 800 },
-      { id: "10", src: "/camino10.webp", width: 1200, height: 800 }
     ]
   },
 

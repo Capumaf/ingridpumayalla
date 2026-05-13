@@ -8,6 +8,7 @@
   body {
     @apply text-black font-normal tracking-wide;
     background: #f5f5f3;
+    overflow-x: hidden;
   }
 
   a {
@@ -15,7 +16,7 @@
   }
 
   .body-text {
-    @apply text-[15px] md:text-[16px] text-neutral-700;
+    @apply text-[12px] md:text-[20px] text-neutral-700;
     line-height: 2.1;
     letter-spacing: 0.015em;
     max-width: 560px;
@@ -26,12 +27,14 @@
     margin-bottom: 2rem;
   }
 
+  /* ─────────────────────────────────────────
+     FADE IN (imagen de portada)
+  ───────────────────────────────────────── */
   @keyframes fadeIn {
     from {
       opacity: 0;
       transform: translateY(12px);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
@@ -40,5 +43,91 @@
 
   .animate-fadeIn {
     animation: fadeIn 1.4s ease forwards;
+  }
+
+  /* ─────────────────────────────────────────
+     HILO — estado de reposo
+     El path empieza completamente invisible.
+     stroke-dasharray = longitud total del path (~95px).
+     stroke-dashoffset = misma longitud = sin trazar.
+  ───────────────────────────────────────── */
+  .thread-path {
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+    opacity: 0;
+    transition: opacity 0s;
+  }
+
+  /* ─────────────────────────────────────────
+     HILO — hover: se dibuja orgánicamente
+     Solo se activa cuando NO está en modo
+     isEntering (controlado por .thread-idle).
+  ───────────────────────────────────────── */
+  @keyframes weaveThread {
+    0% {
+      stroke-dashoffset: 95;
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+
+  /*
+    El selector apunta al path dentro del grupo
+    que tiene la clase .group, pero SOLO si el
+    contenedor NO tiene la clase .is-entering.
+    Así el hover no interfiere con el click.
+  */
+  .group:not(.is-entering):hover .thread-path {
+    animation: weaveThread 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* ─────────────────────────────────────────
+     HILO — click: serpiente que sale
+     Parte exactamente desde donde termina
+     weaveThread: dashoffset 0, hilo completo.
+     La serpiente se forma achicando el dash
+     y desplazando el offset hasta salir.
+  ───────────────────────────────────────── */
+  @keyframes snakeThreadOut {
+    0% {
+      stroke-dasharray: 95 0;
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    20% {
+      stroke-dasharray: 48 47;
+      stroke-dashoffset: -10;
+      opacity: 1;
+    }
+    55% {
+      stroke-dasharray: 28 67;
+      stroke-dashoffset: -52;
+      opacity: 0.9;
+    }
+    85% {
+      stroke-dasharray: 10 85;
+      stroke-dashoffset: -90;
+      opacity: 0.5;
+    }
+    100% {
+      stroke-dasharray: 4 91;
+      stroke-dashoffset: -95;
+      opacity: 0;
+    }
+  }
+
+  /*
+    .thread-active se aplica cuando isEntering = true.
+    Cancela cualquier animación de hover heredada
+    y corre solo snakeThreadOut.
+  */
+  .thread-active {
+    animation: snakeThreadOut 900ms cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
   }
 }

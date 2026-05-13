@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams, useRouter, usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { projectDetails } from "../../../../../data/projectDetails";
@@ -11,6 +11,8 @@ export default function ImagePage() {
   const pathname = usePathname();
   const router = useRouter();
 
+  const [visible, setVisible] = useState(false);
+
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const project = projectDetails[id];
 
@@ -19,7 +21,10 @@ export default function ImagePage() {
     if (footer) footer.style.display = "none";
     document.body.style.overflow = "hidden";
 
+    const t = requestAnimationFrame(() => setVisible(true));
+
     return () => {
+      cancelAnimationFrame(t);
       if (footer) footer.style.display = "";
       document.body.style.overflow = "";
     };
@@ -53,7 +58,13 @@ export default function ImagePage() {
     (typeof img.description === "string" ? img.description : "");
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white">
+    <div
+      className="fixed inset-0 flex items-center justify-center bg-white"
+      style={{
+        opacity: visible ? 1 : 0,
+        transition: "opacity 600ms ease",
+      }}
+    >
       {/* MOBILE */}
       <div className="flex md:hidden flex-col w-full h-full px-5 pt-6 pb-8 justify-center gap-3">
         <div className="flex items-center justify-between">
@@ -65,7 +76,14 @@ export default function ImagePage() {
           </Link>
         </div>
 
-        <div className="w-full">
+        <div
+          className="w-full"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(-10px)",
+            transition: "opacity 700ms ease 100ms, transform 700ms ease 100ms",
+          }}
+        >
           <img
             src={img.src}
             alt={description || "Artwork image"}
@@ -114,7 +132,14 @@ export default function ImagePage() {
 
       {/* DESKTOP */}
       <div className="hidden md:flex w-full max-w-6xl px-10 items-stretch gap-14">
-        <div className="w-[220px] text-sm text-gray-800 flex flex-col">
+        <div
+          className="w-[220px] text-sm text-gray-800 flex flex-col"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(-8px)",
+            transition: "opacity 700ms ease 150ms, transform 700ms ease 150ms",
+          }}
+        >
           <Link
             href={`/${lang}/works/${id}`}
             className="text-xs tracking-widest text-gray-500 hover:text-black"
@@ -130,7 +155,14 @@ export default function ImagePage() {
           </div>
         </div>
 
-        <div className="relative w-full max-w-[720px] flex justify-center flex-col">
+        <div
+          className="relative w-full max-w-[720px] flex justify-center flex-col"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(-10px)",
+            transition: "opacity 800ms ease 80ms, transform 800ms ease 80ms",
+          }}
+        >
           <button
             onClick={() =>
               prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
