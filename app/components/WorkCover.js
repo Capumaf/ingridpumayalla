@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
@@ -56,15 +55,11 @@ export default function WorkCover({ id, lang, cover, title }) {
         const g = data[i + 1];
         const b = data[i + 2];
 
-        const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
-
-        total += luminance;
+        total += 0.299 * r + 0.587 * g + 0.114 * b;
         count++;
       }
 
-      const average = total / count;
-
-      setLabelTone(average > 145 ? "light" : "dark");
+      setLabelTone(total / count > 145 ? "light" : "dark");
     } catch {
       setLabelTone("dark");
     }
@@ -74,7 +69,6 @@ export default function WorkCover({ id, lang, cover, title }) {
     if (!linkRef.current || !perimRef.current || !curveRef.current) return;
 
     const rect = linkRef.current.getBoundingClientRect();
-
     if (!rect.width || !rect.height) return;
 
     const W = rect.width;
@@ -82,7 +76,6 @@ export default function WorkCover({ id, lang, cover, title }) {
     const pad = 20;
 
     const cLen = curveRef.current.getTotalLength();
-
     curveLen.current = cLen;
 
     gsap.set(curveRef.current, {
@@ -102,7 +95,6 @@ export default function WorkCover({ id, lang, cover, title }) {
     perimRef.current.setAttribute("d", d);
 
     const pLen = perimRef.current.getTotalLength();
-
     perimLen.current = pLen;
 
     perimRef.current.style.strokeDasharray = `0 ${pLen}`;
@@ -112,41 +104,28 @@ export default function WorkCover({ id, lang, cover, title }) {
     perimBuilt.current = true;
   };
 
+  const handleImageReady = () => {
+    requestAnimationFrame(() => {
+      buildPerimeter();
+      detectLabelTone();
+    });
+  };
+
   useEffect(() => {
-    const img = imgRef.current;
-
-    if (!img) return;
-
-    const handleLoad = () => {
-      requestAnimationFrame(() => {
-        buildPerimeter();
-        detectLabelTone();
-      });
-    };
-
-    if (img.complete) handleLoad();
-
-    img.addEventListener("load", handleLoad);
+    handleImageReady();
     window.addEventListener("resize", buildPerimeter);
 
     return () => {
-      img.removeEventListener("load", handleLoad);
       window.removeEventListener("resize", buildPerimeter);
     };
   }, []);
 
   useEffect(() => {
     const isTouch = window.matchMedia("(hover: none)").matches;
-
     if (!isTouch) return;
 
-    const showTimer = setTimeout(() => {
-      setShowHint(true);
-    }, 1800);
-
-    const hideTimer = setTimeout(() => {
-      setShowHint(false);
-    }, 5200);
+    const showTimer = setTimeout(() => setShowHint(true), 1800);
+    const hideTimer = setTimeout(() => setShowHint(false), 5200);
 
     return () => {
       clearTimeout(showTimer);
@@ -159,21 +138,12 @@ export default function WorkCover({ id, lang, cover, title }) {
 
     gsap.killTweensOf(curveRef.current);
 
-    if (isHovered || showHint) {
-      gsap.to(curveRef.current, {
-        strokeDashoffset: 0,
-        opacity: 1,
-        duration: 0.9,
-        ease: "power2.out",
-      });
-    } else {
-      gsap.to(curveRef.current, {
-        strokeDashoffset: curveLen.current,
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.in",
-      });
-    }
+    gsap.to(curveRef.current, {
+      strokeDashoffset: isHovered || showHint ? 0 : curveLen.current,
+      opacity: isHovered || showHint ? 1 : 0,
+      duration: isHovered || showHint ? 0.9 : 0.5,
+      ease: isHovered || showHint ? "power2.out" : "power2.in",
+    });
   }, [isHovered, isEntering, showHint]);
 
   useEffect(() => {
@@ -209,25 +179,9 @@ export default function WorkCover({ id, lang, cover, title }) {
     });
 
     tl.current
-      .to(proxy, {
-        drawn: snake,
-        duration: 0.3,
-        ease: "power2.out",
-      })
-      .to(proxy, {
-        tail: travelEnd,
-        duration: 1.8,
-        ease: "power1.inOut",
-      })
-      .to(
-        proxy,
-        {
-          drawn: 0,
-          duration: 0.45,
-          ease: "power2.in",
-        },
-        "-=0.45"
-      );
+      .to(proxy, { drawn: snake, duration: 0.3, ease: "power2.out" })
+      .to(proxy, { tail: travelEnd, duration: 1.8, ease: "power1.inOut" })
+      .to(proxy, { drawn: 0, duration: 0.45, ease: "power2.in" }, "-=0.45");
   }, [isEntering, href, router]);
 
   const handleClick = (e) => {
@@ -259,9 +213,8 @@ export default function WorkCover({ id, lang, cover, title }) {
           ref={imgRef}
           src={cover.src}
           alt={title || ""}
-          width={cover.width || 1200}
-          height={cover.height || 800}
-          priority
+          draggable={false}
+          onLoad={handleImageReady}
           className={`
             w-full max-w-[92vw] md:max-w-[640px]
             h-auto max-h-[74vh] md:max-h-[72vh]
@@ -290,7 +243,6 @@ export default function WorkCover({ id, lang, cover, title }) {
               absolute bottom-5 left-5 md:bottom-7 md:left-7
               flex items-center gap-3
               transition-transform duration-500
-
               ${isLightArea ? "text-black" : "text-white"}
             `}
             style={{
@@ -325,9 +277,7 @@ export default function WorkCover({ id, lang, cover, title }) {
                 tracking-[0.2em] md:tracking-[0.24em]
                 uppercase
                 font-light
-                transition-all
-                duration-500
-
+                transition-all duration-500
                 px-2.5 md:px-3
                 py-[5px] md:py-[6px]
                 rounded-full
@@ -341,10 +291,7 @@ export default function WorkCover({ id, lang, cover, title }) {
               `}
               style={
                 isEntering
-                  ? {
-                      opacity: 0,
-                      transform: "translateX(6px)",
-                    }
+                  ? { opacity: 0, transform: "translateX(6px)" }
                   : undefined
               }
             >

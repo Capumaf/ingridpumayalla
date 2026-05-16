@@ -209,10 +209,10 @@ Curator of the exhibition
     },
 
     imageData: [
-      { id: "1", src: "/Paracas1.webp", width: 1200, height: 800 },
-      { id: "2", src: "/Paracas2.webp", width: 1200, height: 800 },
-      { id: "3", src: "/Paracas3.webp", width: 1200, height: 800 },
-      { id: "4", src: "/Paracas4.webp", width: 1200, height: 800 }
+      { id: "1", src: "/paracas1.webp", width: 1200, height: 800 },
+      { id: "2", src: "/paracas2.webp", width: 1200, height: 800 },
+      { id: "3", src: "/paracas3.webp", width: 1200, height: 800 },
+      { id: "4", src: "/paracas4.webp", width: 1200, height: 800 }
     ]
   },
 
