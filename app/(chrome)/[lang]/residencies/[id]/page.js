@@ -1,62 +1,66 @@
+"use client";
+
+import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+
 import { residencyDetails } from "@/data/residencyDetails";
+import ResidencyCover from "@/components/ResidencyCover";
 
-export default async function ResidencyDetailPage({ params }) {
-  const { id, lang } = await params;
+export default function ResidencyDetailPage() {
+  const { id } = useParams();
+  const pathname = usePathname();
 
+  const lang = pathname.startsWith("/es") ? "es" : "en";
   const residency = residencyDetails[id];
 
   if (!residency) {
-    notFound();
+    return (
+      <div className="px-6 pt-20">
+        <p className="text-sm text-neutral-500">Residency not found</p>
+      </div>
+    );
   }
 
-  return (
-    <article className="w-full flex justify-center">
-      <div className="w-full max-w-3xl px-6 pt-16 pb-24">
+  const cover = residency.imageData?.[0];
 
-        {/* BACK */}
-        <div className="mb-12">
+  const title =
+    typeof residency.title === "string"
+      ? residency.title
+      : residency.title?.[lang];
+
+  const text =
+    typeof residency.introduction === "string"
+      ? residency.introduction
+      : residency.introduction?.[lang] || residency.introduction?.en || "";
+
+  return (
+    <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
+      <div className="w-full max-w-5xl md:pl-[120px] lg:pl-[160px]">
+        {/* Botón de regreso */}
+        <div className="mb-6">
           <Link
             href={`/${lang}/residencies`}
-            className="text-[11px] tracking-[0.14em] text-neutral-400 hover:text-black transition-colors"
+            className="text-xs tracking-widest text-gray-500 hover:text-black transition-colors"
           >
-            ← Back to Residencies
+            ← {lang === "es" ? "Volver a residencias" : "Back to residencies"}
           </Link>
         </div>
 
-        {/* TITLE */}
-        <h1 className="text-2xl font-normal tracking-[0.12em] mb-12">
-          {residency.title}
-        </h1>
+        <ResidencyCover id={id} lang={lang} cover={cover} title={title} />
 
-        {/* INTRO */}
-        {residency.introduction && (
-          <p className="text-sm text-neutral-500 mb-12 leading-relaxed">
-            {residency.introduction}
-          </p>
-        )}
+        <div className="max-w-[520px] mx-auto mt-8 md:mt-32 px-2">
+          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center">
+            {title}
+          </h1>
 
-        {/* IMAGES */}
-        <div className="space-y-12">
-          {residency.imageData?.map((image) => (
-            <figure key={image.id}>
-              <img
-                src={image.src}
-                alt=""
-                className="w-full h-auto object-cover"
-              />
-
-              {image.caption && (
-                <figcaption className="mt-3 text-[11px] text-neutral-400">
-                  {image.caption}
-                </figcaption>
-              )}
-            </figure>
-          ))}
+          {text && (
+            <div
+              className="body-text max-w-[520px]"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
+          )}
         </div>
-
       </div>
-    </article>
+    </div>
   );
 }

@@ -195,7 +195,8 @@ Curator of the exhibition
     imageData: [
       { id: "1", src: "/Curiwarmi_Lunar.webp", width: 1200, height: 800 },
       { id: "2", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
-      { id: "3", src: "/CuriwarmiLunar3.webp", width: 1200, height: 800 }
+      { id: "3", src: "/CuriwarmiLunar3.webp", width: 1200, height: 800 },
+      { id: "4", src: "/CuriwarmiLunar4.webp", width: 1200, height: 800 },
     ]
   },
 
@@ -226,7 +227,8 @@ Curator of the exhibition
     imageData: [
       { id: "1", src: "/huangamarca1.webp", width: 1200, height: 800 },
       { id: "2", src: "/huangamarca2.webp", width: 1200, height: 800 },
-      { id: "3", src: "/huangamarca3.webp", width: 1200, height: 800 }
+      { id: "3", src: "/huangamarca3.webp", width: 1200, height: 800 },
+      { id: "4", src: "/huangamarca4.webp", width: 1200, height: 800 }
     ]
   },
 
@@ -296,8 +298,8 @@ Curator of the exhibition
     ]
   },
 
-  "hilos-que-resisten": {
-    title: "Hilos que Resisten",
+  "rastreando": {
+    title: "Rastreando",
 
     text: {
       es: `<p></p>`,

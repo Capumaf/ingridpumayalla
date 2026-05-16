@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function WorkCover({ id, lang, cover, title }) {
+export default function ResidencyCover({ id, lang, cover, title }) {
   const router = useRouter();
 
   const [isHovered, setIsHovered] = useState(false);
@@ -25,7 +25,7 @@ export default function WorkCover({ id, lang, cover, title }) {
 
   if (!cover) return null;
 
-  const href = `/${lang}/works/${id}/${cover.id}`;
+  const href = `/${lang}/residencies/${id}/${cover.id}`;
 
   const detectLabelTone = () => {
     const img = imgRef.current;
@@ -73,7 +73,6 @@ export default function WorkCover({ id, lang, cover, title }) {
     if (!linkRef.current || !perimRef.current || !curveRef.current) return;
 
     const rect = linkRef.current.getBoundingClientRect();
-
     if (!rect.width || !rect.height) return;
 
     const W = rect.width;
@@ -81,7 +80,6 @@ export default function WorkCover({ id, lang, cover, title }) {
     const pad = 20;
 
     const cLen = curveRef.current.getTotalLength();
-
     curveLen.current = cLen;
 
     gsap.set(curveRef.current, {
@@ -101,7 +99,6 @@ export default function WorkCover({ id, lang, cover, title }) {
     perimRef.current.setAttribute("d", d);
 
     const pLen = perimRef.current.getTotalLength();
-
     perimLen.current = pLen;
 
     perimRef.current.style.strokeDasharray = `0 ${pLen}`;
@@ -113,7 +110,6 @@ export default function WorkCover({ id, lang, cover, title }) {
 
   useEffect(() => {
     const img = imgRef.current;
-
     if (!img) return;
 
     const handleLoad = () => {
@@ -189,7 +185,6 @@ export default function WorkCover({ id, lang, cover, title }) {
     gsap.to(curveRef.current, { opacity: 0, duration: 0.2 });
 
     const proxy = { drawn: 0, tail: 0 };
-
     el.style.opacity = "1";
 
     tl.current = gsap.timeline({
@@ -231,6 +226,7 @@ export default function WorkCover({ id, lang, cover, title }) {
 
   const handleClick = (e) => {
     e.preventDefault();
+
     if (isEntering) return;
 
     if (!perimRef.current || !perimLen.current || perimLen.current === 0) {
@@ -252,7 +248,7 @@ export default function WorkCover({ id, lang, cover, title }) {
         onMouseEnter={() => !isEntering && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className="relative inline-block overflow-hidden max-w-[92vw] md:max-w-[640px]"
-        aria-label={lang === "es" ? "Ver serie" : "View series"}
+        aria-label={lang === "es" ? "Ver residencia" : "View residency"}
       >
         <img
           ref={imgRef}
@@ -344,7 +340,7 @@ export default function WorkCover({ id, lang, cover, title }) {
                   : undefined
               }
             >
-              {lang === "es" ? "Ver serie" : "View series"}
+              {lang === "es" ? "Ver residencia" : "View residency"}
             </span>
           </div>
         </div>

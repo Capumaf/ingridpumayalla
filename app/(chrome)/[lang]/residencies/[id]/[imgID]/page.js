@@ -1,23 +1,23 @@
 "use client";
 
 import { useParams, useRouter, usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
-import { projectDetails } from "../../../../../data/projectDetails";
+import { residencyDetails } from "@/data/residencyDetails";
 
-export default function ImagePage() {
+export default function ResidencyImagePage() {
   const { id, imgID } = useParams();
   const pathname = usePathname();
   const router = useRouter();
 
   const [visible, setVisible] = useState(false);
-
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
-  const project = projectDetails[id];
+  const residency = residencyDetails[id];
 
   useEffect(() => {
     const footer = document.querySelector("footer");
@@ -33,33 +33,37 @@ export default function ImagePage() {
     };
   }, []);
 
-  if (!project || !project.imageData) return <div>Proyecto no encontrado.</div>;
+  if (!residency || !residency.imageData) {
+    return <div>Residency not found.</div>;
+  }
 
-  const images = project.imageData;
+  const images = residency.imageData;
   const currentIndex = images.findIndex((i) => i.id === imgID);
-  if (currentIndex === -1) return <div>Imagen no encontrada.</div>;
+
+  if (currentIndex === -1) {
+    return <div>Image not found.</div>;
+  }
 
   const img = images[currentIndex];
   const prevImg = images[currentIndex - 1] || null;
   const nextImg = images[currentIndex + 1] || null;
-
   const handleTouchStart = (e) => {
-    touchStartX.current = e.changedTouches[0].clientX;
-  };
+  touchStartX.current = e.changedTouches[0].clientX;
+};
 
-  const handleTouchEnd = (e) => {
-    touchEndX.current = e.changedTouches[0].clientX;
+const handleTouchEnd = (e) => {
+  touchEndX.current = e.changedTouches[0].clientX;
 
-    const distance = touchStartX.current - touchEndX.current;
+  const distance = touchStartX.current - touchEndX.current;
 
-    if (distance > 60 && nextImg) {
-      router.push(`/${lang}/works/${id}/${nextImg.id}`);
-    }
+  if (distance > 60 && nextImg) {
+    router.push(`/${lang}/residencies/${id}/${nextImg.id}`);
+  }
 
-    if (distance < -60 && prevImg) {
-      router.push(`/${lang}/works/${id}/${prevImg.id}`);
-    }
-  };
+  if (distance < -60 && prevImg) {
+    router.push(`/${lang}/residencies/${id}/${prevImg.id}`);
+  }
+};
 
   useEffect(() => {
     [prevImg?.src, nextImg?.src].forEach((src) => {
@@ -70,19 +74,22 @@ export default function ImagePage() {
   }, [prevImg?.src, nextImg?.src]);
 
   useEffect(() => {
-    if (prevImg) router.prefetch(`/${lang}/works/${id}/${prevImg.id}`);
-    if (nextImg) router.prefetch(`/${lang}/works/${id}/${nextImg.id}`);
+    if (prevImg) router.prefetch(`/${lang}/residencies/${id}/${prevImg.id}`);
+    if (nextImg) router.prefetch(`/${lang}/residencies/${id}/${nextImg.id}`);
   }, [router, lang, id, prevImg, nextImg]);
 
   const description =
     img.description?.[lang] ??
     (typeof img.description === "string" ? img.description : "");
 
+  const detailsTitle =
+    lang === "es" ? "Detalles de la residencia" : "Residency Details";
+
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-white"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+       className="fixed inset-0 flex items-center justify-center bg-white"
+  onTouchStart={handleTouchStart}
+  onTouchEnd={handleTouchEnd}
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 600ms ease",
@@ -92,10 +99,10 @@ export default function ImagePage() {
       <div className="flex md:hidden flex-col w-full h-full px-5 pt-6 pb-8 justify-center gap-3">
         <div className="flex items-center justify-between">
           <Link
-            href={`/${lang}/works/${id}`}
+            href={`/${lang}/residencies/${id}`}
             className="text-xs tracking-widest text-gray-500 hover:text-black"
           >
-            ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
+            ← {lang === "es" ? "Volver a residencia" : "Back to residency"}
           </Link>
         </div>
 
@@ -109,7 +116,7 @@ export default function ImagePage() {
         >
           <img
             src={img.src}
-            alt={description || "Artwork image"}
+            alt={description || residency.title || "Residency image"}
             className="object-contain w-full max-h-[55vh]"
           />
         </div>
@@ -117,7 +124,8 @@ export default function ImagePage() {
         <div className="flex items-center justify-between">
           <button
             onClick={() =>
-              prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
+              prevImg &&
+              router.push(`/${lang}/residencies/${id}/${prevImg.id}`)
             }
             className={`text-xs tracking-widest text-gray-500 hover:text-black ${
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -128,14 +136,16 @@ export default function ImagePage() {
 
           {!nextImg ? (
             <Link
-              href={`/${lang}/works`}
+              href={`/${lang}/residencies`}
               className="text-xs tracking-widest text-gray-500 hover:text-black"
             >
-              {lang === "es" ? "Volver a trabajos" : "Back to works"} →
+              {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
             </Link>
           ) : (
             <button
-              onClick={() => router.push(`/${lang}/works/${id}/${nextImg.id}`)}
+              onClick={() =>
+                router.push(`/${lang}/residencies/${id}/${nextImg.id}`)
+              }
               className="text-xs tracking-widest text-gray-500 hover:text-black"
             >
               →
@@ -145,10 +155,10 @@ export default function ImagePage() {
 
         <div>
           <p className="text-xs text-neutral-400 tracking-widest mb-1">
-            {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
+            {detailsTitle}
           </p>
           <p className="text-xs text-neutral-600 leading-relaxed">
-            {description}
+            {description || residency.introduction || residency.title}
           </p>
         </div>
       </div>
@@ -164,17 +174,24 @@ export default function ImagePage() {
           }}
         >
           <Link
-            href={`/${lang}/works/${id}`}
+            href={`/${lang}/residencies/${id}`}
             className="text-xs tracking-widest text-gray-500 hover:text-black"
           >
-            ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
+            ← {lang === "es" ? "Volver a residencia" : "Back to residency"}
           </Link>
 
           <div className="mt-6">
             <h2 className="text-base font-semibold mb-1">
-              {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
+              {detailsTitle}
             </h2>
-            <p className="mb-6">{description}</p>
+
+            <p className="mb-3 text-neutral-500">
+              {residency.title}
+            </p>
+
+            <p className="mb-6">
+              {description || residency.introduction || ""}
+            </p>
           </div>
         </div>
 
@@ -188,7 +205,8 @@ export default function ImagePage() {
         >
           <button
             onClick={() =>
-              prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
+              prevImg &&
+              router.push(`/${lang}/residencies/${id}/${prevImg.id}`)
             }
             className={`absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -199,15 +217,15 @@ export default function ImagePage() {
 
           <img
             src={img.src}
-            alt={description || "Artwork image"}
+            alt={description || residency.title || "Residency image"}
             className="object-contain max-h-[85vh] rounded-lg w-full"
           />
 
           <button
             onClick={() =>
               nextImg
-                ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
-                : router.push(`/${lang}/works/${id}`)
+                ? router.push(`/${lang}/residencies/${id}/${nextImg.id}`)
+                : router.push(`/${lang}/residencies/${id}`)
             }
             className={`absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
               nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -218,10 +236,10 @@ export default function ImagePage() {
 
           {!nextImg && (
             <Link
-              href={`/${lang}/works`}
+              href={`/${lang}/residencies`}
               className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-black"
             >
-              {lang === "es" ? "Volver a trabajos" : "Back to works"} →
+              {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
             </Link>
           )}
         </div>

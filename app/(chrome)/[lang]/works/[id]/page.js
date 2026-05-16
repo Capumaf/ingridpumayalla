@@ -57,7 +57,12 @@ export default function WorkPage() {
           {text && (
             <div
 
-  className="body-text max-w-[520px]"
+  className="
+  body-text
+  max-w-[520px]
+  text-[13.5px]
+  leading-[2]
+"
   dangerouslySetInnerHTML={{ __html: text }}
 />
         

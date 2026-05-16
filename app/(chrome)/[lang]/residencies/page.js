@@ -20,6 +20,12 @@ const residencies = [
     id: "solace-project",
     title: "Solace Project"
   },
+
+  {
+    id: "pa-utrygg-grun",
+    title: "Pa Utrygg grun"
+  },
+
   {
     id: "stokkoy-art-carpeta-sin-titulo",
     title: "Stokkoy Art Carpeta sin título"

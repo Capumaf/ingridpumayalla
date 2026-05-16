@@ -1,73 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function WorkCover({ id, lang, cover, title }) {
-  const router = useRouter();
-
+export default function BioCover({
+  href,
+  label,
+  imageSrc,
+  imageAlt,
+}) {
   const [isHovered, setIsHovered] = useState(false);
   const [isEntering, setIsEntering] = useState(false);
   const [showHint, setShowHint] = useState(false);
-  const [labelTone, setLabelTone] = useState("dark");
 
   const linkRef = useRef(null);
-  const imgRef = useRef(null);
   const perimRef = useRef(null);
   const curveRef = useRef(null);
 
   const perimLen = useRef(0);
   const curveLen = useRef(95);
-  const perimBuilt = useRef(false);
-  const tl = useRef(null);
-
-  if (!cover) return null;
-
-  const href = `/${lang}/works/${id}/${cover.id}`;
-
-  const detectLabelTone = () => {
-    const img = imgRef.current;
-    if (!img || !img.naturalWidth || !img.naturalHeight) return;
-
-    try {
-      const canvas = document.createElement("canvas");
-      const ctx = canvas.getContext("2d", { willReadFrequently: true });
-
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-
-      ctx.drawImage(img, 0, 0);
-
-      const sampleX = Math.floor(img.naturalWidth * 0.24);
-      const sampleY = Math.floor(img.naturalHeight * 0.92);
-      const sampleW = Math.floor(img.naturalWidth * 0.28);
-      const sampleH = Math.floor(img.naturalHeight * 0.08);
-
-      const data = ctx.getImageData(sampleX, sampleY, sampleW, sampleH).data;
-
-      let total = 0;
-      let count = 0;
-
-      for (let i = 0; i < data.length; i += 4) {
-        const r = data[i];
-        const g = data[i + 1];
-        const b = data[i + 2];
-
-        const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
-
-        total += luminance;
-        count++;
-      }
-
-      const average = total / count;
-
-      setLabelTone(average > 145 ? "light" : "dark");
-    } catch {
-      setLabelTone("dark");
-    }
-  };
 
   const buildPerimeter = () => {
     if (!linkRef.current || !perimRef.current || !curveRef.current) return;
@@ -78,6 +30,7 @@ export default function WorkCover({ id, lang, cover, title }) {
 
     const W = rect.width;
     const H = rect.height;
+
     const pad = 20;
 
     const cLen = curveRef.current.getTotalLength();
@@ -107,29 +60,14 @@ export default function WorkCover({ id, lang, cover, title }) {
     perimRef.current.style.strokeDasharray = `0 ${pLen}`;
     perimRef.current.style.strokeDashoffset = "0";
     perimRef.current.style.opacity = "0";
-
-    perimBuilt.current = true;
   };
 
   useEffect(() => {
-    const img = imgRef.current;
+    requestAnimationFrame(buildPerimeter);
 
-    if (!img) return;
-
-    const handleLoad = () => {
-      requestAnimationFrame(() => {
-        buildPerimeter();
-        detectLabelTone();
-      });
-    };
-
-    if (img.complete) handleLoad();
-
-    img.addEventListener("load", handleLoad);
     window.addEventListener("resize", buildPerimeter);
 
     return () => {
-      img.removeEventListener("load", handleLoad);
       window.removeEventListener("resize", buildPerimeter);
     };
   }, []);
@@ -158,7 +96,7 @@ export default function WorkCover({ id, lang, cover, title }) {
 
     gsap.killTweensOf(curveRef.current);
 
-    if (isHovered || showHint) {
+    if (isHovered) {
       gsap.to(curveRef.current, {
         strokeDashoffset: 0,
         opacity: 1,
@@ -173,11 +111,19 @@ export default function WorkCover({ id, lang, cover, title }) {
         ease: "power2.in",
       });
     }
-  }, [isHovered, isEntering, showHint]);
+  }, [isHovered, isEntering]);
 
   useEffect(() => {
-    if (!isEntering || !perimBuilt.current) return;
-    if (!perimRef.current || !curveRef.current) return;
+    if (!isEntering) return;
+
+    const fallback = setTimeout(() => {
+      window.location.href = href;
+    }, 2300);
+
+    if (!perimRef.current || !curveRef.current || perimLen.current === 0) {
+      window.location.href = href;
+      return;
+    }
 
     const pLen = perimLen.current;
     const el = perimRef.current;
@@ -186,33 +132,47 @@ export default function WorkCover({ id, lang, cover, title }) {
     const travelEnd = pLen * 0.92;
 
     gsap.killTweensOf(curveRef.current);
-    gsap.to(curveRef.current, { opacity: 0, duration: 0.2 });
 
-    const proxy = { drawn: 0, tail: 0 };
+    gsap.to(curveRef.current, {
+      opacity: 0,
+      duration: 0.2,
+    });
+
+    const proxy = {
+      drawn: 0,
+      tail: 0,
+    };
 
     el.style.opacity = "1";
 
-    tl.current = gsap.timeline({
+    const tl = gsap.timeline({
       onUpdate: () => {
-        el.style.strokeDasharray = `${proxy.drawn} ${pLen - proxy.drawn}`;
+        el.style.strokeDasharray =
+          `${proxy.drawn} ${pLen - proxy.drawn}`;
+
         el.style.strokeDashoffset = `-${proxy.tail}`;
       },
+
       onComplete: () => {
+        clearTimeout(fallback);
+
         gsap.to(el, {
           opacity: 0,
           duration: 0.3,
           ease: "power2.in",
-          onComplete: () => router.push(href),
+
+          onComplete: () => {
+            window.location.href = href;
+          },
         });
       },
     });
 
-    tl.current
-      .to(proxy, {
-        drawn: snake,
-        duration: 0.3,
-        ease: "power2.out",
-      })
+    tl.to(proxy, {
+      drawn: snake,
+      duration: 0.3,
+      ease: "power2.out",
+    })
       .to(proxy, {
         tail: travelEnd,
         duration: 1.8,
@@ -227,21 +187,17 @@ export default function WorkCover({ id, lang, cover, title }) {
         },
         "-=0.45"
       );
-  }, [isEntering, href, router]);
+
+    return () => clearTimeout(fallback);
+  }, [isEntering, href]);
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (isEntering) return;
 
-    if (!perimRef.current || !perimLen.current || perimLen.current === 0) {
-      router.push(href);
-      return;
-    }
+    if (isEntering) return;
 
     setIsEntering(true);
   };
-
-  const isLightArea = labelTone === "light";
 
   return (
     <div className="flex justify-center">
@@ -252,12 +208,12 @@ export default function WorkCover({ id, lang, cover, title }) {
         onMouseEnter={() => !isEntering && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className="relative inline-block overflow-hidden max-w-[92vw] md:max-w-[640px]"
-        aria-label={lang === "es" ? "Ver serie" : "View series"}
+        aria-label={label}
       >
         <img
-          ref={imgRef}
-          src={cover.src}
-          alt={title || ""}
+          src={imageSrc}
+          alt={imageAlt}
+          onLoad={buildPerimeter}
           className={`
             w-full max-w-[92vw] md:max-w-[640px]
             h-auto max-h-[74vh] md:max-h-[72vh]
@@ -278,17 +234,19 @@ export default function WorkCover({ id, lang, cover, title }) {
         <div
           className="absolute inset-0 transition-opacity duration-500 pointer-events-none"
           style={{
-            opacity: isHovered || isEntering || showHint ? 1 : 0,
+            opacity:
+              isHovered || isEntering || showHint
+                ? 1
+                : 0,
           }}
         >
           <div
-            className={`
+            className="
               absolute bottom-5 left-5 md:bottom-7 md:left-7
               flex items-center gap-3
+              text-white
               transition-transform duration-500
-
-              ${isLightArea ? "text-black" : "text-white"}
-            `}
+            "
             style={{
               transform:
                 isHovered || isEntering || showHint
@@ -316,25 +274,23 @@ export default function WorkCover({ id, lang, cover, title }) {
             </svg>
 
             <span
-              className={`
+              className="
                 text-[9px] md:text-[10px]
                 tracking-[0.2em] md:tracking-[0.24em]
                 uppercase
                 font-light
-                transition-all
-                duration-500
 
                 px-2.5 md:px-3
                 py-[5px] md:py-[6px]
+
                 rounded-full
                 backdrop-blur-md
 
-                ${
-                  isLightArea
-                    ? "bg-white/65 text-black border border-black/10 shadow-[0_4px_18px_rgba(255,255,255,0.25)]"
-                    : "bg-black/35 text-white border border-white/15 shadow-[0_4px_18px_rgba(0,0,0,0.35)]"
-                }
-              `}
+                bg-black/35
+                text-white
+                border border-white/15
+                shadow-[0_4px_18px_rgba(0,0,0,0.35)]
+              "
               style={
                 isEntering
                   ? {
@@ -344,7 +300,7 @@ export default function WorkCover({ id, lang, cover, title }) {
                   : undefined
               }
             >
-              {lang === "es" ? "Ver serie" : "View series"}
+              {label}
             </span>
           </div>
         </div>
@@ -361,7 +317,9 @@ export default function WorkCover({ id, lang, cover, title }) {
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
-            style={{ mixBlendMode: "difference" }}
+            style={{
+              mixBlendMode: "difference",
+            }}
           />
         </svg>
       </Link>
