@@ -51,12 +51,12 @@ export const residencyDetails = {
   introduction: "Residency project.",
 
   imageData: [
-    { id: "1", src: "/pautrygggrun1.webp", width: 1200, height: 800 },
-    { id: "2", src: "/pautrygggrun2.webp", width: 1200, height: 800 },
-    { id: "3", src: "/pautrygggrun3.webp", width: 1200, height: 800 },
-    { id: "4", src: "/pautrygggrun4.webp", width: 1200, height: 800 },
-    { id: "5", src: "/pautrygggrun5.webp", width: 1200, height: 800 },
-  ]
+  { id: "1", src: "/pa-utrygg-1.webp", width: 1200, height: 800 },
+  { id: "2", src: "/pa-utrygg-2.webp", width: 1200, height: 800 },
+  { id: "3", src: "/pa-utrygg-3.webp", width: 1200, height: 800 },
+  { id: "4", src: "/pa-utrygg-4.webp", width: 1200, height: 800 },
+  { id: "5", src: "/pa-utrygg-5.webp", width: 1200, height: 800 },
+]
 },
 
   "stokkoy-art-carpeta-": {

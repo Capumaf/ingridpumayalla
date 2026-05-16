@@ -23,6 +23,8 @@ export default function ResidencyDetailPage() {
 
   const cover = residency.imageData?.[0];
 
+  console.log("RESIDENCY COVER:", cover);
+
   const title =
     typeof residency.title === "string"
       ? residency.title
