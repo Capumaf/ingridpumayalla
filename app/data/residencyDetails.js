@@ -55,6 +55,7 @@ export const residencyDetails = {
       { id: "2", src: "/pautrygggrun2.webp", width: 1200, height: 800 },
       { id: "3", src: "/pautrygggrun3.webp", width: 1200, height: 800 },
       { id: "4", src: "/pautrygggrun4.webp", width: 1200, height: 800 },
+      { id: "4", src: "/pautrygggrun4.webp", width: 1200, height: 800 },
     ]
   } ,
 
