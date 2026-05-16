@@ -259,10 +259,9 @@ Curator of the exhibition
       { id: "1", src: "/Tree1.webp", width: 1200, height: 800 },
       { id: "2", src: "/Tree2.webp", width: 1200, height: 800 },
       { id: "3", src: "/Tree3.webp", width: 1200, height: 800 },
-      { id: "3", src: "/Tree4.webp", width: 1200, height: 800 },
-      { id: "3", src: "/Tree5.webp", width: 1200, height: 800 },
-      { id: "3", src: "/Tree6.webp", width: 1200, height: 800 },
-
+      { id: "4", src: "/Tree4.webp", width: 1200, height: 800 },
+      { id: "5", src: "/Tree5.webp", width: 1200, height: 800 },
+      { id: "6", src: "/Tree6.webp", width: 1200, height: 800 }
 
     ]
   },
