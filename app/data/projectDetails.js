@@ -193,9 +193,9 @@ Curator of the exhibition
     },
 
     imageData: [
-      { id: "1", src: "/Curiwarmi_Lunar.webp", width: 1200, height: 800 },
-      { id: "2", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
-      { id: "3", src: "/CuriwarmiLunar3.webp", width: 1200, height: 800 },
+      { id: "1", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
+      { id: "2", src: "/Curiwarmi_Lunar.webp", width: 1200, height: 800 },
+      { id: "3", src: "/Curiwarmilunar3.webp", width: 1200, height: 800 },
       { id: "4", src: "/CuriwarmiLunar4.webp", width: 1200, height: 800 },
     ]
   },
@@ -258,7 +258,12 @@ Curator of the exhibition
     imageData: [
       { id: "1", src: "/tree1.webp", width: 1200, height: 800 },
       { id: "2", src: "/tree2.webp", width: 1200, height: 800 },
-      { id: "3", src: "/tree3.webp", width: 1200, height: 800 }
+      { id: "3", src: "/tree3.webp", width: 1200, height: 800 },
+      { id: "3", src: "/tree4.webp", width: 1200, height: 800 },
+      { id: "3", src: "/tree5.webp", width: 1200, height: 800 },
+      { id: "3", src: "/tree6.webp", width: 1200, height: 800 },
+
+
     ]
   },
 
