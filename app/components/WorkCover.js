@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
@@ -258,6 +259,9 @@ export default function WorkCover({ id, lang, cover, title }) {
           ref={imgRef}
           src={cover.src}
           alt={title || ""}
+          width={cover.width || 1200}
+          height={cover.height || 800}
+          priority
           className={`
             w-full max-w-[92vw] md:max-w-[640px]
             h-auto max-h-[74vh] md:max-h-[72vh]
