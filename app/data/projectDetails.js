@@ -256,12 +256,12 @@ Curator of the exhibition
     },
 
     imageData: [
-      { id: "1", src: "/tree1.webp", width: 1200, height: 800 },
-      { id: "2", src: "/tree2.webp", width: 1200, height: 800 },
-      { id: "3", src: "/tree3.webp", width: 1200, height: 800 },
-      { id: "3", src: "/tree4.webp", width: 1200, height: 800 },
-      { id: "3", src: "/tree5.webp", width: 1200, height: 800 },
-      { id: "3", src: "/tree6.webp", width: 1200, height: 800 },
+      { id: "1", src: "/Tree1.webp", width: 1200, height: 800 },
+      { id: "2", src: "/Tree2.webp", width: 1200, height: 800 },
+      { id: "3", src: "/Tree3.webp", width: 1200, height: 800 },
+      { id: "3", src: "/Tree4.webp", width: 1200, height: 800 },
+      { id: "3", src: "/Tree5.webp", width: 1200, height: 800 },
+      { id: "3", src: "/Tree6.webp", width: 1200, height: 800 },
 
 
     ]
