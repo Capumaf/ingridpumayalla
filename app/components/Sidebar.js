@@ -88,7 +88,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
             onClick={() => setIndexOpen((v) => !v)}
             className="group inline-flex items-center gap-2 text-xs uppercase text-neutral-400 hover:text-neutral-700"
           >
-            <span>{lang === "es" ? "Índice" : "Index"}</span>
+            <span>{lang === "es" ? "Menú" : "Menu"}</span>
 
             <span
               className={`transition-transform ${

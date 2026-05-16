@@ -16,7 +16,17 @@ export default async function HomePage({ params }) {
         lg:pl-[160px]
       "
     >
-      <div className="w-full max-w-[600px] px-6 md:px-0">
+      <div
+        className="
+          w-[calc(100vw-2.5rem)]
+          md:w-full
+
+          max-w-none
+          md:max-w-[600px]
+
+          px-0
+        "
+      >
         <HomeTransmutationImage />
       </div>
     </div>
