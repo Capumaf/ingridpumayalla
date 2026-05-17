@@ -1,5 +1,6 @@
 "use client";
 
+import SectionCover from "@/components/SectionCover";
 import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
 

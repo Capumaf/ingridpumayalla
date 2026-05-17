@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 import { projectDetails } from "@/data/projectDetails";
 import { WORK_ORDER } from "@/data/worksOrder";
@@ -9,6 +10,8 @@ import { WORK_ORDER } from "@/data/worksOrder";
 export default function WorksPage() {
   const pathname = usePathname();
   const lang = pathname.startsWith("/es") ? "es" : "en";
+
+  const [openId, setOpenId] = useState(null);
 
   return (
     <div className="w-full flex justify-center">
@@ -23,9 +26,19 @@ export default function WorksPage() {
             if (!project) return null;
 
             const sections = project.sections || [];
+            const isOfrendas = id === "ofrendas-offerings";
+            const isOpen = isOfrendas && openId === id;
 
             return (
-              <li key={id}>
+              <li
+                key={id}
+                onMouseEnter={() => {
+                  if (isOfrendas) setOpenId(id);
+                }}
+                onMouseLeave={() => {
+                  if (isOfrendas) setOpenId(null);
+                }}
+              >
                 <Link
                   href={`/${lang}/works/${id}`}
                   className="text-xs text-neutral-600 hover:text-black transition-colors"
@@ -33,19 +46,33 @@ export default function WorksPage() {
                   {project.title}
                 </Link>
 
-                {sections.length > 0 && (
-                  <ul className="mt-2 ml-4 space-y-1">
-                    {sections.map((section) => (
-                      <li key={section.id}>
-                        <Link
-                          href={`/${lang}/works/${id}/${section.id}`}
-                          className="text-[11px] text-neutral-400 hover:text-black transition-colors"
-                        >
-                          {section.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                {isOfrendas && sections.length > 0 && (
+                  <div
+                    className={`
+                      overflow-hidden
+                      transition-all
+                      duration-500
+                      ease-out
+                      ${
+                        isOpen
+                          ? "max-h-40 opacity-100 mt-2"
+                          : "max-h-0 opacity-0 mt-0"
+                      }
+                    `}
+                  >
+                    <ul className="ml-4 space-y-1">
+                      {sections.map((section) => (
+                        <li key={section.id}>
+                          <Link
+                            href={`/${lang}/works/${id}/${section.id}`}
+                            className="text-[11px] text-neutral-400 hover:text-black transition-colors"
+                          >
+                            {section.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
               </li>
             );

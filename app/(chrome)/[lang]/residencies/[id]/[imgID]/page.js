@@ -164,9 +164,9 @@ const handleTouchEnd = (e) => {
       </div>
 
       {/* DESKTOP */}
-      <div className="hidden md:flex w-full max-w-6xl px-10 items-stretch gap-14">
+      <div className="hidden md:flex w-full max-w-6xl px-10 pl-16 items-stretch gap-14">
         <div
-          className="w-[220px] text-sm text-gray-800 flex flex-col"
+          className="w-[220px] text-sm text-gray-800 flex flex-col ml-3"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(-8px)",

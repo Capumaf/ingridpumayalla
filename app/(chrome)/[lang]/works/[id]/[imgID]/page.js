@@ -153,79 +153,84 @@ export default function ImagePage() {
         </div>
       </div>
 
-      {/* DESKTOP */}
-      <div className="hidden md:flex w-full max-w-6xl px-10 items-stretch gap-14">
-        <div
-          className="w-[220px] text-sm text-gray-800 flex flex-col"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(-8px)",
-            transition: "opacity 700ms ease 150ms, transform 700ms ease 150ms",
-          }}
-        >
-          <Link
-            href={`/${lang}/works/${id}`}
-            className="text-xs tracking-widest text-gray-500 hover:text-black"
-          >
-            ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
-          </Link>
+   {/* DESKTOP */}
+<div className="hidden md:md:grid w-full max-w-6xl px-10 pl-14 lg:pl-20 grid-cols-[180px_1fr] gap-10 items-start">
+  {/* LEFT DETAILS */}
+  <div
+    className="text-sm text-gray-800 flex flex-col pt-2 ml-8"
+    style={{
+      opacity: visible ? 1 : 0,
+      transform: visible ? "translateY(0)" : "translateY(-8px)",
+      transition: "opacity 700ms ease 150ms, transform 700ms ease 150ms",
+    }}
+  >
+    <Link
+      href={`/${lang}/works/${id}`}
+      className="text-xs tracking-widest text-gray-500 hover:text-black"
+    >
+      ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
+    </Link>
 
-          <div className="mt-6">
-            <h2 className="text-base font-semibold mb-1">
-              {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
-            </h2>
-            <p className="mb-6">{description}</p>
-          </div>
-        </div>
+    <div className="mt-6">
+      <h2 className="text-base font-semibold mb-1">
+        {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
+      </h2>
 
-        <div
-          className="relative w-full max-w-[720px] flex justify-center flex-col"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(-10px)",
-            transition: "opacity 800ms ease 80ms, transform 800ms ease 80ms",
-          }}
-        >
-          <button
-            onClick={() =>
-              prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
-            }
-            className={`absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
-              prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
-            ‹
-          </button>
+      <p className="mb-6 text-sm leading-relaxed text-neutral-600">
+        {description}
+      </p>
+    </div>
+  </div>
 
-          <img
-            src={img.src}
-            alt={description || "Artwork image"}
-            className="object-contain max-h-[85vh] rounded-lg w-full"
-          />
+  {/* IMAGE */}
+  <div
+    className="relative w-full flex justify-center pb-16"
+    style={{
+      opacity: visible ? 1 : 0,
+      transform: visible ? "translateY(0)" : "translateY(-10px)",
+      transition: "opacity 800ms ease 80ms, transform 800ms ease 80ms",
+    }}
+  >
+    <button
+      onClick={() =>
+        prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
+      }
+      className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
+        prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      ‹
+    </button>
 
-          <button
-            onClick={() =>
-              nextImg
-                ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
-                : router.push(`/${lang}/works/${id}`)
-            }
-            className={`absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
-              nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
-            ›
-          </button>
+    <img
+      src={img.src}
+      alt={description || "Artwork image"}
+      className="object-contain max-h-[78vh] w-auto max-w-full"
+    />
 
-          {!nextImg && (
-            <Link
-              href={`/${lang}/works`}
-              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-black"
-            >
-              {lang === "es" ? "Volver a trabajos" : "Back to works"} →
-            </Link>
-          )}
-        </div>
-      </div>
+    <button
+      onClick={() =>
+        nextImg
+          ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
+          : router.push(`/${lang}/works/${id}`)
+      }
+      className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
+        nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      ›
+    </button>
+
+    {!nextImg && (
+      <Link
+        href={`/${lang}/works`}
+        className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-black"
+      >
+        {lang === "es" ? "Volver a trabajos" : "Back to works"} →
+      </Link>
+    )}
+  </div>
+</div>
     </div>
   );
 }

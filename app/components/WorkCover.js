@@ -240,7 +240,7 @@ export default function WorkCover({ id, lang, cover, title }) {
         >
           <div
             className={`
-              absolute bottom-5 left-5 md:bottom-7 md:left-7
+              absolute bottom-5 left-8 md:bottom-7 md:left-10
               flex items-center gap-3
               transition-transform duration-500
               ${isLightArea ? "text-black" : "text-white"}

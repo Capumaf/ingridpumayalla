@@ -266,6 +266,7 @@ Curator of the exhibition
     ]
   },
 
+
   "funereal-home": {
     title: "Funereal Home",
 
@@ -375,38 +376,157 @@ Curator of the exhibition
   },
 
   "ofrendas-offerings": {
-    title: "Ofrendas/Offerings",
+  title: "Ofrendas/Offerings",
 
-    text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+  text: {
+    es: `<p></p>`,
+    en: `<p></p>`
+  },
+
+  sections: [
+    {
+      id: "cantos-al-agua",
+      title: "Cantos al agua",
+
+      cover: {
+        type: "video",
+        src: "/ofrendas/cantos-al-agua.mp4"
+      },
+
+      text: {
+        es: `
+<p>Es un proyecto de sitio específico dentro de las zonas arqueológicas de la Quebrada de Santo Domingo, la Huaca El Brujo (siglos III y VII d.C.) y Chan Chan (850 d.C.), en los alrededores de la ciudad de Trujillo, en el norte del Perú.</p>
+
+<p>Estos paisajes han sido transgredidos como consecuencia de la agroindustria y la expansión urbana, así como también por el saqueo de tesoros dentro de las Huacas.</p>
+
+<p>Las acciones son gestos, ofrendas y cantos para conmemorar al agua como símbolo de fertilidad y su conexión con la tierra, así como un duelo por el lenguaje del agua y el conocimiento perdido dentro del paisaje del desierto peruano.</p>
+        `,
+        en: `
+<p>This project is a site-specific intervention carried out within the archaeological zones of Quebrada de Santo Domingo, Huaca El Brujo (3rd–7th century CE), and Chan Chan (c. 850 CE), located in the outskirts of Trujillo, northern Peru.</p>
+
+<p>These landscapes have been deeply altered by agro-industrial activity, urban expansion, and the looting of sacred Huacas in search of ancestral treasures.</p>
+
+<p>Through gestures, offerings, and songs, the actions pay tribute to water as a symbol of fertility and its connection to the land. They also serve as a mourning ritual for the language of water and the ancestral knowledge lost in this desert landscape.</p>
+        `
+      },
+
+      mediaData: [
+        {
+          id: "1",
+          type: "video",
+          src: "/ofrendas/cantos-al-agua.mp4"
+        }
+      ]
     },
 
-    sections: [
-      {
-        id: "ofrenda-1",
-        title: "Ofrenda 1",
-        videoSrc: "/ofrendas/ofrenda-1.mp4"
-      },
-      {
-        id: "ofrenda-2",
-        title: "Ofrenda 2",
-        videoSrc: "/ofrendas/ofrenda-2.mp4"
-      },
-      {
-        id: "ofrenda-3",
-        title: "Ofrenda 3",
-        videoSrc: "/ofrendas/ofrenda-3.mp4"
-      },
-      {
-        id: "ofrenda-4",
-        title: "Ofrenda 4",
-        videoSrc: "/ofrendas/ofrenda-4.mp4"
-      }
-    ],
+    {
+      id: "plegaria-al-caballo-blanco",
+      title: "Plegaria al caballo blanco",
 
-    imageData: []
-  },
+      cover: {
+        type: "image",
+        src: "/ofrendas/plegaria-cover.webp",
+        width: 1200,
+        height: 800
+      },
+
+      text: {
+        es: `
+<p>Texto de introducción de Plegaria al caballo blanco.</p>
+        `,
+        en: `
+<p>Intro text for Prayer to the White Horse.</p>
+        `
+      },
+
+      mediaData: [
+        {
+          id: "1",
+          type: "image",
+          src: "/ofrendas/plegaria-1.webp",
+          width: 1200,
+          height: 800
+        },
+        {
+          id: "2",
+          type: "image",
+          src: "/ofrendas/plegaria-2.webp",
+          width: 1200,
+          height: 800
+        }
+      ]
+    },
+
+    {
+      id: "the-hair-cut",
+      title: "The Hair Cut",
+
+      cover: {
+        type: "image",
+        src: "/ofrendas/the-hair-cut-cover.webp",
+        width: 1200,
+        height: 800
+      },
+
+      text: {
+        es: `
+<p>Texto introductorio de The Hair Cut.</p>
+        `,
+        en: `
+<p>Introductory text for The Hair Cut.</p>
+        `
+      },
+
+      mediaData: [
+        {
+          id: "1",
+          type: "image",
+          src: "/ofrendas/the-hair-cut-1.webp",
+          width: 1200,
+          height: 800
+        },
+        {
+          id: "2",
+          type: "video",
+          src: "/ofrendas/the-hair-cut-video.mp4"
+        }
+      ]
+    },
+
+    {
+      id: "yuraq-warmi-yana-warmi",
+      title: "Yuraq Warmi, Yana warmi.",
+
+      cover: {
+        type: "image",
+        src: "/ofrendas/yuraq-warmi-yana-warmi-cover.webp",
+        width: 1200,
+        height: 800
+      },
+
+      text: {
+        es: `
+<p>Texto introductorio de Yuraq Warmi, Yana warmi.</p>
+        `,
+        en: `
+<p>Introductory text for Yuraq Warmi, Yana warmi.</p>
+        `
+      },
+
+      mediaData: [
+        {
+          id: "1",
+          type: "image",
+          src: "/ofrendas/yuraq-warmi-yana-warmi-1.webp",
+          width: 1200,
+          height: 800
+        }
+      ]
+    }
+  ],
+
+  imageData: []
+},
 
   "otras-madres": {
     title: "Otras Madres",
