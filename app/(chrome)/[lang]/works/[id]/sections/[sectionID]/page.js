@@ -43,7 +43,7 @@ export default function WorkSectionPage() {
     section.mediaData?.[0];
 
   const mediaHref = firstMedia
-    ? `/${lang}/works/${id}/${sectionID}/${firstMedia.id}`
+    ? `/${lang}/works/${id}/sections/${sectionID}/${firstMedia.id}`
     : null;
 
   return (

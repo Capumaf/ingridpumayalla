@@ -78,13 +78,13 @@ export default function SectionImagePage() {
 
     if (distance > 60 && nextImg) {
       router.push(
-        `/${lang}/works/${id}/${sectionID}/${nextImg.id}`
+        `/${lang}/works/${id}/sections/${sectionID}/${nextImg.id}`
       );
     }
 
     if (distance < -60 && prevImg) {
       router.push(
-        `/${lang}/works/${id}/${sectionID}/${prevImg.id}`
+        `/${lang}/works/${id}/sections/${sectionID}/${prevImg.id}`
       );
     }
   };
@@ -103,7 +103,7 @@ return (
     <div className="flex md:hidden flex-col h-full overflow-y-auto">
       <div className="px-5 pt-6 pb-4">
         <Link
-          href={`/${lang}/works/${id}/${sectionID}`}
+          href={`/${lang}/works/${id}/sections/${sectionID}`}
           className="text-[10px] tracking-[0.18em] uppercase text-neutral-500"
         >
           ← Back
