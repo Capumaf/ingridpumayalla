@@ -7,18 +7,14 @@ export default async function Contact({ params }) {
   const labels = {
     en: {
       section: "Contact",
-      phone: "Phone",
       email: "Email",
       instagram: "Instagram",
-      city: "London",
     },
 
     es: {
       section: "Contacto",
-      phone: "Teléfono",
       email: "Correo",
       instagram: "Instagram",
-      city: "Londres",
     },
   };
 
@@ -38,21 +34,7 @@ export default async function Contact({ params }) {
         </header>
 
         <section className="border-y border-black/10 py-8 md:py-6">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:items-start md:gap-14">
-            {/* PHONE */}
-            <a
-              href="tel:+447711290756"
-              className="group flex flex-col gap-2 text-neutral-800 transition hover:opacity-60"
-            >
-              <span className="text-[10px] uppercase tracking-[0.22em] text-neutral-400">
-                {t.phone}
-              </span>
-
-              <span className="text-[13px] tracking-[0.08em]">
-                +44 07711290756
-              </span>
-            </a>
-
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-start md:gap-14">
             {/* EMAIL */}
             <a
               href={`mailto:${contact.email}`}
@@ -82,16 +64,6 @@ export default async function Contact({ params }) {
                 @ingridjosefa
               </span>
             </a>
-
-            {/* ADDRESS */}
-            <div className="flex justify-start">
-              <div className="inline-flex rotate-[-2deg] flex-col border border-black/20 px-5 py-4 text-[12px] leading-[1.35] tracking-[0.04em] text-neutral-700">
-                <span>53 Fields Estate</span>
-                <span>Albion Drive</span>
-                <span>E8 4LU</span>
-                <span>{t.city}</span>
-              </div>
-            </div>
           </div>
         </section>
       </div>

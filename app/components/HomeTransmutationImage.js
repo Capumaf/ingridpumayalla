@@ -14,7 +14,7 @@ const images = [
   "/Home8.webp",
 ];
 
-const CHANGE_TIME = 20000;
+const CHANGE_TIME = 5000;
 const FADE_TIME = 1000;
 
 export default function HomeTransmutationImage() {
