@@ -67,8 +67,8 @@ export default function WorkPage() {
         />
 
         {/* TEXT */}
-        <div className="max-w-[520px] mx-auto mt-8 md:mt-32 px-2">
-          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center">
+        <div className="max-w-[720px] mx-auto mt-6 md:mt-20 px-2 md:translate-x-[90px]">
+        <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center md:-translate-x-[80px]">
             {title}
           </h1>
 
@@ -76,9 +76,10 @@ export default function WorkPage() {
             <div
               className="
                 body-text
-                max-w-[520px]
+                max-w[720px]
                 text-[13.5px]
                 leading-[2]
+                text-justify
               "
               dangerouslySetInnerHTML={{
                 __html: text,

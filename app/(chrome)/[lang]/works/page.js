@@ -15,7 +15,7 @@ export default function WorksPage() {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="w-full max-w-md px-6">
+      <div className="w-full max-w-[540px] px-6">
         <h1 className="text-2xl font-normal tracking-[0.15em] mb-12 mt-16">
           {lang === "es" ? "Trabajos" : "Works"}
         </h1>
