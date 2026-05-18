@@ -454,14 +454,14 @@ Curator of the exhibition
     {
       id: "2",
       type: "image",
-      src: "/caballito2.webp",
+      src: "/Caballito2.webp",
       width: 1200,
       height: 800
     },
     {
       id: "3",
       type: "image",
-      src: "/caballito3.webp",
+      src: "/Caballito3.webp",
       width: 1200,
       height: 800
     },
