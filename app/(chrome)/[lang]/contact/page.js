@@ -4,35 +4,97 @@ export default async function Contact({ params }) {
   const { lang } = await params;
   const contact = pages.contact;
 
+  const labels = {
+    en: {
+      section: "Contact",
+      phone: "Phone",
+      email: "Email",
+      instagram: "Instagram",
+      city: "London",
+    },
+
+    es: {
+      section: "Contacto",
+      phone: "Teléfono",
+      email: "Correo",
+      instagram: "Instagram",
+      city: "Londres",
+    },
+  };
+
+  const t = labels[lang] || labels.en;
+
   return (
-    <div className="mt-16 max-w-sm">
-      <h1 className="mb-12 text-2xl font-normal tracking-[0.15em]">
-        {contact.title[lang]}
-      </h1>
+    <article className="pt-14 md:pt-16">
+      <div className="px-6 md:px-0 max-w-[820px] mx-auto">
+        <header className="mb-14">
+          <p className="mb-4 text-[11px] uppercase tracking-[0.24em] text-neutral-400">
+            {t.section}
+          </p>
 
-      <p className="mb-10 text-[15px] leading-7 text-neutral-600">
-        {contact.text[lang]}
-      </p>
+          <p className="max-w-[520px] text-[13.5px] leading-[1.9] text-neutral-600">
+            {contact.text[lang]}
+          </p>
+        </header>
 
-      <div className="space-y-4">
-        {/* Email */}
-        <a
-          href={`mailto:${contact.email}`}
-          className="block text-xs tracking-[0.18em] text-neutral-800 hover:opacity-60 transition"
-        >
-          {contact.email}
-        </a>
+        <section className="border-y border-black/10 py-8 md:py-6">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:items-start md:gap-14">
+            {/* PHONE */}
+            <a
+              href="tel:+447711290756"
+              className="group flex flex-col gap-2 text-neutral-800 transition hover:opacity-60"
+            >
+              <span className="text-[10px] uppercase tracking-[0.22em] text-neutral-400">
+                {t.phone}
+              </span>
 
-        {/* Instagram (desde el CV) */}
-        <a
-          href="https://instagram.com/ingridjosefa"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block text-xs tracking-[0.18em] text-neutral-500 hover:opacity-60 transition"
-        >
-          @ingridjosefa
-        </a>
+              <span className="text-[13px] tracking-[0.08em]">
+                +44 07711290756
+              </span>
+            </a>
+
+            {/* EMAIL */}
+            <a
+              href={`mailto:${contact.email}`}
+              className="group flex flex-col gap-2 text-neutral-800 transition hover:opacity-60"
+            >
+              <span className="text-[10px] uppercase tracking-[0.22em] text-neutral-400">
+                {t.email}
+              </span>
+
+              <span className="text-[13px] tracking-[0.04em] whitespace-nowrap">
+                {contact.email}
+              </span>
+            </a>
+
+            {/* INSTAGRAM */}
+            <a
+              href="https://instagram.com/ingridjosefa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col gap-2 text-neutral-800 transition hover:opacity-60"
+            >
+              <span className="text-[10px] uppercase tracking-[0.22em] text-neutral-400">
+                {t.instagram}
+              </span>
+
+              <span className="text-[13px] tracking-[0.08em]">
+                @ingridjosefa
+              </span>
+            </a>
+
+            {/* ADDRESS */}
+            <div className="flex justify-start">
+              <div className="inline-flex rotate-[-2deg] flex-col border border-black/20 px-5 py-4 text-[12px] leading-[1.35] tracking-[0.04em] text-neutral-700">
+                <span>53 Fields Estate</span>
+                <span>Albion Drive</span>
+                <span>E8 4LU</span>
+                <span>{t.city}</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </article>
   );
 }

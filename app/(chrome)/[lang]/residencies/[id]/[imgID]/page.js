@@ -12,9 +12,13 @@ export default function ResidencyImagePage() {
   const router = useRouter();
 
   const [visible, setVisible] = useState(false);
+
   const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const touchCurrentX = useRef(0);
+  const touchCurrentY = useRef(0);
   const touchEndX = useRef(0);
-  
+  const isSwiping = useRef(false);
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const residency = residencyDetails[id];
@@ -47,23 +51,51 @@ export default function ResidencyImagePage() {
   const img = images[currentIndex];
   const prevImg = images[currentIndex - 1] || null;
   const nextImg = images[currentIndex + 1] || null;
+
   const handleTouchStart = (e) => {
-  touchStartX.current = e.changedTouches[0].clientX;
-};
+    const touch = e.changedTouches[0];
 
-const handleTouchEnd = (e) => {
-  touchEndX.current = e.changedTouches[0].clientX;
+    touchStartX.current = touch.clientX;
+    touchStartY.current = touch.clientY;
+    touchCurrentX.current = touch.clientX;
+    touchCurrentY.current = touch.clientY;
+    isSwiping.current = false;
+  };
 
-  const distance = touchStartX.current - touchEndX.current;
+  const handleTouchMove = (e) => {
+    const touch = e.changedTouches[0];
 
-  if (distance > 60 && nextImg) {
-    router.push(`/${lang}/residencies/${id}/${nextImg.id}`);
-  }
+    touchCurrentX.current = touch.clientX;
+    touchCurrentY.current = touch.clientY;
+  };
 
-  if (distance < -60 && prevImg) {
-    router.push(`/${lang}/residencies/${id}/${prevImg.id}`);
-  }
-};
+  const handleTouchEnd = (e) => {
+    const touch = e.changedTouches[0];
+
+    touchEndX.current = touch.clientX;
+
+    const finalX = touchCurrentX.current || touchEndX.current;
+    const finalY = touchCurrentY.current || touch.clientY;
+
+    const deltaX = touchStartX.current - finalX;
+    const deltaY = touchStartY.current - finalY;
+
+    const isHorizontalSwipe =
+      Math.abs(deltaX) > 45 &&
+      Math.abs(deltaX) > Math.abs(deltaY);
+
+    if (!isHorizontalSwipe) return;
+
+    isSwiping.current = true;
+
+    if (deltaX > 0 && nextImg) {
+      router.push(`/${lang}/residencies/${id}/${nextImg.id}`);
+    }
+
+    if (deltaX < 0 && prevImg) {
+      router.push(`/${lang}/residencies/${id}/${prevImg.id}`);
+    }
+  };
 
   useEffect(() => {
     [prevImg?.src, nextImg?.src].forEach((src) => {
@@ -87,9 +119,10 @@ const handleTouchEnd = (e) => {
 
   return (
     <div
-       className="fixed inset-0 flex items-center justify-center bg-white"
-  onTouchStart={handleTouchStart}
-  onTouchEnd={handleTouchEnd}
+      className="fixed inset-0 flex items-center justify-center bg-white"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 600ms ease",
@@ -117,7 +150,8 @@ const handleTouchEnd = (e) => {
           <img
             src={img.src}
             alt={description || residency.title || "Residency image"}
-            className="object-contain w-full max-h-[72vh]"
+            draggable={false}
+            className="object-contain w-full max-h-[72vh] select-none touch-pan-y"
           />
         </div>
 
@@ -181,13 +215,9 @@ const handleTouchEnd = (e) => {
           </Link>
 
           <div className="mt-6">
-            <h2 className="text-base font-semibold mb-1">
-              {detailsTitle}
-            </h2>
+            <h2 className="text-base font-semibold mb-1">{detailsTitle}</h2>
 
-            <p className="mb-3 text-neutral-500">
-              {residency.title}
-            </p>
+            <p className="mb-3 text-neutral-500">{residency.title}</p>
 
             <p className="mb-6">
               {description || residency.introduction || ""}
@@ -218,7 +248,8 @@ const handleTouchEnd = (e) => {
           <img
             src={img.src}
             alt={description || residency.title || "Residency image"}
-            className="object-contain max-h-[85vh] rounded-lg w-full"
+            draggable={false}
+            className="object-contain max-h-[85vh] rounded-lg w-full select-none"
           />
 
           <button

@@ -4,12 +4,7 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function BioCover({
-  href,
-  label,
-  imageSrc,
-  imageAlt,
-}) {
+export default function BioCover({ href, label, imageSrc, imageAlt }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isEntering, setIsEntering] = useState(false);
   const [showHint, setShowHint] = useState(false);
@@ -17,6 +12,7 @@ export default function BioCover({
   const linkRef = useRef(null);
   const perimRef = useRef(null);
   const curveRef = useRef(null);
+  const hintTimerRef = useRef(null);
 
   const perimLen = useRef(0);
   const curveLen = useRef(95);
@@ -25,16 +21,13 @@ export default function BioCover({
     if (!linkRef.current || !perimRef.current || !curveRef.current) return;
 
     const rect = linkRef.current.getBoundingClientRect();
-
     if (!rect.width || !rect.height) return;
 
     const W = rect.width;
     const H = rect.height;
-
     const pad = 20;
 
     const cLen = curveRef.current.getTotalLength();
-
     curveLen.current = cLen;
 
     gsap.set(curveRef.current, {
@@ -54,7 +47,6 @@ export default function BioCover({
     perimRef.current.setAttribute("d", d);
 
     const pLen = perimRef.current.getTotalLength();
-
     perimLen.current = pLen;
 
     perimRef.current.style.strokeDasharray = `0 ${pLen}`;
@@ -62,9 +54,18 @@ export default function BioCover({
     perimRef.current.style.opacity = "0";
   };
 
+  const triggerMobileHint = () => {
+    setShowHint(true);
+
+    clearTimeout(hintTimerRef.current);
+
+    hintTimerRef.current = setTimeout(() => {
+      setShowHint(false);
+    }, 5000);
+  };
+
   useEffect(() => {
     requestAnimationFrame(buildPerimeter);
-
     window.addEventListener("resize", buildPerimeter);
 
     return () => {
@@ -73,21 +74,23 @@ export default function BioCover({
   }, []);
 
   useEffect(() => {
-    const isTouch = window.matchMedia("(hover: none)").matches;
+    const firstHint = setTimeout(() => {
+      triggerMobileHint();
+    }, 900);
 
-    if (!isTouch) return;
+    const handleScroll = () => {
+      triggerMobileHint();
+    };
 
-    const showTimer = setTimeout(() => {
-      setShowHint(true);
-    }, 1800);
-
-    const hideTimer = setTimeout(() => {
-      setShowHint(false);
-    }, 5200);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
+      clearTimeout(firstHint);
+      clearTimeout(hintTimerRef.current);
+
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -96,7 +99,7 @@ export default function BioCover({
 
     gsap.killTweensOf(curveRef.current);
 
-    if (isHovered) {
+    if (isHovered || showHint) {
       gsap.to(curveRef.current, {
         strokeDashoffset: 0,
         opacity: 1,
@@ -111,7 +114,7 @@ export default function BioCover({
         ease: "power2.in",
       });
     }
-  }, [isHovered, isEntering]);
+  }, [isHovered, showHint, isEntering]);
 
   useEffect(() => {
     if (!isEntering) return;
@@ -147,9 +150,7 @@ export default function BioCover({
 
     const tl = gsap.timeline({
       onUpdate: () => {
-        el.style.strokeDasharray =
-          `${proxy.drawn} ${pLen - proxy.drawn}`;
-
+        el.style.strokeDasharray = `${proxy.drawn} ${pLen - proxy.drawn}`;
         el.style.strokeDashoffset = `-${proxy.tail}`;
       },
 
@@ -200,68 +201,78 @@ export default function BioCover({
   };
 
   return (
-  <div className="flex justify-center w-full pl-0 md:pl-[140px]">
-    <Link
-      ref={linkRef}
-      href={href}
-      onClick={handleClick}
-      onMouseEnter={() => !isEntering && setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="relative block overflow-hidden w-full md:w-auto"
-      aria-label={label}
-    >
-   <img
-  src={imageSrc}
-  alt={imageAlt}
-  onLoad={buildPerimeter}
-  className={`
-    w-full
-    h-auto
+    <div className="flex justify-center w-full pl-0 md:pl-[95px]">
+      <Link
+        ref={linkRef}
+        href={href}
+        onClick={handleClick}
+        onMouseEnter={() => !isEntering && setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="relative block overflow-hidden w-full md:w-auto"
+        aria-label={label}
+      >
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          onLoad={buildPerimeter}
+          className={`
+            w-full
+            h-auto
 
-    max-h-[72svh]
-    md:max-w-[760px]
-    md:max-h-[78vh]
+            max-h-[72svh]
+            md:max-w-[760px]
+            md:max-h-[78vh]
 
-    object-contain
-    cursor-pointer
-    transition-all
-    duration-700
-    ease-out
-    opacity-0
-    animate-fadeIn
+            object-contain
+            cursor-pointer
+            transition-all
+            duration-700
+            ease-out
+            opacity-0
+            animate-fadeIn
 
-    ${
-      isEntering
-        ? "brightness-[0.96]"
-        : isHovered
-        ? "scale-[1.01] brightness-[1.03]"
-        : ""
-    }
-  `}
-/>
+            ${
+              isEntering
+                ? "brightness-[0.96]"
+                : isHovered
+                ? "scale-[1.01] brightness-[1.03]"
+                : ""
+            }
+          `}
+        />
 
         <div
-          className="absolute inset-0 transition-opacity duration-500 pointer-events-none"
-          style={{
-            opacity:
-              isHovered || isEntering || showHint
-                ? 1
-                : 0,
-          }}
+          className={`
+            absolute inset-0
+            transition-opacity duration-700
+            pointer-events-none
+
+            ${
+              showHint
+                ? "opacity-100 md:opacity-0"
+                : "opacity-0"
+            }
+
+            ${
+              isHovered || isEntering
+                ? "md:opacity-100"
+                : ""
+            }
+          `}
         >
           <div
-            className="
+            className={`
               absolute bottom-5 left-5 md:bottom-7 md:left-7
               flex items-center gap-3
               text-white
-              transition-transform duration-500
-            "
-            style={{
-              transform:
+              transition-transform duration-700
+
+              ${
                 isHovered || isEntering || showHint
-                  ? "translateY(0)"
-                  : "translateY(8px)",
-            }}
+                  ? "translate-y-0"
+                  : "translate-y-2"
+              }
+            `}
           >
             <svg
               width="112"

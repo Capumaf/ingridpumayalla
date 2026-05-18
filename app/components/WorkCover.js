@@ -17,6 +17,7 @@ export default function WorkCover({ id, lang, cover, title }) {
   const imgRef = useRef(null);
   const perimRef = useRef(null);
   const curveRef = useRef(null);
+  const hintTimerRef = useRef(null);
 
   const perimLen = useRef(0);
   const curveLen = useRef(95);
@@ -111,6 +112,16 @@ export default function WorkCover({ id, lang, cover, title }) {
     });
   };
 
+  const triggerMobileHint = () => {
+    setShowHint(true);
+
+    clearTimeout(hintTimerRef.current);
+
+    hintTimerRef.current = setTimeout(() => {
+      setShowHint(false);
+    }, 5000);
+  };
+
   useEffect(() => {
     handleImageReady();
     window.addEventListener("resize", buildPerimeter);
@@ -121,15 +132,20 @@ export default function WorkCover({ id, lang, cover, title }) {
   }, []);
 
   useEffect(() => {
-    const isTouch = window.matchMedia("(hover: none)").matches;
-    if (!isTouch) return;
+    const initialTimer = setTimeout(() => {
+      triggerMobileHint();
+    }, 900);
 
-    const showTimer = setTimeout(() => setShowHint(true), 1800);
-    const hideTimer = setTimeout(() => setShowHint(false), 5200);
+    const handleScroll = () => {
+      triggerMobileHint();
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
+      clearTimeout(initialTimer);
+      clearTimeout(hintTimerRef.current);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -233,24 +249,28 @@ export default function WorkCover({ id, lang, cover, title }) {
         />
 
         <div
-          className="absolute inset-0 transition-opacity duration-500 pointer-events-none"
-          style={{
-            opacity: isHovered || isEntering || showHint ? 1 : 0,
-          }}
+          className={`
+            absolute inset-0
+            transition-opacity duration-700
+            pointer-events-none
+
+            ${showHint ? "opacity-100 md:opacity-0" : "opacity-0"}
+            ${isHovered || isEntering ? "md:opacity-100" : ""}
+          `}
         >
           <div
             className={`
               absolute bottom-5 left-8 md:bottom-7 md:left-10
               flex items-center gap-3
-              transition-transform duration-500
+              transition-transform duration-700
               ${isLightArea ? "text-black" : "text-white"}
-            `}
-            style={{
-              transform:
+
+              ${
                 isHovered || isEntering || showHint
-                  ? "translateY(0)"
-                  : "translateY(8px)",
-            }}
+                  ? "translate-y-0"
+                  : "translate-y-2"
+              }
+            `}
           >
             <svg
               width="112"

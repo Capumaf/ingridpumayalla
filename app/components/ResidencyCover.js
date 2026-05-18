@@ -17,6 +17,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
   const imgRef = useRef(null);
   const perimRef = useRef(null);
   const curveRef = useRef(null);
+  const hintTimerRef = useRef(null);
 
   const perimLen = useRef(0);
   const curveLen = useRef(95);
@@ -33,9 +34,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
 
     try {
       const canvas = document.createElement("canvas");
-      const ctx = canvas.getContext("2d", {
-        willReadFrequently: true,
-      });
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
 
       canvas.width = img.naturalWidth;
       canvas.height = img.naturalHeight;
@@ -47,12 +46,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
       const sampleW = Math.floor(img.naturalWidth * 0.28);
       const sampleH = Math.floor(img.naturalHeight * 0.08);
 
-      const data = ctx.getImageData(
-        sampleX,
-        sampleY,
-        sampleW,
-        sampleH
-      ).data;
+      const data = ctx.getImageData(sampleX, sampleY, sampleW, sampleH).data;
 
       let total = 0;
       let count = 0;
@@ -62,45 +56,28 @@ export default function ResidencyCover({ id, lang, cover, title }) {
         const g = data[i + 1];
         const b = data[i + 2];
 
-        const luminance =
-          0.299 * r +
-          0.587 * g +
-          0.114 * b;
-
-        total += luminance;
+        total += 0.299 * r + 0.587 * g + 0.114 * b;
         count++;
       }
 
       const average = total / count;
-
-      setLabelTone(
-        average > 145 ? "light" : "dark"
-      );
+      setLabelTone(average > 145 ? "light" : "dark");
     } catch {
       setLabelTone("dark");
     }
   };
 
   const buildPerimeter = () => {
-    if (
-      !linkRef.current ||
-      !perimRef.current ||
-      !curveRef.current
-    )
-      return;
+    if (!linkRef.current || !perimRef.current || !curveRef.current) return;
 
-    const rect =
-      linkRef.current.getBoundingClientRect();
-
+    const rect = linkRef.current.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
 
     const W = rect.width;
     const H = rect.height;
     const pad = 20;
 
-    const cLen =
-      curveRef.current.getTotalLength();
-
+    const cLen = curveRef.current.getTotalLength();
     curveLen.current = cLen;
 
     gsap.set(curveRef.current, {
@@ -119,9 +96,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
 
     perimRef.current.setAttribute("d", d);
 
-    const pLen =
-      perimRef.current.getTotalLength();
-
+    const pLen = perimRef.current.getTotalLength();
     perimLen.current = pLen;
 
     perimRef.current.style.strokeDasharray = `0 ${pLen}`;
@@ -138,46 +113,46 @@ export default function ResidencyCover({ id, lang, cover, title }) {
     });
   };
 
+  const triggerMobileHint = () => {
+    setShowHint(true);
+
+    clearTimeout(hintTimerRef.current);
+
+    hintTimerRef.current = setTimeout(() => {
+      setShowHint(false);
+    }, 5000);
+  };
+
   useEffect(() => {
     handleImageReady();
 
-    window.addEventListener(
-      "resize",
-      buildPerimeter
-    );
+    window.addEventListener("resize", buildPerimeter);
 
     return () => {
-      window.removeEventListener(
-        "resize",
-        buildPerimeter
-      );
+      window.removeEventListener("resize", buildPerimeter);
     };
   }, []);
 
   useEffect(() => {
-    const isTouch = window.matchMedia(
-      "(hover: none)"
-    ).matches;
+    const initialTimer = setTimeout(() => {
+      triggerMobileHint();
+    }, 900);
 
-    if (!isTouch) return;
+    const handleScroll = () => {
+      triggerMobileHint();
+    };
 
-    const showTimer = setTimeout(() => {
-      setShowHint(true);
-    }, 1800);
-
-    const hideTimer = setTimeout(() => {
-      setShowHint(false);
-    }, 5200);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
+      clearTimeout(initialTimer);
+      clearTimeout(hintTimerRef.current);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    if (!curveRef.current || isEntering)
-      return;
+    if (!curveRef.current || isEntering) return;
 
     gsap.killTweensOf(curveRef.current);
 
@@ -190,8 +165,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
       });
     } else {
       gsap.to(curveRef.current, {
-        strokeDashoffset:
-          curveLen.current,
+        strokeDashoffset: curveLen.current,
         opacity: 0,
         duration: 0.5,
         ease: "power2.in",
@@ -200,17 +174,8 @@ export default function ResidencyCover({ id, lang, cover, title }) {
   }, [isHovered, isEntering, showHint]);
 
   useEffect(() => {
-    if (
-      !isEntering ||
-      !perimBuilt.current
-    )
-      return;
-
-    if (
-      !perimRef.current ||
-      !curveRef.current
-    )
-      return;
+    if (!isEntering || !perimBuilt.current) return;
+    if (!perimRef.current || !curveRef.current) return;
 
     const pLen = perimLen.current;
     const el = perimRef.current;
@@ -234,10 +199,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
 
     tl.current = gsap.timeline({
       onUpdate: () => {
-        el.style.strokeDasharray = `${proxy.drawn} ${
-          pLen - proxy.drawn
-        }`;
-
+        el.style.strokeDasharray = `${proxy.drawn} ${pLen - proxy.drawn}`;
         el.style.strokeDashoffset = `-${proxy.tail}`;
       },
 
@@ -246,9 +208,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
           opacity: 0,
           duration: 0.3,
           ease: "power2.in",
-
-          onComplete: () =>
-            router.push(href),
+          onComplete: () => router.push(href),
         });
       },
     });
@@ -259,13 +219,11 @@ export default function ResidencyCover({ id, lang, cover, title }) {
         duration: 0.3,
         ease: "power2.out",
       })
-
       .to(proxy, {
         tail: travelEnd,
         duration: 1.8,
         ease: "power1.inOut",
       })
-
       .to(
         proxy,
         {
@@ -282,11 +240,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
 
     if (isEntering) return;
 
-    if (
-      !perimRef.current ||
-      !perimLen.current ||
-      perimLen.current === 0
-    ) {
+    if (!perimRef.current || !perimLen.current || perimLen.current === 0) {
       router.push(href);
       return;
     }
@@ -294,8 +248,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
     setIsEntering(true);
   };
 
-  const isLightArea =
-    labelTone === "light";
+  const isLightArea = labelTone === "light";
 
   return (
     <div className="flex justify-center">
@@ -303,19 +256,10 @@ export default function ResidencyCover({ id, lang, cover, title }) {
         ref={linkRef}
         href={href}
         onClick={handleClick}
-        onMouseEnter={() =>
-          !isEntering &&
-          setIsHovered(true)
-        }
-        onMouseLeave={() =>
-          setIsHovered(false)
-        }
+        onMouseEnter={() => !isEntering && setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         className="relative inline-block overflow-hidden max-w-[92vw] md:max-w-[640px]"
-        aria-label={
-          lang === "es"
-            ? "Ver residencia"
-            : "View residency"
-        }
+        aria-label={lang === "es" ? "Ver residencia" : "View residency"}
       >
         <img
           ref={imgRef}
@@ -341,36 +285,29 @@ export default function ResidencyCover({ id, lang, cover, title }) {
         />
 
         <div
-          className="absolute inset-0 transition-opacity duration-500 pointer-events-none"
-          style={{
-            opacity:
-              isHovered ||
-              isEntering ||
-              showHint
-                ? 1
-                : 0,
-          }}
+          className={`
+            absolute inset-0
+            transition-opacity duration-700
+            pointer-events-none
+
+            ${showHint ? "opacity-100 md:opacity-0" : "opacity-0"}
+            ${isHovered || isEntering ? "md:opacity-100" : ""}
+          `}
         >
           <div
             className={`
               absolute bottom-5 left-5 md:bottom-7 md:left-7
               flex items-center gap-3
-              transition-transform duration-500
+              transition-transform duration-700
+
+              ${isLightArea ? "text-black" : "text-white"}
 
               ${
-                isLightArea
-                  ? "text-black"
-                  : "text-white"
+                isHovered || isEntering || showHint
+                  ? "translate-y-0"
+                  : "translate-y-2"
               }
             `}
-            style={{
-              transform:
-                isHovered ||
-                isEntering ||
-                showHint
-                  ? "translateY(0)"
-                  : "translateY(8px)",
-            }}
           >
             <svg
               width="112"
@@ -414,15 +351,12 @@ export default function ResidencyCover({ id, lang, cover, title }) {
                 isEntering
                   ? {
                       opacity: 0,
-                      transform:
-                        "translateX(6px)",
+                      transform: "translateX(6px)",
                     }
                   : undefined
               }
             >
-              {lang === "es"
-                ? "Ver residencia"
-                : "View residency"}
+              {lang === "es" ? "Ver residencia" : "View residency"}
             </span>
           </div>
         </div>
@@ -440,8 +374,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
             strokeLinejoin="round"
             fill="none"
             style={{
-              mixBlendMode:
-                "difference",
+              mixBlendMode: "difference",
             }}
           />
         </svg>

@@ -26,6 +26,21 @@ export default async function Bio({ params, searchParams }) {
       ? "Ver statement"
       : "View Statement";
 
+  const imageSrc =
+    view === "statement"
+      ? "/Cromlech-and-gaza.webp"
+      : "/SelfportraitWithHugstone.webp";
+
+  const imageAlt =
+    view === "statement"
+      ? "Cromlech and Gaza"
+      : "Selfportrait with Hugstone";
+
+  const caption =
+    view === "statement"
+      ? "Cromlech and Gaza, 2022."
+      : "Selfportrait with Hugstone, 2018.";
+
   return (
     <article className="pt-14 md:pt-16">
       <div className="px-6 md:px-0 max-w-[820px] mx-auto">
@@ -33,12 +48,12 @@ export default async function Bio({ params, searchParams }) {
           <BioCover
             href={toggleHref}
             label={toggleLabel}
-            imageSrc="/SelfportraitWithHugstone.webp"
-            imageAlt="Selfportrait with Hugstone"
+            imageSrc={imageSrc}
+            imageAlt={imageAlt}
           />
 
-          <figcaption className="mt-4 w-full max-w-[820px] text-center md:text-right text-[11px] tracking-wide text-neutral-400">
-            Selfportrait with Hugstone, 2018.
+          <figcaption className="mt-4 w-full max-w-[820px] text-center md:text-right md:pr-[42px] text-[11px] tracking-wide text-neutral-400">
+            {caption}
           </figcaption>
         </figure>
 
@@ -50,7 +65,8 @@ export default async function Bio({ params, searchParams }) {
               max-w-[780px]
 
               px-0
-              md:px-[100px]
+              md:pl-[100px]
+              md:pr-[125px]
 
               text-[13.5px]
               leading-[2]
