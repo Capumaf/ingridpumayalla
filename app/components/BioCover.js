@@ -200,36 +200,45 @@ export default function BioCover({
   };
 
   return (
-    <div className="flex justify-center">
-      <Link
-        ref={linkRef}
-        href={href}
-        onClick={handleClick}
-        onMouseEnter={() => !isEntering && setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className="relative inline-block overflow-hidden max-w-[92vw] md:max-w-[640px]"
-        aria-label={label}
-      >
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          onLoad={buildPerimeter}
-          className={`
-            w-full max-w-[92vw] md:max-w-[640px]
-            h-auto max-h-[74vh] md:max-h-[72vh]
-            object-contain cursor-pointer
-            transition-all duration-700 ease-out
-            opacity-0 animate-fadeIn
+  <div className="flex justify-center w-full pl-0 md:pl-[140px]">
+    <Link
+      ref={linkRef}
+      href={href}
+      onClick={handleClick}
+      onMouseEnter={() => !isEntering && setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative block overflow-hidden w-full md:w-auto"
+      aria-label={label}
+    >
+   <img
+  src={imageSrc}
+  alt={imageAlt}
+  onLoad={buildPerimeter}
+  className={`
+    w-full
+    h-auto
 
-            ${
-              isEntering
-                ? "brightness-[0.96]"
-                : isHovered
-                ? "scale-[1.01] brightness-[1.03]"
-                : ""
-            }
-          `}
-        />
+    max-h-[72svh]
+    md:max-w-[760px]
+    md:max-h-[78vh]
+
+    object-contain
+    cursor-pointer
+    transition-all
+    duration-700
+    ease-out
+    opacity-0
+    animate-fadeIn
+
+    ${
+      isEntering
+        ? "brightness-[0.96]"
+        : isHovered
+        ? "scale-[1.01] brightness-[1.03]"
+        : ""
+    }
+  `}
+/>
 
         <div
           className="absolute inset-0 transition-opacity duration-500 pointer-events-none"

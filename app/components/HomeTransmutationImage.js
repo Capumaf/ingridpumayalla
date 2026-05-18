@@ -35,11 +35,22 @@ export default function HomeTransmutationImage() {
   if (!images.length) return null;
 
   return (
-    <div className="relative w-full flex flex-col items-center">
+    <div className="relative w-full flex flex-col items-center justify-center">
       <button
         type="button"
         onClick={goNext}
-        className="relative w-full aspect-[3/4] max-h-[72vh] md:max-h-[62vh] block overflow-hidden cursor-pointer"
+        className={`
+          relative
+          w-full
+          max-w-[84vw]
+          aspect-[3/4]
+          max-h-[64svh]
+          md:max-w-none
+          md:max-h-[62vh]
+          block
+          overflow-hidden
+          cursor-pointer
+        `}
         aria-label="Change image"
       >
         <Image
@@ -57,7 +68,7 @@ export default function HomeTransmutationImage() {
         />
       </button>
 
-      <div className="mt-0 md:mt-6 flex justify-center w-full">
+      <div className="mt-3 md:mt-6 flex justify-center w-full">
         <svg
           key={current}
           width="340"
@@ -65,7 +76,7 @@ export default function HomeTransmutationImage() {
           viewBox="0 0 340 18"
           fill="none"
           aria-hidden="true"
-          className="w-[88vw] max-w-[340px]"
+          className="w-[78vw] max-w-[340px]"
         >
           <path
             d="M2 12 L78 12 L78 8 L128 8 L128 13 L188 13 L188 7 L252 7 L252 11 L338 11"

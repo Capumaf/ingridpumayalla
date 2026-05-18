@@ -117,7 +117,7 @@ const handleTouchEnd = (e) => {
           <img
             src={img.src}
             alt={description || residency.title || "Residency image"}
-            className="object-contain w-full max-h-[55vh]"
+            className="object-contain w-full max-h-[72vh]"
           />
         </div>
 

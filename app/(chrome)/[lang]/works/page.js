@@ -64,7 +64,7 @@ export default function WorksPage() {
                       {sections.map((section) => (
                         <li key={section.id}>
                           <Link
-                            href={`/${lang}/works/${id}/${section.id}`}
+                            href={`/${lang}/works/${id}/sections/${section.id}`}
                             className="text-[11px] text-neutral-400 hover:text-black transition-colors"
                           >
                             {section.title}

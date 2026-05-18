@@ -390,7 +390,7 @@ Curator of the exhibition
 
       cover: {
         type: "video",
-        src: "/ofrendas/cantos-al-agua.mp4"
+        src: "/cantos-al-agua.mp4"
       },
 
       text: {
@@ -414,115 +414,133 @@ Curator of the exhibition
         {
           id: "1",
           type: "video",
-          src: "/ofrendas/cantos-al-agua.mp4"
+          src: "/cantos-al-agua.mp4"
         }
       ]
     },
 
+ {
+  id: "plegaria-al-caballo-blanco",
+  title: "Plegaria al caballo blanco",
+
+  cover: {
+    type: "image",
+    src: "/Caballito1.webp",
+    width: 1200,
+    height: 800
+  },
+
+  text: {
+    es: `
+<p>Ehwaz es una runa del alfabeto Futhark que simboliza el caballo, el movimiento, el progreso y la transformación. Asociada con la confianza y la alianza entre caballo y jinete, su forma se asemeja a una “M”.</p>
+
+<p>Esta serie de fotografías documenta un conjunto de rituales y acciones performativas realizadas dentro del paisaje. En 2022 visité Westbury White Horse y realicé una acción alrededor del sitio. Tejí una larga trenza gruesa y la utilicé para dibujar una “M” sobre el paisaje, reforzando una sensación de conexión, confianza e intercambio con la tierra.</p>
+    `,
+    en: `
+<p>Ehwaz is a rune in the Futhark alphabet symbolizing the horse, movement, progress, and transformation. Associated with trust and partnership between horse and rider, its form resembles the shape of an “M.”</p>
+
+<p>This series of photographs documents a set of rituals and performative actions carried out within the landscape. In 2022, I visited Westbury White Horse and performed around the site. I knitted a long, thick plait and used it to draw an “M” into the landscape, reinforcing a sense of connection, trust, and exchange with the land itself.</p>
+    `
+  },
+
+  mediaData: [
     {
-      id: "plegaria-al-caballo-blanco",
-      title: "Plegaria al caballo blanco",
-
-      cover: {
-        type: "image",
-        src: "/ofrendas/plegaria-cover.webp",
-        width: 1200,
-        height: 800
-      },
-
-      text: {
-        es: `
-<p>Texto de introducción de Plegaria al caballo blanco.</p>
-        `,
-        en: `
-<p>Intro text for Prayer to the White Horse.</p>
-        `
-      },
-
-      mediaData: [
-        {
-          id: "1",
-          type: "image",
-          src: "/ofrendas/plegaria-1.webp",
-          width: 1200,
-          height: 800
-        },
-        {
-          id: "2",
-          type: "image",
-          src: "/ofrendas/plegaria-2.webp",
-          width: 1200,
-          height: 800
-        }
-      ]
+      id: "1",
+      type: "image",
+      src: "/caballito1.webp",
+      width: 1200,
+      height: 800
     },
-
     {
-      id: "the-hair-cut",
-      title: "The Hair Cut",
-
-      cover: {
-        type: "image",
-        src: "/ofrendas/the-hair-cut-cover.webp",
-        width: 1200,
-        height: 800
-      },
-
-      text: {
-        es: `
-<p>Texto introductorio de The Hair Cut.</p>
-        `,
-        en: `
-<p>Introductory text for The Hair Cut.</p>
-        `
-      },
-
-      mediaData: [
-        {
-          id: "1",
-          type: "image",
-          src: "/ofrendas/the-hair-cut-1.webp",
-          width: 1200,
-          height: 800
-        },
-        {
-          id: "2",
-          type: "video",
-          src: "/ofrendas/the-hair-cut-video.mp4"
-        }
-      ]
+      id: "2",
+      type: "image",
+      src: "/caballito2.webp",
+      width: 1200,
+      height: 800
     },
-
     {
-      id: "yuraq-warmi-yana-warmi",
-      title: "Yuraq Warmi, Yana warmi.",
-
-      cover: {
-        type: "image",
-        src: "/ofrendas/yuraq-warmi-yana-warmi-cover.webp",
-        width: 1200,
-        height: 800
-      },
-
-      text: {
-        es: `
-<p>Texto introductorio de Yuraq Warmi, Yana warmi.</p>
-        `,
-        en: `
-<p>Introductory text for Yuraq Warmi, Yana warmi.</p>
-        `
-      },
-
-      mediaData: [
-        {
-          id: "1",
-          type: "image",
-          src: "/ofrendas/yuraq-warmi-yana-warmi-1.webp",
-          width: 1200,
-          height: 800
-        }
-      ]
+      id: "3",
+      type: "image",
+      src: "/caballito3.webp",
+      width: 1200,
+      height: 800
+    },
+    {
+      id: "4",
+      type: "video",
+      src: "/plegaria-al-caballo-blanco.mp4"
     }
+  ]
+},
+
+    {
+  id: "the-hair-cut",
+  title: "The Hair Cut",
+
+  cover: {
+    type: "image",
+    src: "/haircut1.webp",
+    width: 1200,
+    height: 800
+  },
+
+  text: {
+    es: `
+<p>Texto introductorio de The Hair Cut.</p>
+    `,
+    en: `
+<p>Introductory text for The Hair Cut.</p>
+    `
+  },
+
+  mediaData: [
+    {
+      id: "1",
+      type: "image",
+      src: "/haircut1.webp",
+      width: 1200,
+      height: 800
+    },
+    {
+      id: "2",
+      type: "video",
+      src: "/the_haircut.mp4"
+    }
+  ]
+},
+
+   {
+  id: "yuraq-warmi-yana-warmi",
+  title: "Yuraq Warmi, Yana Warmi",
+
+  cover: {
+    type: "image",
+    src: "/Linea-infinita1.webp",
+    width: 1200,
+    height: 800
+  },
+
+  text: {
+    es: `
+<p>Texto introductorio de Yuraq Warmi, Yana Warmi.</p>
+    `,
+    en: `
+<p>Introductory text for Yuraq Warmi, Yana Warmi.</p>
+    `
+  },
+
+  mediaData: [
+    {
+      id: "1",
+      type: "image",
+      src: "/Linea-infinita1.webp",
+      width: 1200,
+      height: 800
+    }
+  ]
+},
+
+
   ],
 
   imageData: []

@@ -28,8 +28,8 @@ export default async function Bio({ params, searchParams }) {
 
   return (
     <article className="pt-14 md:pt-16">
-      <div className="px-6 md:px-0 max-w-[760px] mx-auto">
-        <figure className="mb-24 flex flex-col items-center">
+      <div className="px-6 md:px-0 max-w-[820px] mx-auto">
+        <figure className="mb-6 flex flex-col items-center">
           <BioCover
             href={toggleHref}
             label={toggleLabel}
@@ -37,14 +37,24 @@ export default async function Bio({ params, searchParams }) {
             imageAlt="Selfportrait with Hugstone"
           />
 
-          <figcaption className="mt-4 w-full max-w-[640px] text-right text-[11px] tracking-wide text-neutral-400">
+          <figcaption className="mt-4 w-full max-w-[820px] text-center md:text-right text-[11px] tracking-wide text-neutral-400">
             Selfportrait with Hugstone, 2018.
           </figcaption>
         </figure>
 
-        <div className="flex justify-center">
+        <div className="w-full flex justify-center md:translate-x-[75px]">
           <div
-            className="body-text max-w-[520px] text-[13.5px] leading-[2]"
+            className="
+              body-text
+              w-full
+              max-w-[780px]
+
+              px-0
+              md:px-[100px]
+
+              text-[13.5px]
+              leading-[2]
+            "
             dangerouslySetInnerHTML={{
               __html: content?.text?.[lang] || "",
             }}

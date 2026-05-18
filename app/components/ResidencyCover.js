@@ -324,8 +324,8 @@ export default function ResidencyCover({ id, lang, cover, title }) {
           draggable={false}
           onLoad={handleImageReady}
           className={`
-            w-full max-w-[92vw] md:max-w-[640px]
-            h-auto max-h-[74vh] md:max-h-[72vh]
+            w-full max-w-[92vw] md:max-w-[760px]
+            h-auto max-h-[74vh] md:max-h-[78vh]
             object-contain cursor-pointer
             transition-all duration-700 ease-out
             opacity-0 animate-fadeIn

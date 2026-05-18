@@ -43,26 +43,24 @@ export default function SectionCover({ href, cover, title }) {
           />
         ) : (
           <img
-            src={cover.src}
-            alt={title || ""}
-            draggable={false}
-            className={`
-              w-full
-              h-auto
-              max-h-[72vh]
-              object-contain
-              cursor-pointer
-              transition-all
-              duration-700
-              ease-out
+          src={cover.src}
+          alt={title || ""}
+          draggable={false}
+          className={`
+          block
+          w-full
+          max-w-[640px]
+          h-auto
+          max-h-[72vh]
+          object-contain
+          cursor-pointer
+          transition-all
+          duration-700
+          ease-out
 
-              ${
-                isHovered
-                  ? "scale-[1.01] brightness-[1.03]"
-                  : ""
-              }
-            `}
-          />
+    ${isHovered ? "scale-[1.01] brightness-[1.03]" : ""}
+  `}
+/>
         )}
 
         <div

@@ -8,22 +8,27 @@ import ResidencyCover from "@/components/ResidencyCover";
 
 export default function ResidencyDetailPage() {
   const { id } = useParams();
+
   const pathname = usePathname();
 
-  const lang = pathname.startsWith("/es") ? "es" : "en";
+  const lang = pathname.startsWith("/es")
+    ? "es"
+    : "en";
+
   const residency = residencyDetails[id];
 
   if (!residency) {
     return (
       <div className="px-6 pt-20">
-        <p className="text-sm text-neutral-500">Residency not found</p>
+        <p className="text-sm text-neutral-500">
+          Residency not found
+        </p>
       </div>
     );
   }
 
-  const cover = residency.imageData?.[0];
-
-  console.log("RESIDENCY COVER:", cover);
+  const cover =
+    residency.imageData?.[0];
 
   const title =
     typeof residency.title === "string"
@@ -33,23 +38,35 @@ export default function ResidencyDetailPage() {
   const text =
     typeof residency.introduction === "string"
       ? residency.introduction
-      : residency.introduction?.[lang] || residency.introduction?.en || "";
+      : residency.introduction?.[lang] ||
+        residency.introduction?.en ||
+        "";
 
   return (
     <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
       <div className="w-full max-w-5xl md:pl-[120px] lg:pl-[160px]">
-        {/* Botón de regreso */}
+        {/* BACK */}
         <div className="mb-6">
           <Link
             href={`/${lang}/residencies`}
             className="text-xs tracking-widest text-gray-500 hover:text-black transition-colors"
           >
-            ← {lang === "es" ? "Volver a residencias" : "Back to residencies"}
+            ←{" "}
+            {lang === "es"
+              ? "Volver a residencias"
+              : "Back to residencies"}
           </Link>
         </div>
 
-        <ResidencyCover id={id} lang={lang} cover={cover} title={title} />
+        {/* COVER */}
+        <ResidencyCover
+          id={id}
+          lang={lang}
+          cover={cover}
+          title={title}
+        />
 
+        {/* TEXT */}
         <div className="max-w-[520px] mx-auto mt-8 md:mt-32 px-2">
           <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center">
             {title}
@@ -57,8 +74,15 @@ export default function ResidencyDetailPage() {
 
           {text && (
             <div
-              className="body-text max-w-[520px]"
-              dangerouslySetInnerHTML={{ __html: text }}
+              className="
+                body-text
+                max-w-[520px]
+                text-[13.5px]
+                leading-[2]
+              "
+              dangerouslySetInnerHTML={{
+                __html: text,
+              }}
             />
           )}
         </div>

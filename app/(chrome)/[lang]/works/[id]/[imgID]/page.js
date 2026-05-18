@@ -154,7 +154,7 @@ export default function ImagePage() {
       </div>
 
    {/* DESKTOP */}
-<div className="hidden md:md:grid w-full max-w-6xl px-10 pl-14 lg:pl-20 grid-cols-[180px_1fr] gap-10 items-start">
+<div className="hidden md:grid w-full max-w-6xl px-10 pl-14 lg:pl-20 grid-cols-[180px_1fr] gap-10 items-start">
   {/* LEFT DETAILS */}
   <div
     className="text-sm text-gray-800 flex flex-col pt-2 ml-8"
