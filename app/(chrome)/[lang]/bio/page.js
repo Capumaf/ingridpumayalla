@@ -57,7 +57,7 @@ export default async function Bio({ params, searchParams }) {
           </figcaption>
         </figure>
 
-        <div className="w-full flex justify-center md:translate-x-[75px]">
+        <div className="w-full flex justify-center md:translate-x-[60px]">
           <div
             className="
               body-text
@@ -70,6 +70,7 @@ export default async function Bio({ params, searchParams }) {
 
               text-[13.5px]
               leading-[2]
+               text-justify
             "
             dangerouslySetInnerHTML={{
               __html: content?.text?.[lang] || "",
