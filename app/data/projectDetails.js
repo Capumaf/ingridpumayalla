@@ -447,7 +447,7 @@ Curator of the exhibition
     {
       id: "1",
       type: "image",
-      src: "/caballito1.webp",
+      src: "/Caballito.web",
       width: 1200,
       height: 800
     },
