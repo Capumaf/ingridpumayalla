@@ -421,50 +421,49 @@ la memoria y la relación entre cuerpo y territorio.
   },
 
   sections: [
-    {
-      id: "cantos-al-agua",
-      title: "Cantos al agua",
+{
+  id: "cantos-al-agua",
+  title: "Cantos al agua",
 
-      cover: {
-        type: "video",
-        src: "/cantos-al-agua.mp4"
-      },
+  cover: {
+    type: "image",
+    src: "/cantosAgua1.webp",
+    width: 1400,
+    height: 1800,
+  },
 
-      imageData: [
-        {
-          id: "1",
-          type: "image",
-          src: "/cantosAgua1.webp",
-          width: 1400,
-          height: 1800,
-        },
-      ],
-
-      text: {
-        es: `
+  text: {
+    es: `
 <p>Es un proyecto de sitio específico dentro de las zonas arqueológicas de la Quebrada de Santo Domingo, la Huaca El Brujo (siglos III y VII d.C.) y Chan Chan (850 d.C.), en los alrededores de la ciudad de Trujillo, en el norte del Perú.</p>
 
 <p>Estos paisajes han sido transgredidos como consecuencia de la agroindustria y la expansión urbana, así como también por el saqueo de tesoros dentro de las Huacas.</p>
 
 <p>Las acciones son gestos, ofrendas y cantos para conmemorar al agua como símbolo de fertilidad y su conexión con la tierra, así como un duelo por el lenguaje del agua y el conocimiento perdido dentro del paisaje del desierto peruano.</p>
-        `,
-        en: `
+    `,
+    en: `
 <p>This project is a site-specific intervention carried out within the archaeological zones of Quebrada de Santo Domingo, Huaca El Brujo (3rd–7th century CE), and Chan Chan (c. 850 CE), located in the outskirts of Trujillo, northern Peru.</p>
 
 <p>These landscapes have been deeply altered by agro-industrial activity, urban expansion, and the looting of sacred Huacas in search of ancestral treasures.</p>
 
 <p>Through gestures, offerings, and songs, the actions pay tribute to water as a symbol of fertility and its connection to the land. They also serve as a mourning ritual for the language of water and the ancestral knowledge lost in this desert landscape.</p>
-        `
-      },
+    `
+  },
 
-      mediaData: [
-        {
-          id: "1",
-          type: "video",
-          src: "/cantos-al-agua.mp4"
-        }
-      ]
+  mediaData: [
+    {
+      id: "1",
+      type: "image",
+      src: "/cantosAgua1.webp",
+      width: 1400,
+      height: 1800,
     },
+    {
+      id: "2",
+      type: "video",
+      src: "/cantos-al-agua.mp4"
+    }
+  ]
+},
 
     {
       id: "plegaria-al-caballo-blanco",

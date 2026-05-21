@@ -5,6 +5,7 @@ export const residencyDetails = {
 
     imageData: [
       { id: "1", src: "/amorgos1.webp", width: 1200, height: 800 },
+
     ]
 
     
