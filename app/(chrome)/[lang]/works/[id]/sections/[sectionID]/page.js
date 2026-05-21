@@ -31,6 +31,11 @@ export default function WorkSectionPage() {
   console.log("SECTION:", section);
   console.log("COVER:", section.cover);
 
+  const title =
+    typeof section.title === "string"
+      ? section.title
+      : section.title?.[lang] || section.title?.es || "";
+
   const text =
     typeof section.text === "string"
       ? section.text
@@ -58,13 +63,13 @@ export default function WorkSectionPage() {
           <SectionCover
             href={mediaHref}
             cover={section.cover}
-            title={section.title}
+            title={title}
           />
         )}
 
         <div className="max-w-[520px] mx-auto mt-8 md:mt-32 px-2">
           <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center">
-            {section.title}
+            {title}
           </h1>
 
           {text && (

@@ -4,5 +4,4 @@ export const RESIDENCY_ORDER = [
   "chain-in-reaction",
   "solace-project",
   "pa-utrygg-grun",
-  "stokkoy-art-carpeta-sin-titulo",
 ];

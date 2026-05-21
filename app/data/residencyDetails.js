@@ -5,10 +5,9 @@ export const residencyDetails = {
 
     imageData: [
       { id: "1", src: "/amorgos1.webp", width: 1200, height: 800 },
-      { id: "2", src: "/amorgos2.webp", width: 1200, height: 800 },
-      { id: "3", src: "/amorgos3.webp", width: 1200, height: 800 },
-      { id: "4", src: "/amorgos4.webp", width: 1200, height: 800 },
     ]
+
+    
   },
 
   "bledfa-center": {
@@ -20,6 +19,10 @@ export const residencyDetails = {
       { id: "2", src: "/bledfa2.webp", width: 1200, height: 800 },
       { id: "3", src: "/bledfa3.webp", width: 1200, height: 800 },
       { id: "4", src: "/bledfa4.webp", width: 1200, height: 800 },
+      { id: "5", src: "/bledfa5.webp", width: 1200, height: 800 },
+      { id: "6", src: "/bledfa6.webp", width: 1200, height: 800 },
+      { id: "7", src: "/bledfa7.webp", width: 1200, height: 800 },
+      { id: "8", src: "/bledfa8.webp", width: 1200, height: 800 },
     ]
   },
 
@@ -32,6 +35,14 @@ export const residencyDetails = {
       { id: "2", src: "/chain2.webp", width: 1200, height: 800 },
       { id: "3", src: "/chain3.webp", width: 1200, height: 800 },
       { id: "4", src: "/chain4.webp", width: 1200, height: 800 },
+      { id: "5", src: "/chain5.webp", width: 1200, height: 800 },
+      { id: "6", src: "/chain6.webp", width: 1200, height: 800 },
+      { id: "7", src: "/chain7.webp", width: 1200, height: 800 },
+      { id: "8", src: "/chain8.webp", width: 1200, height: 800 },
+      { id: "9", src: "/chain9.webp", width: 1200, height: 800 },
+      { id: "10", src: "/chain10.webp", width: 1200, height: 800 },
+      { id: "11", src: "/chain11.webp", width: 1200, height: 800 },
+      { id: "12", src: "/chain12.webp", width: 1200, height: 800 },
     ]
   },
 
@@ -59,16 +70,5 @@ export const residencyDetails = {
 ]
 },
 
-  "stokkoy-art-carpeta-": {
-  title: "Stokkoy Art Carpeta sin título",
-  introduction: "Residency project.",
-
-  imageData: [
-    { id: "1", src: "/stokkoy1.webp", width: 1200, height: 800 },
-    { id: "2", src: "/stokkoy2.webp", width: 1200, height: 800 },
-    { id: "3", src: "/stokkoy3.webp", width: 1200, height: 800 },
-    { id: "4", src: "/stokkoy4.webp", width: 1200, height: 800 },
-  ]
-},
 
 };

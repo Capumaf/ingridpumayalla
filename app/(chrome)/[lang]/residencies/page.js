@@ -26,10 +26,6 @@ const residencies = [
     title: "Pa Utrygg grun"
   },
 
-  {
-    id: "stokkoy-art-carpeta-sin-titulo",
-    title: "Stokkoy Art Carpeta sin título"
-  }
 ];
 
 export default function ResidenciesPage() {

@@ -13,6 +13,11 @@ export default function WorksPage() {
 
   const [openId, setOpenId] = useState(null);
 
+  const getLocalizedText = (value) => {
+    if (typeof value === "string") return value;
+    return value?.[lang] || value?.es || value?.en || "";
+  };
+
   return (
     <div className="w-full flex justify-center">
       <div className="w-full max-w-[540px] px-6">
@@ -43,7 +48,7 @@ export default function WorksPage() {
                   href={`/${lang}/works/${id}`}
                   className="text-xs text-neutral-600 hover:text-black transition-colors"
                 >
-                  {project.title}
+                  {getLocalizedText(project.title)}
                 </Link>
 
                 {isOfrendas && sections.length > 0 && (
@@ -67,7 +72,7 @@ export default function WorksPage() {
                             href={`/${lang}/works/${id}/sections/${section.id}`}
                             className="text-[11px] text-neutral-400 hover:text-black transition-colors"
                           >
-                            {section.title}
+                            {getLocalizedText(section.title)}
                           </Link>
                         </li>
                       ))}

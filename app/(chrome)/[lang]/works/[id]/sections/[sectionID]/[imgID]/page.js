@@ -92,6 +92,11 @@ export default function SectionMediaPage() {
     item.description?.[lang] ??
     (typeof item.description === "string" ? item.description : "");
 
+  const sectionTitle =
+    typeof section.title === "string"
+      ? section.title
+      : section.title?.[lang] || section.title?.es || "";
+
   const renderMedia = (className) =>
     item.type === "video" ? (
       <video
@@ -106,7 +111,7 @@ export default function SectionMediaPage() {
     ) : (
       <img
         src={item.src}
-        alt={description || section.title}
+        alt={description || sectionTitle}
         className={className}
       />
     );
@@ -172,7 +177,7 @@ export default function SectionMediaPage() {
 
         <div>
           <p className="text-xs text-neutral-400 tracking-widest mb-1">
-            {section.title}
+            {sectionTitle}
           </p>
 
           {description && (
@@ -203,7 +208,7 @@ export default function SectionMediaPage() {
 
           <div className="mt-6">
             <h2 className="text-base font-semibold mb-1">
-              {section.title}
+              {sectionTitle}
             </h2>
 
             {description && (

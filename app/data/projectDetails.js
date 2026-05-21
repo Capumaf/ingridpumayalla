@@ -200,6 +200,34 @@ Curator of the exhibition
     ]
   },
 
+
+  "dancing-on-a-ritual-stone": {
+  title: {
+    en: "Dancing on a Ritual Stone",
+    es: "Danzando sobre una Piedra Ritual",
+  },
+
+  text: {
+    en: `
+A photographic and symbolic exploration centered on ritual movement,
+memory, and the relationship between body and territory.
+    `,
+
+    es: `
+Una exploración fotográfica y simbólica centrada en el movimiento ritual,
+la memoria y la relación entre cuerpo y territorio.
+    `,
+  },
+
+  imageData: [
+  { id: "1", src: "/stone1.webp", width: 1200, height: 800 },
+  { id: "2", src: "/stone2.webp", width: 1200, height: 800 },
+  { id: "3", src: "/stone3.webp", width: 1200, height: 800 },
+  { id: "4", src: "/stone4.webp", width: 1200, height: 800 },
+  { id: "5", src: "/stone5.webp", width: 1200, height: 800 },
+],
+},
+
   "dibujando-una-linea-roja-en-el-desierto-de-paracas": {
     title: "Dibujando una línea roja en el desierto de Paracas",
 
@@ -375,8 +403,17 @@ Curator of the exhibition
     ]
   },
 
-  "ofrendas-offerings": {
+ "ofrendas-offerings": {
   title: "Ofrendas/Offerings",
+
+  imageData: [
+    {
+      id: "1",
+      src: "/Ofrendas1.webp",
+      width: 1200,
+      height: 800,
+    },
+  ],
 
   text: {
     es: `<p></p>`,
@@ -392,6 +429,16 @@ Curator of the exhibition
         type: "video",
         src: "/cantos-al-agua.mp4"
       },
+
+      imageData: [
+        {
+          id: "1",
+          type: "image",
+          src: "/cantosAgua1.webp",
+          width: 1400,
+          height: 1800,
+        },
+      ],
 
       text: {
         es: `
@@ -419,131 +466,127 @@ Curator of the exhibition
       ]
     },
 
- {
-  id: "plegaria-al-caballo-blanco",
-  title: "Plegaria al caballo blanco",
+    {
+      id: "plegaria-al-caballo-blanco",
+      title: "Plegaria al caballo blanco",
 
-  cover: {
-    type: "image",
-    src: "/Caballito1.webp",
-    width: 1200,
-    height: 800
-  },
+      cover: {
+        type: "image",
+        src: "/Caballito1.webp",
+        width: 1200,
+        height: 800
+      },
 
-  text: {
-    es: `
+      text: {
+        es: `
 <p>Ehwaz es una runa del alfabeto Futhark que simboliza el caballo, el movimiento, el progreso y la transformación. Asociada con la confianza y la alianza entre caballo y jinete, su forma se asemeja a una “M”.</p>
 
 <p>Esta serie de fotografías documenta un conjunto de rituales y acciones performativas realizadas dentro del paisaje. En 2022 visité Westbury White Horse y realicé una acción alrededor del sitio. Tejí una larga trenza gruesa y la utilicé para dibujar una “M” sobre el paisaje, reforzando una sensación de conexión, confianza e intercambio con la tierra.</p>
-    `,
-    en: `
+        `,
+        en: `
 <p>Ehwaz is a rune in the Futhark alphabet symbolizing the horse, movement, progress, and transformation. Associated with trust and partnership between horse and rider, its form resembles the shape of an “M.”</p>
 
 <p>This series of photographs documents a set of rituals and performative actions carried out within the landscape. In 2022, I visited Westbury White Horse and performed around the site. I knitted a long, thick plait and used it to draw an “M” into the landscape, reinforcing a sense of connection, trust, and exchange with the land itself.</p>
-    `
-  },
+        `
+      },
 
-  mediaData: [
-    {
-      id: "1",
-      type: "image",
-      src: "/Caballito1.webp",
-      width: 1200,
-      height: 800
+      mediaData: [
+        {
+          id: "1",
+          type: "image",
+          src: "/Caballito1.webp",
+          width: 1200,
+          height: 800
+        },
+        {
+          id: "2",
+          type: "image",
+          src: "/Caballito2.webp",
+          width: 1200,
+          height: 800
+        },
+        {
+          id: "3",
+          type: "image",
+          src: "/Caballito3.webp",
+          width: 1200,
+          height: 800
+        },
+        {
+          id: "4",
+          type: "video",
+          src: "/plegaria-al-caballo-blanco.mp4"
+        }
+      ]
     },
-    {
-      id: "2",
-      type: "image",
-      src: "/Caballito2.webp",
-      width: 1200,
-      height: 800
-    },
-    {
-      id: "3",
-      type: "image",
-      src: "/Caballito3.webp",
-      width: 1200,
-      height: 800
-    },
-    {
-      id: "4",
-      type: "video",
-      src: "/plegaria-al-caballo-blanco.mp4"
-    }
-  ]
-},
 
     {
-  id: "the-hair-cut",
-  title: "The Hair Cut",
+      id: "the-hair-cut",
+      title: "The Hair Cut",
 
-  cover: {
-    type: "image",
-    src: "/haircut1.webp",
-    width: 1200,
-    height: 800
-  },
+      cover: {
+        type: "image",
+        src: "/haircut1.webp",
+        width: 1200,
+        height: 800
+      },
 
-  text: {
-    es: `
+      text: {
+        es: `
 <p>Texto introductorio de The Hair Cut.</p>
-    `,
-    en: `
+        `,
+        en: `
 <p>Introductory text for The Hair Cut.</p>
-    `
-  },
+        `
+      },
 
-  mediaData: [
-    {
-      id: "1",
-      type: "image",
-      src: "/haircut1.webp",
-      width: 1200,
-      height: 800
+      mediaData: [
+        {
+          id: "1",
+          type: "image",
+          src: "/haircut1.webp",
+          width: 1200,
+          height: 800
+        },
+        {
+          id: "2",
+          type: "video",
+          src: "/the_haircut.mp4"
+        }
+      ]
     },
+
     {
-      id: "2",
-      type: "video",
-      src: "/the_haircut.mp4"
-    }
-  ]
-},
+      id: "yuraq-warmi-yana-warmi",
+      title: "Yuraq Warmi, Yana Warmi",
 
-   {
-  id: "yuraq-warmi-yana-warmi",
-  title: "Yuraq Warmi, Yana Warmi",
+      cover: {
+        type: "image",
+        src: "/Linea-infinita1.webp",
+        width: 1200,
+        height: 800
+      },
 
-  cover: {
-    type: "image",
-    src: "/Linea-infinita1.webp",
-    width: 1200,
-    height: 800
-  },
-
-  text: {
-    es: `
+      text: {
+        es: `
 <p>Texto introductorio de Yuraq Warmi, Yana Warmi.</p>
-    `,
-    en: `
+        `,
+        en: `
 <p>Introductory text for Yuraq Warmi, Yana Warmi.</p>
-    `
-  },
+        `
+      },
 
-  mediaData: [
-    {
-      id: "1",
-      type: "image",
-      src: "/Linea-infinita1.webp",
-      width: 1200,
-      height: 800
+      mediaData: [
+        {
+          id: "1",
+          type: "image",
+          src: "/Linea-infinita1.webp",
+          width: 1200,
+          height: 800
+        }
+      ]
     }
   ]
-},
-
-
-  ],
-
-  imageData: []
 },
 
   "otras-madres": {

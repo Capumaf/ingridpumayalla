@@ -8,67 +8,48 @@ import WorkCover from "@/components/WorkCover";
 
 export default function WorkPage() {
   const { id } = useParams();
-
   const pathname = usePathname();
 
-  const lang = pathname.startsWith("/es")
-    ? "es"
-    : "en";
+  const lang = pathname.startsWith("/es") ? "es" : "en";
 
   const project = projectDetails[id];
 
   if (!project) {
     return (
       <div className="px-6 pt-20">
-        <p className="text-sm text-neutral-500">
-          Project not found
-        </p>
+        <p className="text-sm text-neutral-500">Project not found</p>
       </div>
     );
   }
 
-  const cover =
-    project.imageData?.[0];
+  const cover = project.imageData?.[0];
 
   const title =
     typeof project.title === "string"
       ? project.title
-      : project.title?.[lang];
+      : project.title?.[lang] || project.title?.es || "";
 
   const text =
     typeof project.text === "string"
       ? project.text
-      : project.text?.[lang] ||
-        project.text?.es ||
-        "";
+      : project.text?.[lang] || project.text?.es || "";
 
   return (
     <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
       <div className="w-full max-w-5xl md:pl-[120px] lg:pl-[160px]">
-        {/* BACK */}
         <div className="mb-6">
           <Link
             href={`/${lang}/works`}
             className="text-xs tracking-widest text-gray-500 hover:text-black transition-colors"
           >
-            ←{" "}
-            {lang === "es"
-              ? "Volver a trabajos"
-              : "Back to works"}
+            ← {lang === "es" ? "Volver a trabajos" : "Back to works"}
           </Link>
         </div>
 
-        {/* COVER */}
-        <WorkCover
-          id={id}
-          lang={lang}
-          cover={cover}
-          title={title}
-        />
+        <WorkCover id={id} lang={lang} cover={cover} title={title} />
 
-        {/* TEXT */}
         <div className="max-w-[720px] mx-auto mt-6 md:mt-20 px-2 md:translate-x-[90px]">
-        <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center md:-translate-x-[80px]">
+          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center md:-translate-x-[80px]">
             {title}
           </h1>
 
@@ -76,14 +57,12 @@ export default function WorkPage() {
             <div
               className="
                 body-text
-                max-w[720px]
+                max-w-[720px]
                 text-[13.5px]
                 leading-[2]
                 text-justify
               "
-              dangerouslySetInnerHTML={{
-                __html: text,
-              }}
+              dangerouslySetInnerHTML={{ __html: text }}
             />
           )}
         </div>
