@@ -167,6 +167,446 @@ Curator of the exhibition
       en: `<p></p>`
     },
 
+    poems: [
+  {
+    id: "canto-1",
+    title: {
+      es: "Canto I",
+      en: "Chant I",
+    },
+    text: {
+      es: `
+<p>Amarillita amarillita yo te cantoooo<br/>
+Mi retamita mi retamitaaaaaa yo te canto<br/>
+Amarillita y bien bonita amarillita voy recogiendo<br/>
+recooogiendo<br/>
+mi retamita<br/>
+voy conociendo</p>
+
+<p>Mi retamita<br/>
+y bien sanita<br/>
+con la ruditaaaa amarillita<br/>
+yo voy sudannnnnndo<br/>
+mi caminito, mi caminito<br/>
+vengo bajando<br/>
+de la punita<br/>
+de la jalquita<br/>
+vengoooo asomandoooo<br/>
+amarillita, amarillita<br/>
+me voy sananndoooo<br/>
+a ma rillitaaaaaa me voy buscando<br/>
+de la jalquita de la runita vengo bajando,<br/>
+amarillito viengo apareciendo<br/>
+mi lagunita de aguita sana yo voyyyyyyyyy soñando<br/>
+ooo</p>
+      `,
+      en: `
+<p>Amarillita amarillita yo te cantoooo<br/>
+Mi retamita mi retamitaaaaaa yo te canto<br/>
+Amarillita y bien bonita amarillita voy recogiendo<br/>
+recooogiendo<br/>
+mi retamita<br/>
+voy conociendo</p>
+
+<p>Mi retamita<br/>
+y bien sanita<br/>
+con la ruditaaaa amarillita<br/>
+yo voy sudannnnnndo<br/>
+mi caminito, mi caminito<br/>
+vengo bajando<br/>
+de la punita<br/>
+de la jalquita<br/>
+vengoooo asomandoooo<br/>
+amarillita, amarillita<br/>
+me voy sananndoooo<br/>
+a ma rillitaaaaaa me voy buscando<br/>
+de la jalquita de la runita vengo bajando,<br/>
+amarillito viengo apareciendo<br/>
+mi lagunita de aguita sana yo voyyyyyyyyy soñando<br/>
+ooo</p>
+      `,
+    },
+  },
+
+  {
+    id: "canto-2",
+    title: {
+      es: "Canto II",
+      en: "Chant II",
+    },
+    text: {
+      es: `
+<p>Linda retamita, linda congonita,<br/>
+vengo recogiendo.<br/>
+linda retamita<br/>
+vengo caminando<br/>
+vengoooo padeciendo<br/>
+mi mamita duerme<br/>
+bien arropadita<br/>
+desde la jalquita<br/>
+Vienen encantandooooo<br/>
+vienen caminando<br/>
+desde la jalquita vienen recogiendo<br/>
+vienen lamentando<br/>
+Linda retamita<br/>
+bien amarillita…<br/>
+desde el puquitooooo<br/>
+de oro</p>
+
+<p>linda cascada vengo yo encontrando<br/>
+linda retamita<br/>
+bien amarillita<br/>
+viene ella tejiendo<br/>
+esta hilandera desde la punita<br/>
+viene renaciendo<br/>
+cuenta mi tio Emilio<br/>
+de ese torito<br/>
+toroooo de oro linnnnndooo o.<br/>
+viene caminando<br/>
+viene jugueteando<br/>
+viene encantando<br/>
+desde la jalquita<br/>
+hay pues el cerrito esta bien malito<br/>
+pobre lagunita<br/>
+sin agüita queda.<br/>
+Muchos hombrecitos<br/>
+buscan el oriitooooooo</p>
+
+<p>oro encontrando<br/>
+cerro encontrando<br/>
+desde aquellos vientos<br/>
+vienen padeciendo.<br/>
+Desde bien arriba<br/>
+vienen encontrando<br/>
+vienen calateando.</p>
+
+<p>Vienen desplazando<br/>
+Rio moche<br/>
+con aqua enevenando…<br/>
+llega a Trujillo<br/>
+viene a Trujillo<br/>
+Viene hoy contando</p>
+
+<p>mira mi ollita,<br/>
+huele mi limita<br/>
+mira mi mesita,<br/>
+vengo encontrando<br/>
+un chivito de oro<br/>
+viene coqueteando<br/>
+viene encantando.</p>
+
+<p>Vienes retamita bien amarilla<br/>
+Vienes encontrando<br/>
+vienes recogiendo<br/>
+vienes hoy naciendo<br/>
+vienes pues mamita</p>
+
+<p>bien acabadita a cantar tu canto.</p>
+
+<p>Canta pues viejita<br/>
+canta retamita<br/>
+cura pues viejita</p>
+      `,
+      en: `
+<p>Linda retamita, linda congonita,<br/>
+vengo recogiendo.<br/>
+linda retamita<br/>
+vengo caminando<br/>
+vengoooo padeciendo<br/>
+mi mamita duerme<br/>
+bien arropadita<br/>
+desde la jalquita<br/>
+Vienen encantandooooo<br/>
+vienen caminando<br/>
+desde la jalquita vienen recogiendo<br/>
+vienen lamentando<br/>
+Linda retamita<br/>
+bien amarillita…<br/>
+desde el puquitooooo<br/>
+de oro</p>
+
+<p>linda cascada vengo yo encontrando<br/>
+linda retamita<br/>
+bien amarillita<br/>
+viene ella tejiendo<br/>
+esta hilandera desde la punita<br/>
+viene renaciendo<br/>
+cuenta mi tio Emilio<br/>
+de ese torito<br/>
+toroooo de oro linnnnndooo o.<br/>
+viene caminando<br/>
+viene jugueteando<br/>
+viene encantando<br/>
+desde la jalquita<br/>
+hay pues el cerrito esta bien malito<br/>
+pobre lagunita<br/>
+sin agüita queda.<br/>
+Muchos hombrecitos<br/>
+buscan el oriitooooooo</p>
+
+<p>oro encontrando<br/>
+cerro encontrando<br/>
+desde aquellos vientos<br/>
+vienen padeciendo.<br/>
+Desde bien arriba<br/>
+vienen encontrando<br/>
+vienen calateando.</p>
+
+<p>Vienen desplazando<br/>
+Rio moche<br/>
+con aqua enevenando…<br/>
+llega a Trujillo<br/>
+viene a Trujillo<br/>
+Viene hoy contando</p>
+
+<p>mira mi ollita,<br/>
+huele mi limita<br/>
+mira mi mesita,<br/>
+vengo encontrando<br/>
+un chivito de oro<br/>
+viene coqueteando<br/>
+viene encantando.</p>
+
+<p>Vienes retamita bien amarilla<br/>
+Vienes encontrando<br/>
+vienes recogiendo<br/>
+vienes hoy naciendo<br/>
+vienes pues mamita</p>
+
+<p>bien acabadita a cantar tu canto.</p>
+
+<p>Canta pues viejita<br/>
+canta retamita<br/>
+cura pues viejita</p>
+      `,
+    },
+  },
+
+  {
+    id: "canto-3",
+    title: {
+      es: "Canto III",
+      en: "Chant III",
+    },
+    text: {
+      es: `
+<p>Estos son los cantos<br/>
+Que yo cuento<br/>
+Que yo tengo</p>
+
+<p>Estos son los cantos<br/>
+Este canto cuenta de<br/>
+La ninita<br/>
+Jovencita ella viene caminando<br/>
+Desde Tallapliegue<br/>
+a Truijillo viene<br/>
+Viene caminando</p>
+
+<p>Desde tallapliegue</p>
+
+<p>La laydicha anda<br/>
+Vienen caminando<br/>
+Se ha cerrao la niebla<br/>
+A-dios madrecita<br/>
+Canta Tallapliegue<br/>
+Leydi viene y canta<br/>
+Llega a Trujillo<br/>
+Canta y silba en Mansiche<br/>
+Cuida de mi abuela<br/>
+La viejita Enma<br/>
+Ay Leydacha Linda<br/>
+Trae el pan mamiiiita<br/>
+Canta pues mamita<br/>
+Desde la punita<br/>
+La pepa es bien fresquita<br/>
+Desde<br/>
+Desde tallapliegue viene<br/>
+La leydicha<br/>
+Desde tallapliegue<br/>
+Linda la leydacha<br/>
+Silba mamacita<br/>
+Ella silbando<br/>
+Desde la punita<br/>
+La papa es bien<br/>
+Fresquita<br/>
+Desde tallapliegue<br/>
+Viene la leydicha<br/>
+Viene la leydicha<br/>
+Viene camiando<br/>
+Cuida de mi abuela<br/>
+Se ha cerrao la niebla.<br/>
+Se ha cerrao la niebla<br/>
+Cúrate mamita<br/>
+Cuídate chiquita<br/>
+Linda la mamita<br/>
+Cuida de la abuela<br/>
+Cuida de la Enmita.</p>
+      `,
+      en: `
+<p>Estos son los cantos<br/>
+Que yo cuento<br/>
+Que yo tengo</p>
+
+<p>Estos son los cantos<br/>
+Este canto cuenta de<br/>
+La ninita<br/>
+Jovencita ella viene caminando<br/>
+Desde Tallapliegue<br/>
+a Truijillo viene<br/>
+Viene caminando</p>
+
+<p>Desde tallapliegue</p>
+
+<p>La laydicha anda<br/>
+Vienen caminando<br/>
+Se ha cerrao la niebla<br/>
+A-dios madrecita<br/>
+Canta Tallapliegue<br/>
+Leydi viene y canta<br/>
+Llega a Trujillo<br/>
+Canta y silba en Mansiche<br/>
+Cuida de mi abuela<br/>
+La viejita Enma<br/>
+Ay Leydacha Linda<br/>
+Trae el pan mamiiiita<br/>
+Canta pues mamita<br/>
+Desde la punita<br/>
+La pepa es bien fresquita<br/>
+Desde<br/>
+Desde tallapliegue viene<br/>
+La leydicha<br/>
+Desde tallapliegue<br/>
+Linda la leydacha<br/>
+Silba mamacita<br/>
+Ella silbando<br/>
+Desde la punita<br/>
+La papa es bien<br/>
+Fresquita<br/>
+Desde tallapliegue<br/>
+Viene la leydicha<br/>
+Viene la leydicha<br/>
+Viene camiando<br/>
+Cuida de mi abuela<br/>
+Se ha cerrao la niebla.<br/>
+Se ha cerrao la niebla<br/>
+Cúrate mamita<br/>
+Cuídate chiquita<br/>
+Linda la mamita<br/>
+Cuida de la abuela<br/>
+Cuida de la Enmita.</p>
+      `,
+    },
+  },
+
+  {
+    id: "canto-4",
+    title: {
+      es: "Canto IV",
+      en: "Chant IV",
+    },
+    text: {
+      es: `
+<p>Amarillita vengo soñando<br/>
+Vengo encontrando<br/>
+Vengo cantando<br/>
+Vengo limpiando.</p>
+
+<p>De la jalca voy naciendo,<br/>
+De tus vientres voy saliendo</p>
+
+<p>Voy naciendo de tu vientre<br/>
+Madre tierra<br/>
+Voy bajando<br/>
+Y contando<br/>
+Tus heridas<br/>
+Voy cociendo<br/>
+De tus tierras<br/>
+Vannn sufriendo y acabando</p>
+
+<p>La papita se papea,<br/>
+Verde, inmaduras<br/>
+Son sacadas.</p>
+      `,
+      en: `
+<p>Amarillita vengo soñando<br/>
+Vengo encontrando<br/>
+Vengo cantando<br/>
+Vengo limpiando.</p>
+
+<p>De la jalca voy naciendo,<br/>
+De tus vientres voy saliendo</p>
+
+<p>Voy naciendo de tu vientre<br/>
+Madre tierra<br/>
+Voy bajando<br/>
+Y contando<br/>
+Tus heridas<br/>
+Voy cociendo<br/>
+De tus tierras<br/>
+Vannn sufriendo y acabando</p>
+
+<p>La papita se papea,<br/>
+Verde, inmaduras<br/>
+Son sacadas.</p>
+      `,
+    },
+  },
+
+  {
+    id: "canto-5",
+    title: {
+      es: "Canto V",
+      en: "Chant V",
+    },
+    text: {
+      es: `
+<p>De tus lados madre yo voy naciendo<br/>
+De tus senos yo voy bebiendo<br/>
+Madre tierra<br/>
+Tu sangre sabe a luz<br/>
+Amor y mar,<br/>
+De tus piedras madre yo voy latiendo<br/>
+Voy escuchando<br/>
+Tu sentir</p>
+
+<p>Con este canto madre<br/>
+Yo voy cuidando de tu vientre y tu piel.<br/>
+Del Huangamarca yo voy trayendo congonoita<br/>
+Pal mal espanto<br/>
+Cerezas y mameys<br/>
+Nos esperan en el jardín</p>
+
+<p>Vengo cantando y construyendo<br/>
+El camino,<br/>
+el caminito de la jalca al desierto<br/>
+Voy descubriendo.</p>
+      `,
+      en: `
+<p>De tus lados madre yo voy naciendo<br/>
+De tus senos yo voy bebiendo<br/>
+Madre tierra<br/>
+Tu sangre sabe a luz<br/>
+Amor y mar,<br/>
+De tus piedras madre yo voy latiendo<br/>
+Voy escuchando<br/>
+Tu sentir</p>
+
+<p>Con este canto madre<br/>
+Yo voy cuidando de tu vientre y tu piel.<br/>
+Del Huangamarca yo voy trayendo congonoita<br/>
+Pal mal espanto<br/>
+Cerezas y mameys<br/>
+Nos esperan en el jardín</p>
+
+<p>Vengo cantando y construyendo<br/>
+El camino,<br/>
+el caminito de la jalca al desierto<br/>
+Voy descubriendo.</p>
+      `,
+    },
+  },
+],
+
     imageData: [
       { id: "1", src: "/Cantos1.webp", width: 1200, height: 800 },
       { id: "2", src: "/Cantos2.webp", width: 1200, height: 800 },

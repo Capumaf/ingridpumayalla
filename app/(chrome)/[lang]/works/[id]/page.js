@@ -42,7 +42,7 @@ export default function WorkPage() {
             href={`/${lang}/works`}
             className="text-xs tracking-widest text-gray-500 hover:text-black transition-colors"
           >
-            ← {lang === "es" ? "Volver a trabajos" : "Back to works"}
+            ← {lang === "es" ? "Volver a obras" : "Back to works"}
           </Link>
         </div>
 
