@@ -81,6 +81,14 @@ export const pages = {
       en: "Read about my work in the media and publications.",
       es: "Lee sobre mi trabajo en medios y publicaciones.",
     },
+items: [
+    {
+      title: "Accesos",
+      year: "2024",
+      link: "https://www.accesos.info/sofia-alvarez-capunay/",
+    },
+  ],
+  
   },
 
   works: {

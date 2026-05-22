@@ -1,17 +1,43 @@
-import { pages } from "@/data/pages";
+import { pages } from "../../../data/pages";
 
-export default function Press({ params }) {
-  const lang = params.lang;
-  const { title, text } = pages.press;
+export default async function Press({ params }) {
+  const { lang } = await params;
+
+  const { title, text, items = [] } = pages.press;
 
   return (
-    <div>
-      <h1 className="text-2xl font-normal tracking-[0.15em] mb-12 mt-16">
+    <div className="mt-16 max-w-sm">
+      <h1 className="mb-12 text-2xl font-normal tracking-[0.15em]">
         {title[lang]}
       </h1>
-      <p className="text-xs text-neutral-600">
-        {text[lang]}
-      </p>
+
+      {text?.[lang] && (
+        <p className="mb-10 text-xs text-neutral-600">
+          {text[lang]}
+        </p>
+      )}
+
+      {items.length > 0 && (
+        <ul className="space-y-4">
+          {items.map((item) => (
+            <li key={item.link}>
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-xs tracking-[0.08em] text-neutral-600 hover:text-black transition-colors"
+              >
+                {item.year && (
+                  <span className="mr-2 text-neutral-400">
+                    {item.year}
+                  </span>
+                )}
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

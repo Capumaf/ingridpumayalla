@@ -1,13 +1,19 @@
 export const residencyDetails = {
+ 
+ 
+ 
   amorgos: {
     title: "Amorgos",
     introduction: "Residency project.",
 
-    imageData: [
-      { id: "1", src: "/amorgos1.webp", width: 1200, height: 800 },
+  imageData: [
+  { id: "1", src: "/amorgos1.webp", width: 1200, height: 800 },
+],
 
-    ]
-
+audio: {
+  title: "Carta A Amorgos",
+  src: "/Carta A Amorgos_Greek.m4a",
+},
     
   },
 

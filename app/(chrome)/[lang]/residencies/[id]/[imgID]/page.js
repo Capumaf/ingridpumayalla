@@ -81,8 +81,7 @@ export default function ResidencyImagePage() {
     const deltaY = touchStartY.current - finalY;
 
     const isHorizontalSwipe =
-      Math.abs(deltaX) > 45 &&
-      Math.abs(deltaX) > Math.abs(deltaY);
+      Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY);
 
     if (!isHorizontalSwipe) return;
 
@@ -191,9 +190,18 @@ export default function ResidencyImagePage() {
           <p className="text-xs text-neutral-400 tracking-widest mb-1">
             {detailsTitle}
           </p>
+
           <p className="text-xs text-neutral-600 leading-relaxed">
             {description || residency.introduction || residency.title}
           </p>
+
+          {residency.audio && (
+            <div className="mt-4">
+              <audio controls className="w-full">
+                <source src={residency.audio.src} type="audio/mp4" />
+              </audio>
+            </div>
+          )}
         </div>
       </div>
 
@@ -222,6 +230,18 @@ export default function ResidencyImagePage() {
             <p className="mb-6">
               {description || residency.introduction || ""}
             </p>
+
+            {residency.audio && (
+              <div className="mt-6">
+                <p className="mb-2 text-[11px] uppercase tracking-[0.2em] text-neutral-400">
+                  Audio
+                </p>
+
+                <audio controls className="w-full max-w-[220px]">
+                  <source src={residency.audio.src} type="audio/mp4" />
+                </audio>
+              </div>
+            )}
           </div>
         </div>
 

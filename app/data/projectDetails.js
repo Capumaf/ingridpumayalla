@@ -163,8 +163,124 @@ Curator of the exhibition
     title: "Cantos Matrios",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      es: `<p><em>Estos cantos son hechos melodías que cuentan un descenso.</em></p>
+
+<p>
+Paiján y PaijánEXPRESS presentan <strong>Cantos Matrios</strong> de Ingrid Pumayalla (Trujillo, 1989). Un proyecto de investigación que traza las latencias de una experiencia migratoria personal y la del seno familiar, desde un retrato sonoro-poético que abarca la performance, la fotografía y la video instalación.
+</p>
+
+<p>
+Cantos Matrios es el corazón de historias heredadas y voces prestadas, permitiéndonos ser parte de una acción tan íntima como colectiva de registro y emancipación. Estos 5 cantos-cuentos son una ofrenda, un ritual de duelo y desprendimiento que, al surgir como una forma ancestral de transmisión de conocimientos y memoria, reafirma las tensiones entre lo rural y urbano; el fantasma y el cuerpo.
+</p>
+
+<p>
+Ingrid Pumayalla creció en Contumazá, Cajamarca, rodeada de naturaleza y de espíritus guardianes; siendo precisamente la chacra de su abuelo la que hace palpitar sus raíces. A los 11 años, luego de pasar una temporada entre Cascas y Trujillo, emigra a Lima.
+</p>
+
+<p>
+Un proceso que, siendo gradual, refleja el tránsito territorial desde el ande norteño hacia la urbe costeña. Es también en este momento que su madre es electa congresista por Cajamarca.
+</p>
+
+<p>
+Pumayalla recuerda haber sido testigo de la dedicación política de su madre y el haberla acompañado en su campaña proselitista, la incorporó como un sólido referente de mujer-poder en un contexto principalmente masculino.
+</p>
+
+<p>
+Es desde esta pequeña sumilla biográfica, tan anecdótica que guarda relación con los procesos furtivos de su formación como artista, como hija y mujer, que la voz se convierte en un mecanismo de declamación central del proyecto.
+</p>
+
+<p>
+Durante la madrugada, Pumayalla se desplaza desde el barrio de Mansiche en Trujillo, donde se ubica su hogar familiar, hasta Paiján. Haciendo uso del megáfono de PaijánEXPRESS, un artilugio tan reconocible y estridente de la economía popular, se alinea con la referencia visual del mitin y la prédica política.
+</p>
+
+<p>
+A través de un dispositivo concertador que abandona la demagogia por la ternura de los cantos, se despliega un acto litúrgico-bucólico ocupado por la nostalgia.
+</p>
+
+<p>
+Ingrid Pumayalla aborda su práctica fotográfica como un medio que le permite reconocer la reciprocidad entre el interior y el exterior de un cuerpo.
+</p>
+
+<p>
+En este sentido el crear correspondencia entre dos o más elementos condensan la intención de la artista por generar corporalmente nuevas imágenes y mitologías.
+</p>
+
+<p>
+La video-instalación, <em>Nuevas criaturas</em>, se compone de elementos extraídos de un entorno natural y doméstico, reubicados y que mientras discuten su origen y ajenidad, sean reliquias o tótems que resguardan un ubicuo espíritu del lugar.
+</p>
+
+<p>
+En la antigüedad clásica y frecuente en pueblos originarios de América, como los Mapuches y Aymaras, el concepto de Matria hace referencia a la tierra misma del nacimiento, del arraigo y al sentimiento inquebrantable en contraposición al paternalismo determinado por el estado.
+</p>
+
+<p>
+Cantos Matrios es una declaración de libertad y un lazo de unión desde el afecto al calor materno de la tierra.
+</p>`,
+      en: `<p><em>These chants are melodies that recount a descent.</em></p>
+
+<p>
+Paiján and PaijánEXPRESS present <strong>Cantos Matrios</strong> by Ingrid Pumayalla (Trujillo, 1989). A research project that traces the latencies of a personal migratory experience and that of the family, from a sound-poetic portrait that includes performance and video installation.
+</p>
+
+<p>
+Cantos Matrios is the heart of inherited stories and borrowed voices, allowing us to be part of both an intimate and collective action of registration and emancipation.
+</p>
+
+<p>
+These 5 lullaby-like story songs act as an offering, a ritual of mourning and detachment that, by emerging as an ancestral way of transmitting knowledge and memory, reaffirms the tensions between rural and urban contexts; the ghost and the body.
+</p>
+
+<p>
+Ingrid Pumayalla grew up in Contumazá, Cajamarca, surrounded by nature and guardian spirits; It is precisely her grandfather’s farm that makes her roots throb.
+</p>
+
+<p>
+At age 11, after spending a season between Cascas and Trujillo, she migrates to Lima. A process that, being gradual, reflects on the territorial transit from the northern Andes to a coastal city.
+</p>
+
+<p>
+It is also at this time that her mother is elected as a congresswoman for Cajamarca.
+</p>
+
+<p>
+Pumayalla recalls having witnessed the political dedication and fierceness of her mother and by having accompanied her in a vigorous and hectic proselytizing campaign, she incorporated a solid referent of woman-power in a mainly masculine milieu.
+</p>
+
+<p>
+It is from this brief biographical summary, so anecdotal that relates to a furtive process of formation as an artist, as a daughter and as a woman thus, formulates the materialization of a cardinal element of this project.
+</p>
+
+<p>
+The PaijánEXPRESS megaphone aligns itself with certain visual parameters and aesthetic of the political agency and the rally.
+</p>
+
+<p>
+As a recognizable and radiating device of discourse, it is as strident as it enables concertation. From now on, what is transferred does not show demagoguery, but the tenderness of the songs.
+</p>
+
+<p>
+The bucolic echo is nostalgia crossing the city of Trujillo at dawn, moving from the Mansiche neighborhood, where the artist’s family home is located, to Paiján in the city centre.
+</p>
+
+<p>
+Ingrid Pumayalla approaches her photographic practice as a medium that allows her to recognize the reciprocity between the inside and the outside of a body.
+</p>
+
+<p>
+In this sense, creating correspondence between two or more elements condenses the artist’s intention to bodily generate new images and mythologies.
+</p>
+
+<p>
+The installation in Cantos Matrios is made up of elements taken both from a natural and domestic environment, relocated so that while they question their origin and alienation, they are also assumed as totems or relics protecting a ubiquitous genius loci or spirit of the place.
+</p>
+
+<p>
+As in Classical antiquity and frequent in native people of America, such as Mapuche, Aymara and Quechua, the concept of Matria refers to the very land of birth, the roots and unwavering sentiment, in opposition to a determined paternalism of the modern state.
+</p>
+
+<p>
+In this sense, Cantos Matrios is a declaration of freedom and a bond of union from the affection to the maternal warmth of the earth.
+</p>`
     },
 
     poems: [
