@@ -15,6 +15,10 @@
     @apply transition-colors;
   }
 
+  a:hover {
+    color: #c472b6;
+  }
+
   .body-text {
     @apply text-[12px] md:text-[20px] text-neutral-700;
     line-height: 2.1;
@@ -27,9 +31,6 @@
     margin-bottom: 2rem;
   }
 
-  /* ─────────────────────────────────────────
-     FADE IN (imagen de portada)
-  ───────────────────────────────────────── */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -45,12 +46,6 @@
     animation: fadeIn 1.4s ease forwards;
   }
 
-  /* ─────────────────────────────────────────
-     HILO — estado de reposo
-     El path empieza completamente invisible.
-     stroke-dasharray = longitud total del path (~95px).
-     stroke-dashoffset = misma longitud = sin trazar.
-  ───────────────────────────────────────── */
   .thread-path {
     stroke-dasharray: 95;
     stroke-dashoffset: 95;
@@ -58,11 +53,6 @@
     transition: opacity 0s;
   }
 
-  /* ─────────────────────────────────────────
-     HILO — hover: se dibuja orgánicamente
-     Solo se activa cuando NO está en modo
-     isEntering (controlado por .thread-idle).
-  ───────────────────────────────────────── */
   @keyframes weaveThread {
     0% {
       stroke-dashoffset: 95;
@@ -77,23 +67,10 @@
     }
   }
 
-  /*
-    El selector apunta al path dentro del grupo
-    que tiene la clase .group, pero SOLO si el
-    contenedor NO tiene la clase .is-entering.
-    Así el hover no interfiere con el click.
-  */
   .group:not(.is-entering):hover .thread-path {
     animation: weaveThread 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
-  /* ─────────────────────────────────────────
-     HILO — click: serpiente que sale
-     Parte exactamente desde donde termina
-     weaveThread: dashoffset 0, hilo completo.
-     La serpiente se forma achicando el dash
-     y desplazando el offset hasta salir.
-  ───────────────────────────────────────── */
   @keyframes snakeThreadOut {
     0% {
       stroke-dasharray: 95 0;
@@ -122,11 +99,6 @@
     }
   }
 
-  /*
-    .thread-active se aplica cuando isEntering = true.
-    Cancela cualquier animación de hover heredada
-    y corre solo snakeThreadOut.
-  */
   .thread-active {
     animation: snakeThreadOut 900ms cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
   }

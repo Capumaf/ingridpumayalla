@@ -135,7 +135,7 @@ const description =
         <div className="flex items-center justify-between">
           <Link
             href={`/${lang}/works/${id}`}
-            className="text-xs tracking-widest text-gray-500 hover:text-black"
+             className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
           >
             ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
           </Link>
@@ -158,33 +158,37 @@ const description =
         </div>
 
         <div className="flex items-center justify-between">
-          <button
-            onClick={() =>
-              prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
-            }
-            className={`text-xs tracking-widest text-gray-500 hover:text-black ${
-              prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
-            ←
-          </button>
+  <button
+    type="button"
+    onClick={() => {
+      if (prevImg) router.push(`/${lang}/works/${id}/${prevImg.id}`);
+    }}
+    className={`z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#c472b6] ${
+      prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
+    }`}
+  >
+    ←
+  </button>
 
-          {!nextImg ? (
-            <Link
-              href={`/${lang}/works`}
-              className="text-xs tracking-widest text-gray-500 hover:text-black"
-            >
-              {lang === "es" ? "Volver a obras" : "Back to works"} →
-            </Link>
-          ) : (
-            <button
-              onClick={() => router.push(`/${lang}/works/${id}/${nextImg.id}`)}
-              className="text-xs tracking-widest text-gray-500 hover:text-black"
-            >
-              →
-            </button>
-          )}
-        </div>
+  {nextImg ? (
+    <button
+      type="button"
+      onClick={() => {
+        router.push(`/${lang}/works/${id}/${nextImg.id}`);
+      }}
+      className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#c472b6]"
+    >
+      →
+    </button>
+  ) : (
+    <Link
+      href={`/${lang}/works`}
+      className="z-50 px-4 py-3 text-xs tracking-widest text-gray-500 hover:text-black"
+    >
+      {lang === "es" ? "Volver a obras" : "Back to works"} →
+    </Link>
+  )}
+</div>
 
         {description && (
           <div>
@@ -215,7 +219,7 @@ const description =
         >
           <Link
             href={`/${lang}/works/${id}`}
-            className="text-xs tracking-widest text-gray-500 hover:text-black"
+            className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
           >
             ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
           </Link>
@@ -249,7 +253,8 @@ const description =
             onClick={() =>
               prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
             }
-            className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
+            className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#c472b6] ${
+    
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -269,7 +274,7 @@ const description =
                 ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
                 : router.push(`/${lang}/works/${id}`)
             }
-            className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
+            className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#c472b6] ${
               nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -279,7 +284,7 @@ const description =
           {!nextImg && (
             <Link
               href={`/${lang}/works`}
-              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-black"
+              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
             >
               {lang === "es" ? "Volver a obras" : "Back to works"} →
             </Link>

@@ -39,7 +39,7 @@ export default function WorkPage() {
         <div className="mb-6">
           <Link
             href={`/${lang}/works`}
-            className="text-xs tracking-widest text-gray-500 hover:text-black transition-colors"
+            className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6] transition-colors"
           >
             ← {lang === "es" ? "Volver a obras" : "Back to works"}
           </Link>

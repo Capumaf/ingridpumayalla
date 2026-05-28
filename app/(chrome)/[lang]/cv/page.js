@@ -206,7 +206,7 @@ export default function CV({ params }) {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="text-[11px] uppercase tracking-[0.22em] text-neutral-500 transition-colors hover:text-black"
+              className="text-[11px] uppercase tracking-[0.22em] text-neutral-500 transition-colors hover:text-[#c472b6]"
             >
               {downloadLabel[currentLang]} →
             </button>

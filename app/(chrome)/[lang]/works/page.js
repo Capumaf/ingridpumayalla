@@ -19,11 +19,11 @@ export default function WorksPage() {
   };
 
   return (
-  <div className="w-full flex justify-center">
-    <div className="w-full max-w-[540px] px-6">
-      <h1 className="text-2xl font-normal tracking-[0.15em] mb-12 mt-16">
-        {lang === "es" ? "Obras" : "Works"}
-      </h1>
+    <div className="w-full flex justify-center">
+      <div className="w-full max-w-[540px] px-6">
+        <h1 className="text-2xl font-normal tracking-[0.15em] mb-12 mt-16">
+          {lang === "es" ? "Obras" : "Works"}
+        </h1>
 
         <ul className="space-y-2">
           {WORK_ORDER.map((id) => {
@@ -36,14 +36,9 @@ export default function WorksPage() {
             const isOfrendas = id === "ofrendas-offerings";
             const isCantosMatrios = id === "cantos-matrios";
 
-            const hasSectionsDropdown =
-              isOfrendas && sections.length > 0;
-
-            const hasPoemsDropdown =
-              isCantosMatrios && poems.length > 0;
-
-            const hasDropdown =
-              hasSectionsDropdown || hasPoemsDropdown;
+            const hasSectionsDropdown = isOfrendas && sections.length > 0;
+            const hasPoemsDropdown = isCantosMatrios && poems.length > 0;
+            const hasDropdown = hasSectionsDropdown || hasPoemsDropdown;
 
             const isOpen = hasDropdown && openId === id;
 
@@ -59,7 +54,7 @@ export default function WorksPage() {
               >
                 <Link
                   href={`/${lang}/works/${id}`}
-                  className="text-xs text-neutral-600 hover:text-black transition-colors"
+                  className="text-xs text-neutral-600 hover:text-[#c472b6] transition-colors"
                 >
                   {getLocalizedText(project.title)}
                 </Link>
@@ -84,7 +79,7 @@ export default function WorksPage() {
                           <li key={section.id}>
                             <Link
                               href={`/${lang}/works/${id}/sections/${section.id}`}
-                              className="text-[11px] text-neutral-400 hover:text-black transition-colors"
+                              className="text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors"
                             >
                               {getLocalizedText(section.title)}
                             </Link>
@@ -96,7 +91,7 @@ export default function WorksPage() {
                           <li key={poem.id}>
                             <Link
                               href={`/${lang}/works/${id}/poems/${poem.id}`}
-                              className="text-[11px] text-neutral-400 hover:text-black transition-colors"
+                              className="text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors"
                             >
                               {getLocalizedText(poem.title)}
                             </Link>

@@ -75,7 +75,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
             : "Visual artist · Archive"}
         </div>
 
-        <div className="mt-2 text-[11px] text-neutral-400 hover:text-neutral-700">
+        <div className="mt-2 text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors">
           <button onClick={toggleLang}>
             {lang === "es" ? "EN" : "ES"}
           </button>
@@ -117,8 +117,8 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                         href={withLang(item.href, lang)}
                         className={`text-sm ${
                           active
-                            ? "text-black"
-                            : "text-neutral-400 hover:text-neutral-700"
+                            ? "text-[#a8558f]"
+                            : "text-neutral-400 hover:text- [#c472b6]"
                         }`}
                         onClick={() => {
                           clearCloseTimer();
@@ -161,7 +161,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                     : "Visual artist · Archive"}
                 </div>
 
-                <div className="mt-2 text-[11px] text-neutral-400 hover:text-neutral-700">
+                <div className="mt-2 text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors">
                   <button onClick={toggleLang}>
                     {lang === "es" ? "EN" : "ES"}
                   </button>
@@ -177,12 +177,12 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                       href={withLang(item.href, lang)}
                       className={`text-[13px] ${
                         active
-                          ? "text-black"
-                          : "text-neutral-400 hover:text-neutral-700"
+                          ? "text-[#a8558f]"
+                          : "text-neutral-400 hover:text-[#c472b6]"
                       }`}
                     >
                       {active && (
-                        <span className="mr-2 text-neutral-300">—</span>
+                        <span className="mr-2 text-[#a8558f]">—</span>
                       )}
 
                       {item.label[lang]}
