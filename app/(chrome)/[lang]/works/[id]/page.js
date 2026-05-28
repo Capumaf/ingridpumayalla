@@ -11,7 +11,6 @@ export default function WorkPage() {
   const pathname = usePathname();
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
-
   const project = projectDetails[id];
 
   if (!project) {
@@ -36,7 +35,7 @@ export default function WorkPage() {
 
   return (
     <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
-      <div className="w-full max-w-5xl md:pl-[40px] lg:pl-[80px]">
+      <div className="w-full max-w-5xl md:pl-[120px] lg:pl-[160px]">
         <div className="mb-6">
           <Link
             href={`/${lang}/works`}
@@ -48,20 +47,14 @@ export default function WorkPage() {
 
         <WorkCover id={id} lang={lang} cover={cover} title={title} />
 
-        <div className="max-w-[720px] mx-auto mt-6 md:mt-20 px-2">
-          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center">
+        <div className="max-w-[620px] mx-auto mt-16 md:mt-28 px-2">
+          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-6 md:mb-10 text-center">
             {title}
           </h1>
 
           {text && (
             <div
-              className="
-                body-text
-                max-w-[720px]
-                text-[13.5px]
-                leading-[2]
-                text-justify
-              "
+              className="body-text max-w-[620px] text-[13.5px] leading-[2] text-justify"
               dangerouslySetInnerHTML={{ __html: text }}
             />
           )}

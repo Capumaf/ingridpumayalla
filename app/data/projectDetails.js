@@ -856,6 +856,8 @@ la memoria y la relación entre cuerpo y territorio.
 
     text: {
       es: `<p></p>`,
+
+    
       en: `<p></p>`
     },
 
@@ -873,6 +875,163 @@ la memoria y la relación entre cuerpo y territorio.
       es: `<p></p>`,
       en: `<p></p>`
     },
+
+     artworkDetails: {
+  es: [
+    `
+    <em>Giving birth to a Pomegranate I</em><br/>
+    70 × 70 cm<br/>
+    Impresión fotográfica giclée sobre papel metálico.<br/>
+    Ed. 15
+    `,
+
+    `
+    <em>Giving birth to a Pomegranate II</em><br/>
+    70 × 70 cm<br/>
+    Impresión fotográfica giclée sobre papel Awagami Unryu.<br/>
+    Ed. 10
+    `,
+
+    `
+    <em>Giving birth to a Pomegranate III</em><br/>
+    70 × 70 cm<br/>
+    Impresión fotográfica giclée sobre papel Awagami Unryu.<br/>
+    Ed. 10
+    `,
+
+    `
+    <em>Giving birth to a Pomegranate IV</em><br/>
+    70 × 70 cm<br/>
+    Impresión fotográfica giclée sobre papel Awagami Unryu.<br/>
+    Ed. 10
+    `,
+
+    `
+    Documentación de performance<br/>
+    <em>Yo elijo lo que quiero</em><br/>
+    IESA, París<br/>
+    2024
+    `,
+
+    `
+    Vista de instalación<br/>
+    Performance <em>Giving birth to a pomegranate</em><br/>
+    Gasa, impresiones fotográficas giclée sobre papel Awagami,
+    jugo de granada, corteza de fresno,
+    semillas de huayruro y agujas metálicas.<br/>
+    Dimensiones variables.<br/>
+    2024
+    `,
+
+    `
+    Vista de instalación<br/>
+    Performance <em>Giving birth to a pomegranate</em><br/>
+    Gasa, impresiones fotográficas giclée sobre papel Awagami,
+    jugo de granada, corteza de fresno,
+    semillas de huayruro y agujas metálicas.<br/>
+    Dimensiones variables.<br/>
+    2024
+    `,
+
+    `
+    Vista de instalación<br/>
+    Performance <em>Giving birth to a pomegranate</em><br/>
+    Gasa, impresiones fotográficas giclée sobre papel Awagami,
+    jugo de granada, corteza de fresno,
+    semillas de huayruro y agujas metálicas.<br/>
+    Dimensiones variables.<br/>
+    2024
+    `,
+
+    `
+    Vista de instalación<br/>
+    Performance <em>Giving birth to a pomegranate</em><br/>
+    Gasa, impresiones fotográficas giclée sobre papel Awagami,
+    jugo de granada, corteza de fresno,
+    semillas de huayruro y agujas metálicas.<br/>
+    Dimensiones variables.<br/>
+    2024
+    `
+  ],
+
+  en: [
+    `
+    <em>Giving birth to a Pomegranate I</em><br/>
+    70 × 70 cm<br/>
+    Giclée photographic print on metallic paper.<br/>
+    Ed. 15
+    `,
+
+    `
+    <em>Giving birth to a Pomegranate II</em><br/>
+    70 × 70 cm<br/>
+    Giclée photographic print on Awagami Unryu paper.<br/>
+    Ed. 10
+    `,
+
+    `
+    <em>Giving birth to a Pomegranate III</em><br/>
+    70 × 70 cm<br/>
+    Giclée photographic print on Awagami Unryu paper.<br/>
+    Ed. 10
+    `,
+
+    `
+    <em>Giving birth to a Pomegranate IV</em><br/>
+    70 × 70 cm<br/>
+    Giclée photographic print on Awagami Unryu paper.<br/>
+    Ed. 10
+    `,
+
+    `
+    Performance Documentation<br/>
+    <em>Yo elijo lo que quiero</em><br/>
+    IESA, Paris<br/>
+    2024
+    `,
+
+    `
+    Installation View<br/>
+    Performance <em>Giving birth to a pomegranate</em><br/>
+    Gauze, giclée photographic prints on Awagami paper,
+    pomegranate juice, ash bark,
+    huayruro seeds, metal needles.<br/>
+    Dimensions variable.<br/>
+    2024
+    `,
+
+    `
+    Installation View<br/>
+    Performance <em>Giving birth to a pomegranate</em><br/>
+    Gauze, giclée photographic prints on Awagami paper,
+    pomegranate juice, ash bark,
+    huayruro seeds, metal needles.<br/>
+    Dimensions variable.<br/>
+    2024
+    `,
+
+    `
+    Installation View<br/>
+    Performance <em>Giving birth to a pomegranate</em><br/>
+    Gauze, giclée photographic prints on Awagami paper,
+    pomegranate juice, ash bark,
+    huayruro seeds, metal needles.<br/>
+    Dimensions variable.<br/>
+    2024
+    `,
+
+    `
+    Installation View<br/>
+    Performance <em>Giving birth to a pomegranate</em><br/>
+    Gauze, giclée photographic prints on Awagami paper,
+    pomegranate juice, ash bark,
+    huayruro seeds, metal needles.<br/>
+    Dimensions variable.<br/>
+    2024
+    `
+  ]
+},
+
 
     imageData: [
       { id: "1", src: "/pomade1.webp", width: 1200, height: 800 },
@@ -894,6 +1053,24 @@ la memoria y la relación entre cuerpo y territorio.
       es: `<p></p>`,
       en: `<p></p>`
     },
+
+   artworkDetails: {
+  es: [
+    `<p>Vista de instalación<br/><em>Rastreando</em><br/>Proyección fotográfica y lana.<br/>Dimensiones variables.<br/>2022</p>`,
+    `<p>Vista de instalación<br/><em>Rastreando</em><br/>Proyección fotográfica y lana.<br/>Dimensiones variables.<br/>2022</p>`,
+    `<p>Vista de instalación<br/><em>Rastreando</em><br/>Proyección fotográfica y lana.<br/>Dimensiones variables.<br/>2022</p>`,
+    `<p>Vista de instalación<br/><em>Rastreando</em><br/>Proyección fotográfica y lana.<br/>Dimensiones variables.<br/>2022</p>`,
+    `<p>Vista de instalación<br/><em>Rastreando</em><br/>Proyección fotográfica y lana.<br/>Dimensiones variables.<br/>2022</p>`
+  ],
+
+  en: [
+    `<p>Installation View<br/><em>Rastreando</em><br/>Photography projection and wool.<br/>Dimensions variable.<br/>2022</p>`,
+    `<p>Installation View<br/><em>Rastreando</em><br/>Photography projection and wool.<br/>Dimensions variable.<br/>2022</p>`,
+    `<p>Installation View<br/><em>Rastreando</em><br/>Photography projection and wool.<br/>Dimensions variable.<br/>2022</p>`,
+    `<p>Installation View<br/><em>Rastreando</em><br/>Photography projection and wool.<br/>Dimensions variable.<br/>2022</p>`,
+    `<p>Installation View<br/><em>Rastreando</em><br/>Photography projection and wool.<br/>Dimensions variable.<br/>2022</p>`
+  ]
+},
 
     imageData: [
       { id: "1", src: "/hilos1.webp", width: 1200, height: 800 },
@@ -1144,13 +1321,31 @@ la memoria y la relación entre cuerpo y territorio.
   ]
 },
 
-  "otras-madres": {
-    title: "Otras Madres",
+ "otras-madres": {
+  title: "Otras Madres",
 
-    text: {
-      es: `<p></p>`,
-      en: `<p></p>`
-    },
+  text: {
+    es: `
+<p>
+MatiIde regresó a su pueblo natal de Pantipata, ubicado en la provincia de Anta, Cusco, Perú, después de veintidós años de ausencia. Migró sola a Lima a la edad de nueve años, hablando únicamente quechua, su lengua materna. A los veintiséis años volvió a conectarse con su familia tras escuchar un anuncio radial informando sobre el funeral de su madre.
+</p>
+
+<p>
+En 2017 regresó a Pantipata junto a su hermana Francisca. Este reencuentro con su familia y su territorio fortaleció sus vínculos y transformó su experiencia de desplazamiento. Durante este viaje también visitó la tumba de su madre en el pueblo de Poroi. Esta película formó parte de la selección oficial del programa de proyecciones de la UNESCO por el Día Internacional de la Lengua Materna y del Indigenous Film Festival London 2018.
+</p>
+    `,
+
+    en: `
+<p>
+MatiIde returned home to her native village of Pantipata, located in the Province of Anta, Cuzco, Peru, after twenty-two years away. She had migrated alone to Lima, the capital city, at the age of nine, speaking only Quechua, her mother tongue. At the age of twenty-six, she reconnected with her family after hearing a radio broadcast announcing her mother’s funeral.
+</p>
+
+<p>
+In 2017, she returned to Pantipata with her sister Francisca. This reunion with her family and homeland strengthened her bond with them and transformed her experience of displacement. During this journey, she also visited her mother’s grave in the town of Poroi. This film was part of the official selection for the screening of the UNESCO Film Program for International Mother Language Day and the Indigenous Film Festival London 2018.
+</p>
+    `
+  },
+
 
     imageData: [
       { id: "1", src: "/otrasmadres1.webp", width: 1200, height: 800 },
@@ -1180,12 +1375,29 @@ la memoria y la relación entre cuerpo y territorio.
   },
 
   "takij-pupu": {
-    title: "Takij Pupu",
+  title: "Takij Pupu",
 
-    text: {
-      es: `<p></p>`,
-      en: `<p></p>`
-    },
+  text: {
+  es: `
+<p>
+La instalación presenta tres fotografías enmarcadas de vientres de mujeres, intervenidas con largos cordones tejidos de lana, spondylus, piedra de alumbre y semillas de huayruro. Suspendidos desde los cuerpos y extendiéndose hacia el suelo, los elementos tejidos evocan cordones umbilicales, conectando generaciones a través de la memoria heredada, el trauma y la protección. La obra reflexiona sobre miedos y experiencias de violencia transmitidas entre generaciones de mujeres.
+</p>
+
+<p>
+A través de la relación entre mi abuela, mi madre y yo, exploro la necesidad de nombrar estas experiencias y crear nuevas formas de comunicación que permitan compartir y comprender la pérdida, el dolor y la memoria. De este modo, la pieza invita a reflexionar sobre la importancia de confrontar el miedo y abrir espacios de diálogo y sanación. Los cordones tejidos incorporan semillas de huayruro provenientes de la Amazonía, tradicionalmente utilizadas como amuletos de protección, junto con piedra de alumbre, asociada a rituales de limpieza destinados a liberar el miedo y revelar sus orígenes. En conjunto, estos materiales transforman la instalación en un acto personal y simbólico de protección, memoria y conexión intergeneracional.
+</p>
+  `,
+
+  en: `
+<p>
+The installation presents three framed photographs of women’s bellies, each intervened with long knitted cords made of wool, spondylus, alum stone, and huayruro seeds. Suspended from the bodies and extending toward the floor, the woven elements evoke umbilical cords, connecting generations through inherited memory, trauma, and protection. The work reflects on fears and experiences of violence that are passed down among generations of women.
+</p>
+
+<p>
+Through the relationship between my grandmother, my mother, and myself, I explore the need to name these experiences and create new forms of communication that allow loss, pain, and memory to be shared and understood. In doing so, the piece invites reflection on the importance of confronting fear and opening spaces for dialogue and healing. The knitted cords incorporate huayruro seeds from the Amazon, traditionally used as protective amulets, alongside alum stone, which is associated with cleansing rituals intended to release fear and reveal its origins. Together, these materials transform the installation into both a personal and symbolic act of protection, remembrance, and intergenerational connection.
+</p>
+  `
+},
 
     imageData: [
       { id: "1", src: "/TakijPupu1.webp", width: 1200, height: 800 },

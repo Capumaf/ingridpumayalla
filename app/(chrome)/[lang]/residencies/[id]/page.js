@@ -36,15 +36,17 @@ export default function ResidencyDetailPage() {
       : residency.title?.[lang];
 
   const text =
-    typeof residency.introduction === "string"
-      ? residency.introduction
-      : residency.introduction?.[lang] ||
-        residency.introduction?.en ||
+    typeof residency.text === "string"
+      ? residency.text
+      : residency.text?.[lang] ||
+        residency.text?.en ||
+        residency.introduction ||
         "";
 
   return (
     <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
       <div className="w-full max-w-5xl md:pl-[120px] lg:pl-[160px]">
+
         {/* BACK */}
         <div className="mb-6">
           <Link
@@ -66,19 +68,23 @@ export default function ResidencyDetailPage() {
           title={title}
         />
 
-        {/* TEXT */}
-        <div className="max-w-[520px] mx-auto mt-8 md:mt-32 px-2">
-          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center">
+        {/* CONTENT */}
+        <div className="max-w-[620px] mx-auto mt-16 md:mt-28 px-2">
+
+          {/* TITLE */}
+          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-8 md:mb-12 text-center">
             {title}
           </h1>
 
+          {/* TEXT */}
           {text && (
             <div
               className="
                 body-text
-                max-w-[520px]
+                max-w-[620px]
                 text-[13.5px]
                 leading-[2]
+                text-justify
               "
               dangerouslySetInnerHTML={{
                 __html: text,

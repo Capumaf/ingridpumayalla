@@ -87,6 +87,19 @@ items: [
       year: "2024",
       link: "https://www.accesos.info/sofia-alvarez-capunay/",
     },
+
+    {
+  year: "2022",
+  title: "Hilos que resisten, hilos que subvierten. — Artishock Revista",
+  link: "https://artishockrevista.com/2022/10/18/hilos-que-resisten-arte-textil-peruano/",
+},
+
+{
+  year: "2021",
+  title: "Cantos Matrios — Terremoto",
+  link: "https://terremoto.mx/en/online/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/",
+},
+
   ],
   
   },

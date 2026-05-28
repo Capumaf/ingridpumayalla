@@ -6,7 +6,7 @@ export default async function Press({ params }) {
   const { title, text, items = [] } = pages.press;
 
   return (
-    <div className="mt-16 max-w-sm md:ml-[120px]">
+    <div className="mt-16 max-w-xl md:ml-[120px]">
       <h1 className="mb-12 text-2xl font-normal tracking-[0.15em]">
         {title[lang]}
       </h1>
@@ -25,7 +25,7 @@ export default async function Press({ params }) {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-xs tracking-[0.08em] text-neutral-600 hover:text-black transition-colors"
+                className="block text-xs tracking-[0.04em] text-neutral-600 hover:text-black transition-colors"
               >
                 {item.year && (
                   <span className="mr-2 text-neutral-400">

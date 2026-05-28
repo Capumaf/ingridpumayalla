@@ -15,12 +15,9 @@ export default function ImagePage() {
 
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
-
   const touchCurrentX = useRef(0);
   const touchCurrentY = useRef(0);
-
   const touchEndX = useRef(0);
-
   const isSwiping = useRef(false);
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
@@ -40,22 +37,34 @@ export default function ImagePage() {
     };
   }, []);
 
-  if (!project || !project.imageData) return <div>Proyecto no encontrado.</div>;
+  if (!project || !project.imageData) {
+    return <div>Proyecto no encontrado.</div>;
+  }
 
   const images = project.imageData;
   const currentIndex = images.findIndex((i) => i.id === imgID);
-  if (currentIndex === -1) return <div>Imagen no encontrada.</div>;
+
+  if (currentIndex === -1) {
+    return <div>Imagen no encontrada.</div>;
+  }
 
   const img = images[currentIndex];
   const prevImg = images[currentIndex - 1] || null;
   const nextImg = images[currentIndex + 1] || null;
+
+  const artworkDetails =
+  project.artworkDetails?.[lang] ||
+  project.artworkDetails?.en ||
+  [];
+
+const description =
+  artworkDetails[currentIndex] || "";
 
   const handleTouchStart = (e) => {
     const touch = e.changedTouches[0];
 
     touchStartX.current = touch.clientX;
     touchStartY.current = touch.clientY;
-
     touchCurrentX.current = touch.clientX;
     touchCurrentY.current = touch.clientY;
 
@@ -110,10 +119,6 @@ export default function ImagePage() {
     if (nextImg) router.prefetch(`/${lang}/works/${id}/${nextImg.id}`);
   }, [router, lang, id, prevImg, nextImg]);
 
-  const description =
-    img.description?.[lang] ??
-    (typeof img.description === "string" ? img.description : "");
-
   return (
     <div
       className="fixed inset-0 flex items-center justify-center bg-white"
@@ -146,7 +151,7 @@ export default function ImagePage() {
         >
           <img
             src={img.src}
-            alt={description || "Artwork image"}
+            alt="Artwork image"
             draggable={false}
             className="object-contain w-full max-h-[55vh] select-none touch-pan-y"
           />
@@ -181,21 +186,27 @@ export default function ImagePage() {
           )}
         </div>
 
-        <div>
-          <p className="text-xs text-neutral-400 tracking-widest mb-1">
-            {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
-          </p>
-          <p className="text-xs text-neutral-600 leading-relaxed">
-            {description}
-          </p>
-        </div>
+        {description && (
+          <div>
+            <p className="text-xs text-neutral-400 tracking-widest mb-1">
+              {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
+            </p>
+
+            <div
+              className="text-xs text-neutral-600 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: description,
+              }}
+            />
+          </div>
+        )}
       </div>
 
       {/* DESKTOP */}
-      <div className="hidden md:grid w-full max-w-6xl px-10 pl-14 lg:pl-20 grid-cols-[180px_1fr] gap-10 items-start">
+      <div className="hidden md:grid w-full max-w-7xl px-10 pl-14 lg:pl-20 grid-cols-[260px_1fr] gap-14 items-start">
         {/* LEFT DETAILS */}
         <div
-          className="text-sm text-gray-800 flex flex-col pt-2 ml-8"
+          className="text-sm text-gray-800 flex flex-col pt-2 ml-28"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(-8px)",
@@ -209,15 +220,20 @@ export default function ImagePage() {
             ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
           </Link>
 
-          <div className="mt-6">
-            <h2 className="text-base font-semibold mb-1">
-              {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
-            </h2>
+          {description && (
+            <div className="mt-6 max-w-[340px]">
+              <h2 className="text-[15px] font-semibold mb-4 tracking-[0.01em]">
+                {lang === "es" ? "Detalles de la obra" : "Artwork Details"}
+              </h2>
 
-            <p className="mb-6 text-sm leading-relaxed text-neutral-600">
-              {description}
-            </p>
-          </div>
+              <div
+                className="mb-6 text-[12px] leading-[1.70] tracking-[0.005em] text-neutral-700 text-left"
+                dangerouslySetInnerHTML={{
+                  __html: description,
+                }}
+              />
+            </div>
+          )}
         </div>
 
         {/* IMAGE */}
@@ -242,7 +258,7 @@ export default function ImagePage() {
 
           <img
             src={img.src}
-            alt={description || "Artwork image"}
+            alt="Artwork image"
             draggable={false}
             className="object-contain max-h-[78vh] w-auto max-w-full select-none"
           />
