@@ -64,11 +64,11 @@ export const pages = {
     },
 
     downloadLabel: {
-      en: "Download my CV (English — 2025)",
-      es: "Descargar mi CV (Inglés — 2025)",
+      en: "Download my CV (English — 2026)",
+      es: "Descargar mi CV (Inglés — 2026)",
     },
 
-    downloadHref: "/CVPumayalla2025English.pdf",
+    downloadHref: "/CVPumayalla2026English.pdf",
   },
 
   press: {

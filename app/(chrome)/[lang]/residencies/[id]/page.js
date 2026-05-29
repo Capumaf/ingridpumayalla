@@ -35,6 +35,15 @@ export default function ResidencyDetailPage() {
       ? residency.title
       : residency.title?.[lang];
 
+      const subtitle =
+  typeof residency.subtitle === "string"
+    ? residency.subtitle
+    : residency.subtitle?.[lang] ||
+      residency.subtitle?.en ||
+      "";
+
+
+
   const text =
     typeof residency.text === "string"
       ? residency.text
@@ -72,9 +81,17 @@ export default function ResidencyDetailPage() {
         <div className="max-w-[620px] mx-auto mt-16 md:mt-28 px-2">
 
           {/* TITLE */}
-          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-8 md:mb-12 text-center">
-            {title}
-          </h1>
+            <div className="mb-8 md:mb-12 text-center">
+  <h1 className="text-[28px] leading-tight tracking-[0.04em]">
+    {title}
+  </h1>
+
+  {subtitle && (
+    <p className="mt-3 text-[13px] tracking-[0.08em] text-neutral-500 italic">
+      {subtitle}
+    </p>
+  )}
+</div>
 
           {/* TEXT */}
           {text && (

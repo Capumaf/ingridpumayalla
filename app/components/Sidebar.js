@@ -62,34 +62,37 @@ export default function Sidebar({ lang = "en", toggleLang }) {
     <>
       {/* ================= MOBILE ================= */}
       <div className="md:hidden px-5 pt-6">
-        <Link
-          href={withLang("/home", lang)}
-          className="block text-base tracking-wide text-black hover:opacity-70 transition-opacity"
-        >
-          Ingrid Pumayalla
-        </Link>
+        <div className="flex items-start justify-between">
+          <div>
+            <Link
+              href={withLang("/home", lang)}
+              className="block text-[18px] tracking-wide text-black hover:text-[#c472b6] transition-colors"
+            >
+              Ingrid Pumayalla
+            </Link>
 
-        <div className="mt-1 text-xs text-neutral-500">
-          {lang === "es"
-            ? "Artista visual · Archivo"
-            : "Visual artist · Archive"}
-        </div>
+            <div className="mt-1 text-xs text-neutral-500">
+              {lang === "es"
+                ? "Artista visual · Archivo"
+                : "Visual artist · Archive"}
+            </div>
+          </div>
 
-        <div className="mt-2 text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors">
-          <button onClick={toggleLang}>
+          <button
+            onClick={toggleLang}
+            className="text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors"
+          >
             {lang === "es" ? "EN" : "ES"}
           </button>
         </div>
 
-        {/* INDEX */}
-        <div className="mt-4">
+        <div className="mt-5">
           <button
             type="button"
             onClick={() => setIndexOpen((v) => !v)}
-            className="group inline-flex items-center gap-2 text-xs uppercase text-neutral-400 hover:text-neutral-700"
+            className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-neutral-400 hover:text-[#c472b6] transition-colors"
           >
             <span>{lang === "es" ? "Menú" : "Menu"}</span>
-
             <span
               className={`transition-transform ${
                 indexOpen ? "rotate-90" : ""
@@ -99,15 +102,15 @@ export default function Sidebar({ lang = "en", toggleLang }) {
             </span>
           </button>
 
-          <div className="mt-3 h-px w-full bg-neutral-200/60" />
+          <div className="mt-3 h-px w-full bg-neutral-200/70" />
 
           <div
-            className={`overflow-hidden transition-all ${
-              indexOpen ? "max-h-52 opacity-100" : "max-h-0 opacity-0"
+            className={`overflow-hidden transition-all duration-500 ease-out ${
+              indexOpen ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            <nav className="pt-4 pb-2">
-              <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            <nav className="pt-5 pb-3">
+              <ul className="space-y-3">
                 {navItems.map((item) => {
                   const active = isActive(pathname, item.href);
 
@@ -115,10 +118,10 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                     <li key={item.href}>
                       <Link
                         href={withLang(item.href, lang)}
-                        className={`text-sm ${
+                        className={`text-[14px] transition-colors ${
                           active
                             ? "text-[#a8558f]"
-                            : "text-neutral-400 hover:text- [#c472b6]"
+                            : "text-neutral-500 hover:text-[#c472b6]"
                         }`}
                         onClick={() => {
                           clearCloseTimer();
@@ -126,7 +129,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                         }}
                       >
                         {active && (
-                          <span className="mr-2 text-neutral-300">—</span>
+                          <span className="mr-2 text-[#a8558f]">—</span>
                         )}
 
                         {item.label[lang]}
@@ -136,7 +139,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                 })}
               </ul>
 
-              <div className="mt-4 h-px w-full bg-neutral-200/60" />
+              <div className="mt-5 h-px w-full bg-neutral-200/70" />
             </nav>
           </div>
         </div>

@@ -109,9 +109,10 @@ export default function ResidencyImagePage() {
     if (nextImg) router.prefetch(`/${lang}/residencies/${id}/${nextImg.id}`);
   }, [router, lang, id, prevImg, nextImg]);
 
-  const description =
-    img.description?.[lang] ??
-    (typeof img.description === "string" ? img.description : "");
+  const residencyDetail =
+  residency.residencyDetails?.[lang]?.[currentIndex] ||
+  residency.residencyDetails?.en?.[currentIndex] ||
+  "";
 
   const detailsTitle =
     lang === "es" ? "Detalles de la residencia" : "Residency Details";
@@ -146,11 +147,11 @@ export default function ResidencyImagePage() {
             transition: "opacity 700ms ease 100ms, transform 700ms ease 100ms",
           }}
         >
-          <img
-            src={img.src}
-            alt={description || residency.title || "Residency image"}
-            draggable={false}
-            className="object-contain w-full max-h-[72vh] select-none touch-pan-y"
+         <img
+          src={img.src}
+          alt={residency.title || "Residency image"}
+          draggable={false}
+          className="object-contain w-full max-h-[72vh] select-none touch-pan-y"
           />
         </div>
 
@@ -191,9 +192,15 @@ export default function ResidencyImagePage() {
             {detailsTitle}
           </p>
 
-          <p className="text-xs text-neutral-600 leading-relaxed">
-            {description || residency.introduction || residency.title}
-          </p>
+              <div
+  className="text-xs text-neutral-600 leading-relaxed"
+  dangerouslySetInnerHTML={{
+    __html:
+      residencyDetail ||
+      residency.introduction ||
+      residency.title,
+  }}
+/>
 
           {residency.audio && (
             <div className="mt-4">
@@ -227,9 +234,15 @@ export default function ResidencyImagePage() {
 
             <p className="mb-3 text-neutral-500">{residency.title}</p>
 
-            <p className="mb-6">
-              {description || residency.introduction || ""}
-            </p>
+             <div
+             className="mb-6"
+             dangerouslySetInnerHTML={{
+             __html:
+            residencyDetail ||
+            residency.introduction ||
+            "",
+            }}
+            />
 
             {residency.audio && (
               <div className="mt-6">
@@ -266,10 +279,10 @@ export default function ResidencyImagePage() {
           </button>
 
           <img
-            src={img.src}
-            alt={description || residency.title || "Residency image"}
-            draggable={false}
-            className="object-contain max-h-[85vh] rounded-lg w-full select-none"
+           src={img.src}
+          alt={residency.title || "Residency image"}
+          draggable={false}
+          className="object-contain max-h-[85vh] rounded-lg w-full select-none"
           />
 
           <button
