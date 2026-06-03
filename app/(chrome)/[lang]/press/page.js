@@ -25,7 +25,7 @@ export default async function Press({ params }) {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-xs tracking-[0.04em] text-neutral-600 hover:text-[#c472b6] transition-colors"
+                className="block text-xs tracking-[0.04em] text-neutral-600 hover:text-[#b7623b] transition-colors"
               >
                 {item.year && (
                   <span className="mr-2 text-neutral-400">
