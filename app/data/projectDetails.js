@@ -1556,8 +1556,22 @@ es: `
       { id: "7", src: "/camino7.webp", width: 1200, height: 800 },
       { id: "8", src: "/camino8.webp", width: 1200, height: 800 },
       { id: "9", src: "/camino9.webp", width: 1200, height: 800 },
+      { id: "10", src: "/camino10.webp", width: 1200, height: 800 },
+      { id: "11", src: "/camino11.webp", width: 1200, height: 800 },
+      { id: "12", src: "/camino12.webp", width: 1200, height: 800 },
+      { id: "13", src: "/camino13.webp", width: 1200, height: 800 },
+      { id: "14", src: "/camino14.webp", width: 1200, height: 800 },
+      { id: "15", src: "/camino15.webp", width: 1200, height: 800 },
     ]
   },
+
+
+  artworkDetails: {
+  en: [],
+  es: []
+},
+
+
 
   "takij-pupu": {
   title: "Takij Pupu",

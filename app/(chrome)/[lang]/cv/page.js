@@ -22,6 +22,7 @@ const cvContent = {
     {
       title: "Residencies",
       items: [
+        "2025 | Chain in Reaction, Lisbon, Portugal.",
         "2023 | Sidney Nolan Trust | UK.",
         "2019 | Pilotenkuche Arts Residency, Leipzig, Germany.",
         "2019 | Stokkøya Collaborative Arts Program, Norway.",
@@ -31,6 +32,7 @@ const cvContent = {
     {
       title: "Solo Exhibitions",
       items: [
+        "2026 — Huacas del Norte, Museum of Modern Art of Trujillo, Peru. (Upcoming).",
         "2022 — Where Did the Creatures from the Forest Go?, Museo de Arte de San Marcos, Lima, Peru.",
         "2021 — Cantos Matrios, Paijan Gallery, Trujillo, Peru.",
         "2020 — Nuna, the Exercise to Climb a Tree, ABRIR Gallery, Online Exhibition.",
@@ -39,6 +41,9 @@ const cvContent = {
     {
       title: "Group Exhibitions / Film Screenings",
       items: [
+        "2026 — 8 Formas de Curar una Herida, 8M Cine Chimú Program, Trujillo, Peru.",
+        "2025 — Loopend, Ostra, Lisbon, Portugal.",
+        "2025 — Interweaving Climate, Water(s) and Communities, ExposeArtProjects, London, UK.",
         "2025 — The Earth: An Uncertain Future, Institute of the Arts, Havana Biennial, Cuba.",
         "2024 — Yo elijo lo que creo, IESA International, France.",
         "2024 — APUK1, Peruvian Artists in the UK, British Peruvian Institute, Lima, Peru.",
@@ -96,6 +101,7 @@ const cvContent = {
     {
       title: "Residencias",
       items: [
+        "2025 | Chain in Reaction, Lisbon, Portugal.",
         "2023 | Sidney Nolan Trust | Reino Unido.",
         "2019 | Pilotenkuche Arts Residency, Leipzig, Alemania.",
         "2019 | Stokkøya Collaborative Arts Program, Noruega.",
@@ -105,6 +111,7 @@ const cvContent = {
     {
       title: "Exposiciones individuales",
       items: [
+        "2026 — Huacas del Norte, Museo de Arte Moderno de Trujillo, Perú. (Próximamente).",
         "2022 — Where Did the Creatures from the Forest Go?, Museo de Arte de San Marcos, Lima, Perú.",
         "2021 — Cantos Matrios, Paijan Gallery, Trujillo, Perú.",
         "2020 — Nuna, the Exercise to Climb a Tree, ABRIR Gallery, exposición online.",
@@ -113,6 +120,9 @@ const cvContent = {
     {
       title: "Exposiciones colectivas / Proyecciones",
       items: [
+        "2026 — 8 Formas de Curar una Herida, Programa 8M Cine Chimú, Trujillo, Perú.",
+        "2025 — Loopend, Ostra, Lisboa, Portugal.",
+        "2025 — Interweaving Climate, Water(s) and Communities, ExposeArtProjects, Londres, Reino Unido.",
         "2025 — The Earth: An Uncertain Future, Institute of the Arts, Bienal de La Habana, Cuba.",
         "2024 — Yo elijo lo que creo, IESA International, Francia.",
         "2024 — APUK1, Peruvian Artists in the UK, Instituto Cultural Peruano Británico, Lima, Perú.",
@@ -206,7 +216,7 @@ export default function CV({ params }) {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="text-[11px] uppercase tracking-[0.22em] text-neutral-500 transition-colors hover:text-[#c472b6]"
+              className="text-[11px] uppercase tracking-[0.22em] text-neutral-500 transition-colors hover:text-[#b7623b]"
             >
               {downloadLabel[currentLang]} →
             </button>
