@@ -135,7 +135,7 @@ const description =
         <div className="flex items-center justify-between">
           <Link
             href={`/${lang}/works/${id}`}
-             className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
+             className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
             ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
           </Link>
@@ -163,7 +163,7 @@ const description =
     onClick={() => {
       if (prevImg) router.push(`/${lang}/works/${id}/${prevImg.id}`);
     }}
-    className={`z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#c472b6] ${
+    className={`z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b] ${
       prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
     }`}
   >
@@ -176,7 +176,7 @@ const description =
       onClick={() => {
         router.push(`/${lang}/works/${id}/${nextImg.id}`);
       }}
-      className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#c472b6]"
+      className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
     >
       →
     </button>
@@ -219,7 +219,7 @@ const description =
         >
           <Link
             href={`/${lang}/works/${id}`}
-            className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
+            className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
             ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
           </Link>
@@ -253,7 +253,7 @@ const description =
             onClick={() =>
               prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
             }
-            className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#c472b6] ${
+            className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
     
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
@@ -274,7 +274,7 @@ const description =
                 ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
                 : router.push(`/${lang}/works/${id}`)
             }
-            className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#c472b6] ${
+            className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
               nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -284,7 +284,7 @@ const description =
           {!nextImg && (
             <Link
               href={`/${lang}/works`}
-              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
+              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               {lang === "es" ? "Volver a obras" : "Back to works"} →
             </Link>

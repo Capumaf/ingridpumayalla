@@ -48,7 +48,7 @@ export default function ResidenciesPage() {
               <li key={residency.id}>
                 <Link
                   href={`/${lang}/residencies/${residency.id}`}
-                  className="text-xs text-neutral-600 hover:text-[#c472b6] transition-colors"
+                  className="text-xs text-neutral-600 hover:text-[#b7623b] transition-colors"
                 >
                   {residency.title}
                 </Link>

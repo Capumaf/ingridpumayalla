@@ -54,7 +54,7 @@ export default function WorksPage() {
               >
                 <Link
                   href={`/${lang}/works/${id}`}
-                  className="text-xs text-neutral-600 hover:text-[#c472b6] transition-colors"
+                  className="text-xs text-neutral-600 hover:text-[#b7623b] transition-colors"
                 >
                   {getLocalizedText(project.title)}
                 </Link>
@@ -79,7 +79,7 @@ export default function WorksPage() {
                           <li key={section.id}>
                             <Link
                               href={`/${lang}/works/${id}/sections/${section.id}`}
-                              className="text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors"
+                              className="text-[11px] text-neutral-400 hover:text-[#b7623b] transition-colors"
                             >
                               {getLocalizedText(section.title)}
                             </Link>
@@ -91,7 +91,7 @@ export default function WorksPage() {
                           <li key={poem.id}>
                             <Link
                               href={`/${lang}/works/${id}/poems/${poem.id}`}
-                              className="text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors"
+                              className="text-[11px] text-neutral-400 hover:text-[#b7623b] transition-colors"
                             >
                               {getLocalizedText(poem.title)}
                             </Link>

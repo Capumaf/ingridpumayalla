@@ -66,7 +66,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
           <div>
             <Link
               href={withLang("/home", lang)}
-              className="block text-[18px] tracking-wide text-black hover:text-[#c472b6] transition-colors"
+              className="block text-[18px] tracking-wide text-black hover:text-[#b7623b] transition-colors"
             >
               Ingrid Pumayalla
             </Link>
@@ -80,7 +80,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
 
           <button
             onClick={toggleLang}
-            className="text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors"
+            className="text-[11px] text-neutral-400 hover:text-[#b7623b] transition-colors"
           >
             {lang === "es" ? "EN" : "ES"}
           </button>
@@ -90,7 +90,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
           <button
             type="button"
             onClick={() => setIndexOpen((v) => !v)}
-            className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-neutral-400 hover:text-[#c472b6] transition-colors"
+            className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-neutral-400 hover:text-[#b7623b] transition-colors"
           >
             <span>{lang === "es" ? "Menú" : "Menu"}</span>
             <span
@@ -120,8 +120,8 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                         href={withLang(item.href, lang)}
                         className={`text-[14px] transition-colors ${
                           active
-                            ? "text-[#a8558f]"
-                            : "text-neutral-500 hover:text-[#c472b6]"
+                            ? "text-[#b75d5b]"
+                            : "text-neutral-500 hover:text-[#b7623b]"
                         }`}
                         onClick={() => {
                           clearCloseTimer();
@@ -129,7 +129,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                         }}
                       >
                         {active && (
-                          <span className="mr-2 text-[#a8558f]">—</span>
+                          <span className="mr-2 text-[#b75d5b]">—</span>
                         )}
 
                         {item.label[lang]}
@@ -164,7 +164,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                     : "Visual artist · Archive"}
                 </div>
 
-                <div className="mt-2 text-[11px] text-neutral-400 hover:text-[#c472b6] transition-colors">
+                <div className="mt-2 text-[11px] text-neutral-400 hover:text-[#b7623b] transition-colors">
                   <button onClick={toggleLang}>
                     {lang === "es" ? "EN" : "ES"}
                   </button>
@@ -180,12 +180,12 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                       href={withLang(item.href, lang)}
                       className={`text-[13px] ${
                         active
-                          ? "text-[#a8558f]"
-                          : "text-neutral-400 hover:text-[#c472b6]"
+                          ? "text-[#b75d5b]"
+                          : "text-neutral-400 hover:text-[#b7623b]"
                       }`}
                     >
                       {active && (
-                        <span className="mr-2 text-[#a8558f]">—</span>
+                        <span className="mr-2 text-[#b75d5b]">—</span>
                       )}
 
                       {item.label[lang]}

@@ -5,138 +5,60 @@ export const projectDetails = {
 
     text: {
       es: `
-<p><strong>ESP.</strong></p>
-
 <p>
-Curiwarmi, mujer de oro en quechua, es la protagonista de
-<em>¿A dónde se fueron las criaturas del bosque?</em>,
-una historia de ciencia ficción, extrañamente muy real.
-En este relato de migración climática, el espíritu de los bosques salva
-a Curiwarmi de los incendios de la selva amazónica de 2019.
-Este le pide al omnipresente río Amazonas que le ayude a buscar otra
-orilla fuera del peligro. Sus cauces la llevan a Alemania, Inglaterra
-y una vez más de retorno al Perú.
+Curiwarmi, mujer de oro en quechua, es la protagonista de <em>¿A dónde se fueron las criaturas del bosque?</em>, una historia de ciencia ficción extrañamente cercana a la realidad. En este relato de migración climática, el espíritu de los bosques la salva de los incendios de la Amazonía de 2019 y pide al omnipresente río Amazonas que la conduzca hacia otra orilla fuera del peligro. Sus aguas la llevan a Alemania, Inglaterra y finalmente de regreso al Perú.
 </p>
 
 <p>
-Curiwarmi navega estos espacios pacientemente, con equipaje ligero
-portando una larga trenza, tejidos y un armazón de plumas.
-Su lucha es meditativa y reparadora, canta para sanar los espacios
-explotados por el acelerado extractivismo, usa tejidos para darles
-calor y protegerlos y los camina para reconocer que sus heridas
-son reales. Ella navega estos espacios desafiando nuestros propios
-entendimientos del territorio a través de los límites nación-estado.
+Portando una larga trenza, tejidos y un armazón de plumas, Curiwarmi recorre estos territorios con paciencia. Su lucha es meditativa y reparadora: canta para sanar espacios afectados por el extractivismo, utiliza tejidos para brindar calor y protección, y camina los territorios para reconocer que sus heridas son reales. Su viaje desafía nuestras propias nociones de territorio más allá de los límites del Estado-nación.
 </p>
 
 <p>
-La historia de Curiwarmi se despliega en fotografías y videos,
-cada uno de ellos esbozando un complejo escenario de diversos
-territorios a la merced del deseo neoliberal de usar la naturaleza
-para beneficio propio.
+La historia se despliega a través de fotografías y videos que esbozan escenarios atravesados por el deseo neoliberal de explotar la naturaleza para beneficio propio. En Alemania emerge del lago Markkleeberger, una antigua mina de carbón a cielo abierto inundada en 1999 y posteriormente convertida en espacio turístico. En Inglaterra visita el White Horse de Westbury, una figura ecuestre de tiza que en 1957 fue cubierta con concreto en un intento por reducir los costos de mantenimiento necesarios para preservar su frágil silueta al aire libre.
 </p>
 
 <p>
-En Alemania, ella emerge del lago Markkleeberger, antiguamente
-una mina de carbón a cielo abierto que se inundó en 1999 y
-posteriormente se convirtió en espacio turístico.
-En Inglaterra, ella visita el caballo blanco de Westbury,
-antiguamente una figura ecuestre en tiza que hacia 1957 fue
-bañado en concreto en un esfuerzo de recortar gastos necesarios
-para mantener la frágil silueta del caballo al aire libre.
+En Pucallpa y Contumazá escucha relatos sobre la importancia del tejido y desarrolla sesiones de tejido colectivo cuyos resultados forman parte de esta exposición. El agua recolectada de diversos ríos del Perú aparece en la muestra como un recordatorio constante de la compleja relación que mantenemos con este elemento. Los problemas hidrometeorológicos y la degradación de la calidad del agua son, y continuarán siendo, factores determinantes de la migración climática.
 </p>
 
 <p>
-En Pucallpa y Contumazá escucha relatos de la importancia del tejido
-y conduce sesiones de tejido colectivo cuyos resultados están presentes
-en esta sala.
-Agua que recoge de diversos ríos en el Perú se despliega en la exposición
-como perenne recordatorio que mantenemos una complicada relación con este
-elemento.
-</p>
-
-<p>
-Son y serán problemas hidrometeorológicos y de calidad hídrica los
-factores causantes de migración climática.
-</p>
-
-<p>
-La historia de Curiwarmi nos recuerda que recalibrar nuestra relación
-con los espacios naturales es una hazaña a paso lento, de equipaje ligero
-y de compromiso infinito a abandonar actitudes heredadas que nos posicionan
-erróneamente al centro del universo.
+La historia de Curiwarmi nos recuerda que recalibrar nuestra relación con los espacios naturales es un proceso lento que requiere viajar con equipaje ligero y asumir un compromiso permanente para abandonar aquellas actitudes heredadas que nos sitúan erróneamente en el centro del universo.
 </p>
 
 <p class="mt-8">
 Gisselle Girón Casas<br/>
 Curadora de la exposición
 </p>
-  `,
+`,
 
-      en: `
-<p><strong>ENG.</strong></p>
-
+en: `
 <p>
-Curiwarmi, meaning “woman of gold” in Quechua, is the protagonist of
-<em>Where Did the Creatures from the Forest Go?</em>,
-a science fiction story that feels strangely real.
-In this narrative of climate migration, the spirit of the forests rescues
-Curiwarmi from the Amazon rainforest fires of 2019.
-The spirit asks the omnipresent Amazon River to help her search for another
-shore away from danger. Its currents carry her to Germany, England,
-and eventually back once more to Peru.
+Curiwarmi, meaning “woman of gold” in Quechua, is the protagonist of <em>Where Did the Creatures from the Forest Go?</em>, a science fiction story that feels strangely close to reality. In this narrative of climate migration, the spirit of the forests rescues her from the Amazon rainforest fires of 2019 and asks the omnipresent Amazon River to guide her toward another shore beyond danger. Its waters carry her to Germany, England, and eventually back to Peru.
 </p>
 
 <p>
-Curiwarmi patiently navigates these spaces, travelling lightly while carrying
-a long braid, woven textiles, and a structure made of feathers.
-Her struggle is meditative and restorative: she sings to heal spaces exploited
-by accelerated extractivism, uses weaving to provide warmth and protection,
-and walks through territories to acknowledge that their wounds are real.
-She moves across these landscapes while challenging our own understandings
-of territory through the limits imposed by the nation-state.
+Carrying a long braid, woven textiles, and a feather structure, Curiwarmi patiently moves through these territories. Her struggle is meditative and restorative: she sings to heal spaces damaged by extractivism, uses weaving as an act of warmth and protection, and walks through landscapes to acknowledge that their wounds are real. Her journey challenges our own understandings of territory beyond the limits imposed by the nation-state.
 </p>
 
 <p>
-Curiwarmi’s story unfolds through photographs and videos, each one sketching
-a complex scenario of territories subjected to the neoliberal desire to use
-nature for private benefit.
+The story unfolds through photographs and videos that sketch landscapes shaped by the neoliberal desire to exploit nature for private gain. In Germany, she emerges from Lake Markkleeberger, a former open-pit coal mine flooded in 1999 and later transformed into a tourist destination. In England, she visits the White Horse of Westbury, a chalk hill figure that was covered in concrete in 1957 in an attempt to reduce the maintenance costs required to preserve its fragile silhouette.
 </p>
 
 <p>
-In Germany, she emerges from Lake Markkleeberger, formerly an open-pit coal
-mine flooded in 1999 and later transformed into a tourist destination.
-In England, she visits the White Horse of Westbury, originally a chalk hill
-figure that was covered in concrete in 1957 in an effort to reduce the
-maintenance costs required to preserve its fragile silhouette in the open air.
+In Pucallpa and Contumazá, she listens to stories about the importance of weaving and leads collective weaving sessions whose results are presented in this exhibition. Water collected from different rivers across Peru appears throughout the installation as a reminder of the complex relationship we maintain with this element. Hydrometeorological crises and declining water quality are, and will continue to be, central causes of climate migration.
 </p>
 
 <p>
-In Pucallpa and Contumazá, she listens to stories about the importance of
-weaving and leads collective weaving sessions whose results are presented
-within this exhibition.
-Water collected from different rivers across Peru appears throughout the
-installation as a constant reminder of the complicated relationship we maintain
-with this element.
-</p>
-
-<p>
-Hydrometeorological and water-quality crises are, and will continue to be,
-central causes of climate migration.
-</p>
-
-<p>
-Curiwarmi’s story reminds us that recalibrating our relationship with natural
-spaces is a slow process that requires travelling lightly and maintaining an
-endless commitment to abandoning inherited attitudes that wrongly position us
-at the centre of the universe.
+Curiwarmi’s story reminds us that recalibrating our relationship with natural spaces is a slow process that requires travelling lightly and maintaining a lasting commitment to abandoning inherited attitudes that wrongly place us at the center of the universe.
 </p>
 
 <p class="mt-8">
 Gisselle Girón Casas<br/>
 Curator of the exhibition
 </p>
-  `
-  },
+`,
+
+    },
 
     imageData: [
       { id: "1", src: "/Bosque1.webp", width: 1200, height: 800 },
@@ -282,6 +204,8 @@ As in Classical antiquity and frequent in native people of America, such as Mapu
 In this sense, Cantos Matrios is a declaration of freedom and a bond of union from the affection to the maternal warmth of the earth.
 </p>`
     },
+
+
 
     poems: [
   {
@@ -723,6 +647,30 @@ Voy descubriendo.</p>
   },
 ],
 
+
+artworkDetails: {
+  es: [
+    `Objetos Rituales<br />
+Impresión fotográfica sobre papel photorag<br />
+70 × 70 cm<br />
+2021`,
+    "",
+    "",
+    ""
+  ],
+
+  en: [
+    `Ritual Objects<br />
+Photographic print on photorag paper<br />
+70 × 70 cm<br />
+2021`,
+    "",
+    "",
+    ""
+  ]
+},
+
+
     imageData: [
       { id: "1", src: "/Cantos1.webp", width: 1200, height: 800 },
       { id: "2", src: "/Cantos2.webp", width: 1200, height: 800 },
@@ -743,10 +691,73 @@ Voy descubriendo.</p>
   "curiwarmi-lunar": {
     title: "Curiwarmi Lunar",
 
-    text: {
-      es: `<p></p>`,
-      en: `<p></p>`
-    },
+  text: {
+  en: `
+<p>In the trajectory of Curiwarmi, a hybrid creature who has travelled from the Amazon to Europe, multiple worlds become possible. Moving through landscapes marked by displacement, ecological transformation, and the remnants of collapsing systems, Curiwarmi inhabits a speculative territory situated between memory and future-making.</p>
+
+<p>This triptych follows her journey through what could be understood as an approximate "end of the world"—not a final ending, but a moment of rupture in which new forms of existence emerge from the fragments of what has been lost. Within these liminal spaces, Curiwarmi's body becomes both archive and instrument. Through the textiles she creates, she weaves together ancestral knowledge, ecological memory, and forms of communication that exceed human language.</p>
+
+<p>The woven object functions not simply as a material artifact but as a carrier of stories, songs, and relationships. It becomes a vessel through which Curiwarmi gathers experiences across territories and species, proposing alternative ways of inhabiting the world. Her singing, her movements, and her textile-making generate the possibility of another future—one grounded in reciprocity rather than extraction.</p>
+
+<p>The work draws inspiration from Ursula K. Le Guin's <em>The Carrier Bag Theory of Fiction</em>, in which the carrier bag is proposed as one of humanity's first technologies: a container used not for conquest, but for gathering, holding, and sustaining life. In this sense, Curiwarmi's textile becomes a carrier bag of memory and transformation. It collects traces of different worlds, allowing stories, knowledge, and care to travel across time and geography.</p>
+
+<p>Rather than narrating a heroic journey, the work imagines survival through connection. Curiwarmi carries with her fragments of the Amazon, weaving them into new landscapes and new narratives, where the possibility of collective futures can still be imagined.</p>
+  `,
+
+  es: `
+<p>En la trayectoria de Curiwarmi, una criatura híbrida que ha viajado desde la Amazonía hasta Europa, múltiples mundos se vuelven posibles. Desplazándose por paisajes marcados por el desplazamiento, la transformación ecológica y los restos de sistemas en colapso, Curiwarmi habita un territorio especulativo situado entre la memoria y la construcción de futuros.</p>
+
+<p>Este tríptico sigue su recorrido a través de lo que podría entenderse como un aproximado "fin del mundo"; no un final definitivo, sino un momento de ruptura en el que nuevas formas de existencia emergen de los fragmentos de aquello que se ha perdido. Dentro de estos espacios liminales, el cuerpo de Curiwarmi se convierte tanto en archivo como en instrumento. A través de los textiles que crea, entrelaza conocimiento ancestral, memoria ecológica y formas de comunicación que exceden el lenguaje humano.</p>
+
+<p>El objeto tejido funciona no solo como un artefacto material, sino también como portador de historias, cantos y relaciones. Se convierte en un recipiente mediante el cual Curiwarmi reúne experiencias entre territorios y especies, proponiendo formas alternativas de habitar el mundo. Su canto, sus movimientos y su práctica textil generan la posibilidad de otro futuro, basado en la reciprocidad antes que en la extracción.</p>
+
+<p>La obra se inspira en <em>The Carrier Bag Theory of Fiction</em> de Ursula K. Le Guin, donde la bolsa contenedora es propuesta como una de las primeras tecnologías de la humanidad: un recipiente utilizado no para la conquista, sino para reunir, contener y sostener la vida. En este sentido, el textil de Curiwarmi se convierte en una bolsa portadora de memoria y transformación. Recoge rastros de distintos mundos, permitiendo que historias, conocimientos y cuidados viajen a través del tiempo y la geografía.</p>
+
+<p>Más que narrar un viaje heroico, la obra imagina la supervivencia a través de la conexión. Curiwarmi lleva consigo fragmentos de la Amazonía, entretejiéndolos en nuevos paisajes y nuevas narrativas, donde la posibilidad de futuros colectivos aún puede ser imaginada.</p>
+  `
+},
+
+artworkDetails: {
+  en: [
+    `Curiwarmi Lunar I<br />
+    Giclee photographic print on metallic paper<br />
+    120 × 150 cm<br />
+    Edition of 10<br />
+    2022`,
+
+    `Curiwarmi Lunar II<br />
+    Giclee photographic print on metallic paper<br />
+    120 × 150 cm<br />
+    Edition of 10<br />
+    2022`,
+
+    `Curiwarmi Lunar III<br />
+    Giclee photographic print on metallic paper<br />
+    120 × 150 cm<br />
+    Edition of 10<br />
+    2022`
+  ],
+
+  es: [
+    `Curiwarmi Lunar I<br />
+    Impresión fotográfica giclée sobre papel metálico<br />
+    120 × 150 cm<br />
+    Edición de 10<br />
+    2022`,
+
+    `Curiwarmi Lunar II<br />
+    Impresión fotográfica giclée sobre papel metálico<br />
+    120 × 150 cm<br />
+    Edición de 10<br />
+    2022`,
+
+    `Curiwarmi Lunar III<br />
+    Impresión fotográfica giclée sobre papel metálico<br />
+    120 × 150 cm<br />
+    Edición de 10<br />
+    2022`
+  ]
+},
 
     imageData: [
       { id: "1", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
@@ -756,6 +767,7 @@ Voy descubriendo.</p>
     ]
   },
 
+  
 
   "dancing-on-a-ritual-stone": {
   title: {
@@ -764,16 +776,91 @@ Voy descubriendo.</p>
   },
 
   text: {
-    en: `
-A photographic and symbolic exploration centered on ritual movement,
-memory, and the relationship between body and territory.
-    `,
+en: `
 
-    es: `
-Una exploración fotográfica y simbólica centrada en el movimiento ritual,
-la memoria y la relación entre cuerpo y territorio.
-    `,
-  },
+<p>Dancing on a Ritual Stone</p>
+
+<p>Performance action at the Cromlech of Almendres, Portugal</p>
+
+<p>This photographic series documents Dancing on a Ritual Stone, a site-specific performance created at the Cromlech of Almendres, one of the largest and oldest megalithic stone circles in Europe. Located in Portugal and dating to around 4000 BCE, the site has long been associated with ritual, ceremony, and humanity's relationship with the landscape.</p>
+
+<p>In this performance, I dance upon one of the ritual stones while working with a length of gauze that moves between my body, the wind, and the surrounding megaliths. The gauze references ancestral healing practices of the Nazca culture of Peru, who developed sophisticated textile and gauze-making traditions connected to care, healing, and the body.</p>
+
+<p>By bringing this material into dialogue with an ancient European ceremonial landscape, the work creates a symbolic bridge between distant cultures, geographies, and histories. My body becomes a connector between these worlds, activating a space where memory, ritual, and landscape intersect.</p>
+
+<p>The performance explores ideas of collective healing, ancestral knowledge, and the enduring significance of sacred sites. Through movement and gesture, it seeks to reawaken a relationship between body and place, acknowledging the landscape as a living archive of human experience and cultural memory.</p>
+  `,
+
+es: `
+
+<p>Dancing on a Ritual Stone</p>
+
+<p>Acción performática en el Cromlech de Almendres, Portugal.</p>
+
+<p>Esta serie fotográfica documenta Dancing on a Ritual Stone, una performance específica para el lugar creada en el Cromlech de Almendres, uno de los círculos megalíticos más grandes y antiguos de Europa. Ubicado en Portugal y datado alrededor del año 4000 a. C., este sitio ha estado históricamente asociado al ritual, la ceremonia y la relación de la humanidad con el paisaje.</p>
+
+<p>En esta performance bailo sobre una de las piedras rituales mientras trabajo con una gasa que se mueve entre mi cuerpo, el viento y los megalitos que rodean el lugar. La gasa hace referencia a las prácticas ancestrales de sanación de la cultura Nazca del Perú, que desarrolló sofisticadas tradiciones textiles y de elaboración de gasas vinculadas al cuidado, la curación y el cuerpo.</p>
+
+<p>Al poner este material en diálogo con un antiguo paisaje ceremonial europeo, la obra crea un puente simbólico entre culturas, geografías e historias distantes. Mi cuerpo se convierte en un vínculo entre estos mundos, activando un espacio donde la memoria, el ritual y el paisaje se intersectan.</p>
+
+<p>La performance explora ideas de sanación colectiva, conocimiento ancestral y la vigencia de los espacios sagrados. A través del movimiento y el gesto, busca reactivar una relación entre cuerpo y lugar, reconociendo el paisaje como un archivo vivo de experiencia humana y memoria cultural.</p>
+  `
+},
+
+artworkDetails: {
+  en: [
+    `Dancing on a Rituals Stone with Gauze<br />
+    Giclee photographic print on satin paper<br />
+    70 × 50 cm<br />
+    Edition of 15<br />
+    2023`,
+
+    `Dancing on the Sombreiro Tree I<br />
+    Giclee photographic print on satin paper<br />
+    70 × 50 cm<br />
+    Edition of 15<br />
+    2023`,
+
+    `Dancing on the Sombreiro Tree II<br />
+    Giclee photographic print on satin paper<br />
+    70 × 50 cm<br />
+    Edition of 15<br />
+    2023`,
+
+    `Dancing on the Sombreiro Tree IV<br />
+    Giclee photographic print on satin paper<br />
+    70 × 50 cm<br />
+    Edition of 15<br />
+    2023`
+  ],
+
+  es: [
+    `Dancing on a Rituals Stone with Gauze<br />
+    Impresión fotográfica giclée sobre papel satinado<br />
+    70 × 50 cm<br />
+    Edición de 15<br />
+    2023`,
+
+    `Dancing on the Sombreiro Tree I<br />
+    Impresión fotográfica giclée sobre papel satinado<br />
+    70 × 50 cm<br />
+    Edición de 15<br />
+    2023`,
+
+    `Dancing on the Sombreiro Tree II<br />
+    Impresión fotográfica giclée sobre papel satinado<br />
+    70 × 50 cm<br />
+    Edición de 15<br />
+    2023`,
+
+    `Dancing on the Sombreiro Tree IV<br />
+    Impresión fotográfica giclée sobre papel satinado<br />
+    70 × 50 cm<br />
+    Edición de 15<br />
+    2023`
+  ]
+},
+
 
   imageData: [
   { id: "1", src: "/stone1.webp", width: 1200, height: 800 },
@@ -783,6 +870,7 @@ la memoria y la relación entre cuerpo y territorio.
   { id: "5", src: "/stone5.webp", width: 1200, height: 800 },
 ],
 },
+
 
   "dibujando-una-linea-roja-en-el-desierto-de-paracas": {
     title: "Dibujando una línea roja en el desierto de Paracas",
@@ -1253,40 +1341,67 @@ la memoria y la relación entre cuerpo y territorio.
     },
 
     {
-      id: "the-hair-cut",
-      title: "The Hair Cut",
+  id: "the-hair-cut",
+  title: "The Hair Cut",
 
-      cover: {
-        type: "image",
-        src: "/haircut1.webp",
-        width: 1200,
-        height: 800
-      },
+  cover: {
+    type: "image",
+    src: "/haircut1.webp",
+    width: 1200,
+    height: 800
+  },
 
-      text: {
-        es: `
+  text: {
+    es: `
 <p>Texto introductorio de The Hair Cut.</p>
-        `,
-        en: `
+    `,
+    en: `
 <p>Introductory text for The Hair Cut.</p>
-        `
-      },
+    `
+  },
 
-      mediaData: [
-        {
-          id: "1",
-          type: "image",
-          src: "/haircut1.webp",
-          width: 1200,
-          height: 800
-        },
-        {
-          id: "2",
-          type: "video",
-          src: "/the_haircut.mp4"
-        }
-      ]
+  artworkDetails: {
+    es: [
+      `The Hair Cut<br />
+Impresión fotográfica giclée sobre papel de algodón<br />
+50 × 50 cm<br />
+Ed. 15<br />
+2016`,
+
+      `The Hair Cut<br />
+Video<br />
+2'56" min / 3'08" min / 4'34" min<br />
+2016`
+    ],
+    en: [
+      `The Hair Cut<br />
+Giclée photographic print on cotton paper<br />
+50 × 50 cm<br />
+Ed. 15<br />
+2016`,
+
+      `The Hair Cut<br />
+Video<br />
+2'56" min / 3'08" min / 4'34" min<br />
+2016`
+    ]
+  },
+
+  mediaData: [
+    {
+      id: "1",
+      type: "image",
+      src: "/haircut1.webp",
+      width: 1200,
+      height: 800
     },
+    {
+      id: "2",
+      type: "video",
+      src: "/the_haircut.mp4"
+    }
+  ]
+},
 
     {
       id: "yuraq-warmi-yana-warmi",
@@ -1308,6 +1423,24 @@ la memoria y la relación entre cuerpo y territorio.
         `
       },
 
+      artworkDetails: {
+  es: [
+    ``,
+
+    `Yuraq Warmi, Yana Warmi<br />
+    Video<br />
+    3'23"<br />`
+    ],
+
+    en: [
+    ``,
+
+    `Yuraq Warmi, Yana Warmi<br />
+     Video<br /> 
+     3'23"<br />`
+     ]
+     },
+
       mediaData: [
         {
           id: "1",
@@ -1315,7 +1448,14 @@ la memoria y la relación entre cuerpo y territorio.
           src: "/Linea-infinita1.webp",
           width: 1200,
           height: 800
-        }
+        },
+
+        {
+      id: "2",
+      type: "video",
+       src: "https://vimeo.com/294742910?fl=tl&fe=ec"
+      }
+
       ]
     }
   ]
@@ -1357,9 +1497,54 @@ In 2017, she returned to Pantipata with her sister Francisca. This reunion with 
     title: "Sobre el Camino",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
-    },
+
+es: `
+
+
+
+<p>Este proyecto nace de mi necesidad de comprender y materializar la separación de mi familia como consecuencia de la migración interna, un fenómeno que ha transformado la vida de muchas familias en el Perú.</p>
+
+
+
+<p>Crecí junto a mi familia en Contumazá, un pequeño pueblo de la sierra de Cajamarca, donde la vida está marcada por un fuerte sentido de comunidad y pertenencia. Desde temprana edad, las personas participan activamente en la vida colectiva, asumiendo responsabilidades orientadas al bienestar común.</p>
+
+
+
+<p>La migración no solo produjo una fragmentación familiar, sino también un proceso de individualización. Frente a ello, surgió mi interés por reconstruir las historias de cada integrante de mi familia y comprender cómo nuestra identidad se ha transformado a lo largo del tiempo, integrando nuevas experiencias y diferencias culturales.</p>
+
+
+
+<p>Durante mis últimas visitas, el encuentro con mi familia fue distinto. Por primera vez me acerqué a ellos desde mi rol de fotógrafa, una elección profesional que despertó curiosidad y cuestionamientos. Aun así, me abrieron las puertas de sus hogares y de su intimidad, permitiéndome registrar espacios donde permanecen los afectos y los vínculos que resisten la distancia.</p>
+
+
+
+<p>A través de estas fotografías exploro el desarraigo, la memoria y la pertenencia. Al mismo tiempo, construyo un testimonio visual que invita a conocer la intimidad de una familia atravesada por la migración y, con ella, una experiencia que forma parte de la diversidad cultural de mi país.</p>
+
+  `,
+
+  en: `
+
+<p>This project emerged from my need to understand and give form to the separation of my family as a consequence of internal migration, a phenomenon that has transformed the lives of many families in Peru.</p>
+
+
+
+<p>I grew up with my family in Contumazá, a small town in the highlands of Cajamarca, where life is shaped by a strong sense of community and belonging. From an early age, people actively participate in collective life, assuming responsibilities aimed at the common good.</p>
+
+
+
+<p>Migration not only led to family fragmentation but also to a process of individualization. In response, I became interested in reconstructing the stories of each member of my family and understanding how our identities have changed over time through new experiences and cultural differences.</p>
+
+
+
+<p>During my most recent visits, my encounters with my family felt different. For the first time, I approached them through my role as a photographer, a professional choice that generated curiosity and questions. Nevertheless, they welcomed me into their homes and private lives, allowing me to document spaces where affection and bonds continue to endure despite distance.</p>
+
+
+
+<p>Through these photographs, I explore displacement, memory, and belonging. At the same time, I create a visual testimony that invites viewers into the intimacy of a family shaped by migration and, through it, an experience that forms part of my country's cultural diversity.</p>
+
+  `
+
+},
 
     imageData: [
       { id: "1", src: "/camino1.webp", width: 1200, height: 800 },

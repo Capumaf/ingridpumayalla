@@ -133,7 +133,7 @@ export default function ResidencyImagePage() {
         <div className="flex items-center justify-between">
           <Link
             href={`/${lang}/residencies/${id}`}
-            className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
+            className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
             ← {lang === "es" ? "Volver a residencia" : "Back to residency"}
           </Link>
@@ -161,7 +161,7 @@ export default function ResidencyImagePage() {
               prevImg &&
               router.push(`/${lang}/residencies/${id}/${prevImg.id}`)
             }
-            className={`text-xs tracking-widest text-gray-500 hover:text-[#c472b6] ${
+            className={`text-xs tracking-widest text-gray-500 hover:text-[#b7623b] ${
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -171,7 +171,7 @@ export default function ResidencyImagePage() {
           {!nextImg ? (
             <Link
               href={`/${lang}/residencies`}
-              className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
             </Link>
@@ -180,7 +180,7 @@ export default function ResidencyImagePage() {
               onClick={() =>
                 router.push(`/${lang}/residencies/${id}/${nextImg.id}`)
               }
-              className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               →
             </button>
@@ -224,7 +224,7 @@ export default function ResidencyImagePage() {
         >
           <Link
             href={`/${lang}/residencies/${id}`}
-            className="text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
+            className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
             ← {lang === "es" ? "Volver a residencia" : "Back to residency"}
           </Link>
@@ -271,7 +271,7 @@ export default function ResidencyImagePage() {
               prevImg &&
               router.push(`/${lang}/residencies/${id}/${prevImg.id}`)
             }
-            className={`absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#c472b6] ${
+            className={`absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -291,7 +291,7 @@ export default function ResidencyImagePage() {
                 ? router.push(`/${lang}/residencies/${id}/${nextImg.id}`)
                 : router.push(`/${lang}/residencies/${id}`)
             }
-            className={`absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#c472b6] ${
+            className={`absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
               nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -301,7 +301,7 @@ export default function ResidencyImagePage() {
           {!nextImg && (
             <Link
               href={`/${lang}/residencies`}
-              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#c472b6]"
+              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
             </Link>

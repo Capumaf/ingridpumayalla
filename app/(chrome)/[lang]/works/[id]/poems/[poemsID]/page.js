@@ -47,7 +47,7 @@ export default async function PoemPage({ params }) {
             text-[11px]
             tracking-[0.18em]
             text-neutral-500
-             hover:text-[#c472b6]
+             hover:text-[#b7623b]
             transition-colors
           "
         >

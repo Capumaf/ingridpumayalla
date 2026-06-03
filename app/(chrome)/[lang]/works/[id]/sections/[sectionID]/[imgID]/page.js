@@ -88,17 +88,45 @@ export default function SectionMediaPage() {
     }
   }, [router, lang, id, sectionID, prevItem, nextItem]);
 
+  const artworkDetails =
+  section.artworkDetails?.[lang] ||
+  section.artworkDetails?.en ||
+  [];
   const description =
-    item.description?.[lang] ??
-    (typeof item.description === "string" ? item.description : "");
+  artworkDetails[currentIndex] || "";
 
   const sectionTitle =
     typeof section.title === "string"
       ? section.title
       : section.title?.[lang] || section.title?.es || "";
 
-  const renderMedia = (className) =>
-    item.type === "video" ? (
+       const isVimeoUrl = (src = "") =>
+  src.includes("vimeo.com");
+
+const getVimeoEmbedUrl = (src = "") => {
+  const match = src.match(/vimeo\.com\/(\d+)/);
+  const videoId = match?.[1];
+
+  return videoId
+    ? `https://player.vimeo.com/video/${videoId}`
+    : src;
+};
+
+const renderMedia = (className) => {
+  if (item.type === "video" && isVimeoUrl(item.src)) {
+    return (
+      <iframe
+        src={getVimeoEmbedUrl(item.src)}
+        title={description || sectionTitle}
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+        className={`${className} aspect-video`}
+      />
+    );
+  }
+
+  if (item.type === "video") {
+    return (
       <video
         src={item.src}
         controls
@@ -108,13 +136,17 @@ export default function SectionMediaPage() {
         playsInline
         className={className}
       />
-    ) : (
-      <img
-        src={item.src}
-        alt={description || sectionTitle}
-        className={className}
-      />
     );
+  }
+
+  return (
+    <img
+      src={item.src}
+      alt={description || sectionTitle}
+      className={className}
+    />
+  );
+};
 
   return (
     <div
@@ -131,7 +163,7 @@ export default function SectionMediaPage() {
         <div className="flex items-center justify-between">
           <Link
             href={sectionHref}
-            className="text-xs tracking-widest text-gray-500 hover:text-black"
+            className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
             ← {lang === "es" ? "Volver a sección" : "Back to section"}
           </Link>
@@ -151,7 +183,7 @@ export default function SectionMediaPage() {
         <div className="flex items-center justify-between">
           <button
             onClick={() => prevItem && goToItem(prevItem)}
-            className={`text-xs tracking-widest text-gray-500 hover:text-black ${
+            className={`text-xs tracking-widest text-gray-500 hover:text-[#b7623b] ${
               prevItem ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -161,14 +193,14 @@ export default function SectionMediaPage() {
           {!nextItem ? (
             <Link
               href={sectionHref}
-              className="text-xs tracking-widest text-gray-500 hover:text-black"
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               {lang === "es" ? "Volver a sección" : "Back to section"} →
             </Link>
           ) : (
             <button
               onClick={() => goToItem(nextItem)}
-              className="text-xs tracking-widest text-gray-500 hover:text-black"
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               →
             </button>
@@ -181,9 +213,12 @@ export default function SectionMediaPage() {
           </p>
 
           {description && (
-            <p className="text-xs text-neutral-600 leading-relaxed">
-              {description}
-            </p>
+        <div
+        className="text-xs text-neutral-600 leading-relaxed"
+        dangerouslySetInnerHTML={{
+                                  __html: description,
+        }}
+         />
           )}
         </div>
       </div>
@@ -201,7 +236,7 @@ export default function SectionMediaPage() {
         >
           <Link
             href={sectionHref}
-            className="text-xs tracking-widest text-gray-500 hover:text-black"
+            className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
             ← {lang === "es" ? "Volver a sección" : "Back to section"}
           </Link>
@@ -211,11 +246,18 @@ export default function SectionMediaPage() {
               {sectionTitle}
             </h2>
 
+
             {description && (
-              <p className="mb-6 text-sm leading-relaxed text-neutral-600">
-                {description}
-              </p>
-            )}
+  <div
+    className="mb-6 text-sm leading-relaxed text-neutral-600"
+    dangerouslySetInnerHTML={{
+      __html: description,
+    }}
+  />
+)}
+
+            
+            
           </div>
         </div>
 
@@ -230,7 +272,7 @@ export default function SectionMediaPage() {
         >
           <button
             onClick={() => prevItem && goToItem(prevItem)}
-            className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
+            className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
               prevItem ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -243,7 +285,7 @@ export default function SectionMediaPage() {
             onClick={() =>
               nextItem ? goToItem(nextItem) : router.push(sectionHref)
             }
-            className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-black ${
+            className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
               nextItem ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -253,7 +295,7 @@ export default function SectionMediaPage() {
           {!nextItem && (
             <Link
               href={`/${lang}/works`}
-              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-black"
+              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               {lang === "es" ? "Volver a obras" : "Back to works"} →
             </Link>
