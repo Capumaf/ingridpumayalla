@@ -50,6 +50,11 @@ export default function SectionMediaPage() {
   const item = media[currentIndex];
   const prevItem = media[currentIndex - 1] || null;
   const nextItem = media[currentIndex + 1] || null;
+  const firstVideo = section.videoData?.[0] || null;
+
+const videoHref = firstVideo
+  ? `/${lang}/works/${id}/sections/${sectionID}/videos/${firstVideo.id}`
+  : null;
 
   const sectionHref = `/${lang}/works/${id}/sections/${sectionID}`;
 
@@ -100,57 +105,18 @@ export default function SectionMediaPage() {
       ? section.title
       : section.title?.[lang] || section.title?.es || "";
 
-       const isVimeoUrl = (src = "") =>
-  src.includes("vimeo.com");
+    const renderMedia = (className) => (
+  <img
+    src={item.src}
+    alt={description || sectionTitle}
+    className={className}
+  />
+   );
 
-const getVimeoEmbedUrl = (src = "") => {
-  const match = src.match(/vimeo\.com\/(\d+)/);
-  const videoId = match?.[1];
-
-  return videoId
-    ? `https://player.vimeo.com/video/${videoId}`
-    : src;
-};
-
-const renderMedia = (className) => {
-  if (item.type === "video" && isVimeoUrl(item.src)) {
-    return (
-      <iframe
-        src={getVimeoEmbedUrl(item.src)}
-        title={description || sectionTitle}
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowFullScreen
-        className={`${className} aspect-video`}
-      />
-    );
-  }
-
-  if (item.type === "video") {
-    return (
-      <video
-        src={item.src}
-        controls
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={className}
-      />
-    );
-  }
-
-  return (
-    <img
-      src={item.src}
-      alt={description || sectionTitle}
-      className={className}
-    />
-  );
-};
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-white"
+  className="fixed inset-0 flex items-center justify-center bg-white"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       style={{
@@ -191,13 +157,22 @@ const renderMedia = (className) => {
           </button>
 
           {!nextItem ? (
-            <Link
-              href={sectionHref}
-              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
-            >
-              {lang === "es" ? "Volver a sección" : "Back to section"} →
-            </Link>
+          videoHref ? (
+          <Link
+          href={videoHref}
+          className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+          >
+          →
+          </Link>
           ) : (
+          <Link
+          href={sectionHref}
+          className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+          >
+          {lang === "es" ? "Volver a sección" : "Back to section"} →
+          </Link>
+           )
+           ) : (
             <button
               onClick={() => goToItem(nextItem)}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
@@ -282,19 +257,23 @@ const renderMedia = (className) => {
           {renderMedia("object-contain max-h-[78vh] w-auto max-w-full")}
 
           <button
-            onClick={() =>
-              nextItem ? goToItem(nextItem) : router.push(sectionHref)
-            }
-            className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-              nextItem ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
+          onClick={() =>
+          nextItem
+          ? goToItem(nextItem)
+          : videoHref
+          ? router.push(videoHref)
+          : router.push(sectionHref)
+          }
+          className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
+          nextItem || videoHref ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
           >
-            ›
+          ›
           </button>
 
-          {!nextItem && (
+          {!nextItem && !videoHref && (
             <Link
-              href={`/${lang}/works`}
+            href={`/${lang}/works`}
               className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               {lang === "es" ? "Volver a obras" : "Back to works"} →
