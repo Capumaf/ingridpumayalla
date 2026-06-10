@@ -1384,34 +1384,39 @@ Londres, junio de 2026</p>
         `
       },
 
-      mediaData: [
-        {
-          id: "1",
-          type: "image",
-          src: "/Caballito1.webp",
-          width: 1200,
-          height: 800
-        },
-        {
-          id: "2",
-          type: "image",
-          src: "/Caballito2.webp",
-          width: 1200,
-          height: 800
-        },
-        {
-          id: "3",
-          type: "image",
-          src: "/Caballito3.webp",
-          width: 1200,
-          height: 800
-        },
-        {
-          id: "4",
-          type: "video",
-          src: "/plegaria-al-caballo-blanco.mp4"
-        }
-      ]
+ mediaData: [
+  {
+    id: "1",
+    type: "image",
+    src: "/Caballito1.webp",
+    width: 1200,
+    height: 800
+  },
+  {
+    id: "2",
+    type: "image",
+    src: "/Caballito2.webp",
+    width: 1200,
+    height: 800
+  },
+  {
+    id: "3",
+    type: "image",
+    src: "/Caballito3.webp",
+    width: 1200,
+    height: 800
+  }
+],
+
+videoData: [
+  {
+    id: "plegaria-al-caballo-blanco",
+    title: "Plegaria al caballo blanco",
+    src: "/plegaria-al-caballo-blanco-preview.mp4",
+    poster: "/plegaria-al-caballo-blanco-cover.webp",
+    duration: "00:29"
+  }
+]
     },
 
     {

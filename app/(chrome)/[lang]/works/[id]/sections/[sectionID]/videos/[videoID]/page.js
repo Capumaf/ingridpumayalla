@@ -85,11 +85,12 @@ export default function SectionVideoPage() {
 
         <div className="flex-1 flex items-center justify-center px-5">
           <video
-            src={video.src}
-            controls
-            playsInline
-            poster={video.poster}
-            className="w-full max-w-6xl max-h-[68vh] object-contain"
+           src={video.src}
+          controls
+          playsInline
+          preload="metadata"
+          poster={video.poster}
+          className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
           />
         </div>
 
