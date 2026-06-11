@@ -1,7 +1,7 @@
 export const projectDetails = {
 
   "A-donde-fueron-las-criaturas-del-bosque": {
-    title: "A Donde fueron las Criaturas del bosque",
+    title: "A dónde fueron las criaturas del bosque?",
 
     text: {
       es: `
@@ -78,8 +78,21 @@ Curator of the exhibition
       { id: "15", src: "/Bosque15.webp", width: 1200, height: 800 },
       { id: "16", src: "/Bosque16.webp", width: 1200, height: 800 },
       { id: "17", src: "/Bosque17.webp", width: 1200, height: 800 }
-    ]
+    ],
+
+    videoData: [
+  {
+    id: "adonde-fueron-las-criaturas-del-bosque",
+    title: "A dónde fueron las criaturas del bosque?",
+    src: "/adonde-fueron-las-criaturas-del-bosque-preview.mp4",
+    poster: "/adonde-fueron-las-criaturas-del-bosque-cover.webp",
+    duration: "00:26"
+  }
+]
+
   },
+
+  
 
   "cantos-matrios": {
     title: "Cantos Matrios",
@@ -1138,9 +1151,38 @@ artworkDetails: {
     title: "Rastreando",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
-    },
+
+es: `
+
+
+
+<p>El rastreo es la práctica de seguir un rastro. En las tradiciones de la mesa y las ceremonias de San Pedro, se utiliza para buscar aquello que se ha perdido, olvidado o desplazado. A través de objetos, imágenes y signos, el curandero traza un camino hacia la recuperación y el retorno.</p>
+
+
+
+<p>En esta obra, Curiwarmi aparece como una guía a través de la memoria. La imagen proyectada y las formas tejidas crean un espacio donde el conocimiento ancestral puede ser buscado y reactivado. Un hilo negro se extiende desde la figura hacia la galería, convirtiéndose tanto en una línea de conexión como en un gesto de recuerdo.</p>
+
+
+
+<p>El hilo traza un pasaje entre la presencia material y la evocación espiritual. Sigue los caminos por los que viaja la memoria, transportando fragmentos de conocimiento heredados a lo largo de generaciones. En lugar de recuperar un pasado fijo, la obra propone el rastreo como un acto continuo de escuchar, recordar y reconectarse con formas ancestrales de saber.</p>
+
+`,
+
+  en: `
+
+<p>Rastreo is the practice of following a trace. In mesa traditions and San Pedro ceremonies, it is used to search for what has been lost, forgotten, or displaced. Through objects, images, and signs, the curandero maps a path toward recovery and return.</p>
+
+
+
+<p>In this work, Curiwarmi appears as a guide through memory. The projected image and woven forms create a space where ancestral knowledge can be sought and reawakened. A black thread extends from the figure into the gallery, becoming both a line of connection and a gesture of remembrance.</p>
+
+
+
+<p>The thread traces a passage between material presence and spiritual evocation. It follows the pathways through which memory travels, carrying fragments of knowledge inherited across generations. Rather than recovering a fixed past, the work proposes rastreo as an ongoing act of listening, remembering, and reconnecting with ancestral ways of knowing.</p>
+
+`
+
+},
 
    artworkDetails: {
   es: [
@@ -1467,20 +1509,27 @@ Video<br />
   },
 
   mediaData: [
-    {
-      id: "1",
-      type: "image",
-      src: "/haircut1.webp",
-      width: 1200,
-      height: 800
+  {
+    id: "1",
+    type: "image",
+    src: "/haircut1.webp",
+    width: 1200,
+    height: 800
+  },
+
+],
+
+videoData: [
+  {
+    id: "the-haircut",
+    title: "The Hair Cut",
+    src: "/the-haircut-preview.mp4",
+    poster: "/the-haircut-cover.webp",
+    duration: "00:31"
+  }
+]
+
     },
-    {
-      id: "2",
-      type: "video",
-      src: "/the_haircut.mp4"
-    }
-  ]
-},
 
     {
       id: "yuraq-warmi-yana-warmi",

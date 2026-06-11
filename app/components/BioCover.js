@@ -103,14 +103,14 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
       gsap.to(curveRef.current, {
         strokeDashoffset: 0,
         opacity: 1,
-        duration: 0.9,
+        duration: 1.15,
         ease: "power2.out",
       });
     } else {
       gsap.to(curveRef.current, {
         strokeDashoffset: curveLen.current,
         opacity: 0,
-        duration: 0.5,
+        duration: 0.75,
         ease: "power2.in",
       });
     }
@@ -131,14 +131,15 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
     const pLen = perimLen.current;
     const el = perimRef.current;
 
-    const snake = pLen * 0.12;
-    const travelEnd = pLen * 0.92;
+    const snake = pLen * 0.33;
+    const travelEnd = pLen * 0.84;
 
     gsap.killTweensOf(curveRef.current);
 
     gsap.to(curveRef.current, {
       opacity: 0,
-      duration: 0.2,
+      duration: 0.55,
+      ease: "power2.inOut",
     });
 
     const proxy = {
@@ -169,14 +170,18 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
       },
     });
 
-    tl.to(proxy, {
+     tl.to(
+      proxy,
+      {
       drawn: snake,
-      duration: 0.3,
+      duration: 0.35,
       ease: "power2.out",
-    })
+      },
+      "+=0.35"
+      )
       .to(proxy, {
         tail: travelEnd,
-        duration: 1.8,
+        duration: 2.4,
         ease: "power1.inOut",
       })
       .to(
@@ -193,13 +198,19 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
   }, [isEntering, href]);
 
   const handleClick = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (isEntering) return;
+  if (isEntering) return;
 
-    setIsEntering(true);
+  buildPerimeter();
+
+  if (!perimRef.current || !perimLen.current || perimLen.current === 0) {
+    window.location.href = href;
+    return;
+  }
+
+  setIsEntering(true);
   };
-
   return (
     <div className="flex justify-center w-full pl-0 md:pl-[95px]">
       <Link

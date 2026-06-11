@@ -51,6 +51,12 @@ export default function ImagePage() {
   const img = images[currentIndex];
   const prevImg = images[currentIndex - 1] || null;
   const nextImg = images[currentIndex + 1] || null;
+  const firstVideo = project.videoData?.[0] || null;
+
+const nextVideoHref =
+  firstVideo && !nextImg
+    ? `/${lang}/works/${id}/videos/${firstVideo.id}`
+    : null;
 
   const artworkDetails =
   project.artworkDetails?.[lang] ||
@@ -170,24 +176,32 @@ const description =
     ←
   </button>
 
-  {nextImg ? (
-    <button
-      type="button"
-      onClick={() => {
-        router.push(`/${lang}/works/${id}/${nextImg.id}`);
-      }}
-      className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
-    >
-      →
-    </button>
-  ) : (
-    <Link
-      href={`/${lang}/works`}
-      className="z-50 px-4 py-3 text-xs tracking-widest text-gray-500 hover:text-black"
-    >
-      {lang === "es" ? "Volver a obras" : "Back to works"} →
-    </Link>
-  )}
+{nextImg ? (
+  <button
+    type="button"
+    onClick={() => {
+      router.push(`/${lang}/works/${id}/${nextImg.id}`);
+    }}
+    className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
+  >
+    →
+  </button>
+) : nextVideoHref ? (
+  <button
+    type="button"
+    onClick={() => router.push(nextVideoHref)}
+    className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
+  >
+    →
+  </button>
+) : (
+  <Link
+    href={`/${lang}/works`}
+    className="z-50 px-4 py-3 text-xs tracking-widest text-gray-500 hover:text-black"
+  >
+    {lang === "es" ? "Volver a obras" : "Back to works"} →
+  </Link>
+)}
 </div>
 
         {description && (
@@ -272,23 +286,25 @@ const description =
             onClick={() =>
               nextImg
                 ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
+                : nextVideoHref
+                ? router.push(nextVideoHref)
                 : router.push(`/${lang}/works/${id}`)
             }
             className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-              nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
+              nextImg || nextVideoHref ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
             ›
           </button>
 
-          {!nextImg && (
-            <Link
-              href={`/${lang}/works`}
-              className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
-            >
-              {lang === "es" ? "Volver a obras" : "Back to works"} →
-            </Link>
-          )}
+          {!nextImg && !nextVideoHref && (
+          <Link
+          href={`/${lang}/works`}
+          className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+          >
+    {lang === "es" ? "Volver a obras" : "Back to works"} →
+  </Link>
+)}
         </div>
       </div>
     </div>

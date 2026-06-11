@@ -160,14 +160,14 @@ export default function ResidencyCover({ id, lang, cover, title }) {
       gsap.to(curveRef.current, {
         strokeDashoffset: 0,
         opacity: 1,
-        duration: 0.9,
+        duration: 1.5,
         ease: "power2.out",
       });
     } else {
       gsap.to(curveRef.current, {
         strokeDashoffset: curveLen.current,
         opacity: 0,
-        duration: 0.5,
+        duration: 0.75,
         ease: "power2.in",
       });
     }
@@ -180,14 +180,15 @@ export default function ResidencyCover({ id, lang, cover, title }) {
     const pLen = perimLen.current;
     const el = perimRef.current;
 
-    const snake = pLen * 0.12;
-    const travelEnd = pLen * 0.92;
+    const snake = pLen * 0.33;
+    const travelEnd = pLen * 0.84;
 
     gsap.killTweensOf(curveRef.current);
 
     gsap.to(curveRef.current, {
       opacity: 0,
-      duration: 0.2,
+      duration: 0.55,
+      ease: "power2.inOut",
     });
 
     const proxy = {
@@ -213,17 +214,21 @@ export default function ResidencyCover({ id, lang, cover, title }) {
       },
     });
 
-    tl.current
-      .to(proxy, {
-        drawn: snake,
-        duration: 0.3,
-        ease: "power2.out",
-      })
-      .to(proxy, {
-        tail: travelEnd,
-        duration: 1.8,
-        ease: "power1.inOut",
-      })
+   tl.current
+  .to(
+    proxy,
+    {
+      drawn: snake,
+      duration: 0.35,
+      ease: "power2.out",
+      },
+      "+=0.35"
+     )
+    .to(proxy, {
+    tail: travelEnd,
+    duration: 2.4,
+    ease: "power1.inOut",
+     })
       .to(
         proxy,
         {
@@ -240,10 +245,14 @@ export default function ResidencyCover({ id, lang, cover, title }) {
 
     if (isEntering) return;
 
-    if (!perimRef.current || !perimLen.current || perimLen.current === 0) {
-      router.push(href);
-      return;
-    }
+    if (!perimBuilt.current || !perimRef.current || !perimLen.current) {
+  buildPerimeter();
+}
+
+if (!perimBuilt.current || !perimLen.current) {
+  router.push(href);
+  return;
+}
 
     setIsEntering(true);
   };
