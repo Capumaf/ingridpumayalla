@@ -83,14 +83,24 @@ export default function WorkVideoPage() {
         </div>
 
         <div className="flex-1 flex items-center justify-center px-5">
-          <video
-            src={video.src}
-            controls
-            playsInline
-            preload="metadata"
-            poster={video.poster}
-            className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
-          />
+          {video.vimeoUrl ? (
+  <iframe
+    src={video.vimeoUrl.replace("vimeo.com/", "player.vimeo.com/video/")}
+    title={videoTitle}
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowFullScreen
+    className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
+  />
+) : (
+  <video
+    src={video.src}
+    controls
+    playsInline
+    preload="metadata"
+    poster={video.poster}
+    className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
+  />
+   )}
         </div>
 
         <div className="mt-4 max-w-6xl mx-auto w-full flex items-start justify-between gap-6">

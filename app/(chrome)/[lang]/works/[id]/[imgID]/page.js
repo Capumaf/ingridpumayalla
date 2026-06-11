@@ -53,9 +53,14 @@ export default function ImagePage() {
   const nextImg = images[currentIndex + 1] || null;
   const firstVideo = project.videoData?.[0] || null;
 
-const nextVideoHref =
+  const nextVideoHref =
   firstVideo && !nextImg
     ? `/${lang}/works/${id}/videos/${firstVideo.id}`
+    : null;
+
+const externalVideoHref =
+  firstVideo && !nextImg && firstVideo.externalOnly
+    ? firstVideo.fullVideoUrl
     : null;
 
   const artworkDetails =
@@ -288,10 +293,13 @@ const description =
                 ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
                 : nextVideoHref
                 ? router.push(nextVideoHref)
+                : externalVideoHref
+                ? window.open(externalVideoHref, "_blank")
                 : router.push(`/${lang}/works/${id}`)
+
             }
             className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-              nextImg || nextVideoHref ? "opacity-100" : "opacity-0 pointer-events-none"
+              nextImg || nextVideoHref || externalVideoHref ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
             ›

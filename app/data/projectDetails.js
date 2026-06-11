@@ -1618,8 +1618,23 @@ In 2017, she returned to Pantipata with her sister Francisca. This reunion with 
     imageData: [
       { id: "1", src: "/otrasmadres1.webp", width: 1200, height: 800 },
       { id: "2", src: "/otrasmadres2.webp", width: 1200, height: 800 }
-    ]
+    ],
+ 
+    videoData: [
+  {
+    id: "otras-madres",
+    title: "Otras Madres",
+    fullVideoUrl: "https://vimeo.com/304037145?fl=pl&fe=sh",
+  }
+]
+  
   },
+
+
+
+  
+
+
 
   "sobre-el-camino": {
     title: "Sobre el Camino",
