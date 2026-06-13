@@ -1280,46 +1280,46 @@ es: `
 
   text: {
   en: `
-
-
 <p><em>A is for Andes, Atacama, altiplano, alpaca, ayahuasca . . .<br />
 B is for blood, burden, betrayal . . .<br />
-C is charm, chant . . .</em></p>
+C is for charm . . .</em></p>
 
 <p><strong>Thoughts on the work of Ingrid Pumayalla</strong></p>
 
-<p>Ingrid the puma is a contemporary artist, a land artist from the land of Peru. She is a friend of mine. She walks the earth and labours and wonders and wanders and sometimes she makes artworks, concoctions that are spell-bound and binding. Sometimes she sings. You might call her a witch or a shaman or a dryad. I wouldn’t though.</p>
+<p>Ingrid the puma is a contemporary artist, a land artist from the land of Peru. She is a friend of mine. She walks the earth and labours and wonders and wanders and sometimes she makes artworks, concoctions that are spell-bound and binding. Sometimes she sings. You might call her a witch or a shaman or a dryad. I wouldn't though.</p>
 
 <p><strong>[1/huk: magic]</strong></p>
 
-<p>There is no reason to see the esoteric, the magical, the artistic and the sublime as phenomena mystified and quasi-religious. They can be both pragmatic and abstract. They can be brought ‘down to earth’, mucky and gritty, and maybe have to be in order to function as humans designed them to. We have long, and primordially so, needed to able to calm the wind, call the rain, protect ourselves from dangerous co-inhabitants, divert hazard in our favour, even summon help from sympathetic ‘beings’ that are not ‘normally’ in and around us.</p>
+<p>There is no reason to see the esoteric, the magical, the artistic and the sublime as phenomena mystified and quasi-religious. They can be both pragmatic and abstract. They can be brought 'down to earth', mucky and gritty, and maybe have to be in order to function as humans designed them to. We have long, and primordially so, needed to able to calm the wind, call the rain, protect ourselves from dangerous co-inhabitants, divert hazard in our favour, even summon help from sympathetic 'beings' that are not 'normally' in and around us.</p>
 
-<p>In his 1948 book <em>Magic, Science and Religion and Other Essays</em> the social anthropologist Bronislaw Malinowski sets out an ethnographically-based argument for the presence of secretive and protected practices carried out historically and generationally in society for practical purposes, in agriculture, horticulture, medicinal and kinship rituals, et cetera. Malinowski writes that “The formula is always the core of the magical performance” and “knowledge of magic means knowledge of spell.”</p>
+<p>In his 1948 book <em>Magic, Science and Religion and Other Essays</em> the social anthropologist Bronislaw Malinowski sets out an ethnographically-based argument for the presence of secretive and protected practices carried out historically and generationally in society for practical purposes, in agriculture, horticulture, medicinal and kinship rituals, et cetera. Malinowski writes that "The formula is always the core of the magical performance" and "knowledge of magic means knowledge of spell." (Ibid. p.54 i)</p>
 
-<p>Not all do, but some know how to do this thing (you know they do), the knack and techne: to spell, to cast, to perform these actions and these words that oscillate along the temporal and spatial plane of absence/presence, the ‘here and now’ and the ‘there and then’. They know the grammar, the syntax, the lexicon, the contiguity of elements. And those labels are really not metaphors. They are literal and our literacy. Many more of us homo sapiens are savvy and this practice is heart-felt. We just don’t know we know. Maybe we should let Ingrid Pumayalla show us the way, lead us in a song or an incantated dance down a narrow twisting path into a secret garden valley as dry as time and as human as death.</p>
+<p>Not all do, but some know how to do this thing (you know they do), the knack and techne: to spell, to cast, to perform these actions and these words that oscillate along the temporal and spatial plane of absence/presence, the 'here and now' and the 'there and then'. They know the grammar, the syntax, the lexicon, the contiguity of elements. And those labels are really not metaphors. They are literal and our literacy. Many more of us homo sapiens are savvy and this practice is heart-felt. We just don't know we know. Maybe we should let Ingrid Pumayalla show us the way, lead us in a song or an incantated dance down a narrow twisting path into a secret garden valley as dry as time and as human as death.</p>
 
 <p><strong>[2/iskay: performativity]</strong></p>
 
-<p>This artist seems to me to be able to get ‘performance’ to ‘do’ more, which may be a truly positive thing—the ‘doing’ I mean. Performance art is a tough medium to work in in so far as it often requires documentation, audience/viewer narrativity and narration, and even the challenges of claims of theatricality to be dealt with.</p>
+<p>This artist seems to me to be able to get 'performance' to 'do' more, which may be a truly positive and necessary thing—the 'doing' I mean. Performance art is a tough medium to work in, in so far as it often requires documentation, audience/viewer participation, an open or shared narrativity and narration, and even the challenges of claims of theatricality to be dealt with.<sup>1</sup></p>
 
-<p>Much, perhaps too much, has been said about the Austinian origins of Speech Act Theory and its far reaching influences on how we can understand the cultural consequences of form and context performing meaning, giving agency to the user of word and/or gesture actioned in the ‘right way’ at the ‘right place’ and the ‘right time’ by the ‘right person’. All verbal language and social code is in fact functional in this way. Choose the material. Make the time. Mark the sequence. Enter the space. Go.</p>
+<p>Much, perhaps too much, has been said about the Austinian origins of Speech Act Theory and its far reaching influences on how we can understand the cultural consequences of form and context performing meaning, giving agency to the user of word and/or gesture (paralanguage) actioned in the 'right way' at the 'right place' and the 'right time' by the 'right person'. All verbal language and social code is in fact functional in its way. Choose the material. Make the time. Mark the sequence. Enter the space. Go.</p>
 
-<p>But what about the performativity of the ‘magical language’, verbal or not, of the charm or spell? What’s interesting here is that we can perhaps question whether, in this instance, when casting a spell, we are ‘sending out’ words, speech sounds or phonation that have agency ‘in and for themselves’—animated words and animated worlds that can live and can act independently, like universal matter in collision with other universal objects. This is not an idea that traditional semantics would accept. But we are dealing with the nature of nature here. This supernatural power and supra-nature. Quantum language and quantum linguistics? I may feel empowered to have the magic words, the passcode, the key, the encrypted message. But it is the magic words themselves that have the power.</p>
+<p>But what about the performativity of the 'magical language', verbal or not, of the charm or spell? What's interesting here is that we can perhaps question whether, in this instance, when casting (a spell), we are 'sending out' words/speech sounds/phonation that have agency 'in and for themselves'—animated words and animated worlds that can live and can act independently, like universal matter in collision with other universal objects. This is not an idea that traditional semantics would accept. But we are dealing with the nature of nature here. This is supernatural power and supra-nature—quantum language needs quantum linguistics. I may feel empowered to possess the magic words, the passcode, the key, the encrypted message. But it is the magic words themselves that have the power.</p>
 
-<p><strong>[Kimsa-3: a dream]</strong></p>
+<p><strong>[3/kimsa: a dream]</strong></p>
 
-<p>I dreamt a reverie yesterday (7/6/2026) that Ana Mendieta and Richard Long collaborated on a project called <em>Meet me in Australia</em>, whereby he would travel (probably mostly walking) from London to Sydney across the semi-circumference of planet earth; she would journey through the centre, a place not unknown to her. Then on their arrival or soon after there would be a panel discussion in the Sydney Opera House moderated by Ingrid the puma. It’s only a dream, right?</p>
+<p>I dreamt a reverie yesterday (7/6/2026) that Ana Mendieta and Richard Long collaborated on a project called <em>Meet me in Australia</em>, whereby he would travel (probably mostly walking) from London to Sydney across the semi-circumference of planet earth; she would journey through the centre, a place not unknown to her (and a much shorter route by half π). Then on their arrival or soon after there would be a panel discussion in the Sydney Opera House moderated by Ingrid the puma. It's only a dream, right?</p>
 
 <p>Roger Orwell<br />
 London, June 2026</p>
+
+<p><sup>1</sup> In relation to this and digressing far from a critique of contemporary art, the adjectival 'performative' has latterly become a pejorative/negative term in media punditry. This is perhaps emanating from the visceral and culturally violent spoken attacks by far right-wing US politics on gender theory and critical theory more widely.</p>
 
 <p>© Roger Orwell. All rights reserved. Please do not use without permission.</p>
   `,
 
 es: `
-<p><em>A de Andes, Atacama, altiplano, alpaca, ayahuasca...</em><br />
-<em>B de sangre, carga, traición...</em><br />
-<em>C de encanto, canto...</em></p>
+<p><em>A de Andes, Atacama, altiplano, alpaca, ayahuasca...<br />
+B de sangre, carga, traición...<br />
+C de encanto...</em></p>
 
 <p><strong>Reflexiones sobre la obra de Ingrid Pumayalla</strong></p>
 
@@ -1329,26 +1329,28 @@ es: `
 
 <p>No hay razón para entender lo esotérico, lo mágico, lo artístico y lo sublime como fenómenos mistificados o cuasi religiosos. Pueden ser al mismo tiempo pragmáticos y abstractos. Pueden ser traídos «a la tierra», al barro y a la aspereza, y quizá deban serlo para funcionar del modo en que los seres humanos los concibieron. Desde tiempos remotos hemos necesitado calmar el viento, llamar a la lluvia, protegernos de habitantes peligrosos con quienes compartimos el mundo, desviar el peligro a nuestro favor e incluso invocar ayuda de seres afines que normalmente no percibimos a nuestro alrededor.</p>
 
-<p>En su libro <em>Magic, Science and Religion and Other Essays</em> (1948), el antropólogo social Bronislaw Malinowski desarrolla un argumento basado en la etnografía sobre la existencia de prácticas reservadas y protegidas, transmitidas históricamente de generación en generación con fines prácticos: agrícolas, hortícolas, medicinales, rituales de parentesco, entre otros. Malinowski escribe que «la fórmula es siempre el núcleo de la ejecución mágica» y que «el conocimiento de la magia significa conocimiento del hechizo».</p>
+<p>En su libro <em>Magic, Science and Religion and Other Essays</em> (1948), el antropólogo social Bronislaw Malinowski desarrolla un argumento basado en la etnografía sobre la existencia de prácticas reservadas y protegidas, transmitidas históricamente de generación en generación con fines prácticos: agrícolas, hortícolas, medicinales, rituales de parentesco, entre otros. Malinowski escribe que «la fórmula es siempre el núcleo de la ejecución mágica» y que «el conocimiento de la magia significa conocimiento del hechizo». (Ibid. p.54 i)</p>
 
 <p>No todos saben hacerlo, pero algunos sí conocen este arte —y sabes que existen—: la destreza y la técnica de conjurar, de invocar, de ejecutar acciones y palabras que oscilan entre los planos temporales y espaciales de la ausencia y la presencia, del «aquí y ahora» y el «allá y entonces». Conocen la gramática, la sintaxis, el léxico y la contigüidad de los elementos. Y estas palabras no son metáforas. Son literales y forman parte de nuestra propia alfabetización. Muchos más de nosotros, como especie, participamos de estas prácticas de lo que creemos. Simplemente no sabemos que lo sabemos. Quizá deberíamos permitir que Ingrid Pumayalla nos muestre el camino, que nos conduzca mediante un canto o una danza encantada por un sendero estrecho y sinuoso hacia un jardín secreto, tan seco como el tiempo y tan humano como la muerte.</p>
 
 <p><strong>[2/iskay: performatividad]</strong></p>
 
-<p>Esta artista parece ser capaz de hacer que la «performance» haga más, y eso puede ser algo profundamente positivo. El arte de acción es un medio complejo, en la medida en que suele requerir documentación, narración por parte del público o del espectador, e incluso enfrentarse a los problemas asociados a las acusaciones de teatralidad.</p>
+<p>Esta artista parece ser capaz de hacer que la «performance» haga más, lo cual puede ser algo verdaderamente positivo y necesario —el «hacer» propiamente dicho—. El arte de acción es un medio complejo, en la medida en que suele requerir documentación, participación del público o del espectador, una narratividad y narración abierta o compartida, e incluso enfrentarse a los problemas asociados a las acusaciones de teatralidad.<sup>1</sup></p>
 
-<p>Mucho, quizá demasiado, se ha escrito sobre los orígenes de la Teoría de los Actos de Habla de Austin y sobre la enorme influencia que ha tenido en nuestra comprensión de cómo la forma y el contexto producen significado, otorgando agencia a quien utiliza palabras y gestos en el lugar adecuado, en el momento adecuado y por la persona adecuada. Todo lenguaje verbal y todo código social funcionan, en cierta medida, de esta manera. Elegir el material. Crear el tiempo. Marcar la secuencia. Entrar en el espacio. Actuar.</p>
+<p>Mucho, quizá demasiado, se ha escrito sobre los orígenes de la Teoría de los Actos de Habla de Austin y sobre la enorme influencia que ha tenido en nuestra comprensión de cómo la forma y el contexto producen significado, otorgando agencia a quien utiliza palabras y/o gestos (paralenguaje) en el lugar adecuado, en el momento adecuado y por la persona adecuada. Todo lenguaje verbal y todo código social funcionan, en cierta medida, de esta manera. Elegir el material. Crear el tiempo. Marcar la secuencia. Entrar en el espacio. Actuar.</p>
 
-<p>Pero ¿qué ocurre con la performatividad del lenguaje mágico, verbal o no verbal, propio del encantamiento o del hechizo? Lo interesante es que aquí podemos preguntarnos si, al lanzar un conjuro, estamos enviando palabras, sonidos o fonaciones dotadas de agencia propia: palabras animadas y mundos animados capaces de vivir y actuar independientemente, como si fueran materia universal en colisión con otros cuerpos universales. Esta es una idea que la semántica tradicional difícilmente aceptaría. Pero aquí estamos tratando con la naturaleza de la naturaleza. Con lo sobrenatural y lo supranatural. ¿Lenguaje cuántico? ¿Lingüística cuántica? Yo puedo sentirme empoderado por poseer las palabras mágicas, la contraseña, la llave o el mensaje cifrado. Sin embargo, son las propias palabras mágicas las que poseen el poder.</p>
+<p>Pero ¿qué ocurre con la performatividad del lenguaje mágico, verbal o no verbal, propio del encantamiento o del hechizo? Lo interesante es que aquí podemos preguntarnos si, al lanzar (un hechizo), estamos «enviando» palabras, sonidos o fonaciones dotadas de agencia propia «en y para sí mismas»: palabras animadas y mundos animados capaces de vivir y actuar independientemente, como si fueran materia universal en colisión con otros cuerpos universales. Esta es una idea que la semántica tradicional difícilmente aceptaría. Pero aquí estamos tratando con la naturaleza de la naturaleza. Con lo sobrenatural y lo supranatural: el lenguaje cuántico necesita una lingüística cuántica. Yo puedo sentirme empoderado por poseer las palabras mágicas, la contraseña, la llave o el mensaje cifrado. Sin embargo, son las propias palabras mágicas las que poseen el poder.</p>
 
 <p><strong>[3/kimsa: un sueño]</strong></p>
 
-<p>Ayer, 7 de junio de 2026, soñé una ensoñación en la que Ana Mendieta y Richard Long colaboraban en un proyecto llamado <em>Meet me in Australia</em>. Él viajaría —probablemente caminando gran parte del trayecto— desde Londres hasta Sídney recorriendo la semicircunferencia del planeta; ella atravesaría el centro de la Tierra, un lugar que no le era desconocido. Después de su llegada, o poco tiempo más tarde, tendría lugar una mesa redonda en la Ópera de Sídney moderada por Ingrid la puma. Después de todo, solo es un sueño, ¿verdad?</p>
+<p>Ayer, 7 de junio de 2026, soñé una ensoñación en la que Ana Mendieta y Richard Long colaboraban en un proyecto llamado <em>Meet me in Australia</em>. Él viajaría —probablemente caminando gran parte del trayecto— desde Londres hasta Sídney recorriendo la semicircunferencia del planeta; ella atravesaría el centro de la Tierra, un lugar que no le era desconocido (y una ruta mucho más corta, por la mitad de π). Después de su llegada, o poco tiempo más tarde, tendría lugar una mesa redonda en la Ópera de Sídney moderada por Ingrid la puma. Después de todo, solo es un sueño, ¿verdad?</p>
 
 <p>Roger Orwell<br />
 Londres, junio de 2026</p>
 
-<p>© Roger Orwell. Todos derechos reservados. Porfavor, no usar sin permiso.</p>
+<p><sup>1</sup> En relación con esto, y alejándome de la crítica al arte contemporáneo, el término adjetival «performativo» se ha convertido últimamente en un término peyorativo o negativo dentro de la crítica mediática. Esto proviene quizás de los ataques verbales viscerales y culturalmente violentos lanzados por la política de extrema derecha estadounidense contra la teoría de género y, más ampliamente, contra la teoría crítica.</p>
+
+<p>© Roger Orwell. Todos los derechos reservados. Por favor, no usar sin permiso.</p>
 `},
 
   sections: [

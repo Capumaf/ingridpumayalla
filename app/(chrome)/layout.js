@@ -120,12 +120,12 @@ export default function ChromeLayout({ children }) {
       {/* HOME */}
       {isHome ? (
         <div className="min-h-dvh flex flex-col">
-          <div className="flex-1 grid place-items-center pt-4 md:pt-0">
+          <div className="flex-1 flex flex-col items-center justify-center pt-[4vh] md:pt-[5vh] pb-2">
             {React.isValidElement(children)
               ? React.cloneElement(children, { lang })
               : children}
           </div>
-          <div className="pb-6 pt-2 text-center">
+          <div className="pb-4 pt-2 md:pb-6 md:pt-3 text-center">
             <Footer />
           </div>
         </div>

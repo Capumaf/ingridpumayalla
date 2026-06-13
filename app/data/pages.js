@@ -89,20 +89,43 @@ items: [
     },
 
     {
-  year: "2022",
-  title: "Hilos que resisten, hilos que subvierten. — Artishock Revista",
-  link: "https://artishockrevista.com/2022/10/18/hilos-que-resisten-arte-textil-peruano/",
-},
+      year: "2022",
+      title: "Hilos que resisten, hilos que subvierten. — Artishock Revista",
+      link: "https://artishockrevista.com/2022/10/18/hilos-que-resisten-arte-textil-peruano/",
+    },
 
-{
-  year: "2021",
-  title: "Cantos Matrios — Terremoto",
-  link: "https://terremoto.mx/en/online/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/",
-},
+    {
+      year: "2022",
+      title: "¿A dónde fueron las criaturas del bosque? — Artishock Revista",
+      link: "https://artishockrevista.com/2022/11/29/ingrid-pumayalla/",
+    },
+
+    {
+      year: "2021",
+      title: "Cantos Matrios — Artishock Revista",
+      link: "https://artishockrevista.com/2021/02/22/ingrid-pumayalla-cantos-matrios/",
+    },
+
+    {
+      year: "2021",
+      title: "Cantos Matrios — Terremoto",
+      link: "https://terremoto.mx/en/online/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/",
+    },
+
+    {
+      year: "2025",
+      title: "ADDA by Ankita Mukherji — Issue 2",
+      link: "https://ankitamukherji.info/adda-2",
+    },
+
+    {
+      year: "2025",
+      title: "Loop End 2025 — LOOP.END.bilingual_compressed.pdf",
+      link: "https://drive.google.com/file/d/1cmz_inxEfLho7iMfvhEpzc4W_X20KAhy/view?usp=sharing",
+    },
 
   ],
-  
-  },
+  }, 
 
   works: {
     title: {
