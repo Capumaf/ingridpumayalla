@@ -84,15 +84,25 @@ export default function SectionVideoPage() {
         </div>
 
         <div className="flex-1 flex items-center justify-center px-5">
-          <video
-           src={video.src}
-          controls
-          playsInline
-          preload="metadata"
-          poster={video.poster}
-          className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
-          />
-        </div>
+  {video.vimeoUrl ? (
+    <iframe
+      src={video.vimeoUrl.replace("vimeo.com/", "player.vimeo.com/video/")}
+      title={videoTitle}
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowFullScreen
+      className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
+    />
+  ) : (
+    <video
+      src={video.src}
+      controls
+      playsInline
+      preload="metadata"
+      poster={video.poster}
+      className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
+    />
+  )}
+</div>
 
         <div className="mt-4 max-w-6xl mx-auto w-full flex items-start justify-between gap-6">
           <div>
@@ -122,9 +132,9 @@ export default function SectionVideoPage() {
               {lang === "es" ? "Volver a obras" : "Back to works"} →
             </Link>
 
-            {video.fullVideoUrl && (
+            {(video.fullVideoUrl || video.vimeoUrl) && (
               <a
-                href={video.fullVideoUrl}
+                href={video.fullVideoUrl || video.vimeoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
