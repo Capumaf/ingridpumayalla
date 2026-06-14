@@ -23,6 +23,7 @@ export default function WorkCover({ id, lang, cover, title }) {
   const curveLen = useRef(95);
   const perimBuilt = useRef(false);
   const tl = useRef(null);
+  const isMultiTouchRef = useRef(false);
 
   if (!cover) return null;
 
@@ -205,7 +206,16 @@ export default function WorkCover({ id, lang, cover, title }) {
       .to(proxy, { drawn: 0, duration: 0.45, ease: "power2.in" }, "-=0.45");
   }, [isEntering, href, router]);
 
+  const handleTouchStart = (e) => {
+    isMultiTouchRef.current = e.touches.length > 1;
+  };
+
   const handleClick = (e) => {
+    if (isMultiTouchRef.current) {
+      isMultiTouchRef.current = false;
+      e.preventDefault();
+      return;
+    }
     e.preventDefault();
     if (isEntering) return;
 
@@ -231,6 +241,7 @@ export default function WorkCover({ id, lang, cover, title }) {
         onClick={handleClick}
         onMouseEnter={() => !isEntering && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={handleTouchStart}
         className="relative inline-block overflow-hidden max-w-[92vw] md:max-w-[640px]"
         aria-label={lang === "es" ? "Ver serie" : "View series"}
       >

@@ -23,6 +23,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
   const curveLen = useRef(95);
   const perimBuilt = useRef(false);
   const tl = useRef(null);
+  const isMultiTouchRef = useRef(false);
 
   if (!cover) return null;
 
@@ -240,7 +241,16 @@ export default function ResidencyCover({ id, lang, cover, title }) {
       );
   }, [isEntering, href, router]);
 
+  const handleTouchStart = (e) => {
+    isMultiTouchRef.current = e.touches.length > 1;
+  };
+
   const handleClick = (e) => {
+    if (isMultiTouchRef.current) {
+      isMultiTouchRef.current = false;
+      e.preventDefault();
+      return;
+    }
     e.preventDefault();
 
     if (isEntering) return;
@@ -267,6 +277,7 @@ if (!perimBuilt.current || !perimLen.current) {
         onClick={handleClick}
         onMouseEnter={() => !isEntering && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={handleTouchStart}
         className="relative inline-block overflow-hidden max-w-[92vw] md:max-w-[640px]"
         aria-label={lang === "es" ? "Ver residencia" : "View residency"}
       >

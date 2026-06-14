@@ -193,10 +193,10 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
 
     stateRef.current = {
       phase: 'braid',
-      braidStart: null,
+      braidElapsed: 0,
       currentThread: 0,
       completedThreads: [],
-      threadStart: null,
+      threadElapsed: undefined,
     };
 
     function drawCord(progress) {
@@ -251,22 +251,34 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
       ctx.globalAlpha=1;
     }
 
+    let lastTs = null;
+
     function frame(ts) {
       const s = stateRef.current;
+
+      // Clampear delta para evitar saltos grandes por frame drops en mobile
+      if (lastTs === null) lastTs = ts;
+      let dt = ts - lastTs;
+      const MAX_DT = 50; // máximo 50ms por frame (~20fps mínimo efectivo)
+      if (dt > MAX_DT) dt = MAX_DT;
+      lastTs = ts;
+
       ctx.clearRect(0, 0, W, H);
 
       if (s.phase === 'braid') {
-        if (!s.braidStart) s.braidStart = ts;
-        const rawT = Math.min((ts-s.braidStart)/BRAID_DUR, 1);
+        if (s.braidElapsed === undefined) s.braidElapsed = 0;
+        s.braidElapsed += dt;
+        const rawT = Math.min(s.braidElapsed/BRAID_DUR, 1);
         drawCord(easeBraid(rawT));
         for (const i of s.completedThreads) drawVThread(VTHREADS[i], 1);
-        if (rawT >= 1) { s.phase='thread'; s.threadStart=null; }
+        if (rawT >= 1) { s.phase='thread'; s.threadElapsed=undefined; }
 
       } else if (s.phase === 'thread') {
-        if (!s.threadStart) s.threadStart = ts;
+        if (s.threadElapsed === undefined) s.threadElapsed = 0;
+        s.threadElapsed += dt;
         const vt  = VTHREADS[s.currentThread];
-        const dur = 2000+vt.len*7;
-        const rawT = Math.min((ts-s.threadStart)/dur, 1);
+        const dur = 2400+vt.len*5;
+        const rawT = Math.min(s.threadElapsed/dur, 1);
         drawCord(1);
         for (const i of s.completedThreads) drawVThread(VTHREADS[i], 1);
         drawVThread(vt, easeThread(rawT));
@@ -279,16 +291,17 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
           if (s.currentThread >= IMAGES) {
             setTimeout(() => {
               stateRef.current = {
-                phase:'braid', braidStart:null,
-                currentThread:0, completedThreads:[], threadStart:null,
+                phase:'braid', braidElapsed:0,
+                currentThread:0, completedThreads:[], threadElapsed:undefined,
               };
+              lastTs = null;
               onAllDoneRef.current();
               rafRef.current = requestAnimationFrame(frame);
             }, 800);
             return;
           } else {
             s.phase = 'thread';
-            s.threadStart = null;
+            s.threadElapsed = undefined;
           }
         }
       }
@@ -351,7 +364,7 @@ export default function HomeTransmutationImage() {
           className="object-contain absolute inset-0"
           style={{
             transition: isChanging ? `transform ${slideDurationRef.current}ms cubic-bezier(0.45,0,0.2,1)` : "none",
-            transform: isChanging ? "translateX(-100%)" : "translateX(0)",
+            transform: isChanging ? "translateX(-102%)" : "translateX(0)",
           }}
         />
         {/* Imagen nueva — entra desde la derecha */}
@@ -364,7 +377,7 @@ export default function HomeTransmutationImage() {
           className="object-contain absolute inset-0"
           style={{
             transition: isChanging ? `transform ${slideDurationRef.current}ms cubic-bezier(0.45,0,0.2,1)` : "none",
-            transform: isChanging ? "translateX(0)" : "translateX(100%)",
+            transform: isChanging ? "translateX(0)" : "translateX(102%)",
           }}
         />
       </div>
