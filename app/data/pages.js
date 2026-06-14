@@ -120,7 +120,7 @@ items: [
 
     {
       year: "2025",
-      title: "Loop End 2025 — LOOP.END.bilingual_compressed.pdf",
+      title: "Loop End 2025 — LOOP.END.",
       link: "https://drive.google.com/file/d/1cmz_inxEfLho7iMfvhEpzc4W_X20KAhy/view?usp=sharing",
     },
 

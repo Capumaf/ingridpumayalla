@@ -14,7 +14,8 @@ const images = [
   "/Home8.webp",
 ];
 
-const SLIDE_DURATION = 1600;
+const SLIDE_DURATION_FIRST = 1600;
+const SLIDE_DURATION_REST  = 2400;
 const BRAID_DUR      = 10000;
 const IMAGES         = images.length;
 
@@ -103,7 +104,11 @@ function lineW(idx, x, base) {
 
 function easeBraid(t) {
   if (t < 0.04) return t * t * 7;
-  if (t > 0.93) { const e=(t-0.93)/0.07; return 0.93+e*0.07*0.30; }
+  if (t > 0.93) {
+    // Desaceleración final, pero llega a 1 exactamente en t=1
+    const e = (t - 0.93) / 0.07;
+    return 0.93 + (1 - 0.93) * (1 - Math.pow(1 - e, 2));
+  }
   return Math.max(0,Math.min(1, t - Math.sin(t*Math.PI)*0.09*t*(1-t)*3.2 + Math.sin(t*Math.PI*3.9)*0.007));
 }
 function easeThread(t) { return 1 - Math.pow(1-t, 1.7); }
@@ -269,7 +274,7 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
         if (rawT >= 1) {
           s.completedThreads.push(s.currentThread);
           s.currentThread++;
-          onThreadCompleteRef.current();
+          onThreadCompleteRef.current(s.currentThread - 1);
 
           if (s.currentThread >= IMAGES) {
             setTimeout(() => {
@@ -305,16 +310,20 @@ export default function HomeTransmutationImage() {
   const timeoutRef    = useRef(null);
   const isChangingRef = useRef(false);
 
-  const handleThreadComplete = useCallback(() => {
+  const slideDurationRef = useRef(SLIDE_DURATION_FIRST);
+
+  const handleThreadComplete = useCallback((threadIndex) => {
     if (isChangingRef.current) return;
     isChangingRef.current = true;
+    const duration = threadIndex === 0 ? SLIDE_DURATION_FIRST : SLIDE_DURATION_REST;
+    slideDurationRef.current = duration;
     setIsChanging(true);
     clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       setCurrent(prev => (prev + 1) % images.length);
       setIsChanging(false);
       isChangingRef.current = false;
-    }, SLIDE_DURATION);
+    }, duration);
   }, []);
 
   const handleAllDone = useCallback(() => {
@@ -331,35 +340,31 @@ export default function HomeTransmutationImage() {
   return (
     <div className="relative w-full flex flex-col items-center justify-center">
       <div className="relative w-full max-w-[90vw] aspect-[3/4] max-h-[52svh] md:max-w-none md:max-h-[50vh] overflow-hidden">
-        {/* Imagen actual — se desvanece primero (mitad 1) */}
+        {/* Imagen actual — sale hacia la izquierda */}
         <Image
-          key={images[current] + "-base"}
+          key="slot-base"
           src={images[current]}
           alt=""
           fill
-          priority={current === 0}
+          priority
           sizes="(max-width: 768px) 84vw, 620px"
           className="object-contain absolute inset-0"
           style={{
-            transition: isChanging
-              ? `opacity ${SLIDE_DURATION/2}ms ease-in 0ms`
-              : "none",
-            opacity: isChanging ? 0 : 1,
+            transition: isChanging ? `transform ${slideDurationRef.current}ms cubic-bezier(0.45,0,0.2,1)` : "none",
+            transform: isChanging ? "translateX(-100%)" : "translateX(0)",
           }}
         />
-        {/* Imagen nueva — aparece después (mitad 2) */}
+        {/* Imagen nueva — entra desde la derecha */}
         <Image
-          key={images[nextIdx] + "-reveal"}
+          key="slot-reveal"
           src={images[nextIdx]}
           alt=""
           fill
           sizes="(max-width: 768px) 84vw, 620px"
           className="object-contain absolute inset-0"
           style={{
-            transition: isChanging
-              ? `opacity ${SLIDE_DURATION/2}ms ease-out ${SLIDE_DURATION/2}ms`
-              : "none",
-            opacity: isChanging ? 1 : 0,
+            transition: isChanging ? `transform ${slideDurationRef.current}ms cubic-bezier(0.45,0,0.2,1)` : "none",
+            transform: isChanging ? "translateX(0)" : "translateX(100%)",
           }}
         />
       </div>
