@@ -146,6 +146,7 @@ const description =
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 600ms ease",
+        touchAction: "pan-y pinch-zoom",
       }}
     >
       {/* MOBILE */}

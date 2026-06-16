@@ -15,6 +15,7 @@ export default function SectionMediaPage() {
 
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const isMultiTouch = useRef(false);
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const project = projectDetails[id];
@@ -63,10 +64,17 @@ const videoHref = firstVideo
   };
 
   const handleTouchStart = (e) => {
+    isMultiTouch.current = e.touches.length > 1;
+    if (isMultiTouch.current) return;
     touchStartX.current = e.changedTouches[0].clientX;
   };
 
   const handleTouchEnd = (e) => {
+    if (isMultiTouch.current) {
+      isMultiTouch.current = false;
+      return;
+    }
+
     touchEndX.current = e.changedTouches[0].clientX;
 
     const distance = touchStartX.current - touchEndX.current;
@@ -122,6 +130,7 @@ const videoHref = firstVideo
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 600ms ease",
+        touchAction: "pan-y pinch-zoom",
       }}
     >
       {/* MOBILE */}

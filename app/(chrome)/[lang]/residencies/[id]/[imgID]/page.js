@@ -26,14 +26,14 @@ export default function SectionMediaPage() {
     const footer = document.querySelector("footer");
 
     if (footer) footer.style.display = "none";
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden"; // desactivado para permitir pinch-zoom
 
     const t = requestAnimationFrame(() => setVisible(true));
 
     return () => {
       cancelAnimationFrame(t);
       if (footer) footer.style.display = "";
-      document.body.style.overflow = "";
+      // document.body.style.overflow = "";
     };
   }, []);
 
@@ -130,6 +130,7 @@ const videoHref = firstVideo
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 600ms ease",
+        touchAction: "pan-y pinch-zoom",
       }}
     >
       {/* MOBILE */}
