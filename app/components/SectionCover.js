@@ -5,16 +5,20 @@ import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function SectionCover({ href, cover, title }) {
+export default function SectionCover({ href, cover, title, lang }) {
   const router = useRouter();
 
   const [isHovered, setIsHovered] = useState(false);
   const [isEntering, setIsEntering] = useState(false);
+  const [showHint, setShowHint] = useState(false);
+  const [labelTone, setLabelTone] = useState("dark");
 
   const linkRef = useRef(null);
   const mediaRef = useRef(null);
   const perimRef = useRef(null);
   const curveRef = useRef(null);
+  const hintTimerRef = useRef(null);
+  const isMobileRef = useRef(false);
 
   const perimLen = useRef(0);
   const curveLen = useRef(95);
@@ -23,6 +27,44 @@ export default function SectionCover({ href, cover, title }) {
   const isMultiTouchRef = useRef(false);
 
   if (!cover) return null;
+
+  const detectLabelTone = () => {
+    const img = mediaRef.current;
+    if (!img || !img.naturalWidth || !img.naturalHeight) return;
+
+    try {
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+
+      ctx.drawImage(img, 0, 0);
+
+      const sampleX = Math.floor(img.naturalWidth * 0.24);
+      const sampleY = Math.floor(img.naturalHeight * 0.92);
+      const sampleW = Math.floor(img.naturalWidth * 0.28);
+      const sampleH = Math.floor(img.naturalHeight * 0.08);
+
+      const data = ctx.getImageData(sampleX, sampleY, sampleW, sampleH).data;
+
+      let total = 0;
+      let count = 0;
+
+      for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+
+        total += 0.299 * r + 0.587 * g + 0.114 * b;
+        count++;
+      }
+
+      setLabelTone(total / count > 145 ? "light" : "dark");
+    } catch {
+      setLabelTone("dark");
+    }
+  };
 
   const buildPerimeter = () => {
     if (!linkRef.current || !perimRef.current || !curveRef.current) return;
@@ -62,7 +104,6 @@ export default function SectionCover({ href, cover, title }) {
 
     perimBuilt.current = true;
 
-    // Fade-in suave de la imagen al cargar
     if (mediaRef.current) {
       gsap.fromTo(mediaRef.current,
         { opacity: 0 },
@@ -71,7 +112,28 @@ export default function SectionCover({ href, cover, title }) {
     }
   };
 
+  const handleMediaReady = () => {
+    requestAnimationFrame(() => {
+      buildPerimeter();
+      if (cover.type !== "video") detectLabelTone();
+    });
+  };
+
+  const triggerHint = () => {
+    setShowHint(true);
+
+    // En mobile se mantiene indefinidamente, en desktop desaparece a los 5s
+    if (!isMobileRef.current) {
+      clearTimeout(hintTimerRef.current);
+      hintTimerRef.current = setTimeout(() => {
+        setShowHint(false);
+      }, 5000);
+    }
+  };
+
   useEffect(() => {
+    isMobileRef.current = window.matchMedia("(pointer: coarse)").matches;
+
     requestAnimationFrame(buildPerimeter);
     window.addEventListener("resize", buildPerimeter);
 
@@ -81,17 +143,35 @@ export default function SectionCover({ href, cover, title }) {
   }, []);
 
   useEffect(() => {
+    const initialTimer = setTimeout(() => {
+      triggerHint();
+    }, 900);
+
+    const handleScroll = () => {
+      triggerHint();
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      clearTimeout(initialTimer);
+      clearTimeout(hintTimerRef.current);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!curveRef.current || isEntering) return;
 
     gsap.killTweensOf(curveRef.current);
 
     gsap.to(curveRef.current, {
-      strokeDashoffset: isHovered ? 0 : curveLen.current,
-      opacity: isHovered ? 1 : 0,
-      duration: isHovered ? 1.15 : 0.75,
-      ease: isHovered ? "power2.out" : "power2.in",
+      strokeDashoffset: isHovered || showHint ? 0 : curveLen.current,
+      opacity: isHovered || showHint ? 1 : 0,
+      duration: isHovered || showHint ? 1.15 : 0.75,
+      ease: isHovered || showHint ? "power2.out" : "power2.in",
     });
-  }, [isHovered, isEntering]);
+  }, [isHovered, isEntering, showHint]);
 
   useEffect(() => {
     if (!isEntering || !perimBuilt.current) return;
@@ -163,6 +243,8 @@ export default function SectionCover({ href, cover, title }) {
     setIsEntering(true);
   };
 
+  const isLightArea = labelTone === "light";
+
   return (
     <div className="flex justify-center">
       <Link
@@ -184,7 +266,7 @@ export default function SectionCover({ href, cover, title }) {
             loop
             playsInline
             style={{ opacity: 0 }}
-            onLoadedData={buildPerimeter}
+            onLoadedData={handleMediaReady}
             className={`
               w-full
               h-auto
@@ -208,7 +290,7 @@ export default function SectionCover({ href, cover, title }) {
             loading="eager"
             fetchPriority="high"
             style={{ opacity: 0 }}
-            onLoad={buildPerimeter}
+            onLoad={handleMediaReady}
             className={`
               block
               w-auto
@@ -231,16 +313,17 @@ export default function SectionCover({ href, cover, title }) {
             absolute inset-0
             transition-opacity duration-700
             pointer-events-none
-            ${isHovered || isEntering ? "opacity-100" : "opacity-0"}
+            ${showHint ? "opacity-100 md:opacity-0" : "opacity-0"}
+            ${isHovered || isEntering ? "md:opacity-100" : ""}
           `}
         >
           <div
             className={`
               absolute bottom-5 left-5 md:bottom-7 md:left-7
               flex items-center gap-3
-              text-white
               transition-transform duration-700
-              ${isHovered || isEntering ? "translate-y-0" : "translate-y-2"}
+              ${isLightArea ? "text-black" : "text-white"}
+              ${isHovered || isEntering || showHint ? "translate-y-0" : "translate-y-2"}
             `}
           >
             <svg
@@ -276,12 +359,12 @@ export default function SectionCover({ href, cover, title }) {
                 md:py-[6px]
                 rounded-full
                 backdrop-blur-md
-                bg-black/35
-                text-white
-                border
-                border-white/15
-                shadow-[0_4px_18px_rgba(0,0,0,0.35)]
                 transition-all duration-500
+                ${
+                  isLightArea
+                    ? "bg-white/65 text-black border border-black/10 shadow-[0_4px_18px_rgba(255,255,255,0.25)]"
+                    : "bg-black/35 text-white border border-white/15 shadow-[0_4px_18px_rgba(0,0,0,0.35)]"
+                }
               `}
               style={
                 isEntering
@@ -289,7 +372,7 @@ export default function SectionCover({ href, cover, title }) {
                   : undefined
               }
             >
-              View records
+              {lang === "es" ? "Ver registros" : "View records"}
             </span>
           </div>
         </div>

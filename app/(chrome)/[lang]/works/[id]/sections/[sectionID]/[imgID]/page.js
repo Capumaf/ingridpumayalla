@@ -134,8 +134,9 @@ const videoHref = firstVideo
 
         <div className="flex items-center justify-between">
           <button
+            type="button"
             onClick={() => prevItem && goToItem(prevItem)}
-            className={`text-xs tracking-widest text-gray-500 hover:text-[#b7623b] ${
+            className={`z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b] ${
               prevItem ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -146,22 +147,23 @@ const videoHref = firstVideo
           videoHref ? (
           <Link
           href={videoHref}
-          className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+          className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
           >
           →
           </Link>
           ) : (
           <Link
           href={sectionHref}
-          className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+          className="z-50 px-4 py-3 text-xs tracking-widest text-gray-500 hover:text-black"
           >
           {lang === "es" ? "Volver a sección" : "Back to section"} →
           </Link>
            )
            ) : (
             <button
+              type="button"
               onClick={() => goToItem(nextItem)}
-              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+              className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
             >
               →
             </button>
