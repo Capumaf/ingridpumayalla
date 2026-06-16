@@ -226,6 +226,8 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
           src={imageSrc}
           alt={imageAlt}
           onLoad={buildPerimeter}
+          loading="eager"
+          fetchPriority="high"
           className={`
             w-full
             h-auto

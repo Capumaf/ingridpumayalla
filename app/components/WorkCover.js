@@ -259,6 +259,8 @@ export default function WorkCover({ id, lang, cover, title }) {
           alt={title || ""}
           draggable={false}
           onLoad={handleImageReady}
+          loading="eager"
+          fetchPriority="high"
           style={{ opacity: 0 }}
           className={`
             w-full max-w-[92vw] md:max-w-[640px]

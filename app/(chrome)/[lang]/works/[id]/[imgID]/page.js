@@ -19,6 +19,7 @@ export default function ImagePage() {
   const touchCurrentY = useRef(0);
   const touchEndX = useRef(0);
   const isSwiping = useRef(false);
+  const isMultiTouch = useRef(false);
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const project = projectDetails[id];
@@ -72,26 +73,32 @@ const description =
   artworkDetails[currentIndex] || "";
 
   const handleTouchStart = (e) => {
-    const touch = e.changedTouches[0];
+    isMultiTouch.current = e.touches.length > 1;
+    if (isMultiTouch.current) return;
 
+    const touch = e.changedTouches[0];
     touchStartX.current = touch.clientX;
     touchStartY.current = touch.clientY;
     touchCurrentX.current = touch.clientX;
     touchCurrentY.current = touch.clientY;
-
     isSwiping.current = false;
   };
 
   const handleTouchMove = (e) => {
-    const touch = e.changedTouches[0];
+    if (isMultiTouch.current) return;
 
+    const touch = e.changedTouches[0];
     touchCurrentX.current = touch.clientX;
     touchCurrentY.current = touch.clientY;
   };
 
   const handleTouchEnd = (e) => {
-    const touch = e.changedTouches[0];
+    if (isMultiTouch.current) {
+      isMultiTouch.current = false;
+      return;
+    }
 
+    const touch = e.changedTouches[0];
     touchEndX.current = touch.clientX;
 
     const finalX = touchCurrentX.current || touchEndX.current;
@@ -273,7 +280,6 @@ const description =
               prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
             }
             className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-    
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -296,7 +302,6 @@ const description =
                 : externalVideoHref
                 ? window.open(externalVideoHref, "_blank")
                 : router.push(`/${lang}/works/${id}`)
-
             }
             className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
               nextImg || nextVideoHref || externalVideoHref ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -310,9 +315,9 @@ const description =
           href={`/${lang}/works`}
           className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
-    {lang === "es" ? "Volver a obras" : "Back to works"} →
-  </Link>
-)}
+            {lang === "es" ? "Volver a obras" : "Back to works"} →
+          </Link>
+          )}
         </div>
       </div>
     </div>

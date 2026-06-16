@@ -205,6 +205,8 @@ export default function SectionCover({ href, cover, title }) {
             src={cover.src}
             alt={title || ""}
             draggable={false}
+            loading="eager"
+            fetchPriority="high"
             style={{ opacity: 0 }}
             onLoad={buildPerimeter}
             className={`
