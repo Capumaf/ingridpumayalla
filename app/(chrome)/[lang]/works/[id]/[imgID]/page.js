@@ -13,14 +13,6 @@ export default function ImagePage() {
 
   const [visible, setVisible] = useState(false);
 
-  const touchStartX = useRef(0);
-  const touchStartY = useRef(0);
-  const touchCurrentX = useRef(0);
-  const touchCurrentY = useRef(0);
-  const touchEndX = useRef(0);
-  const isSwiping = useRef(false);
-  const isMultiTouch = useRef(false);
-
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const project = projectDetails[id];
 
@@ -72,58 +64,6 @@ const externalVideoHref =
 const description =
   artworkDetails[currentIndex] || "";
 
-  const handleTouchStart = (e) => {
-    isMultiTouch.current = e.touches.length > 1;
-    if (isMultiTouch.current) return;
-
-    const touch = e.changedTouches[0];
-    touchStartX.current = touch.clientX;
-    touchStartY.current = touch.clientY;
-    touchCurrentX.current = touch.clientX;
-    touchCurrentY.current = touch.clientY;
-    isSwiping.current = false;
-  };
-
-  const handleTouchMove = (e) => {
-    if (isMultiTouch.current) return;
-
-    const touch = e.changedTouches[0];
-    touchCurrentX.current = touch.clientX;
-    touchCurrentY.current = touch.clientY;
-  };
-
-  const handleTouchEnd = (e) => {
-    if (isMultiTouch.current) {
-      isMultiTouch.current = false;
-      return;
-    }
-
-    const touch = e.changedTouches[0];
-    touchEndX.current = touch.clientX;
-
-    const finalX = touchCurrentX.current || touchEndX.current;
-    const finalY = touchCurrentY.current || touch.clientY;
-
-    const deltaX = touchStartX.current - finalX;
-    const deltaY = touchStartY.current - finalY;
-
-    const isHorizontalSwipe =
-      Math.abs(deltaX) > 45 &&
-      Math.abs(deltaX) > Math.abs(deltaY);
-
-    if (!isHorizontalSwipe) return;
-
-    isSwiping.current = true;
-
-    if (deltaX > 0 && nextImg) {
-      router.push(`/${lang}/works/${id}/${nextImg.id}`);
-    }
-
-    if (deltaX < 0 && prevImg) {
-      router.push(`/${lang}/works/${id}/${prevImg.id}`);
-    }
-  };
-
   useEffect(() => {
     [prevImg?.src, nextImg?.src].forEach((src) => {
       if (!src) return;
@@ -140,13 +80,9 @@ const description =
   return (
     <div
       className="fixed inset-0 flex items-center justify-center bg-white"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 600ms ease",
-        touchAction: "pan-y pinch-zoom",
       }}
     >
       {/* MOBILE */}
@@ -172,7 +108,7 @@ const description =
             src={img.src}
             alt="Artwork image"
             draggable={false}
-            className="object-contain w-full max-h-[55vh] select-none touch-pan-y"
+            className="object-contain w-full max-h-[55vh] select-none"
           />
         </div>
 

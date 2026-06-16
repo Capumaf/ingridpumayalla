@@ -13,9 +13,7 @@ export default function SectionMediaPage() {
 
   const [visible, setVisible] = useState(false);
 
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
-  const isMultiTouch = useRef(false);
+
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const project = projectDetails[id];
@@ -26,14 +24,14 @@ export default function SectionMediaPage() {
     const footer = document.querySelector("footer");
 
     if (footer) footer.style.display = "none";
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden"; // desactivado para permitir pinch-zoom
 
     const t = requestAnimationFrame(() => setVisible(true));
 
     return () => {
       cancelAnimationFrame(t);
       if (footer) footer.style.display = "";
-      document.body.style.overflow = "";
+      // document.body.style.overflow = "";
     };
   }, []);
 
@@ -63,25 +61,7 @@ const videoHref = firstVideo
     router.push(`/${lang}/works/${id}/sections/${sectionID}/${target.id}`);
   };
 
-  const handleTouchStart = (e) => {
-    isMultiTouch.current = e.touches.length > 1;
-    if (isMultiTouch.current) return;
-    touchStartX.current = e.changedTouches[0].clientX;
-  };
 
-  const handleTouchEnd = (e) => {
-    if (isMultiTouch.current) {
-      isMultiTouch.current = false;
-      return;
-    }
-
-    touchEndX.current = e.changedTouches[0].clientX;
-
-    const distance = touchStartX.current - touchEndX.current;
-
-    if (distance > 60 && nextItem) goToItem(nextItem);
-    if (distance < -60 && prevItem) goToItem(prevItem);
-  };
 
   useEffect(() => {
     [prevItem?.src, nextItem?.src].forEach((src) => {
@@ -125,12 +105,9 @@ const videoHref = firstVideo
   return (
     <div
   className="fixed inset-0 flex items-center justify-center bg-white"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
       style={{
         opacity: visible ? 1 : 0,
         transition: "opacity 600ms ease",
-        touchAction: "pan-y pinch-zoom",
       }}
     >
       {/* MOBILE */}
