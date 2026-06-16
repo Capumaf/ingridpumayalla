@@ -1,30 +1,31 @@
 "use client";
 
 import { useParams, useRouter, usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
-import { projectDetails } from "@/data/projectDetails";
+import { residencyDetails } from "@/data/residencyDetails";
 
-export default function SectionMediaPage() {
-  const { id, sectionID, imgID } = useParams();
+export default function ResidencyImagePage() {
+  const { id, imgID } = useParams();
   const pathname = usePathname();
   const router = useRouter();
 
   const [visible, setVisible] = useState(false);
 
   const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const touchCurrentX = useRef(0);
+  const touchCurrentY = useRef(0);
   const touchEndX = useRef(0);
+  const isSwiping = useRef(false);
   const isMultiTouch = useRef(false);
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
-  const project = projectDetails[id];
-
-  const section = project?.sections?.find((item) => item.id === sectionID);
+  const residency = residencyDetails[id];
 
   useEffect(() => {
     const footer = document.querySelector("footer");
-
     if (footer) footer.style.display = "none";
     // document.body.style.overflow = "hidden"; // desactivado para permitir pinch-zoom
 
@@ -37,36 +38,39 @@ export default function SectionMediaPage() {
     };
   }, []);
 
-  if (!project || !section || !section.mediaData) {
-    return <div>Section not found.</div>;
+  if (!residency || !residency.imageData) {
+    return <div>Residency not found.</div>;
   }
 
-  const media = section.mediaData;
-  const currentIndex = media.findIndex((item) => item.id === imgID);
+  const images = residency.imageData;
+  const currentIndex = images.findIndex((i) => i.id === imgID);
 
   if (currentIndex === -1) {
-    return <div>Media not found.</div>;
+    return <div>Image not found.</div>;
   }
 
-  const item = media[currentIndex];
-  const prevItem = media[currentIndex - 1] || null;
-  const nextItem = media[currentIndex + 1] || null;
-  const firstVideo = section.videoData?.[0] || null;
-
-const videoHref = firstVideo
-  ? `/${lang}/works/${id}/sections/${sectionID}/videos/${firstVideo.id}`
-  : null;
-
-  const sectionHref = `/${lang}/works/${id}/sections/${sectionID}`;
-
-  const goToItem = (target) => {
-    router.push(`/${lang}/works/${id}/sections/${sectionID}/${target.id}`);
-  };
+  const img = images[currentIndex];
+  const prevImg = images[currentIndex - 1] || null;
+  const nextImg = images[currentIndex + 1] || null;
 
   const handleTouchStart = (e) => {
     isMultiTouch.current = e.touches.length > 1;
     if (isMultiTouch.current) return;
-    touchStartX.current = e.changedTouches[0].clientX;
+
+    const touch = e.changedTouches[0];
+    touchStartX.current = touch.clientX;
+    touchStartY.current = touch.clientY;
+    touchCurrentX.current = touch.clientX;
+    touchCurrentY.current = touch.clientY;
+    isSwiping.current = false;
+  };
+
+  const handleTouchMove = (e) => {
+    if (isMultiTouch.current) return;
+
+    const touch = e.changedTouches[0];
+    touchCurrentX.current = touch.clientX;
+    touchCurrentY.current = touch.clientY;
   };
 
   const handleTouchEnd = (e) => {
@@ -75,57 +79,57 @@ const videoHref = firstVideo
       return;
     }
 
-    touchEndX.current = e.changedTouches[0].clientX;
+    const touch = e.changedTouches[0];
+    touchEndX.current = touch.clientX;
 
-    const distance = touchStartX.current - touchEndX.current;
+    const finalX = touchCurrentX.current || touchEndX.current;
+    const finalY = touchCurrentY.current || touch.clientY;
 
-    if (distance > 60 && nextItem) goToItem(nextItem);
-    if (distance < -60 && prevItem) goToItem(prevItem);
+    const deltaX = touchStartX.current - finalX;
+    const deltaY = touchStartY.current - finalY;
+
+    const isHorizontalSwipe =
+      Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY);
+
+    if (!isHorizontalSwipe) return;
+
+    isSwiping.current = true;
+
+    if (deltaX > 0 && nextImg) {
+      router.push(`/${lang}/residencies/${id}/${nextImg.id}`);
+    }
+
+    if (deltaX < 0 && prevImg) {
+      router.push(`/${lang}/residencies/${id}/${prevImg.id}`);
+    }
   };
 
   useEffect(() => {
-    [prevItem?.src, nextItem?.src].forEach((src) => {
-      if (!src || src.endsWith(".mp4")) return;
+    [prevImg?.src, nextImg?.src].forEach((src) => {
+      if (!src) return;
       const image = new window.Image();
       image.src = src;
     });
-  }, [prevItem?.src, nextItem?.src]);
+  }, [prevImg?.src, nextImg?.src]);
 
   useEffect(() => {
-    if (prevItem) {
-      router.prefetch(`/${lang}/works/${id}/sections/${sectionID}/${prevItem.id}`);
-    }
+    if (prevImg) router.prefetch(`/${lang}/residencies/${id}/${prevImg.id}`);
+    if (nextImg) router.prefetch(`/${lang}/residencies/${id}/${nextImg.id}`);
+  }, [router, lang, id, prevImg, nextImg]);
 
-    if (nextItem) {
-      router.prefetch(`/${lang}/works/${id}/sections/${sectionID}/${nextItem.id}`);
-    }
-  }, [router, lang, id, sectionID, prevItem, nextItem]);
+  const residencyDetail =
+  residency.residencyDetails?.[lang]?.[currentIndex] ||
+  residency.residencyDetails?.en?.[currentIndex] ||
+  "";
 
-  const artworkDetails =
-  section.artworkDetails?.[lang] ||
-  section.artworkDetails?.en ||
-  [];
-  const description =
-  artworkDetails[currentIndex] || "";
-
-  const sectionTitle =
-    typeof section.title === "string"
-      ? section.title
-      : section.title?.[lang] || section.title?.es || "";
-
-    const renderMedia = (className) => (
-  <img
-    src={item.src}
-    alt={description || sectionTitle}
-    className={className}
-  />
-   );
-
+  const detailsTitle =
+    lang === "es" ? "Detalles de la residencia" : "Residency Details";
 
   return (
     <div
-  className="fixed inset-0 flex items-center justify-center bg-white"
+      className="fixed inset-0 flex items-center justify-center bg-white"
       onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       style={{
         opacity: visible ? 1 : 0,
@@ -137,10 +141,10 @@ const videoHref = firstVideo
       <div className="flex md:hidden flex-col w-full h-full px-5 pt-6 pb-8 justify-center gap-3">
         <div className="flex items-center justify-between">
           <Link
-            href={sectionHref}
+            href={`/${lang}/residencies/${id}`}
             className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
-            ← {lang === "es" ? "Volver a sección" : "Back to section"}
+            ← {lang === "es" ? "Volver a residencia" : "Back to residency"}
           </Link>
         </div>
 
@@ -152,38 +156,39 @@ const videoHref = firstVideo
             transition: "opacity 700ms ease 100ms, transform 700ms ease 100ms",
           }}
         >
-          {renderMedia("object-contain w-full max-h-[55vh]")}
+         <img
+          src={img.src}
+          alt={residency.title || "Residency image"}
+          draggable={false}
+          className="object-contain w-full max-h-[72vh] select-none touch-pan-y"
+          />
         </div>
 
         <div className="flex items-center justify-between">
           <button
-            onClick={() => prevItem && goToItem(prevItem)}
+            onClick={() =>
+              prevImg &&
+              router.push(`/${lang}/residencies/${id}/${prevImg.id}`)
+            }
             className={`text-xs tracking-widest text-gray-500 hover:text-[#b7623b] ${
-              prevItem ? "opacity-100" : "opacity-0 pointer-events-none"
+              prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
             ←
           </button>
 
-          {!nextItem ? (
-          videoHref ? (
-          <Link
-          href={videoHref}
-          className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
-          >
-          →
-          </Link>
+          {!nextImg ? (
+            <Link
+              href={`/${lang}/residencies`}
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+            >
+              {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
+            </Link>
           ) : (
-          <Link
-          href={sectionHref}
-          className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
-          >
-          {lang === "es" ? "Volver a sección" : "Back to section"} →
-          </Link>
-           )
-           ) : (
             <button
-              onClick={() => goToItem(nextItem)}
+              onClick={() =>
+                router.push(`/${lang}/residencies/${id}/${nextImg.id}`)
+              }
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
               →
@@ -193,25 +198,33 @@ const videoHref = firstVideo
 
         <div>
           <p className="text-xs text-neutral-400 tracking-widest mb-1">
-            {sectionTitle}
+            {detailsTitle}
           </p>
 
-          {description && (
-        <div
-        className="text-xs text-neutral-600 leading-relaxed"
-        dangerouslySetInnerHTML={{
-                                  __html: description,
-        }}
-         />
+              <div
+  className="text-xs text-neutral-600 leading-relaxed"
+  dangerouslySetInnerHTML={{
+    __html:
+      residencyDetail ||
+      residency.introduction ||
+      residency.title,
+  }}
+/>
+
+          {residency.audio && (
+            <div className="mt-4">
+              <audio controls className="w-full">
+                <source src={residency.audio.src} type="audio/mp4" />
+              </audio>
+            </div>
           )}
         </div>
       </div>
 
       {/* DESKTOP */}
-      <div className="hidden md:grid w-full max-w-6xl px-10 pl-14 lg:pl-20 grid-cols-[180px_1fr] gap-10 items-start">
-        {/* LEFT DETAILS */}
+      <div className="hidden md:flex w-full max-w-6xl px-10 pl-16 items-stretch gap-14">
         <div
-          className="text-sm text-gray-800 flex flex-col pt-2 ml-8"
+          className="w-[220px] text-sm text-gray-800 flex flex-col ml-3"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(-8px)",
@@ -219,35 +232,43 @@ const videoHref = firstVideo
           }}
         >
           <Link
-            href={sectionHref}
+            href={`/${lang}/residencies/${id}`}
             className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
-            ← {lang === "es" ? "Volver a sección" : "Back to section"}
+            ← {lang === "es" ? "Volver a residencia" : "Back to residency"}
           </Link>
 
           <div className="mt-6">
-            <h2 className="text-base font-semibold mb-1">
-              {sectionTitle}
-            </h2>
+            <h2 className="text-base font-semibold mb-1">{detailsTitle}</h2>
 
+            <p className="mb-3 text-neutral-500">{residency.title}</p>
 
-            {description && (
-  <div
-    className="mb-6 text-sm leading-relaxed text-neutral-600"
-    dangerouslySetInnerHTML={{
-      __html: description,
-    }}
-  />
-)}
+             <div
+             className="mb-6"
+             dangerouslySetInnerHTML={{
+             __html:
+            residencyDetail ||
+            residency.introduction ||
+            "",
+            }}
+            />
 
-            
-            
+            {residency.audio && (
+              <div className="mt-6">
+                <p className="mb-2 text-[11px] uppercase tracking-[0.2em] text-neutral-400">
+                  Audio
+                </p>
+
+                <audio controls className="w-full max-w-[220px]">
+                  <source src={residency.audio.src} type="audio/mp4" />
+                </audio>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* MEDIA */}
         <div
-          className="relative w-full flex justify-center pb-16"
+          className="relative w-full max-w-[720px] flex justify-center flex-col"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(-10px)",
@@ -255,37 +276,43 @@ const videoHref = firstVideo
           }}
         >
           <button
-            onClick={() => prevItem && goToItem(prevItem)}
-            className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-              prevItem ? "opacity-100" : "opacity-0 pointer-events-none"
+            onClick={() =>
+              prevImg &&
+              router.push(`/${lang}/residencies/${id}/${prevImg.id}`)
+            }
+            className={`absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
+              prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
             ‹
           </button>
 
-          {renderMedia("object-contain max-h-[78vh] w-auto max-w-full")}
+          <img
+           src={img.src}
+          alt={residency.title || "Residency image"}
+          draggable={false}
+          className="object-contain max-h-[85vh] rounded-lg w-full select-none"
+          />
 
           <button
-          onClick={() =>
-          nextItem
-          ? goToItem(nextItem)
-          : videoHref
-          ? router.push(videoHref)
-          : router.push(sectionHref)
-          }
-          className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-          nextItem || videoHref ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+            onClick={() =>
+              nextImg
+                ? router.push(`/${lang}/residencies/${id}/${nextImg.id}`)
+                : router.push(`/${lang}/residencies/${id}`)
+            }
+            className={`absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
+              nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
           >
-          ›
+            ›
           </button>
 
-          {!nextItem && !videoHref && (
+          {!nextImg && (
             <Link
-            href={`/${lang}/works`}
+              href={`/${lang}/residencies`}
               className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
-              {lang === "es" ? "Volver a obras" : "Back to works"} →
+              {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
             </Link>
           )}
         </div>
