@@ -353,7 +353,7 @@ export default function HomeTransmutationImage() {
   return (
     <div className="relative w-full flex flex-col items-center justify-center">
       <div className="relative w-full max-w-[90vw] aspect-[3/4] max-h-[52svh] md:max-w-none md:max-h-[50vh] overflow-hidden">
-        {/* Imagen actual — sale hacia la izquierda */}
+        {/* Imagen actual — se desvanece */}
         <Image
           key="slot-base"
           src={images[current]}
@@ -363,11 +363,11 @@ export default function HomeTransmutationImage() {
           sizes="(max-width: 768px) 84vw, 620px"
           className="object-contain absolute inset-0"
           style={{
-            transition: isChanging ? `transform ${slideDurationRef.current}ms cubic-bezier(0.45,0,0.2,1)` : "none",
-            transform: isChanging ? "translateX(-102%)" : "translateX(0)",
+            transition: isChanging ? `opacity ${slideDurationRef.current}ms ease-in-out` : "none",
+            opacity: isChanging ? 0 : 1,
           }}
         />
-        {/* Imagen nueva — entra desde la derecha */}
+        {/* Imagen nueva — aparece simultáneamente */}
         <Image
           key="slot-reveal"
           src={images[nextIdx]}
@@ -376,8 +376,8 @@ export default function HomeTransmutationImage() {
           sizes="(max-width: 768px) 84vw, 620px"
           className="object-contain absolute inset-0"
           style={{
-            transition: isChanging ? `transform ${slideDurationRef.current}ms cubic-bezier(0.45,0,0.2,1)` : "none",
-            transform: isChanging ? "translateX(0)" : "translateX(102%)",
+            transition: isChanging ? `opacity ${slideDurationRef.current}ms ease-in-out` : "none",
+            opacity: isChanging ? 1 : 0,
           }}
         />
       </div>

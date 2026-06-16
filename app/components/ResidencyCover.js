@@ -105,6 +105,14 @@ export default function ResidencyCover({ id, lang, cover, title }) {
     perimRef.current.style.opacity = "0";
 
     perimBuilt.current = true;
+
+    // Fade-in suave de la imagen al cargar
+    if (imgRef.current) {
+      gsap.fromTo(imgRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.9, ease: "power2.out" }
+      );
+    }
   };
 
   const handleImageReady = () => {
@@ -287,13 +295,12 @@ if (!perimBuilt.current || !perimLen.current) {
           alt={title || ""}
           draggable={false}
           onLoad={handleImageReady}
+          style={{ opacity: 0 }}
           className={`
             w-full max-w-[92vw] md:max-w-[760px]
             h-auto max-h-[74vh] md:max-h-[78vh]
             object-contain cursor-pointer
             transition-all duration-700 ease-out
-            opacity-0 animate-fadeIn
-
             ${
               isEntering
                 ? "brightness-[0.96]"

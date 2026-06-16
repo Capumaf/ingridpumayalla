@@ -12,6 +12,7 @@ export default function SectionCover({ href, cover, title }) {
   const [isEntering, setIsEntering] = useState(false);
 
   const linkRef = useRef(null);
+  const mediaRef = useRef(null);
   const perimRef = useRef(null);
   const curveRef = useRef(null);
 
@@ -60,6 +61,14 @@ export default function SectionCover({ href, cover, title }) {
     perimRef.current.style.opacity = "0";
 
     perimBuilt.current = true;
+
+    // Fade-in suave de la imagen al cargar
+    if (mediaRef.current) {
+      gsap.fromTo(mediaRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.9, ease: "power2.out" }
+      );
+    }
   };
 
   useEffect(() => {
@@ -168,11 +177,13 @@ export default function SectionCover({ href, cover, title }) {
       >
         {cover.type === "video" ? (
           <video
+            ref={mediaRef}
             src={cover.src}
             autoPlay
             muted
             loop
             playsInline
+            style={{ opacity: 0 }}
             onLoadedData={buildPerimeter}
             className={`
               w-full
@@ -190,9 +201,11 @@ export default function SectionCover({ href, cover, title }) {
           />
         ) : (
           <img
+            ref={mediaRef}
             src={cover.src}
             alt={title || ""}
             draggable={false}
+            style={{ opacity: 0 }}
             onLoad={buildPerimeter}
             className={`
               block
