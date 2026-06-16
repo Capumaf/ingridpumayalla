@@ -13,15 +13,13 @@ export default function ResidencyImagePage() {
 
   const [visible, setVisible] = useState(false);
 
-
-
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const residency = residencyDetails[id];
 
   useEffect(() => {
     const footer = document.querySelector("footer");
     if (footer) footer.style.display = "none";
-    // document.body.style.overflow = "hidden"; // desactivado para permitir pinch-zoom
+    // document.body.style.overflow = "hidden";
 
     const t = requestAnimationFrame(() => setVisible(true));
 
@@ -47,8 +45,6 @@ export default function ResidencyImagePage() {
   const prevImg = images[currentIndex - 1] || null;
   const nextImg = images[currentIndex + 1] || null;
 
-
-
   useEffect(() => {
     [prevImg?.src, nextImg?.src].forEach((src) => {
       if (!src) return;
@@ -63,9 +59,9 @@ export default function ResidencyImagePage() {
   }, [router, lang, id, prevImg, nextImg]);
 
   const residencyDetail =
-  residency.residencyDetails?.[lang]?.[currentIndex] ||
-  residency.residencyDetails?.en?.[currentIndex] ||
-  "";
+    residency.residencyDetails?.[lang]?.[currentIndex] ||
+    residency.residencyDetails?.en?.[currentIndex] ||
+    "";
 
   const detailsTitle =
     lang === "es" ? "Detalles de la residencia" : "Residency Details";
@@ -97,21 +93,19 @@ export default function ResidencyImagePage() {
             transition: "opacity 700ms ease 100ms, transform 700ms ease 100ms",
           }}
         >
-         <img
-          src={img.src}
-          alt={residency.title || "Residency image"}
-          draggable={false}
-          className="object-contain w-full max-h-[72vh] select-none touch-pan-y"
+          <img
+            src={img.src}
+            alt={residency.title || "Residency image"}
+            draggable={false}
+            className="object-contain w-full max-h-[55vh] select-none"
           />
         </div>
 
         <div className="flex items-center justify-between">
           <button
-            onClick={() =>
-              prevImg &&
-              router.push(`/${lang}/residencies/${id}/${prevImg.id}`)
-            }
-            className={`text-xs tracking-widest text-gray-500 hover:text-[#b7623b] ${
+            type="button"
+            onClick={() => prevImg && router.push(`/${lang}/residencies/${id}/${prevImg.id}`)}
+            className={`z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b] ${
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
@@ -121,16 +115,15 @@ export default function ResidencyImagePage() {
           {!nextImg ? (
             <Link
               href={`/${lang}/residencies`}
-              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+              className="z-50 px-4 py-3 text-xs tracking-widest text-gray-500 hover:text-black"
             >
               {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
             </Link>
           ) : (
             <button
-              onClick={() =>
-                router.push(`/${lang}/residencies/${id}/${nextImg.id}`)
-              }
-              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+              type="button"
+              onClick={() => router.push(`/${lang}/residencies/${id}/${nextImg.id}`)}
+              className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
             >
               →
             </button>
@@ -142,15 +135,12 @@ export default function ResidencyImagePage() {
             {detailsTitle}
           </p>
 
-              <div
-  className="text-xs text-neutral-600 leading-relaxed"
-  dangerouslySetInnerHTML={{
-    __html:
-      residencyDetail ||
-      residency.introduction ||
-      residency.title,
-  }}
-/>
+          <div
+            className="text-xs text-neutral-600 leading-relaxed"
+            dangerouslySetInnerHTML={{
+              __html: residencyDetail || residency.introduction || residency.title,
+            }}
+          />
 
           {residency.audio && (
             <div className="mt-4">
@@ -184,14 +174,11 @@ export default function ResidencyImagePage() {
 
             <p className="mb-3 text-neutral-500">{residency.title}</p>
 
-             <div
-             className="mb-6"
-             dangerouslySetInnerHTML={{
-             __html:
-            residencyDetail ||
-            residency.introduction ||
-            "",
-            }}
+            <div
+              className="mb-6"
+              dangerouslySetInnerHTML={{
+                __html: residencyDetail || residency.introduction || "",
+              }}
             />
 
             {residency.audio && (
@@ -199,7 +186,6 @@ export default function ResidencyImagePage() {
                 <p className="mb-2 text-[11px] uppercase tracking-[0.2em] text-neutral-400">
                   Audio
                 </p>
-
                 <audio controls className="w-full max-w-[220px]">
                   <source src={residency.audio.src} type="audio/mp4" />
                 </audio>
@@ -217,10 +203,7 @@ export default function ResidencyImagePage() {
           }}
         >
           <button
-            onClick={() =>
-              prevImg &&
-              router.push(`/${lang}/residencies/${id}/${prevImg.id}`)
-            }
+            onClick={() => prevImg && router.push(`/${lang}/residencies/${id}/${prevImg.id}`)}
             className={`absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
               prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
@@ -229,10 +212,10 @@ export default function ResidencyImagePage() {
           </button>
 
           <img
-           src={img.src}
-          alt={residency.title || "Residency image"}
-          draggable={false}
-          className="object-contain max-h-[85vh] rounded-lg w-full select-none"
+            src={img.src}
+            alt={residency.title || "Residency image"}
+            draggable={false}
+            className="object-contain max-h-[85vh] rounded-lg w-full select-none"
           />
 
           <button
