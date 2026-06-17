@@ -13,6 +13,7 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
   const perimRef = useRef(null);
   const curveRef = useRef(null);
   const hintTimerRef = useRef(null);
+  const isMobileRef = useRef(false);
 
   const perimLen = useRef(0);
   const curveLen = useRef(95);
@@ -54,17 +55,20 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
     perimRef.current.style.opacity = "0";
   };
 
-  const triggerMobileHint = () => {
+  const triggerHint = () => {
     setShowHint(true);
 
-    clearTimeout(hintTimerRef.current);
-
-    hintTimerRef.current = setTimeout(() => {
-      setShowHint(false);
-    }, 5000);
+    if (!isMobileRef.current) {
+      clearTimeout(hintTimerRef.current);
+      hintTimerRef.current = setTimeout(() => {
+        setShowHint(false);
+      }, 5000);
+    }
   };
 
   useEffect(() => {
+    isMobileRef.current = window.matchMedia("(pointer: coarse)").matches;
+
     requestAnimationFrame(buildPerimeter);
     window.addEventListener("resize", buildPerimeter);
 
@@ -75,21 +79,18 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
 
   useEffect(() => {
     const firstHint = setTimeout(() => {
-      triggerMobileHint();
+      triggerHint();
     }, 900);
 
     const handleScroll = () => {
-      triggerMobileHint();
+      triggerHint();
     };
 
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       clearTimeout(firstHint);
       clearTimeout(hintTimerRef.current);
-
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -142,10 +143,7 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
       ease: "power2.inOut",
     });
 
-    const proxy = {
-      drawn: 0,
-      tail: 0,
-    };
+    const proxy = { drawn: 0, tail: 0 };
 
     el.style.opacity = "1";
 
@@ -154,15 +152,12 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
         el.style.strokeDasharray = `${proxy.drawn} ${pLen - proxy.drawn}`;
         el.style.strokeDashoffset = `-${proxy.tail}`;
       },
-
       onComplete: () => {
         clearTimeout(fallback);
-
         gsap.to(el, {
           opacity: 0,
           duration: 0.3,
           ease: "power2.in",
-
           onComplete: () => {
             window.location.href = href;
           },
@@ -170,47 +165,24 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
       },
     });
 
-     tl.to(
-      proxy,
-      {
-      drawn: snake,
-      duration: 0.35,
-      ease: "power2.out",
-      },
-      "+=0.35"
-      )
-      .to(proxy, {
-        tail: travelEnd,
-        duration: 2.4,
-        ease: "power1.inOut",
-      })
-      .to(
-        proxy,
-        {
-          drawn: 0,
-          duration: 0.45,
-          ease: "power2.in",
-        },
-        "-=0.45"
-      );
+    tl.to(proxy, { drawn: snake, duration: 0.35, ease: "power2.out" }, "+=0.35")
+      .to(proxy, { tail: travelEnd, duration: 2.4, ease: "power1.inOut" })
+      .to(proxy, { drawn: 0, duration: 0.45, ease: "power2.in" }, "-=0.45");
 
     return () => clearTimeout(fallback);
   }, [isEntering, href]);
 
   const handleClick = (e) => {
-  e.preventDefault();
-
-  if (isEntering) return;
-
-  buildPerimeter();
-
-  if (!perimRef.current || !perimLen.current || perimLen.current === 0) {
-    window.location.href = href;
-    return;
-  }
-
-  setIsEntering(true);
+    e.preventDefault();
+    if (isEntering) return;
+    buildPerimeter();
+    if (!perimRef.current || !perimLen.current || perimLen.current === 0) {
+      window.location.href = href;
+      return;
+    }
+    setIsEntering(true);
   };
+
   return (
     <div className="flex justify-center w-full pl-0 md:pl-[95px]">
       <Link
@@ -231,11 +203,9 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
           className={`
             w-full
             h-auto
-
             max-h-[72svh]
             md:max-w-[760px]
             md:max-h-[78vh]
-
             object-contain
             cursor-pointer
             transition-all
@@ -243,14 +213,7 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
             ease-out
             opacity-0
             animate-fadeIn
-
-            ${
-              isEntering
-                ? "brightness-[0.96]"
-                : isHovered
-                ? "scale-[1.01] brightness-[1.03]"
-                : ""
-            }
+            ${isEntering ? "brightness-[0.96]" : isHovered ? "scale-[1.01] brightness-[1.03]" : ""}
           `}
         />
 
@@ -259,18 +222,8 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
             absolute inset-0
             transition-opacity duration-700
             pointer-events-none
-
-            ${
-              showHint
-                ? "opacity-100 md:opacity-0"
-                : "opacity-0"
-            }
-
-            ${
-              isHovered || isEntering
-                ? "md:opacity-100"
-                : ""
-            }
+            ${showHint ? "opacity-100 md:opacity-0" : "opacity-0"}
+            ${isHovered || isEntering ? "md:opacity-100" : ""}
           `}
         >
           <div
@@ -279,12 +232,7 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
               flex items-center gap-3
               text-white
               transition-transform duration-700
-
-              ${
-                isHovered || isEntering || showHint
-                  ? "translate-y-0"
-                  : "translate-y-2"
-              }
+              ${isHovered || isEntering || showHint ? "translate-y-0" : "translate-y-2"}
             `}
           >
             <svg
@@ -312,26 +260,16 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
                 tracking-[0.2em] md:tracking-[0.24em]
                 uppercase
                 font-light
-
                 px-2.5 md:px-3
                 py-[5px] md:py-[6px]
-
                 rounded-full
                 backdrop-blur-md
-
                 bg-black/35
                 text-white
                 border border-white/15
                 shadow-[0_4px_18px_rgba(0,0,0,0.35)]
               "
-              style={
-                isEntering
-                  ? {
-                      opacity: 0,
-                      transform: "translateX(6px)",
-                    }
-                  : undefined
-              }
+              style={isEntering ? { opacity: 0, transform: "translateX(6px)" } : undefined}
             >
               {label}
             </span>
@@ -350,9 +288,7 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
-            style={{
-              mixBlendMode: "difference",
-            }}
+            style={{ mixBlendMode: "difference" }}
           />
         </svg>
       </Link>

@@ -6,7 +6,7 @@ export default async function Press({ params }) {
   const { title, text, items = [] } = pages.press;
 
   return (
-    <div className="mt-16 max-w-xl md:ml-[120px]">
+    <div className="mt-16 max-w-xl md:ml-[100px]">
       <h1 className="mb-12 text-2xl font-normal tracking-[0.15em]">
         {title[lang]}
       </h1>

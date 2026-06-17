@@ -45,7 +45,7 @@ export default function WorkPage() {
       )}
 
       <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
-        <div className="w-full max-w-5xl md:pl-[120px] lg:pl-[160px]">
+        <div className="w-full max-w-5xl md:pl-[100px] lg:pl-[120px]">
           <div className="mb-6">
             <Link
               href={`/${lang}/works`}

@@ -9,11 +9,14 @@ export default async function HomePage({ params }) {
         w-full
         flex
         justify-center
-        items-center
+        items-start
+        md:items-center
+        pt-8
+        md:pt-0
         h-full
 
-        md:pl-[120px]
-        lg:pl-[160px]
+        md:pl-[100px]
+        lg:pl-[120px]
       "
     >
       <link rel="preload" as="image" href="/Home1.webp" />
