@@ -124,7 +124,7 @@ items: [
     },
 
       {
-      title: "Accesos - Revista de investigación artistica",
+      title: "Accesos - Revista de investigación artística",
       year: "2024",
       link: "https://www.accesos.info/sofia-alvarez-capunay/",
     },
