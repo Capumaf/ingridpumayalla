@@ -98,10 +98,17 @@ es: `
       es: "Lee sobre mi trabajo en medios y publicaciones.",
     },
 items: [
+  
+        {
+      year: "2021",
+      title: "Cantos Matrios — Artishock Revista",
+      link: "https://artishockrevista.com/2021/02/22/ingrid-pumayalla-cantos-matrios/",
+    },
+
     {
-      title: "Accesos",
-      year: "2024",
-      link: "https://www.accesos.info/sofia-alvarez-capunay/",
+      year: "2021",
+      title: "Cantos Matrios — Terremoto",
+      link: "https://terremoto.mx/en/online/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/",
     },
 
     {
@@ -116,16 +123,10 @@ items: [
       link: "https://artishockrevista.com/2022/11/29/ingrid-pumayalla/",
     },
 
-    {
-      year: "2021",
-      title: "Cantos Matrios — Artishock Revista",
-      link: "https://artishockrevista.com/2021/02/22/ingrid-pumayalla-cantos-matrios/",
-    },
-
-    {
-      year: "2021",
-      title: "Cantos Matrios — Terremoto",
-      link: "https://terremoto.mx/en/online/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/",
+      {
+      title: "Accesos",
+      year: "2024",
+      link: "https://www.accesos.info/sofia-alvarez-capunay/",
     },
 
     {
