@@ -299,8 +299,8 @@ if (!perimBuilt.current || !perimLen.current) {
           fetchPriority="high"
           style={{ opacity: 0 }}
           className={`
-            w-full max-w-[92vw] md:max-w-[760px]
-            h-auto max-h-[74vh] md:max-h-[78vh]
+            w-full  md:max-w-[760px]
+            h-auto md:max-h-[78vh]
             object-contain cursor-pointer
             transition-all duration-700 ease-out
             ${
@@ -318,9 +318,7 @@ if (!perimBuilt.current || !perimLen.current) {
             absolute inset-0
             transition-opacity duration-700
             pointer-events-none
-
-            ${showHint ? "opacity-100 md:opacity-0" : "opacity-0"}
-            ${isHovered || isEntering ? "md:opacity-100" : ""}
+            ${showHint || isHovered || isEntering ? "opacity-100" : "opacity-0"}
           `}
         >
           <div

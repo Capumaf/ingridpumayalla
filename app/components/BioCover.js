@@ -222,8 +222,8 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
             absolute inset-0
             transition-opacity duration-700
             pointer-events-none
-            ${showHint ? "opacity-100 md:opacity-0" : "opacity-0"}
-            ${isHovered || isEntering ? "md:opacity-100" : ""}
+            ${showHint ? "opacity-100" : "opacity-0"}
+            ${isHovered || isEntering ? "opacity-100" : ""}
           `}
         >
           <div

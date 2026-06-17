@@ -254,7 +254,7 @@ export default function SectionCover({ href, cover, title, lang }) {
         onMouseEnter={() => !isEntering && setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onTouchStart={handleTouchStart}
-        className="group relative inline-block overflow-hidden max-w-[92vw] md:max-w-[640px]"
+        className="group relative inline-block overflow-hidden md:max-w-[640px]"
         aria-label={title}
       >
         {cover.type === "video" ? (
@@ -270,9 +270,8 @@ export default function SectionCover({ href, cover, title, lang }) {
             className={`
               w-full
               h-auto
-              max-w-[92vw]
               md:max-w-[640px]
-              max-h-[72vh]
+              md:max-h-[72vh]
               object-contain
               cursor-pointer
               transition-all
@@ -293,11 +292,10 @@ export default function SectionCover({ href, cover, title, lang }) {
             onLoad={handleMediaReady}
             className={`
               block
-              w-auto
-              max-w-[92vw]
+              w-full
               md:max-w-[640px]
               h-auto
-              max-h-[72vh]
+              md:max-h-[72vh]
               object-contain
               cursor-pointer
               transition-all
@@ -313,8 +311,7 @@ export default function SectionCover({ href, cover, title, lang }) {
             absolute inset-0
             transition-opacity duration-700
             pointer-events-none
-            ${showHint ? "opacity-100 md:opacity-0" : "opacity-0"}
-            ${isHovered || isEntering ? "md:opacity-100" : ""}
+            ${showHint || isHovered || isEntering ? "opacity-100" : "opacity-0"}
           `}
         >
           <div

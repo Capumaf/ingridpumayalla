@@ -67,14 +67,10 @@ export default function Sidebar({ lang = "en", toggleLang }) {
             >
               Ingrid Pumayalla
             </Link>
-
             <div className="mt-1 text-xs text-neutral-500">
-              {lang === "es"
-                ? "Artista visual · Archivo"
-                : "Visual artist · Archive"}
+              {lang === "es" ? "Artista visual · Archivo" : "Visual artist · Archive"}
             </div>
           </div>
-
           <button
             onClick={toggleLang}
             className="text-[11px] text-neutral-400 hover:text-[#b7623b] transition-colors"
@@ -90,9 +86,7 @@ export default function Sidebar({ lang = "en", toggleLang }) {
             className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-neutral-400 hover:text-[#b7623b] transition-colors"
           >
             <span>{lang === "es" ? "Menú" : "Menu"}</span>
-            <span className={`transition-transform ${indexOpen ? "rotate-90" : ""}`}>
-              →
-            </span>
+            <span className={`transition-transform ${indexOpen ? "rotate-90" : ""}`}>→</span>
           </button>
 
           <div className="mt-3 h-px w-full bg-neutral-200/70" />
@@ -111,14 +105,9 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                       <Link
                         href={withLang(item.href, lang)}
                         className={`text-[14px] transition-colors ${
-                          active
-                            ? "text-[#b75d5b]"
-                            : "text-neutral-500 hover:text-[#b7623b]"
+                          active ? "text-[#b75d5b]" : "text-neutral-500 hover:text-[#b7623b]"
                         }`}
-                        onClick={() => {
-                          clearCloseTimer();
-                          setIndexOpen(false);
-                        }}
+                        onClick={() => { clearCloseTimer(); setIndexOpen(false); }}
                       >
                         {active && <span className="mr-2 text-[#b75d5b]">—</span>}
                         {item.label[lang]}
@@ -134,27 +123,20 @@ export default function Sidebar({ lang = "en", toggleLang }) {
       </div>
 
       {/* ================= DESKTOP ================= */}
-      <div className="hidden md:flex flex-col w-[160px] shrink-0 relative">
-        {/* Línea vertical derecha */}
-        <div className="absolute right-0 top-0 h-full w-px bg-neutral-200/60" />
-
-        <div className="sticky top-0 h-screen pr-6">
+      <div className="hidden md:flex flex-col w-[220px] shrink-0">
+        <div className="sticky top-0 h-screen">
           <nav>
             <ul className="flex flex-col gap-4">
               <li className="mt-16 mb-14">
                 <Link
                   href={withLang("/home", lang)}
-                  className="text-[17px] text-black hover:opacity-70 leading-snug"
+                  className="text-xl text-black hover:opacity-70"
                 >
                   Ingrid Pumayalla
                 </Link>
-
                 <div className="mt-2 text-xs text-neutral-500">
-                  {lang === "es"
-                    ? "Artista visual · Archivo"
-                    : "Visual artist · Archive"}
+                  {lang === "es" ? "Artista visual · Archivo" : "Visual artist · Archive"}
                 </div>
-
                 <div className="mt-2 text-[11px] text-neutral-400 hover:text-[#b7623b] transition-colors">
                   <button onClick={toggleLang}>
                     {lang === "es" ? "EN" : "ES"}
@@ -168,10 +150,8 @@ export default function Sidebar({ lang = "en", toggleLang }) {
                   <li key={item.href}>
                     <Link
                       href={withLang(item.href, lang)}
-                      className={`text-[12px] transition-colors ${
-                        active
-                          ? "text-[#b75d5b]"
-                          : "text-neutral-400 hover:text-[#b7623b]"
+                      className={`text-[13px] ${
+                        active ? "text-[#b75d5b]" : "text-neutral-400 hover:text-[#b7623b]"
                       }`}
                     >
                       {active && <span className="mr-2 text-[#b75d5b]">—</span>}

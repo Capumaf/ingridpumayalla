@@ -105,7 +105,6 @@ export default function WorkCover({ id, lang, cover, title }) {
 
     perimBuilt.current = true;
 
-    // Fade-in suave de la imagen al cargar
     if (imgRef.current) {
       gsap.fromTo(imgRef.current,
         { opacity: 0 },
@@ -121,11 +120,9 @@ export default function WorkCover({ id, lang, cover, title }) {
     });
   };
 
-  const triggerMobileHint = () => {
+  const triggerHint = () => {
     setShowHint(true);
-
     clearTimeout(hintTimerRef.current);
-
     hintTimerRef.current = setTimeout(() => {
       setShowHint(false);
     }, 5000);
@@ -142,11 +139,11 @@ export default function WorkCover({ id, lang, cover, title }) {
 
   useEffect(() => {
     const initialTimer = setTimeout(() => {
-      triggerMobileHint();
+      triggerHint();
     }, 900);
 
     const handleScroll = () => {
-      triggerMobileHint();
+      triggerHint();
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -183,10 +180,10 @@ export default function WorkCover({ id, lang, cover, title }) {
 
     gsap.killTweensOf(curveRef.current);
     gsap.to(curveRef.current, {
-    strokeDashoffset: curveLen.current,
-    opacity: 0,
-    duration: 0.55,
-    ease: "power2.inOut", 
+      strokeDashoffset: curveLen.current,
+      opacity: 0,
+      duration: 0.55,
+      ease: "power2.inOut",
     });
 
     const proxy = { drawn: 0, tail: 0 };
@@ -228,16 +225,16 @@ export default function WorkCover({ id, lang, cover, title }) {
     if (isEntering) return;
 
     if (!perimBuilt.current || !perimRef.current || !perimLen.current || perimLen.current === 0) {
-   buildPerimeter();
-   } 
+      buildPerimeter();
+    }
 
-   if (!perimBuilt.current || !perimLen.current || perimLen.current === 0) {
-   router.push(href);
-   return;
-   }
+    if (!perimBuilt.current || !perimLen.current || perimLen.current === 0) {
+      router.push(href);
+      return;
+    }
 
     setIsEntering(true);
-    };
+  };
 
   const isLightArea = labelTone === "light";
 
@@ -263,17 +260,11 @@ export default function WorkCover({ id, lang, cover, title }) {
           fetchPriority="high"
           style={{ opacity: 0 }}
           className={`
-            w-full max-w-[92vw] md:max-w-[640px]
-            h-auto max-h-[74vh] md:max-h-[72vh]
+            w-full  md:max-w-[640px]
+            h-auto md:max-h-[72vh]
             object-contain cursor-pointer
             transition-all duration-700 ease-out
-            ${
-              isEntering
-                ? "brightness-[0.96]"
-                : isHovered
-                ? "scale-[1.01] brightness-[1.03]"
-                : ""
-            }
+            ${isEntering ? "brightness-[0.96]" : isHovered ? "scale-[1.01] brightness-[1.03]" : ""}
           `}
         />
 
@@ -282,9 +273,7 @@ export default function WorkCover({ id, lang, cover, title }) {
             absolute inset-0
             transition-opacity duration-700
             pointer-events-none
-
-            ${showHint ? "opacity-100 md:opacity-0" : "opacity-0"}
-            ${isHovered || isEntering ? "md:opacity-100" : ""}
+            ${showHint || isHovered || isEntering ? "opacity-100" : "opacity-0"}
           `}
         >
           <div
@@ -293,12 +282,7 @@ export default function WorkCover({ id, lang, cover, title }) {
               flex items-center gap-3
               transition-transform duration-700
               ${isLightArea ? "text-black" : "text-white"}
-
-              ${
-                isHovered || isEntering || showHint
-                  ? "translate-y-0"
-                  : "translate-y-2"
-              }
+              ${isHovered || isEntering || showHint ? "translate-y-0" : "translate-y-2"}
             `}
           >
             <svg
@@ -331,18 +315,12 @@ export default function WorkCover({ id, lang, cover, title }) {
                 py-[5px] md:py-[6px]
                 rounded-full
                 backdrop-blur-md
-
-                ${
-                  isLightArea
-                    ? "bg-white/65 text-black border border-black/10 shadow-[0_4px_18px_rgba(255,255,255,0.25)]"
-                    : "bg-black/35 text-white border border-white/15 shadow-[0_4px_18px_rgba(0,0,0,0.35)]"
+                ${isLightArea
+                  ? "bg-white/65 text-black border border-black/10 shadow-[0_4px_18px_rgba(255,255,255,0.25)]"
+                  : "bg-black/35 text-white border border-white/15 shadow-[0_4px_18px_rgba(0,0,0,0.35)]"
                 }
               `}
-              style={
-                isEntering
-                  ? { opacity: 0, transform: "translateX(6px)" }
-                  : undefined
-              }
+              style={isEntering ? { opacity: 0, transform: "translateX(6px)" } : undefined}
             >
               {lang === "es" ? "Ver serie" : "View series"}
             </span>
