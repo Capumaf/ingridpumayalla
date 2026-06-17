@@ -43,6 +43,8 @@ export default async function Bio({ params, searchParams }) {
 
   return (
     <article className="pt-14 md:pt-16">
+      <link rel="preload" as="image" href={imageSrc} />
+
       <div className="px-6 md:px-0 max-w-[820px] mx-auto">
         <figure className="mb-6 flex flex-col items-center">
           <BioCover

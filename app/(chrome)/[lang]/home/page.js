@@ -16,6 +16,8 @@ export default async function HomePage({ params }) {
         lg:pl-[160px]
       "
     >
+      <link rel="preload" as="image" href="/Home1.webp" />
+
       <div
         className="
           w-[calc(100vw-2.5rem)]

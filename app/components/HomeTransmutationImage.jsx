@@ -14,15 +14,14 @@ const images = [
   "/Home8.webp",
 ];
 
-const SLIDE_DURATION_FIRST = 1600;
-const SLIDE_DURATION_REST  = 2400;
-const BRAID_DUR      = 10000;
-const IMAGES         = images.length;
+const SLIDE_DURATION_FIRST = 1200;
+const SLIDE_DURATION_REST  = 1400;
+const BRAID_DUR            = 6500;
+const IMAGES               = images.length;
 
 function noise(x)  { const s = Math.sin(x * 127.1 + 311.7) * 43758.5453; return s - Math.floor(s); }
 function noise2(x) { const s = Math.sin(x * 91.3  + 127.4) * 27841.231;  return s - Math.floor(s); }
 
-// Paleta spondylus
 const COL_A = { r:183, g:98,  b:59  };
 const COL_B = { r:158, g:52,  b:32  };
 const VDEFS = [
@@ -42,7 +41,6 @@ function tensionFactor(dx) {
   return 1 + slow * 0.5 + slow2 * 0.35 + n;
 }
 
-// ── Cordón principal: torsión Z/S de dos hebras con curvatura tipo collar ────
 function buildCord(W, H, dir = 1) {
   const cy      = H / 2;
   const xStart  = W * 0.13;
@@ -69,7 +67,7 @@ function buildCord(W, H, dir = 1) {
     else if (dx < CLOSE_START + OPEN_RANGE) { const e=(dx-CLOSE_START)/OPEN_RANGE; spread=1-e*e*(3-2*e); }
     else spread = 0;
 
-    const tension    = Math.max(0.4, tensionFactor(dx));
+    const tension     = Math.max(0.4, tensionFactor(dx));
     const localPeriod = TWIST_PERIOD_BASE * tension;
     const localAmp    = TWIST_AMP_BASE * (0.6 + 0.4 * tension);
 
@@ -81,7 +79,6 @@ function buildCord(W, H, dir = 1) {
     const ampMod = localAmp * spread;
     const irr    = (noise(x * 0.02) - 0.5) * 0.8 * spread;
 
-    // Curvatura suave hacia abajo en el centro (collar)
     const arcOffset = Math.sin(t * Math.PI) * 22;
     const baseY = cy + arcOffset;
 
@@ -105,7 +102,6 @@ function lineW(idx, x, base) {
 function easeBraid(t) {
   if (t < 0.04) return t * t * 7;
   if (t > 0.93) {
-    // Desaceleración final, pero llega a 1 exactamente en t=1
     const e = (t - 0.93) / 0.07;
     return 0.93 + (1 - 0.93) * (1 - Math.pow(1 - e, 2));
   }
@@ -113,9 +109,7 @@ function easeBraid(t) {
 }
 function easeThread(t) { return 1 - Math.pow(1-t, 1.7); }
 
-// ── Hilos verticales (2 hebras) — igual estilo que antes ─────────────────────
 function buildVThreads(W, cordYAtX) {
-  const xStart = W * 0.07, xEnd = W * 0.93;
   const vxStart = W * 0.32, vxEnd = W * 0.68;
 
   return Array.from({ length: IMAGES }, (_, i) => {
@@ -157,8 +151,8 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const dpr  = Math.min(window.devicePixelRatio || 1, 2);
-    const parentW  = canvas.parentElement?.offsetWidth || window.innerWidth || 500;
+    const dpr     = Math.min(window.devicePixelRatio || 1, 2);
+    const parentW = canvas.parentElement?.offsetWidth || window.innerWidth || 500;
     const isMobile = window.innerWidth < 768;
     const cssW = isMobile
       ? Math.min(parentW * 0.94, window.innerWidth * 0.92)
@@ -177,9 +171,7 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
     const CORD = buildCord(W, H, 1);
     const CLEN = CORD.A.length;
 
-    // Función para obtener la Y del cordón en un X dado (interpolación simple)
     function cordYAtX(x) {
-      // Buscar el punto más cercano en A
       let best = CORD.A[0];
       let bestDist = Math.abs(CORD.A[0].x - x);
       for (let i = 1; i < CORD.A.length; i++) {
@@ -256,10 +248,9 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
     function frame(ts) {
       const s = stateRef.current;
 
-      // Clampear delta para evitar saltos grandes por frame drops en mobile
       if (lastTs === null) lastTs = ts;
       let dt = ts - lastTs;
-      const MAX_DT = 50; // máximo 50ms por frame (~20fps mínimo efectivo)
+      const MAX_DT = 50;
       if (dt > MAX_DT) dt = MAX_DT;
       lastTs = ts;
 
@@ -277,7 +268,7 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
         if (s.threadElapsed === undefined) s.threadElapsed = 0;
         s.threadElapsed += dt;
         const vt  = VTHREADS[s.currentThread];
-        const dur = 2400+vt.len*5;
+        const dur = 1700 + vt.len * 3;
         const rawT = Math.min(s.threadElapsed/dur, 1);
         drawCord(1);
         for (const i of s.completedThreads) drawVThread(VTHREADS[i], 1);
@@ -297,7 +288,7 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
               lastTs = null;
               onAllDoneRef.current();
               rafRef.current = requestAnimationFrame(frame);
-            }, 800);
+            }, 600);
             return;
           } else {
             s.phase = 'thread';
@@ -344,7 +335,11 @@ export default function HomeTransmutationImage() {
   }, []);
 
   useEffect(() => {
-    images.forEach(src => { const img = new window.Image(); img.src = src; });
+    // Precargar todas las imágenes incluyendo Home7
+    images.forEach(src => {
+      const img = new window.Image();
+      img.src = src;
+    });
     return () => clearTimeout(timeoutRef.current);
   }, []);
 
@@ -353,9 +348,8 @@ export default function HomeTransmutationImage() {
   return (
     <div className="relative w-full flex flex-col items-center justify-center">
       <div className="relative w-full max-w-[90vw] aspect-[3/4] max-h-[52svh] md:max-w-none md:max-h-[50vh] overflow-hidden">
-        {/* Imagen actual — se desvanece */}
         <Image
-          key="slot-base"
+          key={`base-${current}`}
           src={images[current]}
           alt=""
           fill
@@ -367,12 +361,12 @@ export default function HomeTransmutationImage() {
             opacity: isChanging ? 0 : 1,
           }}
         />
-        {/* Imagen nueva — aparece simultáneamente */}
         <Image
-          key="slot-reveal"
+          key={`reveal-${nextIdx}`}
           src={images[nextIdx]}
           alt=""
           fill
+          priority
           sizes="(max-width: 768px) 84vw, 620px"
           className="object-contain absolute inset-0"
           style={{

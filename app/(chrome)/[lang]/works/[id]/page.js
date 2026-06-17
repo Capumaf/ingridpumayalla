@@ -2,6 +2,7 @@
 
 import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
+import Head from "next/head";
 
 import { projectDetails } from "@/data/projectDetails";
 import WorkCover from "@/components/WorkCover";
@@ -33,33 +34,43 @@ export default function WorkPage() {
       ? project.text
       : project.text?.[lang] || project.text?.es || "";
 
+  const coverSrc = cover?.src || null;
+
   return (
-    <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
-      <div className="w-full max-w-5xl md:pl-[120px] lg:pl-[160px]">
-        <div className="mb-6">
-          <Link
-            href={`/${lang}/works`}
-            className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b] transition-colors"
-          >
-            ← {lang === "es" ? "Volver a obras" : "Back to works"}
-          </Link>
-        </div>
+    <>
+      {coverSrc && (
+        <Head>
+          <link rel="preload" as="image" href={coverSrc} />
+        </Head>
+      )}
 
-        <WorkCover id={id} lang={lang} cover={cover} title={title} />
+      <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
+        <div className="w-full max-w-5xl md:pl-[120px] lg:pl-[160px]">
+          <div className="mb-6">
+            <Link
+              href={`/${lang}/works`}
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b] transition-colors"
+            >
+              ← {lang === "es" ? "Volver a obras" : "Back to works"}
+            </Link>
+          </div>
 
-        <div className="max-w-[620px] mx-auto mt-16 md:mt-28 px-2">
-          <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-6 md:mb-10 text-center">
-            {title}
-          </h1>
+          <WorkCover id={id} lang={lang} cover={cover} title={title} />
 
-          {text && (
-            <div
-              className="body-text max-w-[620px] text-[13.5px] leading-[2] text-justify"
-              dangerouslySetInnerHTML={{ __html: text }}
-            />
-          )}
+          <div className="max-w-[620px] mx-auto mt-16 md:mt-28 px-2">
+            <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-6 md:mb-10 text-center">
+              {title}
+            </h1>
+
+            {text && (
+              <div
+                className="body-text max-w-[620px] text-[13.5px] leading-[2] text-justify"
+                dangerouslySetInnerHTML={{ __html: text }}
+              />
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
