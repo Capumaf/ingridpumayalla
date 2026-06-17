@@ -29,7 +29,8 @@ const VDEFS = [
   { r:158, g:52,  b:32 },
 ];
 
-const LENGTHS = [62, 82, 58, 95, 70, 52, 86, 64];
+// Hilos un poco más largos
+const LENGTHS = [74, 96, 70, 112, 84, 64, 100, 78];
 
 const TWIST_PERIOD_BASE = 8;
 const TWIST_AMP_BASE    = 1.5;
@@ -109,6 +110,25 @@ function easeBraid(t) {
 }
 function easeThread(t) { return 1 - Math.pow(1-t, 1.7); }
 
+// Genera posiciones de nudos para cada hilo — 1 o 2 nudos por hilo
+function buildKnots(i) {
+  const knots = [];
+  const count = noise(i * 17.3) > 0.4 ? 2 : 1;
+  for (let k = 0; k < count; k++) {
+    const pos = 0.25 + noise(i * 7.1 + k * 13.7) * 0.5; // entre 25% y 75% del hilo
+    knots.push(pos);
+  }
+  return knots;
+}
+
+// Intensidad del nudo en t dado — campana gaussiana suave
+function knotFactor(t, knotPos) {
+  const dist = Math.abs(t - knotPos);
+  const width = 0.035; // ancho del nudo
+  if (dist > width * 3) return 0;
+  return Math.exp(-(dist * dist) / (2 * width * width));
+}
+
 function buildVThreads(W, cordYAtX) {
   const vxStart = W * 0.32, vxEnd = W * 0.68;
 
@@ -133,7 +153,8 @@ function buildVThreads(W, cordYAtX) {
     }
     return { pts, len, period, phase, sep, cx, N,
       lw0: 0.85+noise(i*7.3)*0.3,
-      lw1: 0.75+noise(i*3.9)*0.3 };
+      lw1: 0.75+noise(i*3.9)*0.3,
+      knots: buildKnots(i) };
   });
 }
 
@@ -157,7 +178,7 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
     const cssW = isMobile
       ? Math.min(parentW * 0.94, window.innerWidth * 0.92)
       : Math.min(parentW * 0.75, 620);
-    const cssH = 175;
+    const cssH = 220;
 
     canvas.width        = cssW * dpr;
     canvas.height       = cssH * dpr;
@@ -230,12 +251,20 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
         const midT = (seg+Math.floor(CHUNK/2))/vt.N;
         const ang  = (midT*vt.len/vt.period)*Math.PI*2+vt.phase;
         const dep  = Math.sin(ang);
+
+        // Calcular factor de nudo en este segmento
+        let kf = 0;
+        for (const kpos of vt.knots) {
+          kf = Math.max(kf, knotFactor(midT, kpos));
+        }
+        const knotMult = 1 + kf * 1.8; // engrosar hasta 2.8x en el pico del nudo
+
         const drawS = (pts, col, lw, top) => {
           ctx.globalAlpha = top ? 0.90 : 0.60;
           ctx.beginPath();
           for (let i=seg;i<end;i++) { const p=pts[i]; i===seg?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y); }
           ctx.strokeStyle=`rgba(${col.r},${col.g},${col.b},1)`;
-          ctx.lineWidth=lw; ctx.lineCap='round'; ctx.lineJoin='round'; ctx.stroke();
+          ctx.lineWidth=lw * knotMult; ctx.lineCap='round'; ctx.lineJoin='round'; ctx.stroke();
         };
         if (dep>0) { drawS(vt.pts[1],VDEFS[1],vt.lw1,false); drawS(vt.pts[0],VDEFS[0],vt.lw0,true); }
         else       { drawS(vt.pts[0],VDEFS[0],vt.lw0,false); drawS(vt.pts[1],VDEFS[1],vt.lw1,true); }
@@ -268,7 +297,7 @@ function QuipuCanvas({ onThreadComplete, onAllDone, resetKey }) {
         if (s.threadElapsed === undefined) s.threadElapsed = 0;
         s.threadElapsed += dt;
         const vt  = VTHREADS[s.currentThread];
-        const dur = 1700 + vt.len * 3;
+        const dur = 1900 + vt.len * 4;
         const rawT = Math.min(s.threadElapsed/dur, 1);
         drawCord(1);
         for (const i of s.completedThreads) drawVThread(VTHREADS[i], 1);
@@ -335,7 +364,6 @@ export default function HomeTransmutationImage() {
   }, []);
 
   useEffect(() => {
-    // Precargar todas las imágenes incluyendo Home7
     images.forEach(src => {
       const img = new window.Image();
       img.src = src;
