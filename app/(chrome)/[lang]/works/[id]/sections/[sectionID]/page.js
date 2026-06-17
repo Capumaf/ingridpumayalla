@@ -83,7 +83,7 @@ export default function WorkSectionPage() {
 
             {text && (
               <div
-                className="body-text max-w-[520px] text-[13.5px] leading-[2]"
+                className="body-text max-w-[520px] text-[13.5px] leading-[2] text-justify"
                 dangerouslySetInnerHTML={{ __html: text }}
               />
             )}
