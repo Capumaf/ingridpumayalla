@@ -54,7 +54,7 @@ export default async function Bio({ params, searchParams }) {
             imageAlt={imageAlt}
           />
 
-          <figcaption className="mt-4 w-full max-w-[820px] text-center md:text-right md:pr-[42px] text-[11px] tracking-wide text-neutral-400">
+          <figcaption className="mt-4 w-full max-w-[820px] text-center md:text-right md:pr-[95px] text-[11px] tracking-wide text-neutral-400">
             {caption}
           </figcaption>
         </figure>
