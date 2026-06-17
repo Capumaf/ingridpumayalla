@@ -107,7 +107,7 @@ export default function SectionCover({ href, cover, title, lang }) {
     if (mediaRef.current) {
       gsap.fromTo(mediaRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 0.9, ease: "power2.out" }
+        { opacity: 1, duration: 0.3, ease: "power2.out" }
       );
     }
   };

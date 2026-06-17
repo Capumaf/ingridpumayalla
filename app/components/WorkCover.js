@@ -108,7 +108,7 @@ export default function WorkCover({ id, lang, cover, title }) {
     if (imgRef.current) {
       gsap.fromTo(imgRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 0.9, ease: "power2.out" }
+        { opacity: 1, duration: 0.3, ease: "power2.out" }
       );
     }
   };

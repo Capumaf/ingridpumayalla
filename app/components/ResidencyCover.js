@@ -110,7 +110,7 @@ export default function ResidencyCover({ id, lang, cover, title }) {
     if (imgRef.current) {
       gsap.fromTo(imgRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 0.9, ease: "power2.out" }
+        { opacity: 1, duration: 0.3, ease: "power2.out" }
       );
     }
   };
@@ -299,7 +299,7 @@ if (!perimBuilt.current || !perimLen.current) {
           fetchPriority="high"
           style={{ opacity: 0 }}
           className={`
-            w-full  md:max-w-[760px]
+            w-full md:max-w-[760px]
             h-auto md:max-h-[78vh]
             object-contain cursor-pointer
             transition-all duration-700 ease-out
