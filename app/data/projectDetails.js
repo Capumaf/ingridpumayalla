@@ -87,11 +87,198 @@ Curator of the exhibition
     src: "/adonde-fueron-las-criaturas-del-bosque-preview.mp4",
     poster: "/adonde-fueron-las-criaturas-del-bosque-cover.webp",
     duration: "00:26"
-  }
-]
+  },
+    ], 
+
+   artworkDetails: {
+      en: [ `The Arrival I<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition 1/15<br />
+        2019`,
+
+        `The Arrival II<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition 1/15<br />
+        2019`,
+
+        `The Arrival III<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition 1/15<br />
+        2019`,
+
+        `The Arrival IV<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition 1/15<br />
+        2019`,
+
+        `Curiwarmi and Stone I<br />
+        Giclée photographic print on cotton paper<br />
+        80 × 80 cm<br />
+        Edition 1/15<br />
+        2019`,
+
+        `Lying on a Stone in Leipzig<br />
+        Giclée photographic print on cotton paper<br />
+        80 × 80 cm<br />
+        Edition 1/10<br />
+        2019`,
+
+        `Ñuqa<br />
+        Giclée photographic print on cotton paper<br />
+        80 × 80 cm<br />
+        Edition 1/10<br />
+        2019`,
+
+        `Curiwarmi<br />
+        Giclée photographic print on cotton paper<br />
+        50 × 70 cm<br />
+        Edition 1/15<br />
+        2019`,
+
+        `Installation View<br />
+        Pine tree, monitor, lens, Moche River water, celluloid<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
+        Maguey log, celluloid, Shipibo–Conibo Kené textile<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
+        Maguey log, camera body, San Pedro cactus<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
+        Crochet knitted ropes, giclée photographic prints, glass jar container, Chicama River water, monitor, celluloid<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
+        Crochet knitted ropes, giclée photographic prints, Chimú vase<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
+        Maguey logs, camera body, light glass jar, San Pedro cactus<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Creatures and Foxes<br />
+        Film still<br />
+        13'20"<br />
+        2022`,
+
+        `Where Did the Creatures from the Forest Go?<br />
+        Single-channel film<br />
+        21'20"<br />
+        2019` ],
+
+
+        es: [  `The Arrival I<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición 1/15<br />
+        2019`,
+
+        `The Arrival II<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición 1/15<br />
+        2019`,
+
+        `The Arrival III<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición 1/15<br />
+        2019`,
+
+        `The Arrival IV<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición 1/15<br />
+        2019`,
+
+        `Curiwarmi and Stone I<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        80 × 80 cm<br />
+        Edición 1/15<br />
+        2019`,
+
+        `Lying on a Stone in Leipzig<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        80 × 80 cm<br />
+        Edición 1/10<br />
+        2019`,
+
+        `Ñuqa<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        80 × 80 cm<br />
+        Edición 1/10<br />
+        2019`,
+
+        `Curiwarmi<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        50 × 70 cm<br />
+        Edición 1/15<br />
+        2019`,
+
+        `Vista de instalación<br />
+        Pino, monitor, lente, agua del río Moche, celuloide<br />
+        Dimensiones variables<br />
+        2022`,
+
+        `Vista de instalación<br />
+        Dimensiones variables<br />
+        2022`,
+
+        `Vista de instalación<br />
+        Tronco de maguey, celuloide, textil Kené Shipibo–Conibo<br />
+        Dimensiones variables<br />
+        2022`,
+
+        `Vista de instalación<br />
+        Tronco de maguey, cuerpo de cámara, cactus San Pedro<br />
+        Dimensiones variables<br />
+        2022`,
+
+        `Vista de instalación<br />
+        Cuerdas tejidas a crochet, impresiones fotográficas giclée, recipiente de vidrio, agua del río Chicama, monitor, celuloide<br />
+        Dimensiones variables<br />
+        2022`,
+
+        `Vista de instalación<br />
+        Cuerdas tejidas a crochet, impresiones fotográficas giclée, vasija Chimú<br />
+        Dimensiones variables<br />
+        2022`,
+
+        `Vista de instalación<br />
+        Troncos de maguey, cuerpo de cámara, frasco de vidrio con luz, cactus San Pedro<br />
+        Dimensiones variables<br />
+        2022`,
+
+        `Creatures and Foxes<br />
+        Fotograma de película<br />
+        13'20"<br />
+        2022`,
+
+        `¿A dónde fueron las criaturas del bosque?<br />
+        Película monocanal<br />
+        21'20"<br />
+        2019` ],
 
   },
 
+    },
   
 
   "cantos-matrios": {
@@ -889,17 +1076,99 @@ artworkDetails: {
     title: "Dibujando una línea roja en el desierto de Paracas",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      es: `<p><p><strong>Dibujando una línea roja en el desierto de Paracas</strong> (2017) es una serie de cuatro fotografías que documentan una performance realizada en el desierto de Paracas, Perú. Llevando un largo hilo continuo de lana de alpaca roja, recorrí el paisaje corriendo, trazando una línea roja efímera sobre el desierto. La acción se convirtió en un gesto de conexión, uniendo mi cuerpo con un territorio profundamente arraigado en la historia del arte textil.</p>
+
+<p>La región de Paracas alberga una de las tradiciones textiles más antiguas y sofisticadas de América. Esta performance surgió del deseo de relacionarme conscientemente con ese legado cultural y de reflexionar sobre cómo los saberes ancestrales pueden activarse a través de la práctica artística contemporánea. La lana roja de alpaca funciona tanto como material como símbolo, evocando el hilo como portador de memoria, movimiento y continuidad.</p>
+
+<p>Más que dejar una marca permanente sobre el paisaje, la obra propone una intervención efímera que existe a través del acto de caminar, de la documentación fotográfica y de la imaginación del espectador. <em>Dibujando una línea roja en el desierto de Paracas</em> representa un momento clave dentro de mi práctica artística, expresando mi compromiso con el textil como medio y como una forma de comprender las relaciones entre paisaje, memoria e identidad cultural.</p>`,
+    
+en: `<p><strong>Drawing a Red Line in the Paracas Desert</strong> (2017) is a series of four photographs documenting a performance in the Paracas Desert, Peru. Carrying a continuous length of red alpaca wool, I ran across the landscape, drawing a temporary red line through the desert. The action became a gesture of connection, linking my body to a place deeply rooted in the history of textile making.</p>
+
+<p>The Paracas region is home to one of the oldest and most sophisticated textile traditions in the Americas. This performance emerged from a desire to consciously engage with that cultural legacy and to reflect on how ancestral knowledge can be activated through contemporary artistic practice. The red alpaca wool serves as both a material and a symbol, evoking the thread as a carrier of memory, movement, and continuity.</p>
+
+<p>Rather than leaving a permanent mark on the landscape, the work proposes an ephemeral intervention that exists through the act of walking, the photographic documentation, and the viewer's imagination. <em>Drawing a Red Line in the Paracas Desert</em> marks an important moment in my practice, expressing my commitment to textiles as both a medium and a way of understanding relationships between landscape, memory, and cultural identity.</p>`
     },
 
+      text: {
+  es: `
+<p><strong>Dibujando una línea roja en el desierto de Paracas</strong> (2017) es una serie de cuatro fotografías que documentan una performance realizada en el desierto de Paracas, Perú. Llevando un largo hilo continuo de lana de alpaca roja, recorrí el paisaje corriendo, trazando una línea roja efímera sobre el desierto. La acción se convirtió en un gesto de conexión, uniendo mi cuerpo con un territorio profundamente arraigado en la historia del arte textil.</p>
+
+<p>La región de Paracas alberga una de las tradiciones textiles más antiguas y sofisticadas de América. Esta performance surgió del deseo de relacionarme conscientemente con ese legado cultural y de reflexionar sobre cómo los saberes ancestrales pueden activarse a través de la práctica artística contemporánea. La lana roja de alpaca funciona tanto como material como símbolo, evocando el hilo como portador de memoria, movimiento y continuidad.</p>
+
+<p>Más que dejar una marca permanente sobre el paisaje, la obra propone una intervención efímera que existe a través del acto de caminar, de la documentación fotográfica y de la imaginación del espectador. <em>Dibujando una línea roja en el desierto de Paracas</em> representa un momento clave dentro de mi práctica artística, expresando mi compromiso con el textil como medio y como una forma de comprender las relaciones entre paisaje, memoria e identidad cultural.</p>
+`,
+
+  en: `
+<p><strong>Drawing a Red Line in the Paracas Desert</strong> (2017) is a series of four photographs documenting a performance in the Paracas Desert, Peru. Carrying a continuous length of red alpaca wool, I ran across the landscape, drawing a temporary red line through the desert. The action became a gesture of connection, linking my body to a place deeply rooted in the history of textile making.</p>
+
+<p>The Paracas region is home to one of the oldest and most sophisticated textile traditions in the Americas. This performance emerged from a desire to consciously engage with that cultural legacy and to reflect on how ancestral knowledge can be activated through contemporary artistic practice. The red alpaca wool serves as both a material and a symbol, evoking the thread as a carrier of memory, movement, and continuity.</p>
+
+<p>Rather than leaving a permanent mark on the landscape, the work proposes an ephemeral intervention that exists through the act of walking, the photographic documentation, and the viewer's imagination. <em>Drawing a Red Line in the Paracas Desert</em> marks an important moment in my practice, expressing my commitment to textiles as both a medium and a way of understanding relationships between landscape, memory, and cultural identity.</p>
+`
+},
+    
     imageData: [
       { id: "1", src: "/paracas1.webp", width: 1200, height: 800 },
       { id: "2", src: "/paracas2.webp", width: 1200, height: 800 },
       { id: "3", src: "/paracas3.webp", width: 1200, height: 800 },
       { id: "4", src: "/paracas4.webp", width: 1200, height: 800 }
-    ]
+    ],
+
+    artworkDetails: {
+  en: [
+    `Drawing a Red Line in the Paracas Desert I<br />
+    Giclée print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition 1/10<br />
+    2017`,
+
+    `Drawing a Red Line in the Paracas Desert II<br />
+    Giclée print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition 1/10<br />
+    2017`,
+
+    `Drawing a Red Line in the Paracas Desert III<br />
+    Giclée print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition 2/10<br />
+    2017`,
+
+    `Drawing a Red Line in the Paracas Desert IV<br />
+    Giclée print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition 1/10<br />
+    2017`
+  ],
+
+  es: [
+    `Dibujando una línea roja en el desierto de Paracas I<br />
+    Impresión giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición 1/10<br />
+    2017`,
+
+    `Dibujando una línea roja en el desierto de Paracas II<br />
+    Impresión giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición 1/10<br />
+    2017`,
+
+    `Dibujando una línea roja en el desierto de Paracas III<br />
+    Impresión giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición 2/10<br />
+    2017`,
+
+    `Dibujando una línea roja en el desierto de Paracas IV<br />
+    Impresión giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición 1/10<br />
+    2017`
+  ]
+},
   },
+
 
   "el-espiritu-santo-de-huangamarca": {
     title: "El Espíritu Santo de Huangamarca",
@@ -936,8 +1205,29 @@ artworkDetails: {
     title: "Exercise to climb a tree",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      es: `<p><strong>Video Performance – Nuna</strong></p>
+
+<p>Nuna es una videoperformance centrada en una conversación con mi abuelo. Durante nuestro encuentro le pedí que escribiera unas palabras en una hoja en blanco, colocara el papel dentro de una botella y luego rompiera la botella. Este encuentro fue significativo, ya que era la primera vez que nos veíamos después de tres años.</p>
+
+<p>El video también incluye una acción realizada en Regent’s Park, donde intenté repetidamente trepar un árbol de serbal. En la mitología y el folclore nórdico, el serbal es un árbol de protección y, en algunas tradiciones, está asociado con la feminidad y los orígenes de las mujeres. Durante el periodo en que mi estatus migratorio estaba siendo procesado por el gobierno británico, me encontraba en un estado de limbo, suspendida entre lugares e incierta sobre dónde pertenecía o dónde podía habitar.</p>
+
+<p>Como respuesta a esa condición de espera, recurrí a la naturaleza. Visitaba con frecuencia este árbol cercano al lugar donde vivía, regresando a él como un espacio de refugio y arraigo. Después de muchos intentos logré finalmente treparlo y fundirme con sus ramas, convirtiéndome en parte de él. Acunado entre su copa, mi cuerpo ocupa un umbral entre lo humano y el paisaje, entre la presencia y la desaparición. En ese estado suspendido, el árbol se convirtió en un lugar de protección y pertenencia temporal durante un periodo marcado por la incertidumbre y la espera.</p>
+
+<p>El acto de convertirme en parte del árbol fue una forma de habitar un espacio más allá de las definiciones burocráticas de identidad y residencia. Entre sus ramas encontré un hábitat temporal desde el cual reflexionar sobre el desplazamiento, la resistencia y la búsqueda de conexión. El serbal se convirtió tanto en testigo como en compañero, ofreciendo una forma de refugio que contrastaba con la inestabilidad de mi situación legal y social.</p>
+
+<p>En conjunto, la conversación con mi abuelo y el encuentro con el árbol exploran la memoria, el desplazamiento, la protección, la ancestralidad y la búsqueda de pertenencia a través de distancias geográficas, familiares y simbólicas. El acto de escribir y romper la botella habla de la fragilidad de la comunicación y de la transmisión de la memoria, mientras que el acto de fundirse con el árbol propone otra forma de conexión: una arraigada en el cuerpo, en la naturaleza y en la posibilidad de encontrar refugio durante un periodo de incertidumbre. A través de estos gestos, <em>Nuna</em> reflexiona sobre las formas en que buscamos pertenecer cuando el hogar, la identidad y el lugar permanecen sin resolverse.</p>`,
+      
+    en: `<p> <strong>Video Performance – Nuna</strong></p>
+
+<p>Nuna is a video performance centered on a conversation with my grandfather. During our encounter, I asked him to write a few words on a blank sheet of paper, place the paper inside a bottle, and then break the bottle. This meeting was significant, as it was the first time we had seen each other in three years.</p>
+
+<p>The footage also includes an action performed in Regent’s Park, where I repeatedly attempted to climb a rowan tree. In Norse mythology and folklore, the rowan is a tree of protection, and in certain traditions it is associated with femininity and women's origins. During a period in which my immigration status was being processed by the British government, I found myself in a state of limbo, suspended between places and uncertain of where I belonged or where I could inhabit.</p>
+
+<p>In response to this condition of waiting, I turned toward nature. I regularly visited this tree near the place where I lived, returning to it as a site of refuge and grounding. After many attempts, I was finally able to climb it and merge with its branches, becoming part of it. Cradled within the canopy of the rowan, my body occupies a threshold between human and landscape, presence and disappearance. In this suspended state, the tree became a place of protection and temporary belonging during a period marked by uncertainty and waiting.</p>
+
+<p>The act of becoming part of the tree became a way of inhabiting a space beyond bureaucratic definitions of identity and residence. Within its branches, I found a temporary habitat, a place from which to reflect on displacement, endurance, and the search for connection. The rowan became both witness and companion, offering a form of shelter that contrasted with the instability of my legal and social condition.</p>
+
+<p>Together, the conversation with my grandfather and the encounter with the rowan tree explore memory, displacement, protection, ancestry, and the search for belonging across geographical, familial, and symbolic distances. The act of writing and breaking the bottle speaks to the fragility of communication and the transmission of memory, while the act of merging with the tree proposes another form of connection—one rooted in the body, in nature, and in the possibility of finding refuge during a period of uncertainty. Through these gestures, Nuna reflects on the ways we seek belonging when home, identity, and place remain unresolved. </p>`
     },
 
     imageData: [
@@ -948,9 +1238,63 @@ artworkDetails: {
       { id: "5", src: "/Tree5.webp", width: 1200, height: 800 },
       { id: "6", src: "/Tree6.webp", width: 1200, height: 800 }
 
-    ]
-  },
+    ],
 
+artworkDetails: {
+  en: [
+    `Nuna, Exercise to Climb a Tree I<br />
+    Giclée photographic print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition of 20<br />
+    2016`,
+
+    `Nuna, Exercise to Climb a Tree II<br />
+    Giclée photographic print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition of 20<br />
+    2016`,
+
+    `Nuna, Exercise to Climb a Tree III<br />
+    Giclée photographic print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition of 20<br />
+    2016`,
+
+    `Nuna, Exercise to Climb a Tree IV<br />
+    Giclée photographic print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition of 20<br />
+    2016`
+  ],
+
+  es: [
+    `Nuna, Ejercicio para trepar un árbol I<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición de 20<br />
+    2016`,
+
+    `Nuna, Ejercicio para trepar un árbol II<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición de 20<br />
+    2016`,
+
+    `Nuna, Ejercicio para trepar un árbol III<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición de 20<br />
+    2016`,
+
+    `Nuna, Ejercicio para trepar un árbol IV<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición de 20<br />
+    2016`
+  ]
+},
+
+ },
 
   "funereal-home": {
     title: "Funereal Home",
@@ -1248,9 +1592,107 @@ es: `
     title: "Nostalgias Imperiales",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      es: `<p><p><strong>Nostalgias Imperiales</strong> es una video performance e instalación que documenta un recorrido por la Av. Mansiche, quemando palo santo en dirección a la entrada principal del Mall Aventura Plaza Trujillo, en la ciudad de Trujillo, al norte del Perú.</p>
+
+<p>Mansiche fue uno de los primeros asentamientos indígenas fundados tras la llegada de los españoles y la dispersión de los habitantes de Chan Chan. Hoy ya no quedan las chacras, poyos y establos que César Vallejo menciona en el poema del mismo nombre hace más de cien años. Han sido reemplazados por el concreto y el cemento del centro comercial. Durante la pandemia, también se hizo evidente en Trujillo la falta de inversión en hospitales y la profunda crisis del sistema público de salud. El progreso y el desarrollo han sido medidos a partir de la cantidad de centros comerciales construidos en la última década, como este monumento de concreto que ha transformado y gentrificado la antigua aldea de Mansiche.</p>
+
+<p>El ritual de quemar palo santo se realiza para limpiar un susto, un espacio o un lugar, y también para conectar con mundos ancestrales. En el Perú, ¿hacia dónde nos dirigimos para sanar cuando vivimos en un estado tan precario y ausente? Esta acción es un duelo por los muertos de la pandemia, una despedida acompañada por el humo dulce de la madera santa.</p>`,
+      
+     en: `<p><strong>Imperial Nostalgias</strong> is a video performance and installation documenting a walk along Mansiche Avenue while burning palo santo toward the main entrance of Mall Aventura Plaza Trujillo, in the city of Trujillo, northern Peru.</p>
+
+<p>Mansiche was one of the first Indigenous settlements established after the arrival of the Spanish and the displacement of the inhabitants of Chan Chan. Today, the farmlands, earthen benches, and stables described by César Vallejo in his poem of the same name over a century ago have disappeared. They have been replaced by the concrete and cement of a shopping mall. During the COVID-19 pandemic, Trujillo also exposed the lack of investment in hospitals and the deep crisis of the public healthcare system. Progress and development have come to be measured by the number of shopping malls built over the past decade, such as this concrete monument that has transformed and gentrified the former village of Mansiche.</p>
+
+<p>The ritual of burning palo santo is performed to cleanse fear, a space, or a place, while also creating a connection with ancestral worlds. In Peru, where do we go to heal when we live within such a precarious and absent state? This action is an act of mourning for those who died during the pandemic—a farewell accompanied by the sweet smoke of sacred wood.</p>`
     },
+
+
+      poems: [
+    {
+      id: "nostalgias-imperiales",
+
+      title: {
+        es: "Nostalgias Imperiales",
+        en: "Imperial Nostalgias"
+      },
+
+      text: {
+        es: `<p>En los paisajes de Maniche labra imperiales nostalgias el crepúsculo:</p>
+<p>y lábrase la raza en mi palabra</p>
+<p>como estrella de sangre a flor de músculo.</p>
+
+<p>El campanario dobla... No hay quien abra la capilla... Diríase un opúsculo</p>
+<p>bíblico que muriera en la palabra</p>
+<p>de asiática emoción de este crepúsculo.</p>
+
+<p>Un poyo con tres potos, es retablo</p>
+<p>en que acaban de alzar labios en coro</p>
+<p>la eucaristía de una chicha de oro.</p>
+
+<p>Más allá, de los ranchos surge el viento,</p>
+<p>el humo oliendo a sueño y a establo,</p>
+<p>como si se exhumara un firmamento.</p>
+
+<p>La anciana pensativa, cual relieve</p>
+<p>de un bosque pre-incaico, hila que hila;</p>
+<p>en sus dedos de Mama el huso leve</p>
+<p>la lana gris de su vejez trasquila.</p>
+
+<p>Sus ojos de esclerótica de nieve.</p>
+<p>Un ciego sol sin luz guarda y mutila...</p>
+<p>Su boca está en desdén, y en calma aleve</p>
+<p>su cansancio imperial talvez vigila.</p>
+
+<p>Hay ficus que meditan, melenudos</p>
+<p>trovadores inactivos en derrota</p>
+<p>la rancia pena de esta cruz idiota,</p>
+
+<p>en la hora en rubor que ya se escapa,</p>
+<p>y que es lago que suelda espejos rudos</p>
+<p>donde náufrago llora Manco-Cápac.</p>
+
+<p>Como viejos curacas van los bueyes</p>
+<p>camino de Trujillo, meditando...</p>
+<p>Y al hierro de la tarde, fingen reyes</p>
+<p>que por muertos dominios van llorando.</p>
+
+<p>En el muro de pie, pienso en las leyes</p>
+<p>que la dicha y la angustia van trocando:</p>
+<p>ya en las viudas pupilas de los bueyes</p>
+<p>se pudren sueños que no tienen cuando.</p>
+
+<p>La aldea, ante su paso, se reviste</p>
+<p>de un rudo gris, en que un mugir de vaca</p>
+<p>se aceita en sueño y emoción de huaca.</p>
+
+<p>Y en el festín del cielo azul yodado</p>
+<p>gime en el cáliz de la esquila triste</p>
+<p>un viejo corequenque desterrado.</p>
+
+<p>La grama mustia, recogida, escueta</p>
+<p>ahoga no sé qué protesta ignota;</p>
+<p>parece el alma exhausta de un poeta,</p>
+<p>arredrada en un gesto de derrota.</p>
+
+<p>La ramada ha tallado su silueta,</p>
+<p>cadavérica jaula, sola y rota,</p>
+<p>donde mi enfermo corazón se aquieta</p>
+<p>en un tedio estatual de terracota.</p>
+
+<p>Llega el canto sin sal del mar labrado</p>
+<p>en su máscara bufa de canalla</p>
+<p>que babea y da tumbos, ahorcado.</p>
+
+<p>La niebla hila una venda al cerro lila</p>
+<p>que en ensueños miliarios se enmuralla</p>
+<p>como un huaco gigante que vigila.</p>
+`,
+        en: `
+<p>This work references the poem <em>Imperial Nostalgias</em> by César Vallejo.</p>
+`
+      }
+    }
+  ],
+
 
     imageData: [
       { id: "1", src: "/nostalgias1.webp", width: 1200, height: 800 },
@@ -1714,14 +2156,15 @@ es: `
       { id: "13", src: "/camino13.webp", width: 1200, height: 800 },
       { id: "14", src: "/camino14.webp", width: 1200, height: 800 },
       { id: "15", src: "/camino15.webp", width: 1200, height: 800 },
-    ]
-  },
-
+    ],
 
   artworkDetails: {
   en: [],
   es: []
 },
+
+  },
+
 
 
 
@@ -1754,7 +2197,45 @@ Through the relationship between my grandmother, my mother, and myself, I explor
       { id: "1", src: "/TakijPupu1.webp", width: 1200, height: 800 },
       { id: "2", src: "/TakijPupu2.webp", width: 1200, height: 800 },
       { id: "3", src: "/TakijPupu3.webp", width: 1200, height: 800 }
-    ]
-  }
+    ],
 
-};
+     artworkDetails: {
+  en: [
+    `Enma’s Bellybutton<br />
+    Giclée inkjet print on cotton paper<br />
+    50 × 50 cm`,
+
+    `Takij Pupu I<br />
+    Inkjet print photographs, knitted cords, spondylus, huayruro seeds, alum stone<br />
+    150 × 170 × 5 cm<br />
+    2021`,
+
+    `Takij Pupu II<br />
+    Installation view photography installation<br />
+    Alum stone, giclée photographic prints on cotton paper, wool, ash bark, huayruro seeds, metal needles<br />
+    Dimensions variable<br />
+    2024`
+  ],
+
+  es: [
+    `Ombligo de Enma<br />
+    Impresión inkjet giclée sobre papel de algodón<br />
+    50 × 50 cm`,
+
+    `Takij Pupu I<br />
+    Fotografías impresas en inkjet, cordones tejidos, spondylus, semillas de huayruro, piedra de alumbre<br />
+    150 × 170 × 5 cm<br />
+    2021`,
+
+    `Takij Pupu II<br />
+    Fotografía de vista de instalación<br />
+    Piedra de alumbre, impresiones fotográficas giclée sobre papel de algodón, lana, corteza de fresno, semillas de huayruro, agujas de metal<br />
+    Dimensiones variables<br />
+    2024`
+  ]
+  } ,
+
+}
+
+
+}

@@ -28,16 +28,16 @@ export default function WorksPage() {
         <ul className="space-y-2">
           {WORK_ORDER.map((id) => {
             const project = projectDetails[id];
+            console.log(id, project);
             if (!project) return null;
 
             const sections = project.sections || [];
             const poems = project.poems || [];
 
             const isOfrendas = id === "ofrendas-offerings";
-            const isCantosMatrios = id === "cantos-matrios";
 
             const hasSectionsDropdown = isOfrendas && sections.length > 0;
-            const hasPoemsDropdown = isCantosMatrios && poems.length > 0;
+            const hasPoemsDropdown = poems.length > 0;
             const hasDropdown = hasSectionsDropdown || hasPoemsDropdown;
 
             const isOpen = hasDropdown && openId === id;
