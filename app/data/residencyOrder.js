@@ -4,4 +4,5 @@ export const RESIDENCY_ORDER = [
   "chain-in-reaction",
   "solace-project",
   "pa-utrygg-grun",
+  "songs-from-the-mountain-to-the-sea",
 ];

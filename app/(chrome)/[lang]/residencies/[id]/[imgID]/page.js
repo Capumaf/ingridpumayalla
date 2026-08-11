@@ -17,6 +17,11 @@ export default function ResidencyImagePage() {
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const residency = residencyDetails[id];
 
+  const residencyTitle =
+    typeof residency?.title === "string"
+      ? residency.title
+      : residency?.title?.[lang] || residency?.title?.en || "";
+
   useEffect(() => {
     const footer = document.querySelector("footer");
     if (footer) footer.style.display = "none";
@@ -99,7 +104,7 @@ export default function ResidencyImagePage() {
           >
             <img
               src={img.src}
-              alt={residency.title || "Residency image"}
+              alt={residencyTitle || "Residency image"}
               draggable={false}
               className="object-contain w-full max-h-[55vh] select-none"
             />
@@ -142,7 +147,7 @@ export default function ResidencyImagePage() {
             <div
               className="text-xs text-neutral-600 leading-relaxed"
               dangerouslySetInnerHTML={{
-                __html: residencyDetail || residency.introduction || residency.title,
+                __html: residencyDetail || residency.introduction || residencyTitle,
               }}
             />
 
@@ -176,7 +181,7 @@ export default function ResidencyImagePage() {
             <div className="mt-6">
               <h2 className="text-base font-semibold mb-1">{detailsTitle}</h2>
 
-              <p className="mb-3 text-neutral-500">{residency.title}</p>
+              <p className="mb-3 text-neutral-500">{residencyTitle}</p>
 
               <div
                 className="mb-6"
@@ -217,7 +222,7 @@ export default function ResidencyImagePage() {
 
             <img
               src={img.src}
-              alt={residency.title || "Residency image"}
+              alt={residencyTitle || "Residency image"}
               draggable={false}
               className="object-contain max-h-[85vh] rounded-lg w-full select-none"
             />

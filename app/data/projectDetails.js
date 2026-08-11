@@ -288,7 +288,7 @@ Curator of the exhibition
       es: `<p><em>Estos cantos son hechos melodías que cuentan un descenso.</em></p>
 
 <p>
-Paiján y PaijánEXPRESS presentan <strong>Cantos Matrios</strong> de Ingrid Pumayalla (Trujillo, 1989). Un proyecto de investigación que traza las latencias de una experiencia migratoria personal y la del seno familiar, desde un retrato sonoro-poético que abarca la performance, la fotografía y la video instalación.
+Paiján y Paiján EXPRESS presentan <strong>Cantos Matrios</strong> de Ingrid Pumayalla (Trujillo, 1989). Un proyecto de investigación que traza las latencias de una experiencia migratoria personal y la del seno familiar, desde un retrato sonoro-poético que abarca la performance, la fotografía y la video instalación.
 </p>
 
 <p>
@@ -341,7 +341,7 @@ Cantos Matrios es una declaración de libertad y un lazo de unión desde el afec
       en: `<p><em>These chants are melodies that recount a descent.</em></p>
 
 <p>
-Paiján and PaijánEXPRESS present <strong>Cantos Matrios</strong> by Ingrid Pumayalla (Trujillo, 1989). A research project that traces the latencies of a personal migratory experience and that of the family, from a sound-poetic portrait that includes performance and video installation.
+Paiján and Paiján EXPRESS present <strong>Cantos Matrios</strong> by Ingrid Pumayalla (Trujillo, 1989). A research project that traces the latencies of a personal migratory experience and that of the family, from a sound-poetic portrait that includes performance and video installation.
 </p>
 
 <p>
@@ -1174,8 +1174,61 @@ en: `<p><strong>Drawing a Red Line in the Paracas Desert</strong> (2017) is a se
     title: "El Espíritu Santo de Huangamarca",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      es: `<p>El Espíritu Santo de Huangamarca es una instalación que proyecta la imagen de un paisaje montañoso del norte del Perú sobre las paredes de un espacio de buhardilla. La montaña es el lugar donde creció mi abuelo, y a través de relatos familiares se convirtió en parte de mi comprensión del hogar, la ascendencia y la pertenencia.</p>
+<p>Tras mudarme a Londres, llevé este paisaje conmigo. Proyectada en un nuevo entorno arquitectónico, la montaña se convierte en una presencia espectral que habita un espacio alejado de su lugar de origen. La imagen es fragmentada intencionalmente mediante elementos escultóricos inspirados en las ventanas incas, quebrando el paisaje en planos cambiantes de luz y sombra.</p>
+<p>La instalación explora cómo la migración transforma nuestra relación con el lugar. En lugar de reconstruir la montaña como una imagen completa, la obra la presenta como una memoria frágil, transportada a través de fronteras y continuamente reconfigurada por la distancia, la arquitectura y la luz.</p>`,
+      en: `<p>El Espíritu Santo de Huangamarca is an installation that projects the image of a mountain landscape from northern Peru onto the walls of an attic space. The mountain is where my grandfather grew up, and through family stories it became part of my understanding of home, ancestry and belonging.</p>
+<p>After moving to London, I carried this landscape with me. Projected into a new architectural setting, the mountain becomes a spectral presence that inhabits a space far from its place of origin. The image is intentionally fragmented by sculptural elements inspired by Inca windows, breaking the landscape into shifting planes of light and shadow.</p>
+<p>The installation explores how migration transforms our relationship with place. Rather than reconstructing the mountain as a complete image, the work presents it as a fragile memory, carried across borders and continually reshaped by distance, architecture and light.</p>`
+    },
+
+    artworkDetails: {
+      es: [
+        `El espíritu Santo de Huangamarca<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        50 × 50 cm<br />
+        2013`,
+
+        `El espíritu Santo de Huangamarca<br />
+        Vista de instalación<br />
+        Proyección sobre pared<br />
+        Dimensiones variables<br />
+        2014`,
+
+        `El espíritu Santo de Huangamarca<br />
+        Vista de instalación<br />
+        Proyección sobre pared<br />
+        Dimensiones variables<br />
+        2014`,
+
+        `El cementerio<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        80 × 80 cm<br />
+        2014`
+      ],
+      en: [
+        `El espíritu Santo de Huangamarca<br />
+        Giclée print on cotton paper<br />
+        50 × 50 cm<br />
+        2013`,
+
+        `El espíritu Santo de Huangamarca<br />
+        Installation View<br />
+        Projection on wall<br />
+        Dimensions Variable<br />
+        2014`,
+
+        `El espíritu Santo de Huangamarca<br />
+        Installation View<br />
+        Projection on wall<br />
+        Dimensions Variable<br />
+        2014`,
+
+        `El cementerio<br />
+        Giclée print on cotton paper<br />
+        80 × 80 cm<br />
+        2014`
+      ]
     },
 
     imageData: [
@@ -1190,8 +1243,65 @@ en: `<p><strong>Drawing a Red Line in the Paracas Desert</strong> (2017) is a se
     title: "Exercise on Balance with Spondylus",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      en: `
+<p>Exercise on Balance with Spondylus is a series of three photographic self-portraits exploring the relationship between the body, spirituality, ancestral memory, and displacement.</p>
+
+<p>In this work, I perform a physical exercise of balance while carrying objects on my head and hands, including the spondylus shell, a sacred material in pre-Columbian Andean cultures associated with offerings, fertility, abundance, and communication with the spiritual world.</p>
+
+<p>The spondylus also carries histories of movement and exchange, travelling across territories through ancient Andean networks. Through this object, I reflect on my own experience of displacement and the ways ancestral knowledge continues to inhabit the body.</p>
+
+<p>The act of balancing becomes an ongoing exercise of adaptation—a negotiation between the weight of memory, cultural identity, and the landscapes we inhabit. The body becomes a vessel connecting ancestral spirituality with contemporary life.</p>
+      `,
+      es: `
+<p>Exercise on Balance with Spondylus es una serie de tres autorretratos fotográficos que exploran la relación entre el cuerpo, la espiritualidad, la memoria ancestral y el desplazamiento.</p>
+
+<p>En esta obra realizo un ejercicio físico de equilibrio mientras cargo objetos sobre mi cabeza y manos, entre ellos la concha de spondylus, un material sagrado en las culturas andinas precolombinas asociado con las ofrendas, la fertilidad, la abundancia y la comunicación con el mundo espiritual.</p>
+
+<p>El spondylus también porta historias de movimiento e intercambio, viajando a través de territorios mediante antiguas redes andinas. A través de este objeto, reflexiono sobre mi propia experiencia de desplazamiento y las formas en que el conocimiento ancestral continúa habitando el cuerpo.</p>
+
+<p>El acto de mantener el equilibrio se convierte en un ejercicio continuo de adaptación: una negociación entre el peso de la memoria, la identidad cultural y los paisajes que habitamos. El cuerpo se convierte en un vehículo que conecta la espiritualidad ancestral con la vida contemporánea.</p>
+      `
+    },
+
+    artworkDetails: {
+      en: [
+        `Exercise on Balance with Spondylus I<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2022`,
+
+        `Exercise on Balance with Spondylus II<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2022`,
+
+        `Exercise on Balance with Spondylus III<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2022`
+      ],
+      es: [
+        `Exercise on Balance with Spondylus I<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2022`,
+
+        `Exercise on Balance with Spondylus II<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2022`,
+
+        `Exercise on Balance with Spondylus III<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2022`
+      ]
     },
 
     imageData: [
@@ -1200,6 +1310,7 @@ en: `<p><strong>Drawing a Red Line in the Paracas Desert</strong> (2017) is a se
       { id: "3", src: "/spondylus3.webp", width: 1200, height: 800 }
     ]
   },
+
 
   "exercise-to-climb-a-tree": {
     title: "Exercise to climb a tree",
@@ -1264,7 +1375,30 @@ artworkDetails: {
     Giclée photographic print on cotton paper<br />
     70 × 70 cm<br />
     Edition of 20<br />
+    2016`,
+
+    `Nuna, Exercise to Climb a Tree V<br />
+    The fruit<br />
+    Giclée photographic print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition of 20<br />
+    2016`,
+
+    `Nuna, Exercise to Climb a Tree VI<br />
+    The fruit<br />
+    Giclée photographic print on cotton paper<br />
+    70 × 70 cm<br />
+    Edition of 20<br />
+    2016`,
+
+    `Nuna, Ejercicio para trepar un árbol VI<br />
+    El fruto<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición de 20<br />
     2016`
+
+    
   ],
 
   es: [
@@ -1290,21 +1424,92 @@ artworkDetails: {
     Impresión fotográfica giclée sobre papel de algodón<br />
     70 × 70 cm<br />
     Edición de 20<br />
+    2016`,
+
+    `Nuna, Ejercicio para trepar un árbol V<br />
+    El fruto<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición de 20<br />
     2016`
   ]
+
 },
 
+videoData: [
+      {
+        id: "nuna-exercise-to-climb-a-tree",
+        title: "Nuna, Exercise to Climb a Tree",
+        vimeoUrl: "https://vimeo.com/235358588?fl=tl&fe=ec"
+      }
+    ]
  },
 
   "funereal-home": {
     title: "Funereal Home",
 
     text: {
-      es: `<p></p>`,
+      es: `<p>The Funereal Home es una videoinstalación desarrollada a través de una serie de performances y rituales que exploran el desplazamiento, el duelo, el miedo, la memoria y la búsqueda de pertenencia. Creada mientras vivía lejos del Perú, la obra surgió de un intento por comprender qué ocurre con nuestro sentido de hogar cuando estamos físicamente separados del lugar donde se formó nuestra identidad.</p>
+
+<p>Recolecté objetos naturales y encontrados en lugares como Regent's Park y Epping Forest, y los llevé a la galería, transformando el espacio expositivo en un paisaje doméstico y ritual fragmentado. Una silla caída, un tronco de árbol, ramas, botellas, fotografías y video se convierten en huellas de un hogar que es, a la vez, familiar, desplazado y transformado.</p>
+
+<p>Dentro de las performances, enterré mi cuerpo en la tierra y me corté el cabello como una ofrenda a la tierra en la que vivía. El cabello tiene un significado particular dentro de la identidad femenina peruana; su remoción se convirtió en un gesto íntimo de duelo, separación y un intento por establecer una relación con un nuevo paisaje.</p>
+
+<p>Las performances fueron documentadas mediante fotografía. Posteriormente sumergí el celuloide fotográfico en agua recolectada del río Támesis, permitiendo que el material que portaba la imagen se disolviera gradualmente. A través de la destrucción de la imagen fotográfica, la obra concibe la memoria como algo frágil y mutable.</p>
+
+<p>The Funereal Home se convierte al mismo tiempo en un espacio doméstico, una tumba, un altar y un paisaje: un lugar donde se performa la pérdida y donde puede emerger la posibilidad de crear otro sentido de hogar.</p>`,
 
     
-      en: `<p></p>`
+       en: `
+<p>The Funereal Home is a video installation developed through a series of performances and rituals that explore displacement, mourning, fear, memory, and the search for belonging. Created while living away from Peru, the work emerged from an attempt to understand what happens to our sense of home when we are physically separated from the place where identity was formed.</p>
+
+<p>I gathered natural and found objects from places including Regent's Park and Epping Forest and brought them into the gallery, transforming the exhibition space into a fragmented domestic and ritual landscape. A fallen chair, a tree trunk, branches, bottles, photographs, and video become traces of a home that is simultaneously familiar, displaced, and transformed.</p>
+
+<p>Within the performances, I buried my body in the earth and cut my hair as an offering to the land in which I was living. Hair holds particular significance within Peruvian female identity; its removal became an intimate gesture of mourning, separation, and an attempt to establish a relationship with a new landscape.</p>
+
+<p>The performances were documented through photography. I later immersed the photographic celluloid in water collected from the River Thames, allowing the material carrying the image to gradually dissolve. Through the destruction of the photographic image, the work considers memory as something fragile and mutable.</p>
+
+<p>The Funereal Home becomes at once a domestic space, a grave, an altar, and a landscape—a place where loss is performed and where the possibility of creating another sense of home can emerge.</p>
+      `,
     },
+
+     artworkDetails: {
+      en: [
+        `Fetal Condition<br />
+        Giclée inkjet photographic print on cotton paper<br />
+        80 × 80 cm<br />
+        Edition of 10<br />
+        2016`,
+
+        `The Funereal Home<br />
+        Installation view<br />
+        Celluloid, water from the River Thames, giclée-printed photograph, glass jar, camera lens, soil, hair<br />
+        Dimensions variable<br />
+        2016`,
+
+        `The Haircut<br />
+        Log, monitor, chair, glass jar, camera lens<br />
+        2016`
+      ],
+      es: [
+        `Fetal Condition<br />
+        Impresión fotográfica giclée inkjet sobre papel de algodón<br />
+        80 × 80 cm<br />
+        Edición de 10<br />
+        2016`,
+
+        `The Funereal Home<br />
+        Vista de instalación<br />
+        Celuloide, agua del río Támesis, fotografía impresa en giclée, frasco de vidrio, lente de cámara, tierra, cabello<br />
+        Dimensiones variables<br />
+        2016`,
+
+        `The Haircut<br />
+        Tronco, monitor, silla, frasco de vidrio, lente de cámara<br />
+        2016`
+      ]
+    },
+
 
     imageData: [
       { id: "1", src: "/funereal1.webp", width: 1200, height: 800 },
@@ -1317,8 +1522,16 @@ artworkDetails: {
     title: "Giving birth to a Pomegranate",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      es: `<p>Dando a luz una granada es una serie de cinco fotografías creada como respuesta a una colaboración con la poeta Andrea Cruzado y su obra Parto.</p>
+<p>A través de esta serie, exploro y reivindico el poder simbólico de dar a luz. Habiendo crecido en una sociedad patriarcal y religiosa, he experimentado cómo el cuerpo femenino suele definirse a través de su capacidad reproductiva. Con este trabajo, reflexiono sobre el parto no solo como un acto biológico, sino como una forma de creación, agencia y transformación.</p>
+<p>Como artista mujer, cuestiono las formas en que las mujeres pueden reapropiarse del poder de generar, imaginar y traer nuevos mundos a la existencia. El acto de creación va más allá de la maternidad: existe también a través de la práctica artística, de las ideas y de la capacidad de dar forma a nuestras propias narrativas.</p>
+<p>En estas fotografías, uso mi cuerpo y una granada como elementos simbólicos. La granada, fruto históricamente vinculado a la fertilidad, la regeneración y los ciclos de vida, se convierte en metáfora de las obras, ideas e identidades que traemos a la existencia. El ritual realizado con la fruta y la tierra donde me paro conecta mi cuerpo con la tierra, la ascendencia y la memoria.</p>
+<p>Como artista mujer peruana, realizo este gesto como una declaración: tengo el poder de dar a luz mi propio arte, mis propias visiones y mis propias formas de existencia.</p>`,
+      en: `<p>Giving Birth to a Pomegranate is a series of five photographs created in response to a collaboration with poet Andrea Cruzado and her work Parto.</p>
+<p>Through this series, I explore and reclaim the symbolic power of giving birth. Growing up within a patriarchal and religious society, I have experienced how the female body is often defined through its reproductive capacity. With this work, I reflect on birth not only as a biological act, but as a form of creation, agency, and transformation.</p>
+<p>As a female artist, I question the ways in which women can reclaim the power to generate, imagine, and bring new worlds into existence. The act of creation extends beyond motherhood: it also exists through artistic practice, through ideas, and through the ability to shape our own narratives.</p>
+<p>In these photographs, I use my body and a pomegranate as symbolic elements. The pomegranate, a fruit historically connected with fertility, regeneration, and cycles of life, becomes a metaphor for the works, ideas, and identities we bring into being. The ritual performed with the fruit and the soil where I stand connects my body to the land, ancestry, and memory.</p>
+<p>As a Peruvian female artist, I create this gesture as a declaration: I have the power to give birth to my own art, my own visions, and my own forms of existence.</p>`
     },
 
      artworkDetails: {
@@ -1555,12 +1768,85 @@ es: `
     ]
   },
 
-  "interrupted-landscape": {
+ "interrupted-landscape": {
     title: "Interrupted Landscape",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      en: `
+<p>The Granary Building is an institutional structure whose aim is to encourage the creative process. The building and its surrounding area have been in continuous change, while the students who inhabit it have also undergone processes of transformation. Interrupted Landscape asks about the relationship between the spaces and the individuals who inhabit them, and how the building and its inhabitants affect one another.</p>
+
+<p>Part of my research is grounded in an understanding of loss as part of the migration process. Migration involves a restructuring of identity that can produce fragility, uncertainty and fear. I became interested in how these experiences of loss and change might be transformed through art, creating new experiences and a deeper relationship with an unfamiliar environment.</p>
+
+<p>Within the university, I found a sense of protection that allowed me to place my body within the architecture and consider it as a landscape. The building established a physical bond between my body, its materials, and the institution I was becoming part of. The university became a temporary home.</p>
+
+<p>Photography became part of this process of inhabitation. Rather than simply recording the building, photographing became a way of spending time with it—looking, returning and forming a relationship with the space. Through the act of looking, the unfamiliar could become familiar.</p>
+
+<p>The work asks how a body can land somewhere unfamiliar, and how that place can begin to become home.</p>
+      `,
+      es: `
+<p>El Granary Building es una estructura institucional cuyo objetivo es fomentar el proceso creativo. El edificio y su entorno han estado en constante cambio, mientras que los estudiantes que lo habitan también han atravesado procesos de transformación. Interrupted Landscape indaga sobre la relación entre los espacios y las personas que los habitan, y cómo el edificio y sus habitantes se afectan mutuamente.</p>
+
+<p>Parte de mi investigación se sustenta en entender la pérdida como parte del proceso migratorio. La migración implica una reestructuración de la identidad que puede producir fragilidad, incertidumbre y miedo. Me interesó explorar cómo estas experiencias de pérdida y cambio podían transformarse a través del arte, creando nuevas experiencias y una relación más profunda con un entorno desconocido.</p>
+
+<p>Dentro de la universidad, encontré una sensación de protección que me permitió situar mi cuerpo dentro de la arquitectura y considerarlo como un paisaje. El edificio estableció un vínculo físico entre mi cuerpo, sus materiales y la institución de la que empezaba a formar parte. La universidad se convirtió en un hogar temporal.</p>
+
+<p>La fotografía se volvió parte de este proceso de habitar. Más que simplemente registrar el edificio, fotografiar se convirtió en una forma de pasar tiempo con él: mirar, volver y construir una relación con el espacio. A través del acto de mirar, lo desconocido podía volverse familiar.</p>
+
+<p>La obra se pregunta cómo un cuerpo puede aterrizar en un lugar desconocido, y cómo ese lugar puede empezar a convertirse en un hogar.</p>
+      `
+    },
+
+    artworkDetails: {
+      en: [
+        `Interrupted Landscape I<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2014`,
+
+        `Interrupted Landscape II<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2014`,
+
+        `Interrupted Landscape III<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2014`,
+
+        `Interrupted Landscape IV<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2014`
+      ],
+      es: [
+        `Interrupted Landscape I<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2014`,
+
+        `Interrupted Landscape II<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2014`,
+
+        `Interrupted Landscape III<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2014`,
+
+        `Interrupted Landscape IV<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2014`
+      ]
     },
 
     imageData: [
@@ -1568,15 +1854,28 @@ es: `
       { id: "2", src: "/interrupted2.webp", width: 1200, height: 800 },
       { id: "3", src: "/interrupted3.webp", width: 1200, height: 800 },
       { id: "4", src: "/interrupted4.webp", width: 1200, height: 800 }
+    ],
+
+    videoData: [
+      {
+        id: "interrupted-landscape",
+        title: "Interrupted Landscape",
+        vimeoUrl: "https://vimeo.com/130300551"
+      }
     ]
   },
 
-  "matoaka-is-my-name-matoaka-es-mi-nombre": {
+
+"matoaka-is-my-name-matoaka-es-mi-nombre": {
     title: "Matoaka is my name. Matoaka es mi nombre.",
 
     text: {
-      es: `<p></p>`,
-      en: `<p></p>`
+      es: `<p>Este proyecto de video y fotografía sigue el recorrido de Matoaka, una joven nativa americana conocida después como Pocahontas. Fue casada a temprana edad con John Rolfe, bautizada como Rebecca, y llevada a Inglaterra, donde murió alrededor de los diecisiete años y fue enterrada en Gravesend, al oeste de Inglaterra. Su historia se hizo ampliamente conocida y más tarde fue adaptada en una película de Disney, contribuyendo a su reconocimiento global bajo el nombre de Pocahontas.</p>
+<p>En este trabajo, regreso a los lugares vinculados a su vida y desplazamiento, incluyendo sitios donde probablemente ocurrió violencia y desarraigo. Al nombrarla Matoaka y recorrer nuevamente estos lugares, busco restituir su presencia más allá de las narrativas mitificadas. Abordando la obra como un acto de hermandad y memoria, creo un espacio ritual de reflexión y sanación, dialogando con aquello que fue borrado, transformado o silenciado en el relato de su historia.</p>
+<p>Este proyecto fue presentado como parte de la exposición colectiva Contemporary American Arts Prize 2022 en el Instituto Cultural Peruano Norteamericano (ICPNA) en Lima (2022).</p>`,
+      en: `<p>This video and photography project follows the journey of Matoaka, a Native American girl later known as Pocahontas. She was married at a young age to John Rolfe, baptized as Rebecca, and taken to England, where she died at around seventeen years old and was buried in Gravesend, in the west of England. Her story became widely known and was later adapted into a Disney film, contributing to her global recognition under the name Pocahontas.</p>
+<p>In this work, I revisit the places connected to her life and movement, including sites where violence and displacement likely occurred. By naming her Matoaka and retracing these locations, I seek to restore her presence beyond mythologized narratives. Approaching the work as a sisterly act of remembrance, I create a ritual space of reflection and healing, engaging with what was erased, transformed, or silenced in the telling of her story.</p>
+<p>This project was presented as part of the Contemporary American Arts Prize 2022 group exhibition at the American Institute in Lima (2022).</p>`
     },
 
     imageData: [
@@ -1585,8 +1884,68 @@ es: `
       { id: "3", src: "/matoaka3.webp", width: 1200, height: 800 },
       { id: "4", src: "/matoaka4.webp", width: 1200, height: 800 },
       { id: "5", src: "/matoaka5.webp", width: 1200, height: 800 }
-    ]
+    ],
+
+   artworkDetails: {
+      en: [
+        `Matoaka Is My Name<br />
+        Giclée photographic print on cotton paper, tarot card, knitted wool piece, huayruro seed<br />
+        74 × 74 cm<br />
+        Edition of 1<br />
+        2022`,
+
+        `Singing to Matoaka<br />
+        Giclée photographic print on cotton paper<br />
+        50 × 50 cm<br />
+        Edition of 5<br />
+        2022`,
+
+        `Matoaka Is My Name<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2022`,
+
+        `The Rope for Matoaka in Gravesend<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2022`,
+
+        
+
+
+      ],
+
+      es: [
+        ` Matoaka es mi nombre<br />
+        Impresión fotográfica giclée sobre papel de algodón, carta de tarot, pieza tejida de lana, semilla de huayruro<br />
+        74 × 74 cm<br />
+        Edición de 1<br />
+        2022`,
+
+        `Cantándole a Matoaka<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        50 × 50 cm<br />
+        Edición de 5<br />
+        2022`,
+
+        `Matoaka es mi nombre<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2022`,
+
+        `La cuerda para Matoaka en Gravesend<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2022`,
+
+      ]
+    }
   },
+
 
   "nostalgias-imperiales": {
     title: "Nostalgias Imperiales",
@@ -1606,7 +1965,7 @@ es: `
     },
 
 
-      poems: [
+    poems: [
     {
       id: "nostalgias-imperiales",
 
@@ -1616,83 +1975,277 @@ es: `
       },
 
       text: {
-        es: `<p>En los paisajes de Maniche labra imperiales nostalgias el crepúsculo:</p>
-<p>y lábrase la raza en mi palabra</p>
-<p>como estrella de sangre a flor de músculo.</p>
+        es: `<p>En los paisajes de Mansiche labra imperiales nostalgias el crepúsculo:<br />
+y lábrase la raza en mi palabra<br />
+como estrella de sangre a flor de músculo.</p>
 
-<p>El campanario dobla... No hay quien abra la capilla... Diríase un opúsculo</p>
-<p>bíblico que muriera en la palabra</p>
-<p>de asiática emoción de este crepúsculo.</p>
+<p>El campanario dobla... No hay quien abra la capilla... Diríase un opúsculo<br />
+bíblico que muriera en la palabra<br />
+de asiática emoción de este crepúsculo.</p>
 
-<p>Un poyo con tres potos, es retablo</p>
-<p>en que acaban de alzar labios en coro</p>
-<p>la eucaristía de una chicha de oro.</p>
+<p>Un poyo con tres potos, es retablo<br />
+en que acaban de alzar labios en coro<br />
+la eucaristía de una chicha de oro.</p>
 
-<p>Más allá, de los ranchos surge el viento,</p>
-<p>el humo oliendo a sueño y a establo,</p>
-<p>como si se exhumara un firmamento.</p>
+<p>Más allá, de los ranchos surge el viento,<br />
+el humo oliendo a sueño y a establo,<br />
+como si se exhumara un firmamento.</p>
 
-<p>La anciana pensativa, cual relieve</p>
-<p>de un bosque pre-incaico, hila que hila;</p>
-<p>en sus dedos de Mama el huso leve</p>
-<p>la lana gris de su vejez trasquila.</p>
+<p>La anciana pensativa, cual relieve<br />
+de un bosque pre-incaico, hila que hila;<br />
+en sus dedos de Mama el huso leve<br />
+la lana gris de su vejez trasquila.</p>
 
-<p>Sus ojos de esclerótica de nieve.</p>
-<p>Un ciego sol sin luz guarda y mutila...</p>
-<p>Su boca está en desdén, y en calma aleve</p>
-<p>su cansancio imperial talvez vigila.</p>
+<p>Sus ojos de esclerótica de nieve.<br />
+Un ciego sol sin luz guarda y mutila...<br />
+Su boca está en desdén, y en calma aleve<br />
+su cansancio imperial talvez vigila.</p>
 
-<p>Hay ficus que meditan, melenudos</p>
-<p>trovadores inactivos en derrota</p>
-<p>la rancia pena de esta cruz idiota,</p>
+<p>Hay ficus que meditan, melenudos<br />
+trovadores inactivos en derrota<br />
+la rancia pena de esta cruz idiota,</p>
 
-<p>en la hora en rubor que ya se escapa,</p>
-<p>y que es lago que suelda espejos rudos</p>
-<p>donde náufrago llora Manco-Cápac.</p>
+<p>en la hora en rubor que ya se escapa,<br />
+y que es lago que suelda espejos rudos<br />
+donde náufrago llora Manco-Cápac.</p>
 
-<p>Como viejos curacas van los bueyes</p>
-<p>camino de Trujillo, meditando...</p>
-<p>Y al hierro de la tarde, fingen reyes</p>
-<p>que por muertos dominios van llorando.</p>
+<p>Como viejos curacas van los bueyes<br />
+camino de Trujillo, meditando...<br />
+Y al hierro de la tarde, fingen reyes<br />
+que por muertos dominios van llorando.</p>
 
-<p>En el muro de pie, pienso en las leyes</p>
-<p>que la dicha y la angustia van trocando:</p>
-<p>ya en las viudas pupilas de los bueyes</p>
-<p>se pudren sueños que no tienen cuando.</p>
+<p>En el muro de pie, pienso en las leyes<br />
+que la dicha y la angustia van trocando:<br />
+ya en las viudas pupilas de los bueyes<br />
+se pudren sueños que no tienen cuando.</p>
 
-<p>La aldea, ante su paso, se reviste</p>
-<p>de un rudo gris, en que un mugir de vaca</p>
-<p>se aceita en sueño y emoción de huaca.</p>
+<p>La aldea, ante su paso, se reviste<br />
+de un rudo gris, en que un mugir de vaca<br />
+se aceita en sueño y emoción de huaca.</p>
 
-<p>Y en el festín del cielo azul yodado</p>
-<p>gime en el cáliz de la esquila triste</p>
-<p>un viejo corequenque desterrado.</p>
+<p>Y en el festín del cielo azul yodado<br />
+gime en el cáliz de la esquila triste<br />
+un viejo corequenque desterrado.</p>
 
-<p>La grama mustia, recogida, escueta</p>
-<p>ahoga no sé qué protesta ignota;</p>
-<p>parece el alma exhausta de un poeta,</p>
-<p>arredrada en un gesto de derrota.</p>
+<p>La grama mustia, recogida, escueta<br />
+ahoga no sé qué protesta ignota;<br />
+parece el alma exhausta de un poeta,<br />
+arredrada en un gesto de derrota.</p>
 
-<p>La ramada ha tallado su silueta,</p>
-<p>cadavérica jaula, sola y rota,</p>
-<p>donde mi enfermo corazón se aquieta</p>
-<p>en un tedio estatual de terracota.</p>
+<p>La ramada ha tallado su silueta,<br />
+cadavérica jaula, sola y rota,<br />
+donde mi enfermo corazón se aquieta<br />
+en un tedio estatual de terracota.</p>
 
-<p>Llega el canto sin sal del mar labrado</p>
-<p>en su máscara bufa de canalla</p>
-<p>que babea y da tumbos, ahorcado.</p>
+<p>Llega el canto sin sal del mar labrado<br />
+en su máscara bufa de canalla<br />
+que babea y da tumbos, ahorcado.</p>
 
-<p>La niebla hila una venda al cerro lila</p>
-<p>que en ensueños miliarios se enmuralla</p>
-<p>como un huaco gigante que vigila.</p>
-`,
-        en: `
-<p>This work references the poem <em>Imperial Nostalgias</em> by César Vallejo.</p>
-`
+<p>La niebla hila una venda al cerro lila<br />
+que en ensueños miliarios se enmuralla<br />
+como un huaco gigante que vigila.</p>
+
+<p class="attribution" style="font-style: normal; margin-bottom: 4px;">César Vallejo.</p>
+<p class="attribution" style="font-style: normal; margin-top: 0;">Los Heraldos Negros, 1919.</p>
+
+<p class="glossary"><em><strong>Huaca</strong>: objeto sagrado del antiguo Perú, ruina preincaica (como una tumba o montículo funerario).<br />
+<strong>Corequenque</strong>: un ave.<br />
+<strong>Manco Cápac</strong>: fundador del imperio incaico. La leyenda dice que emergió del lago Titicaca junto a Mama Ocllo, ambos hijos del sol, enviados hacia el norte para fundar el imperio inca en el Cusco.<br />
+<strong>Poyo</strong>: palabra quechua para un objeto donde sentarse.</em></p>`,
+
+        en: `<p>En los paisajes de Mansiche labra imperiales nostalgias el crepúsculo:<br />
+y lábrase la raza en mi palabra<br />
+como estrella de sangre a flor de músculo.</p>
+
+<p>El campanario dobla... No hay quien abra la capilla... Diríase un opúsculo<br />
+bíblico que muriera en la palabra<br />
+de asiática emoción de este crepúsculo.</p>
+
+<p>Un poyo con tres potos, es retablo<br />
+en que acaban de alzar labios en coro<br />
+la eucaristía de una chicha de oro.</p>
+
+<p>Más allá, de los ranchos surge el viento,<br />
+el humo oliendo a sueño y a establo,<br />
+como si se exhumara un firmamento.</p>
+
+<p>La anciana pensativa, cual relieve<br />
+de un bosque pre-incaico, hila que hila;<br />
+en sus dedos de Mama el huso leve<br />
+la lana gris de su vejez trasquila.</p>
+
+<p>Sus ojos de esclerótica de nieve.<br />
+Un ciego sol sin luz guarda y mutila...<br />
+Su boca está en desdén, y en calma aleve<br />
+su cansancio imperial talvez vigila.</p>
+
+<p>Hay ficus que meditan, melenudos<br />
+trovadores inactivos en derrota<br />
+la rancia pena de esta cruz idiota,</p>
+
+<p>en la hora en rubor que ya se escapa,<br />
+y que es lago que suelda espejos rudos<br />
+donde náufrago llora Manco-Cápac.</p>
+
+<p>Como viejos curacas van los bueyes<br />
+camino de Trujillo, meditando...<br />
+Y al hierro de la tarde, fingen reyes<br />
+que por muertos dominios van llorando.</p>
+
+<p>En el muro de pie, pienso en las leyes<br />
+que la dicha y la angustia van trocando:<br />
+ya en las viudas pupilas de los bueyes<br />
+se pudren sueños que no tienen cuando.</p>
+
+<p>La aldea, ante su paso, se reviste<br />
+de un rudo gris, en que un mugir de vaca<br />
+se aceita en sueño y emoción de huaca.</p>
+
+<p>Y en el festín del cielo azul yodado<br />
+gime en el cáliz de la esquila triste<br />
+un viejo corequenque desterrado.</p>
+
+<p>La grama mustia, recogida, escueta<br />
+ahoga no sé qué protesta ignota;<br />
+parece el alma exhausta de un poeta,<br />
+arredrada en un gesto de derrota.</p>
+
+<p>La ramada ha tallado su silueta,<br />
+cadavérica jaula, sola y rota,<br />
+donde mi enfermo corazón se aquieta<br />
+en un tedio estatual de terracota.</p>
+
+<p>Llega el canto sin sal del mar labrado<br />
+en su máscara bufa de canalla<br />
+que babea y da tumbos, ahorcado.</p>
+
+<p>La niebla hila una venda al cerro lila<br />
+que en ensueños miliarios se enmuralla<br />
+como un huaco gigante que vigila.</p>
+
+<p class="attribution" style="font-style: normal; margin-bottom: 4px;">César Vallejo.</p>
+<p class="attribution" style="font-style: normal; margin-top: 0;">Los Heraldos Negros, 1919.</p>
+
+<p class="glossary"><em><strong>Huaca</strong>: an ancient Peruvian sacred object, a pre-Columbian ruin (such as a tomb or burial mound).<br />
+<strong>Corequenque</strong>: a bird.<br />
+<strong>Manco Cápac</strong>: founder of the Inca Empire. Legend says that he emerged from Lake Titicaca together with Mama Ocllo, both children of the sun, sent north to found the Inca Empire in Cusco.<br />
+<strong>Poyo</strong>: Quechua word for an object used for sitting.</em></p>`
       }
     }
   ],
 
+  artworkDetails: {
+      en: [
+        `Nostalgias Imperiales<br />
+        Video still<br />
+        21'21"<br />
+        2020<br />
+        Documentation by José Carlos Orrillo.`,
+
+        `Nostalgias Imperiales<br />
+        Installation view<br />
+        Wool, Venetian mask, knitted plaits, pitahaya skin, bean seeds, palo santo, giclée-printed photographs, copper bell, Polaroid<br />
+        Dimensions variable<br />
+        2020<br />
+        Photos by Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Installation view<br />
+        Wool, Venetian mask, knitted plaits, pitahaya skin, bean seeds, palo santo, giclée-printed photographs, copper bell, Polaroid<br />
+        Dimensions variable<br />
+        2020<br />
+        Photos by Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Installation view<br />
+        Wool, Venetian mask, knitted plaits, pitahaya skin, bean seeds, palo santo, giclée-printed photographs, copper bell, Polaroid<br />
+        Dimensions variable<br />
+        2020<br />
+        Photos by Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Wool, Venetian mask, knitted plaits<br />
+        Dimensions variable<br />
+        2020<br />
+        Photos by Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Dyed wool, Venetian mask, seeds, dried dragon fruit skin, Polaroid, beans, avocado seeds, and Colorado beans<br />
+        2020<br />
+        Photos by Juan Pablo Murrugarra`,
+
+        `Offering Table<br />
+        Giclée-printed photographs, copper bell, palo santo, pumice stone<br />
+        Dimensions variable<br />
+        2020<br />
+        Photos by Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Knitted wool plaits, wool bag, shells<br />
+        Dimensions variable<br />
+        2020<br />
+        Photos by Juan Pablo Murrugarra`,
+
+        `The Shaman's Dream<br />
+        Film still<br />
+        Documentation by José Carlos Orrillo.`
+      ],
+      es: [
+        `Nostalgias Imperiales<br />
+        Fotograma de video<br />
+        21'21"<br />
+        2020<br />
+        Documentación de José Carlos Orrillo.`,
+
+        `Nostalgias Imperiales<br />
+        Vista de instalación<br />
+        Lana, máscara veneciana, trenzas tejidas, cáscara de pitahaya, semillas de frijol, palo santo, fotografías impresas en giclée, campana de cobre, Polaroid<br />
+        Dimensiones variables<br />
+        2020<br />
+        Fotos de Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Vista de instalación<br />
+        Lana, máscara veneciana, trenzas tejidas, cáscara de pitahaya, semillas de frijol, palo santo, fotografías impresas en giclée, campana de cobre, Polaroid<br />
+        Dimensiones variables<br />
+        2020<br />
+        Fotos de Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Vista de instalación<br />
+        Lana, máscara veneciana, trenzas tejidas, cáscara de pitahaya, semillas de frijol, palo santo, fotografías impresas en giclée, campana de cobre, Polaroid<br />
+        Dimensiones variables<br />
+        2020<br />
+        Fotos de Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Lana, máscara veneciana, trenzas tejidas<br />
+        Dimensiones variables<br />
+        2020<br />
+        Fotos de Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Lana teñida, máscara veneciana, semillas, cáscara de pitahaya seca, Polaroid, frijoles, semillas de palta y frijoles colorados<br />
+        2020<br />
+        Fotos de Juan Pablo Murrugarra`,
+
+        `Mesa de Ofrenda<br />
+        Fotografías impresas en giclée, campana de cobre, palo santo, piedra pómez<br />
+        Dimensiones variables<br />
+        2020<br />
+        Fotos de Juan Pablo Murrugarra`,
+
+        `Nostalgias Imperiales<br />
+        Trenzas de lana tejidas, bolsa de lana, conchas<br />
+        Dimensiones variables<br />
+        2020<br />
+        Fotos de Juan Pablo Murrugarra`,
+
+        `El Sueño del Chamán<br />
+        Fotograma de película<br />
+        Documentación de José Carlos Orrillo.`
+      ]
+    },
 
     imageData: [
       { id: "1", src: "/nostalgias1.webp", width: 1200, height: 800 },
@@ -1721,79 +2274,9 @@ es: `
   ],
 
   text: {
-  en: `
-<p><em>A is for Andes, Atacama, altiplano, alpaca, ayahuasca . . .<br />
-B is for blood, burden, betrayal . . .<br />
-C is for charm . . .</em></p>
-
-<p><strong>Thoughts on the work of Ingrid Pumayalla</strong></p>
-
-<p>Ingrid the puma is a contemporary artist, a land artist from the land of Peru. She is a friend of mine. She walks the earth and labours and wonders and wanders and sometimes she makes artworks, concoctions that are spell-bound and binding. Sometimes she sings. You might call her a witch or a shaman or a dryad. I wouldn't though.</p>
-
-<p><strong>[1/huk: magic]</strong></p>
-
-<p>There is no reason to see the esoteric, the magical, the artistic and the sublime as phenomena mystified and quasi-religious. They can be both pragmatic and abstract. They can be brought 'down to earth', mucky and gritty, and maybe have to be in order to function as humans designed them to. We have long, and primordially so, needed to able to calm the wind, call the rain, protect ourselves from dangerous co-inhabitants, divert hazard in our favour, even summon help from sympathetic 'beings' that are not 'normally' in and around us.</p>
-
-<p>In his 1948 book <em>Magic, Science and Religion and Other Essays</em> the social anthropologist Bronislaw Malinowski sets out an ethnographically-based argument for the presence of secretive and protected practices carried out historically and generationally in society for practical purposes, in agriculture, horticulture, medicinal and kinship rituals, et cetera. Malinowski writes that "The formula is always the core of the magical performance" and "knowledge of magic means knowledge of spell." (Ibid. p.54 i)</p>
-
-<p>Not all do, but some know how to do this thing (you know they do), the knack and techne: to spell, to cast, to perform these actions and these words that oscillate along the temporal and spatial plane of absence/presence, the 'here and now' and the 'there and then'. They know the grammar, the syntax, the lexicon, the contiguity of elements. And those labels are really not metaphors. They are literal and our literacy. Many more of us homo sapiens are savvy and this practice is heart-felt. We just don't know we know. Maybe we should let Ingrid Pumayalla show us the way, lead us in a song or an incantated dance down a narrow twisting path into a secret garden valley as dry as time and as human as death.</p>
-
-<p><strong>[2/iskay: performativity]</strong></p>
-
-<p>This artist seems to me to be able to get 'performance' to 'do' more, which may be a truly positive and necessary thing—the 'doing' I mean. Performance art is a tough medium to work in, in so far as it often requires documentation, audience/viewer participation, an open or shared narrativity and narration, and even the challenges of claims of theatricality to be dealt with.<sup>1</sup></p>
-
-<p>Much, perhaps too much, has been said about the Austinian origins of Speech Act Theory and its far reaching influences on how we can understand the cultural consequences of form and context performing meaning, giving agency to the user of word and/or gesture (paralanguage) actioned in the 'right way' at the 'right place' and the 'right time' by the 'right person'. All verbal language and social code is in fact functional in its way. Choose the material. Make the time. Mark the sequence. Enter the space. Go.</p>
-
-<p>But what about the performativity of the 'magical language', verbal or not, of the charm or spell? What's interesting here is that we can perhaps question whether, in this instance, when casting (a spell), we are 'sending out' words/speech sounds/phonation that have agency 'in and for themselves'—animated words and animated worlds that can live and can act independently, like universal matter in collision with other universal objects. This is not an idea that traditional semantics would accept. But we are dealing with the nature of nature here. This is supernatural power and supra-nature—quantum language needs quantum linguistics. I may feel empowered to possess the magic words, the passcode, the key, the encrypted message. But it is the magic words themselves that have the power.</p>
-
-<p><strong>[3/kimsa: a dream]</strong></p>
-
-<p>I dreamt a reverie yesterday (7/6/2026) that Ana Mendieta and Richard Long collaborated on a project called <em>Meet me in Australia</em>, whereby he would travel (probably mostly walking) from London to Sydney across the semi-circumference of planet earth; she would journey through the centre, a place not unknown to her (and a much shorter route by half π). Then on their arrival or soon after there would be a panel discussion in the Sydney Opera House moderated by Ingrid the puma. It's only a dream, right?</p>
-
-<p>Roger Orwell<br />
-London, June 2026</p>
-
-<p><sup>1</sup> In relation to this and digressing far from a critique of contemporary art, the adjectival 'performative' has latterly become a pejorative/negative term in media punditry. This is perhaps emanating from the visceral and culturally violent spoken attacks by far right-wing US politics on gender theory and critical theory more widely.</p>
-
-<p>© Roger Orwell. All rights reserved. Please do not use without permission.</p>
-  `,
-
-es: `
-<p><em>A de Andes, Atacama, altiplano, alpaca, ayahuasca...<br />
-B de sangre, carga, traición...<br />
-C de encanto...</em></p>
-
-<p><strong>Reflexiones sobre la obra de Ingrid Pumayalla</strong></p>
-
-<p>Ingrid la puma es una artista contemporánea, una artista del territorio proveniente del territorio del Perú. Es amiga mía. Camina la tierra, trabaja, se maravilla y deambula; y a veces crea obras de arte, elaboraciones cargadas de hechizo y de vínculo. A veces canta. Podrías llamarla bruja, chamana o dríade. Yo no lo haría.</p>
-
-<p><strong>[1/huk: magia]</strong></p>
-
-<p>No hay razón para entender lo esotérico, lo mágico, lo artístico y lo sublime como fenómenos mistificados o cuasi religiosos. Pueden ser al mismo tiempo pragmáticos y abstractos. Pueden ser traídos «a la tierra», al barro y a la aspereza, y quizá deban serlo para funcionar del modo en que los seres humanos los concibieron. Desde tiempos remotos hemos necesitado calmar el viento, llamar a la lluvia, protegernos de habitantes peligrosos con quienes compartimos el mundo, desviar el peligro a nuestro favor e incluso invocar ayuda de seres afines que normalmente no percibimos a nuestro alrededor.</p>
-
-<p>En su libro <em>Magic, Science and Religion and Other Essays</em> (1948), el antropólogo social Bronislaw Malinowski desarrolla un argumento basado en la etnografía sobre la existencia de prácticas reservadas y protegidas, transmitidas históricamente de generación en generación con fines prácticos: agrícolas, hortícolas, medicinales, rituales de parentesco, entre otros. Malinowski escribe que «la fórmula es siempre el núcleo de la ejecución mágica» y que «el conocimiento de la magia significa conocimiento del hechizo». (Ibid. p.54 i)</p>
-
-<p>No todos saben hacerlo, pero algunos sí conocen este arte —y sabes que existen—: la destreza y la técnica de conjurar, de invocar, de ejecutar acciones y palabras que oscilan entre los planos temporales y espaciales de la ausencia y la presencia, del «aquí y ahora» y el «allá y entonces». Conocen la gramática, la sintaxis, el léxico y la contigüidad de los elementos. Y estas palabras no son metáforas. Son literales y forman parte de nuestra propia alfabetización. Muchos más de nosotros, como especie, participamos de estas prácticas de lo que creemos. Simplemente no sabemos que lo sabemos. Quizá deberíamos permitir que Ingrid Pumayalla nos muestre el camino, que nos conduzca mediante un canto o una danza encantada por un sendero estrecho y sinuoso hacia un jardín secreto, tan seco como el tiempo y tan humano como la muerte.</p>
-
-<p><strong>[2/iskay: performatividad]</strong></p>
-
-<p>Esta artista parece ser capaz de hacer que la «performance» haga más, lo cual puede ser algo verdaderamente positivo y necesario —el «hacer» propiamente dicho—. El arte de acción es un medio complejo, en la medida en que suele requerir documentación, participación del público o del espectador, una narratividad y narración abierta o compartida, e incluso enfrentarse a los problemas asociados a las acusaciones de teatralidad.<sup>1</sup></p>
-
-<p>Mucho, quizá demasiado, se ha escrito sobre los orígenes de la Teoría de los Actos de Habla de Austin y sobre la enorme influencia que ha tenido en nuestra comprensión de cómo la forma y el contexto producen significado, otorgando agencia a quien utiliza palabras y/o gestos (paralenguaje) en el lugar adecuado, en el momento adecuado y por la persona adecuada. Todo lenguaje verbal y todo código social funcionan, en cierta medida, de esta manera. Elegir el material. Crear el tiempo. Marcar la secuencia. Entrar en el espacio. Actuar.</p>
-
-<p>Pero ¿qué ocurre con la performatividad del lenguaje mágico, verbal o no verbal, propio del encantamiento o del hechizo? Lo interesante es que aquí podemos preguntarnos si, al lanzar (un hechizo), estamos «enviando» palabras, sonidos o fonaciones dotadas de agencia propia «en y para sí mismas»: palabras animadas y mundos animados capaces de vivir y actuar independientemente, como si fueran materia universal en colisión con otros cuerpos universales. Esta es una idea que la semántica tradicional difícilmente aceptaría. Pero aquí estamos tratando con la naturaleza de la naturaleza. Con lo sobrenatural y lo supranatural: el lenguaje cuántico necesita una lingüística cuántica. Yo puedo sentirme empoderado por poseer las palabras mágicas, la contraseña, la llave o el mensaje cifrado. Sin embargo, son las propias palabras mágicas las que poseen el poder.</p>
-
-<p><strong>[3/kimsa: un sueño]</strong></p>
-
-<p>Ayer, 7 de junio de 2026, soñé una ensoñación en la que Ana Mendieta y Richard Long colaboraban en un proyecto llamado <em>Meet me in Australia</em>. Él viajaría —probablemente caminando gran parte del trayecto— desde Londres hasta Sídney recorriendo la semicircunferencia del planeta; ella atravesaría el centro de la Tierra, un lugar que no le era desconocido (y una ruta mucho más corta, por la mitad de π). Después de su llegada, o poco tiempo más tarde, tendría lugar una mesa redonda en la Ópera de Sídney moderada por Ingrid la puma. Después de todo, solo es un sueño, ¿verdad?</p>
-
-<p>Roger Orwell<br />
-Londres, junio de 2026</p>
-
-<p><sup>1</sup> En relación con esto, y alejándome de la crítica al arte contemporáneo, el término adjetival «performativo» se ha convertido últimamente en un término peyorativo o negativo dentro de la crítica mediática. Esto proviene quizás de los ataques verbales viscerales y culturalmente violentos lanzados por la política de extrema derecha estadounidense contra la teoría de género y, más ampliamente, contra la teoría crítica.</p>
-
-<p>© Roger Orwell. Todos los derechos reservados. Por favor, no usar sin permiso.</p>
-`},
+  en: `<p></p>`,
+  es: `<p></p>`
+},
 
   sections: [
 {
@@ -1834,7 +2317,7 @@ Londres, junio de 2026</p>
     },
   ],
 
-  videoData: [
+  Data: [
   {
     id: "cantos-al-agua",
     title: "Cantos al Agua",
@@ -2008,7 +2491,7 @@ videoData: [
     ``,
 
     `Yuraq Warmi, Yana Warmi<br />
-     Video<br /> 
+     Vvideoideo<br /> 
      3'23"<br />`
      ]
      },
@@ -2027,14 +2510,93 @@ videoData: [
         {
           id: "yuraq-warmi-yana-warmi",
           title: "Yuraq Warmi, Yana Warmi",
-          src: "/yuraq-warmi-yana-warmi-preview.mp4",
-          poster: "/yuraq-warmi-yana-warmi-cover.webp",
-          duration: "00:20",
-          fullVideoUrl: "https://vimeo.com/294742910?fl=tl&fe=ec"
+          duration: "06:23",
+          vimeoUrl: "https://vimeo.com/294742910?fl=tl&fe=ec"
         }
       ]
+    },
 
-    }
+      {
+        id: "reflexiones",
+        title:  {
+        en: "Reflections",
+        es: "Reflexiones"
+        },
+        text: {
+        en: `
+<p><em>A is for Andes, Atacama, altiplano, alpaca, ayahuasca . . .<br />
+B is for blood, burden, betrayal . . .<br />
+C is charm, chant . . .</em></p>
+
+<p><strong>Thoughts on the work of Ingrid Pumayalla</strong></p>
+
+<p>Ingrid the puma is a contemporary artist, a land artist from the land of Peru. She is a friend of mine. She walks the earth and labours and wonders and wanders and sometimes she makes artworks, concoctions that are spell-bound and binding. Sometimes she sings. You might call her a witch or a shaman or a dryad. I wouldn't though.</p>
+
+<p><strong>[1/huk: magic]</strong></p>
+
+<p>There is no reason to see the esoteric, the magical, the artistic and the sublime as phenomena mystified and quasi-religious. They can be both pragmatic and abstract. They can be brought 'down to earth', mucky and gritty, and maybe have to be in order to function as humans designed them to. We have long, and primordially so, needed to able to calm the wind, call the rain, protect ourselves from dangerous co-inhabitants, divert hazard in our favour, even summon help from sympathetic 'beings' that are not 'normally' in and around us.</p>
+
+<p>In his 1948 book <em>Magic, Science and Religion and Other Essays</em> the social anthropologist Bronislaw Malinowski sets out an ethnographically-based argument for the presence of secretive and protected practices carried out historically and generationally in society for practical purposes, in agriculture, horticulture, medicinal and kinship rituals, et cetera. Malinowski writes that "The formula is always the core of the magical performance" and "knowledge of magic means knowledge of spell." (Ibid. p.54 i)</p>
+
+<p>Not all do, but some know how to do this thing (you know they do), the knack and techne: to spell, to cast, to perform these actions and these words that oscillate along the temporal and spatial plane of absence/presence, the 'here and now' and the 'there and then'. They know the grammar, the syntax, the lexicon, the contiguity of elements. And those labels are really not metaphors. They are literal and our literacy. Many more of us homo sapiens are savvy and this practice is heart-felt. We just don't know we know. Maybe we should let Ingrid Pumayalla show us the way, lead us in a song or an incantated dance down a narrow twisting path into a secret garden valley as dry as time and as human as death.</p>
+
+<p><strong>[2/iskay: performativity]</strong></p>
+
+<p>This artist seems to me to be able to get 'performance' to 'do' more, which may be a truly positive thing—the 'doing' I mean. Performance art is a tough medium to work in in so far as it often requires documentation, audience/viewer narrativity and narration, and even the challenges of claims of theatricality to be dealt with.<sup>1</sup></p>
+
+<p>Much, perhaps too much, has been said about the Austinian origins of Speech Act Theory and its far reaching influences on how we can understand the cultural consequences of form and context performing meaning, giving agency to the user of word and/or gesture (paralanguage) actioned in the 'right way' at the 'right place' and the 'right time' by the 'right person', All verbal language and social code is in fact functional in its and to a degree this way. Choose the material. Make the time. Mark the sequence. Enter the space. Go.</p>
+
+<p>But what about the performativity of the 'magical language', verbal or not, of the charm or spell? What's interesting here is that we can perhaps question whether, in this instance, when casting (a spell), we are 'sending out' words/speech sounds/phonation that have agency 'in and for themselves'—animated words and animated worlds that can live and can act independently, like universal matter in collision with other universal objects. This is not an idea that traditional semantics would accept. But we are dealing with the nature of nature here. This supernatural power and supra-nature. Quantum language and quantum linguistics? I may feel empowered to have the magic words, the passcode, the key, the encrypted message. But it is the magic words themselves that have the power.</p>
+
+<p><strong>[Kimsa-3: a dream]</strong></p>
+
+<p>I dreamt a reverie yesterday (7/6/2026) that Ana Mendieta and Richard Long collaborated on a project called <em>Meet me in Australia</em>, whereby he would travel (probably mostly walking) from London to Sydney across the semi-circumference of planet earth; she would journey through the centre, a place not unknown to her. Then on their arrival or soon after there would be a panel discussion in the Sydney Opera House moderated by Ingrid the puma. It's only a dream, right?</p>
+
+<p>Roger Orwell<br />
+London, June 2026</p>
+
+<p><sup>1</sup> In relation to this and digressing far from a critique of contemporary art, the adjectival 'performative' has latterly become a pejorative/negative term in media punditry. This is perhaps emanating from the visceral attacks by far right-wing US politics on gender theory and critical theory more widely. (Someone needs to tell Fox News anchors they need to go back to grad school and gen up on the normative/un marked meaning)</p>
+
+<p>© Roger Orwell. All rights reserved. Please do not use without permission.</p>
+        `,
+        es: `
+<p><em>A de Andes, Atacama, altiplano, alpaca, ayahuasca...<br />
+B de sangre, carga, traición...<br />
+C de encanto, canto...</em></p>
+
+<p><strong>Reflexiones sobre la obra de Ingrid Pumayalla</strong></p>
+
+<p>Ingrid la puma es una artista contemporánea, una artista del territorio proveniente del territorio del Perú. Es amiga mía. Camina la tierra, trabaja, se maravilla y deambula; y a veces crea obras de arte, elaboraciones cargadas de hechizo y de vínculo. A veces canta. Podrías llamarla bruja, chamana o dríade. Yo no lo haría.</p>
+
+<p><strong>[1/huk: magia]</strong></p>
+
+<p>No hay razón para entender lo esotérico, lo mágico, lo artístico y lo sublime como fenómenos mistificados o cuasi religiosos. Pueden ser al mismo tiempo pragmáticos y abstractos. Pueden ser traídos «a la tierra», al barro y a la aspereza, y quizá deban serlo para funcionar del modo en que los seres humanos los concibieron. Desde tiempos remotos hemos necesitado calmar el viento, llamar a la lluvia, protegernos de habitantes peligrosos con quienes compartimos el mundo, desviar el peligro a nuestro favor e incluso invocar ayuda de seres afines que normalmente no percibimos a nuestro alrededor.</p>
+
+<p>En su libro <em>Magic, Science and Religion and Other Essays</em> (1948), el antropólogo social Bronislaw Malinowski desarrolla un argumento basado en la etnografía sobre la existencia de prácticas reservadas y protegidas, transmitidas históricamente de generación en generación con fines prácticos: agrícolas, hortícolas, medicinales, rituales de parentesco, entre otros. Malinowski escribe que «la fórmula es siempre el núcleo de la ejecución mágica» y que «el conocimiento de la magia significa conocimiento del hechizo». (Ibid. p.54 i)</p>
+
+<p>No todos saben hacerlo, pero algunos sí conocen este arte —y sabes que existen—: la destreza y la técnica de conjurar, de invocar, de ejecutar acciones y palabras que oscilan entre los planos temporales y espaciales de la ausencia y la presencia, del «aquí y ahora» y el «allá y entonces». Conocen la gramática, la sintaxis, el léxico y la contigüidad de los elementos. Y estas palabras no son metáforas. Son literales y forman parte de nuestra propia alfabetización. Muchos más de nosotros, como especie, participamos de estas prácticas de lo que creemos. Simplemente no sabemos que lo sabemos. Quizá deberíamos permitir que Ingrid Pumayalla nos muestre el camino, que nos conduzca mediante un canto o una danza encantada por un sendero estrecho y sinuoso hacia un jardín secreto, tan seco como el tiempo y tan humano como la muerte.</p>
+
+<p><strong>[2/iskay: performatividad]</strong></p>
+
+<p>Esta artista parece ser capaz de hacer que la «performance» haga más, lo cual puede ser algo verdaderamente positivo —el «hacer» propiamente dicho—. El arte de acción es un medio complejo, en la medida en que suele requerir documentación, narratividad y narración de audiencia/espectador, e incluso enfrentarse a los problemas asociados a las acusaciones de teatralidad.<sup>1</sup></p>
+
+<p>Mucho, quizá demasiado, se ha escrito sobre los orígenes de la Teoría de los Actos de Habla de Austin y sobre la enorme influencia que ha tenido en nuestra comprensión de cómo la forma y el contexto producen significado, otorgando agencia a quien utiliza palabras y/o gestos (paralenguaje) en el lugar adecuado, en el momento adecuado y por la persona adecuada. Todo lenguaje verbal y todo código social funcionan, de algún modo y hasta cierto grado, de esta manera. Elegir el material. Crear el tiempo. Marcar la secuencia. Entrar en el espacio. Actuar.</p>
+
+<p>Pero ¿qué ocurre con la performatividad del lenguaje mágico, verbal o no verbal, propio del encantamiento o del hechizo? Lo interesante es que aquí podemos preguntarnos si, al lanzar (un hechizo), estamos «enviando» palabras, sonidos o fonaciones dotadas de agencia propia «en y para sí mismas»: palabras animadas y mundos animados capaces de vivir y actuar independientemente, como si fueran materia universal en colisión con otros cuerpos universales. Esta es una idea que la semántica tradicional difícilmente aceptaría. Pero aquí estamos tratando con la naturaleza de la naturaleza. Este poder sobrenatural y la supranaturaleza. ¿Lenguaje cuántico y lingüística cuántica? Yo puedo sentirme empoderado por tener las palabras mágicas, la contraseña, la llave, el mensaje cifrado. Sin embargo, son las propias palabras mágicas las que poseen el poder.</p>
+
+<p><strong>[Kimsa-3: un sueño]</strong></p>
+
+<p>Ayer, 7 de junio de 2026, soñé una ensoñación en la que Ana Mendieta y Richard Long colaboraban en un proyecto llamado <em>Meet me in Australia</em>. Él viajaría —probablemente caminando gran parte del trayecto— desde Londres hasta Sídney recorriendo la semicircunferencia del planeta; ella atravesaría el centro de la Tierra, un lugar que no le era desconocido. Después de su llegada, o poco tiempo más tarde, tendría lugar una mesa redonda en la Ópera de Sídney moderada por Ingrid la puma. Después de todo, solo es un sueño, ¿verdad?</p>
+
+<p>Roger Orwell<br />
+Londres, junio de 2026</p>
+
+<p><sup>1</sup> En relación con esto, y alejándome de la crítica al arte contemporáneo, el término adjetival «performativo» se ha convertido últimamente en un término peyorativo o negativo dentro de la crítica mediática. Esto proviene quizás de los ataques viscerales lanzados por la política de extrema derecha estadounidense contra la teoría de género y, más ampliamente, contra la teoría crítica. (Alguien debería decirle a los presentadores de Fox News que vuelvan a la universidad y se pongan al día con el significado normativo/no marcado.)</p>
+
+<p>© Roger Orwell. Todos los derechos reservados. Por favor, no usar sin permiso.</p>
+        `
+      }
+      }
   ]
 },
 
@@ -2068,17 +2630,16 @@ In 2017, she returned to Pantipata with her sister Francisca. This reunion with 
       { id: "1", src: "/otrasmadres1.webp", width: 1200, height: 800 },
       { id: "2", src: "/otrasmadres2.webp", width: 1200, height: 800 }
     ],
- videoData: [
-  {
-    id: "otras-madres",
-    title: "Otras Madres",
-    src: "/otras-madres-preview.mp4",
-    poster: "/otras-madres-cover.webp",
-    duration: "00:26",
-    fullVideoUrl: "https://vimeo.com/304037145?fl=pl&fe=sh"
-  }
-]
-  
+ 
+    videoData: [
+    {
+      id: "otras-madres",
+      title: "Otras Madres",
+      duration: "Contraseña / Password: matilde",
+      vimeoUrl: "https://vimeo.com/304037145?fl=pl&fe=sh"
+    }
+  ]
+
   },
 
 
@@ -2158,9 +2719,110 @@ es: `
       { id: "15", src: "/camino15.webp", width: 1200, height: 800 },
     ],
 
-  artworkDetails: {
-  en: [],
-  es: []
+artworkDetails: {
+  en: [
+    `Mamita Angélica<br />
+    Giclée photographic print on Photo Rag paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mamá y la cortina roja<br />
+    Giclée photographic print on Photo Rag paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Dando un paseo con mi padre<br />
+    Giclée photographic print on Photo Rag paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mi tío Emilio<br />
+    Giclée photographic print on Photo Rag paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Enmita Yolanda<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Luchita en Guadalupito<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mi tío Nicolás<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `El ingeniero<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mamá Irma<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Autorretrato en el jardín<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`
+  ],
+
+  es: [
+    `Mamita Angélica<br />
+    Impresión fotográfica giclée sobre papel Photo Rag<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mamá y la cortina roja<br />
+    Impresión fotográfica giclée sobre papel Photo Rag<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Dando un paseo con mi padre<br />
+    Impresión fotográfica giclée sobre papel Photo Rag<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mi tío Emilio<br />
+    Impresión fotográfica giclée sobre papel Photo Rag<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Enmita Yolanda<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Luchita en Guadalupito<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mi tío Nicolás<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `El ingeniero<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mamá Irma<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Autorretrato en el jardín<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`
+  ]
 },
 
   },

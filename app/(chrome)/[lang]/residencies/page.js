@@ -2,6 +2,9 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
+
+import { residencyDetails } from "@/data/residencyDetails";
 
 const residencies = [
   {
@@ -24,6 +27,10 @@ const residencies = [
     id: "pa-utrygg-grun",
     title: "Pa Utrygg grun",
   },
+  {
+    id: "songs-from-the-mountain-to-the-sea",
+    title: "Orality Workshop: Songs from the Mountain to the Sea",
+  },
 ];
 
 export default function ResidenciesPage() {
@@ -32,6 +39,13 @@ export default function ResidenciesPage() {
   const lang = pathname.startsWith("/es")
     ? "es"
     : "en";
+
+  const [openId, setOpenId] = useState(null);
+
+  const getLocalizedText = (value) => {
+    if (typeof value === "string") return value;
+    return value?.[lang] || value?.es || value?.en || "";
+  };
 
   return (
     <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
@@ -44,16 +58,60 @@ export default function ResidenciesPage() {
           </h1>
 
           <ul className="space-y-2">
-            {residencies.map((residency) => (
-              <li key={residency.id}>
-                <Link
-                  href={`/${lang}/residencies/${residency.id}`}
-                  className="text-xs text-neutral-600 hover:text-[#b7623b] transition-colors"
+            {residencies.map((residency) => {
+              const detail = residencyDetails[residency.id];
+              const poems = detail?.poems || [];
+              const hasDropdown = poems.length > 0;
+              const isOpen = hasDropdown && openId === residency.id;
+
+              return (
+                <li
+                  key={residency.id}
+                  onMouseEnter={() => {
+                    if (hasDropdown) setOpenId(residency.id);
+                  }}
+                  onMouseLeave={() => {
+                    if (hasDropdown) setOpenId(null);
+                  }}
                 >
-                  {residency.title}
-                </Link>
-              </li>
-            ))}
+                  <Link
+                    href={`/${lang}/residencies/${residency.id}`}
+                    className="text-xs text-neutral-600 hover:text-[#b7623b] transition-colors"
+                  >
+                    {residency.title}
+                  </Link>
+
+                  {hasDropdown && (
+                    <div
+                      className={`
+                        overflow-hidden
+                        transition-all
+                        duration-500
+                        ease-out
+                        ${
+                          isOpen
+                            ? "max-h-60 opacity-100 mt-2"
+                            : "max-h-0 opacity-0 mt-0"
+                        }
+                      `}
+                    >
+                      <ul className="ml-4 space-y-1">
+                        {poems.map((poem) => (
+                          <li key={poem.id}>
+                            <Link
+                              href={`/${lang}/residencies/${residency.id}/poems/${poem.id}`}
+                              className="text-[11px] text-neutral-400 hover:text-[#b7623b] transition-colors"
+                            >
+                              {getLocalizedText(poem.title)}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </li>
+              );
+            })}
           </ul>
 
         </div>
