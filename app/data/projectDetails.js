@@ -2418,7 +2418,40 @@ London, June 2026</p>
 <p>© Roger Orwell. All rights reserved. Please do not use without permission.</p>
         `,
         es: `
-<p> Texto solo disponible en ingles ( Pronto en espanol) </p>
+<p><em>A de Andes, Atacama, altiplano, alpaca, ayahuasca...<br />
+B de brote, bulto, brecha...<br />
+C de canto, contacto, curación...</em></p>
+
+<p><strong>Reflexiones sobre la obra de Ingrid Pumayalla</strong></p>
+
+<p>Ingrid la puma es una artista contemporánea, una artista del territorio proveniente del territorio del Perú. Es amiga mía. Camina la tierra, trabaja, se maravilla y deambula; y a veces crea obras de arte, elaboraciones cargadas de hechizo y de vínculo. A veces canta. Podrías llamarla bruja, chamana o dríade. Yo no lo haría.</p>
+
+<p><strong>[1/huk: magia]</strong></p>
+
+<p>No hay razón para entender lo esotérico, lo mágico, lo artístico y lo sublime como fenómenos mistificados o cuasi religiosos. Pueden ser al mismo tiempo pragmáticos y abstractos. Pueden ser traídos «a la tierra», al barro y a la aspereza, y quizá deban serlo para funcionar del modo en que los seres humanos los concibieron. Desde tiempos remotos hemos necesitado calmar el viento, llamar a la lluvia, protegernos de habitantes peligrosos con quienes compartimos el mundo, desviar el peligro a nuestro favor e incluso invocar ayuda de seres afines que normalmente no percibimos a nuestro alrededor.</p>
+
+<p>En su libro <em>Magic, Science and Religion and Other Essays</em> (1948), el antropólogo social Bronislaw Malinowski desarrolla un argumento basado en la etnografía sobre la existencia de prácticas reservadas y protegidas, transmitidas históricamente de generación en generación con fines prácticos: agrícolas, hortícolas, medicinales, rituales de parentesco, entre otros. Malinowski escribe que «la fórmula es siempre el núcleo de la ejecución mágica» y que «el conocimiento de la magia significa conocimiento del hechizo». (Ibid. p.54 i)</p>
+
+<p>No todos saben hacerlo, pero algunos sí conocen este arte —y sabes que existen—: la destreza y la técnica de conjurar, de invocar, de ejecutar acciones y palabras que oscilan entre los planos temporales y espaciales de la ausencia y la presencia, del «aquí y ahora» y el «allá y entonces». Conocen la gramática, la sintaxis, el léxico y la contigüidad de los elementos. Y estas palabras no son metáforas. Son literales y forman parte de nuestra propia alfabetización. Muchos más de nosotros, como especie, participamos de estas prácticas de lo que creemos. Simplemente no sabemos que lo sabemos. Quizá deberíamos permitir que Ingrid Pumayalla nos muestre el camino, que nos conduzca mediante un canto o una danza encantada por un sendero estrecho y sinuoso hacia un jardín secreto, tan seco como el tiempo y tan humano como la muerte.</p>
+
+<p><strong>[2/iskay: performatividad]</strong></p>
+
+<p>Esta artista parece ser capaz de hacer que la «performance» haga más, lo cual puede ser algo verdaderamente positivo —el «hacer» propiamente dicho—. El arte de acción es un medio complejo, en la medida en que suele requerir documentación, narratividad y narración de audiencia/espectador, e incluso enfrentarse a los problemas asociados a las acusaciones de teatralidad.<sup>1</sup></p>
+
+<p>Mucho, quizá demasiado, se ha escrito sobre los orígenes de la Teoría de los Actos de Habla de Austin y sobre la enorme influencia que ha tenido en nuestra comprensión de cómo la forma y el contexto producen significado, otorgando agencia a quien utiliza palabras y/o gestos (paralenguaje) en el lugar adecuado, en el momento adecuado y por la persona adecuada. Todo lenguaje verbal y todo código social funcionan, de algún modo y hasta cierto grado, de esta manera. Elegir el material. Crear el tiempo. Marcar la secuencia. Entrar en el espacio. Actuar.</p>
+
+<p>Pero ¿qué ocurre con la performatividad del lenguaje mágico, verbal o no verbal, propio del encantamiento o del hechizo? Lo interesante es que aquí podemos preguntarnos si, al lanzar (un hechizo), estamos «enviando» palabras, sonidos o fonaciones dotadas de agencia propia «en y para sí mismas»: palabras animadas y mundos animados capaces de vivir y actuar independientemente, como si fueran materia universal en colisión con otros cuerpos universales. Esta es una idea que la semántica tradicional difícilmente aceptaría. Pero aquí estamos tratando con la naturaleza de la naturaleza. Este poder sobrenatural y la supranaturaleza. ¿Lenguaje cuántico y lingüística cuántica? Yo puedo sentirme empoderado por tener las palabras mágicas, la contraseña, la llave, el mensaje cifrado. Sin embargo, son las propias palabras mágicas las que poseen el poder.</p>
+
+<p><strong>[Kimsa-3: un sueño]</strong></p>
+
+<p>Ayer, 7 de junio de 2026, soñé una ensoñación en la que Ana Mendieta y Richard Long colaboraban en un proyecto llamado <em>Meet me in Australia</em>. Él viajaría —probablemente caminando gran parte del trayecto— desde Londres hasta Sídney recorriendo la semicircunferencia del planeta; ella atravesaría el centro de la Tierra, un lugar que no le era desconocido. Después de su llegada, o poco tiempo más tarde, tendría lugar una mesa redonda en la Ópera de Sídney moderada por Ingrid la puma. Después de todo, solo es un sueño, ¿verdad?</p>
+
+<p>Roger Orwell<br />
+Londres, junio de 2026</p>
+
+<p><sup>1</sup> En relación con esto, y alejándome de la crítica al arte contemporáneo, el término adjetival «performativo» se ha convertido últimamente en un término peyorativo o negativo dentro de la crítica mediática. Esto proviene quizás de los ataques viscerales lanzados por la política de extrema derecha estadounidense contra la teoría de género y, más ampliamente, contra la teoría crítica. (Alguien debería decirle a los presentadores de Fox News que vuelvan a la universidad y se pongan al día con el significado normativo/no marcado.)</p>
+
+<p>© Roger Orwell. Todos los derechos reservados. Por favor, no usar sin permiso.</p>
         `
       }
     },
