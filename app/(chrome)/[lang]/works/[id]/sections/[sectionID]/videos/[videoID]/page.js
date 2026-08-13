@@ -84,7 +84,15 @@ export default function SectionVideoPage() {
         </div>
 
         <div className="flex-1 flex items-center justify-center px-5">
-  {video.vimeoUrl ? (
+  {video.driveUrl ? (
+    <iframe
+      src={video.driveUrl}
+      title={videoTitle}
+      allow="autoplay; fullscreen"
+      allowFullScreen
+      className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
+    />
+  ) : video.vimeoUrl ? (
     <iframe
       src={video.vimeoUrl.replace("vimeo.com/", "player.vimeo.com/video/")}
       title={videoTitle}

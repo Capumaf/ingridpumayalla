@@ -849,27 +849,127 @@ Voy descubriendo.</p>
 
 
 artworkDetails: {
-  es: [
-    `Objetos Rituales<br />
-Impresión fotográfica sobre papel photorag<br />
-70 × 70 cm<br />
-2021`,
-    "",
-    "",
-    ""
-  ],
+      en: [
+        `Ritual Objects<br />
+        Giclée print on cotton paper<br />
+        70 × 70 cm<br />
+        Edition of 10<br />
+        2021`,
 
-  en: [
-    `Ritual Objects<br />
-Photographic print on photorag paper<br />
-70 × 70 cm<br />
-2021`,
-    "",
-    "",
-    ""
-  ]
-},
+        `Criatura I<br />
+        Giclée print on cotton paper<br />
+        70 × 50 cm<br />
+        Edition of 15<br />
+        2021`,
 
+        `Cantos Matrios<br />
+        Installation view<br />
+        Sea wood, red wool, blue jumper, giclée photographic print<br />
+        Dimensions variable<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Sound installation<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Installation view<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Installation detail<br />
+        Chimú huaco, camera lens<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Installation view<br />
+        Retama petals, compass, palo santo, ceramic Chimú replica, copper bell<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Installation view<br />
+        Chimú huacos, retama flowers, compass, sea wood, pine wood, clay pots, camera lens<br />
+        Dimensions variable<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Installation view<br />
+        Chimú huacos, retama flowers, compass, sea wood, pine wood, clay pots, camera lens<br />
+        Dimensions variable<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Installation view<br />
+        Chimú huacos, retama flowers, compass, sea wood, pine wood, clay pots, camera lens<br />
+        Dimensions variable<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Performance documentation<br />
+        Photograph by Lucio Mora<br />
+        2021`
+      ],
+      es: [
+        `Objetos Rituales<br />
+        Impresión giclée sobre papel de algodón<br />
+        70 × 70 cm<br />
+        Edición de 10<br />
+        2021`,
+
+        `Criatura I<br />
+        Impresión giclée sobre papel de algodón<br />
+        70 × 50 cm<br />
+        Edición de 15<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Vista de instalación<br />
+        Madera de mar, lana roja, jersey azul, impresión fotográfica giclée<br />
+        Dimensiones variables<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Instalación sonora<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Vista de instalación<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Detalle de instalación<br />
+        Huaco Chimú, lente de cámara<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Vista de instalación<br />
+        Pétalos de retama, brújula, palo santo, réplica cerámica Chimú, campana de cobre<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Vista de instalación<br />
+        Huacos Chimú, flores de retama, brújula, madera de mar, madera de pino, ollas de barro, lente de cámara<br />
+        Dimensiones variables<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Vista de instalación<br />
+        Huacos Chimú, flores de retama, brújula, madera de mar, madera de pino, ollas de barro, lente de cámara<br />
+        Dimensiones variables<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Vista de instalación<br />
+        Huacos Chimú, flores de retama, brújula, madera de mar, madera de pino, ollas de barro, lente de cámara<br />
+        Dimensiones variables<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Documentación de performance<br />
+        Fotografía de Lucio Mora<br />
+        2021`
+      ]
+    },
 
     imageData: [
       { id: "1", src: "/Cantos1.webp", width: 1200, height: 800 },
@@ -1389,16 +1489,7 @@ artworkDetails: {
     Giclée photographic print on cotton paper<br />
     70 × 70 cm<br />
     Edition of 20<br />
-    2016`,
-
-    `Nuna, Ejercicio para trepar un árbol VI<br />
-    El fruto<br />
-    Impresión fotográfica giclée sobre papel de algodón<br />
-    70 × 70 cm<br />
-    Edición de 20<br />
     2016`
-
-    
   ],
 
   es: [
@@ -1427,6 +1518,13 @@ artworkDetails: {
     2016`,
 
     `Nuna, Ejercicio para trepar un árbol V<br />
+    El fruto<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    70 × 70 cm<br />
+    Edición de 20<br />
+    2016`,
+
+    `Nuna, Ejercicio para trepar un árbol VI<br />
     El fruto<br />
     Impresión fotográfica giclée sobre papel de algodón<br />
     70 × 70 cm<br />
@@ -1910,9 +2008,7 @@ es: `
         Giclée photographic print on cotton paper<br />
         60 × 60 cm<br />
         Edition of 10<br />
-        2022`,
-
-        
+        2022`
 
 
       ],
@@ -1940,8 +2036,7 @@ es: `
         Impresión fotográfica giclée sobre papel de algodón<br />
         60 × 60 cm<br />
         Edición de 10<br />
-        2022`,
-
+        2022`
       ]
     }
   },
@@ -2279,8 +2374,57 @@ como un huaco gigante que vigila.</p>
 },
 
   sections: [
-{
-  id: "cantos-al-agua",
+    {
+      id: "reflexiones",
+      title: {
+        en: "Thoughts on the work of Ingrid Pumayalla",
+        es: "Reflexiones sobre la obra de Ingrid Pumayalla"
+      },
+      text: {
+        en: `
+<p><em>A is for Andes, Atacama, altiplano, alpaca, ayahuasca . . .<br />
+B is for blood, burden, betrayal . . .<br />
+C is charm, chant . . .</em></p>
+
+<p><strong>Thoughts on the work of Ingrid Pumayalla</strong></p>
+
+<p>Ingrid the puma is a contemporary artist, a land artist from the land of Peru. She is a friend of mine. She walks the earth and labours and wonders and wanders and sometimes she makes artworks, concoctions that are spell-bound and binding. Sometimes she sings. You might call her a witch or a shaman or a dryad. I wouldn't though.</p>
+
+<p><strong>[1/huk: magic]</strong></p>
+
+<p>There is no reason to see the esoteric, the magical, the artistic and the sublime as phenomena mystified and quasi-religious. They can be both pragmatic and abstract. They can be brought 'down to earth', mucky and gritty, and maybe have to be in order to function as humans designed them to. We have long, and primordially so, needed to able to calm the wind, call the rain, protect ourselves from dangerous co-inhabitants, divert hazard in our favour, even summon help from sympathetic 'beings' that are not 'normally' in and around us.</p>
+
+<p>In his 1948 book <em>Magic, Science and Religion and Other Essays</em> the social anthropologist Bronislaw Malinowski sets out an ethnographically-based argument for the presence of secretive and protected practices carried out historically and generationally in society for practical purposes, in agriculture, horticulture, medicinal and kinship rituals, et cetera. Malinowski writes that "The formula is always the core of the magical performance" and "knowledge of magic means knowledge of spell." (Ibid. p.54 i)</p>
+
+<p>Not all do, but some know how to do this thing (you know they do), the knack and techne: to spell, to cast, to perform these actions and these words that oscillate along the temporal and spatial plane of absence/presence, the 'here and now' and the 'there and then'. They know the grammar, the syntax, the lexicon, the contiguity of elements. And those labels are really not metaphors. They are literal and our literacy. Many more of us homo sapiens are savvy and this practice is heart-felt. We just don't know we know. Maybe we should let Ingrid Pumayalla show us the way, lead us in a song or an incantated dance down a narrow twisting path into a secret garden valley as dry as time and as human as death.</p>
+
+<p><strong>[2/iskay: performativity]</strong></p>
+
+<p>This artist seems to me to be able to get 'performance' to 'do' more, which may be a truly positive thing—the 'doing' I mean. Performance art is a tough medium to work in in so far as it often requires documentation, audience/viewer narrativity and narration, and even the challenges of claims of theatricality to be dealt with.<sup>1</sup></p>
+
+<p>Much, perhaps too much, has been said about the Austinian origins of Speech Act Theory and its far reaching influences on how we can understand the cultural consequences of form and context performing meaning, giving agency to the user of word and/or gesture (paralanguage) actioned in the 'right way' at the 'right place' and the 'right time' by the 'right person', All verbal language and social code is in fact functional in its and to a degree this way. Choose the material. Make the time. Mark the sequence. Enter the space. Go.</p>
+
+<p>But what about the performativity of the 'magical language', verbal or not, of the charm or spell? What's interesting here is that we can perhaps question whether, in this instance, when casting (a spell), we are 'sending out' words/speech sounds/phonation that have agency 'in and for themselves'—animated words and animated worlds that can live and can act independently, like universal matter in collision with other universal objects. This is not an idea that traditional semantics would accept. But we are dealing with the nature of nature here. This supernatural power and supra-nature. Quantum language and quantum linguistics? I may feel empowered to have the magic words, the passcode, the key, the encrypted message. But it is the magic words themselves that have the power.</p>
+
+<p><strong>[Kimsa-3: a dream]</strong></p>
+
+<p>I dreamt a reverie yesterday (7/6/2026) that Ana Mendieta and Richard Long collaborated on a project called <em>Meet me in Australia</em>, whereby he would travel (probably mostly walking) from London to Sydney across the semi-circumference of planet earth; she would journey through the centre, a place not unknown to her. Then on their arrival or soon after there would be a panel discussion in the Sydney Opera House moderated by Ingrid the puma. It's only a dream, right?</p>
+
+<p>Roger Orwell<br />
+London, June 2026</p>
+
+<p><sup>1</sup> In relation to this and digressing far from a critique of contemporary art, the adjectival 'performative' has latterly become a pejorative/negative term in media punditry. This is perhaps emanating from the visceral attacks by far right-wing US politics on gender theory and critical theory more widely. (Someone needs to tell Fox News anchors they need to go back to grad school and gen up on the normative/un marked meaning)</p>
+
+<p>© Roger Orwell. All rights reserved. Please do not use without permission.</p>
+        `,
+        es: `
+<p> Texto solo disponible en ingles ( Pronto en espanol) </p>
+        `
+      }
+    },
+
+    {
+      id: "cantos-al-agua",
   title: "Cantos al agua",
 
   cover: {
@@ -2317,13 +2461,14 @@ como un huaco gigante que vigila.</p>
     },
   ],
 
-  Data: [
+ videoData: [
   {
     id: "cantos-al-agua",
     title: "Cantos al Agua",
     src: "/cantos-al-agua-preview.mp4",
     poster: "/cantos-al-agua-cover2.webp",
-    duration: "00:55"
+    duration: "13:48",
+    driveUrl: "https://drive.google.com/file/d/1vBQL0DRXrp3RwgueDdzYcLHiDSXqlyET/preview"
   }
 ],
 
@@ -2452,7 +2597,8 @@ videoData: [
     title: "The Hair Cut",
     src: "/the-haircut-preview.mp4",
     poster: "/the-haircut-cover.webp",
-    duration: "00:31"
+    duration: "00:31",
+    driveUrl: "https://drive.google.com/file/d/1gRqVjGjgtZBPpzgYB3RRG8BJ0sh2pVMj/preview"
   }
 ]
 
@@ -2491,7 +2637,7 @@ videoData: [
     ``,
 
     `Yuraq Warmi, Yana Warmi<br />
-     Vvideoideo<br /> 
+     Video<br /> 
      3'23"<br />`
      ]
      },
@@ -2514,89 +2660,7 @@ videoData: [
           vimeoUrl: "https://vimeo.com/294742910?fl=tl&fe=ec"
         }
       ]
-    },
-
-      {
-        id: "reflexiones",
-        title:  {
-        en: "Reflections",
-        es: "Reflexiones"
-        },
-        text: {
-        en: `
-<p><em>A is for Andes, Atacama, altiplano, alpaca, ayahuasca . . .<br />
-B is for blood, burden, betrayal . . .<br />
-C is charm, chant . . .</em></p>
-
-<p><strong>Thoughts on the work of Ingrid Pumayalla</strong></p>
-
-<p>Ingrid the puma is a contemporary artist, a land artist from the land of Peru. She is a friend of mine. She walks the earth and labours and wonders and wanders and sometimes she makes artworks, concoctions that are spell-bound and binding. Sometimes she sings. You might call her a witch or a shaman or a dryad. I wouldn't though.</p>
-
-<p><strong>[1/huk: magic]</strong></p>
-
-<p>There is no reason to see the esoteric, the magical, the artistic and the sublime as phenomena mystified and quasi-religious. They can be both pragmatic and abstract. They can be brought 'down to earth', mucky and gritty, and maybe have to be in order to function as humans designed them to. We have long, and primordially so, needed to able to calm the wind, call the rain, protect ourselves from dangerous co-inhabitants, divert hazard in our favour, even summon help from sympathetic 'beings' that are not 'normally' in and around us.</p>
-
-<p>In his 1948 book <em>Magic, Science and Religion and Other Essays</em> the social anthropologist Bronislaw Malinowski sets out an ethnographically-based argument for the presence of secretive and protected practices carried out historically and generationally in society for practical purposes, in agriculture, horticulture, medicinal and kinship rituals, et cetera. Malinowski writes that "The formula is always the core of the magical performance" and "knowledge of magic means knowledge of spell." (Ibid. p.54 i)</p>
-
-<p>Not all do, but some know how to do this thing (you know they do), the knack and techne: to spell, to cast, to perform these actions and these words that oscillate along the temporal and spatial plane of absence/presence, the 'here and now' and the 'there and then'. They know the grammar, the syntax, the lexicon, the contiguity of elements. And those labels are really not metaphors. They are literal and our literacy. Many more of us homo sapiens are savvy and this practice is heart-felt. We just don't know we know. Maybe we should let Ingrid Pumayalla show us the way, lead us in a song or an incantated dance down a narrow twisting path into a secret garden valley as dry as time and as human as death.</p>
-
-<p><strong>[2/iskay: performativity]</strong></p>
-
-<p>This artist seems to me to be able to get 'performance' to 'do' more, which may be a truly positive thing—the 'doing' I mean. Performance art is a tough medium to work in in so far as it often requires documentation, audience/viewer narrativity and narration, and even the challenges of claims of theatricality to be dealt with.<sup>1</sup></p>
-
-<p>Much, perhaps too much, has been said about the Austinian origins of Speech Act Theory and its far reaching influences on how we can understand the cultural consequences of form and context performing meaning, giving agency to the user of word and/or gesture (paralanguage) actioned in the 'right way' at the 'right place' and the 'right time' by the 'right person', All verbal language and social code is in fact functional in its and to a degree this way. Choose the material. Make the time. Mark the sequence. Enter the space. Go.</p>
-
-<p>But what about the performativity of the 'magical language', verbal or not, of the charm or spell? What's interesting here is that we can perhaps question whether, in this instance, when casting (a spell), we are 'sending out' words/speech sounds/phonation that have agency 'in and for themselves'—animated words and animated worlds that can live and can act independently, like universal matter in collision with other universal objects. This is not an idea that traditional semantics would accept. But we are dealing with the nature of nature here. This supernatural power and supra-nature. Quantum language and quantum linguistics? I may feel empowered to have the magic words, the passcode, the key, the encrypted message. But it is the magic words themselves that have the power.</p>
-
-<p><strong>[Kimsa-3: a dream]</strong></p>
-
-<p>I dreamt a reverie yesterday (7/6/2026) that Ana Mendieta and Richard Long collaborated on a project called <em>Meet me in Australia</em>, whereby he would travel (probably mostly walking) from London to Sydney across the semi-circumference of planet earth; she would journey through the centre, a place not unknown to her. Then on their arrival or soon after there would be a panel discussion in the Sydney Opera House moderated by Ingrid the puma. It's only a dream, right?</p>
-
-<p>Roger Orwell<br />
-London, June 2026</p>
-
-<p><sup>1</sup> In relation to this and digressing far from a critique of contemporary art, the adjectival 'performative' has latterly become a pejorative/negative term in media punditry. This is perhaps emanating from the visceral attacks by far right-wing US politics on gender theory and critical theory more widely. (Someone needs to tell Fox News anchors they need to go back to grad school and gen up on the normative/un marked meaning)</p>
-
-<p>© Roger Orwell. All rights reserved. Please do not use without permission.</p>
-        `,
-        es: `
-<p><em>A de Andes, Atacama, altiplano, alpaca, ayahuasca...<br />
-B de sangre, carga, traición...<br />
-C de encanto, canto...</em></p>
-
-<p><strong>Reflexiones sobre la obra de Ingrid Pumayalla</strong></p>
-
-<p>Ingrid la puma es una artista contemporánea, una artista del territorio proveniente del territorio del Perú. Es amiga mía. Camina la tierra, trabaja, se maravilla y deambula; y a veces crea obras de arte, elaboraciones cargadas de hechizo y de vínculo. A veces canta. Podrías llamarla bruja, chamana o dríade. Yo no lo haría.</p>
-
-<p><strong>[1/huk: magia]</strong></p>
-
-<p>No hay razón para entender lo esotérico, lo mágico, lo artístico y lo sublime como fenómenos mistificados o cuasi religiosos. Pueden ser al mismo tiempo pragmáticos y abstractos. Pueden ser traídos «a la tierra», al barro y a la aspereza, y quizá deban serlo para funcionar del modo en que los seres humanos los concibieron. Desde tiempos remotos hemos necesitado calmar el viento, llamar a la lluvia, protegernos de habitantes peligrosos con quienes compartimos el mundo, desviar el peligro a nuestro favor e incluso invocar ayuda de seres afines que normalmente no percibimos a nuestro alrededor.</p>
-
-<p>En su libro <em>Magic, Science and Religion and Other Essays</em> (1948), el antropólogo social Bronislaw Malinowski desarrolla un argumento basado en la etnografía sobre la existencia de prácticas reservadas y protegidas, transmitidas históricamente de generación en generación con fines prácticos: agrícolas, hortícolas, medicinales, rituales de parentesco, entre otros. Malinowski escribe que «la fórmula es siempre el núcleo de la ejecución mágica» y que «el conocimiento de la magia significa conocimiento del hechizo». (Ibid. p.54 i)</p>
-
-<p>No todos saben hacerlo, pero algunos sí conocen este arte —y sabes que existen—: la destreza y la técnica de conjurar, de invocar, de ejecutar acciones y palabras que oscilan entre los planos temporales y espaciales de la ausencia y la presencia, del «aquí y ahora» y el «allá y entonces». Conocen la gramática, la sintaxis, el léxico y la contigüidad de los elementos. Y estas palabras no son metáforas. Son literales y forman parte de nuestra propia alfabetización. Muchos más de nosotros, como especie, participamos de estas prácticas de lo que creemos. Simplemente no sabemos que lo sabemos. Quizá deberíamos permitir que Ingrid Pumayalla nos muestre el camino, que nos conduzca mediante un canto o una danza encantada por un sendero estrecho y sinuoso hacia un jardín secreto, tan seco como el tiempo y tan humano como la muerte.</p>
-
-<p><strong>[2/iskay: performatividad]</strong></p>
-
-<p>Esta artista parece ser capaz de hacer que la «performance» haga más, lo cual puede ser algo verdaderamente positivo —el «hacer» propiamente dicho—. El arte de acción es un medio complejo, en la medida en que suele requerir documentación, narratividad y narración de audiencia/espectador, e incluso enfrentarse a los problemas asociados a las acusaciones de teatralidad.<sup>1</sup></p>
-
-<p>Mucho, quizá demasiado, se ha escrito sobre los orígenes de la Teoría de los Actos de Habla de Austin y sobre la enorme influencia que ha tenido en nuestra comprensión de cómo la forma y el contexto producen significado, otorgando agencia a quien utiliza palabras y/o gestos (paralenguaje) en el lugar adecuado, en el momento adecuado y por la persona adecuada. Todo lenguaje verbal y todo código social funcionan, de algún modo y hasta cierto grado, de esta manera. Elegir el material. Crear el tiempo. Marcar la secuencia. Entrar en el espacio. Actuar.</p>
-
-<p>Pero ¿qué ocurre con la performatividad del lenguaje mágico, verbal o no verbal, propio del encantamiento o del hechizo? Lo interesante es que aquí podemos preguntarnos si, al lanzar (un hechizo), estamos «enviando» palabras, sonidos o fonaciones dotadas de agencia propia «en y para sí mismas»: palabras animadas y mundos animados capaces de vivir y actuar independientemente, como si fueran materia universal en colisión con otros cuerpos universales. Esta es una idea que la semántica tradicional difícilmente aceptaría. Pero aquí estamos tratando con la naturaleza de la naturaleza. Este poder sobrenatural y la supranaturaleza. ¿Lenguaje cuántico y lingüística cuántica? Yo puedo sentirme empoderado por tener las palabras mágicas, la contraseña, la llave, el mensaje cifrado. Sin embargo, son las propias palabras mágicas las que poseen el poder.</p>
-
-<p><strong>[Kimsa-3: un sueño]</strong></p>
-
-<p>Ayer, 7 de junio de 2026, soñé una ensoñación en la que Ana Mendieta y Richard Long colaboraban en un proyecto llamado <em>Meet me in Australia</em>. Él viajaría —probablemente caminando gran parte del trayecto— desde Londres hasta Sídney recorriendo la semicircunferencia del planeta; ella atravesaría el centro de la Tierra, un lugar que no le era desconocido. Después de su llegada, o poco tiempo más tarde, tendría lugar una mesa redonda en la Ópera de Sídney moderada por Ingrid la puma. Después de todo, solo es un sueño, ¿verdad?</p>
-
-<p>Roger Orwell<br />
-Londres, junio de 2026</p>
-
-<p><sup>1</sup> En relación con esto, y alejándome de la crítica al arte contemporáneo, el término adjetival «performativo» se ha convertido últimamente en un término peyorativo o negativo dentro de la crítica mediática. Esto proviene quizás de los ataques viscerales lanzados por la política de extrema derecha estadounidense contra la teoría de género y, más ampliamente, contra la teoría crítica. (Alguien debería decirle a los presentadores de Fox News que vuelvan a la universidad y se pongan al día con el significado normativo/no marcado.)</p>
-
-<p>© Roger Orwell. Todos los derechos reservados. Por favor, no usar sin permiso.</p>
-        `
-      }
-      }
+    }
   ]
 },
 
@@ -2641,11 +2705,6 @@ In 2017, she returned to Pantipata with her sister Francisca. This reunion with 
   ]
 
   },
-
-
-
-  
-
 
 
   "sobre-el-camino": {
@@ -2900,4 +2959,4 @@ Through the relationship between my grandmother, my mother, and myself, I explor
 }
 
 
-}
+};
