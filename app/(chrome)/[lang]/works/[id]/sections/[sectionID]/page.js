@@ -77,9 +77,11 @@ export default function WorkSectionPage() {
           )}
 
           <div className="max-w-[520px] mx-auto mt-8 md:mt-32 px-2">
+            {sectionID !== "reflexiones" && (
             <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-12 md:mb-24 text-center">
               {title}
             </h1>
+            )}
 
             {text && (
               <div
