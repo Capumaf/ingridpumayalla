@@ -2356,7 +2356,7 @@ como un huaco gigante que vigila.</p>
     ]
   },
 
- "ofrendas-offerings": {
+"ofrendas-offerings": {
   title: "Ofrendas/Offerings",
 
   imageData: [
@@ -2369,24 +2369,55 @@ como un huaco gigante que vigila.</p>
   ],
 
   text: {
-  en: `<p></p>`,
-  es: `<p></p>`
+  en: `
+<p>This series of videos has been made over the course of ten years, between Peru and the United Kingdom, from Parcate in the Andes to the Isle of Arran in Scotland.</p>
+
+<p>Across these works, la ofrenda — the offering — becomes a gesture of reciprocity. I think about trueque, an Andean practice of exchange in which goods, knowledge, ideas and experiences are shared between people and communities. I bring this idea into my relationship with the territories that receive me.</p>
+
+<p>Through ritual gestures, I exchange with the landscape. I activate the stone, the circle, the fire, the water, the hair and the thread. These materials become ways of communicating with a place. Hair, like the stone or fire, becomes a kind of universal language through which I leave something of my body in the territory and, at the same time, receive something from it.</p>
+
+<p>Moving between Peru and the UK has made me think about how we carry one place within us while entering another. These rituals help me feel rooted and grounded in different territories.</p>
+
+<p>The performances hold moments of arrival, departure, blessing and mourning. My body becomes the place where these experiences meet. Through giving, listening and exchanging with the landscape, the body is charged by these experiences and, in this process, finds its own way of healing.</p>
+  `,
+  es: `
+<p>Esta serie de videos ha sido realizada a lo largo de diez años, entre Perú y el Reino Unido, desde Parcate en los Andes hasta la Isla de Arran en Escocia.</p>
+
+<p>A través de estas obras, la ofrenda se convierte en un gesto de reciprocidad. Pienso en el trueque, una práctica andina de intercambio en la que bienes, saberes, ideas y experiencias son compartidos entre personas y comunidades. Traigo esta idea a mi relación con los territorios que me reciben.</p>
+
+<p>A través de gestos rituales, intercambio con el paisaje. Activo la piedra, el círculo, el fuego, el agua, el cabello y el hilo. Estos materiales se convierten en formas de comunicarse con un lugar. El cabello, al igual que la piedra o el fuego, se convierte en una especie de lenguaje universal a través del cual dejo algo de mi cuerpo en el territorio y, al mismo tiempo, recibo algo de él.</p>
+
+<p>Moverme entre Perú y el Reino Unido me ha hecho pensar en cómo llevamos un lugar dentro de nosotros mientras entramos en otro. Estos rituales me ayudan a sentirme arraigada y con los pies en la tierra en distintos territorios.</p>
+
+<p>Las performances contienen momentos de llegada, partida, bendición y duelo. Mi cuerpo se convierte en el lugar donde estas experiencias se encuentran. A través de dar, escuchar e intercambiar con el paisaje, el cuerpo se carga de estas experiencias y, en este proceso, encuentra su propia forma de sanar.</p>
+  `
 },
+
+  artworkDetails: {
+    en: [
+      `El abrazo<br />
+      Still from Video<br />
+      2021`
+    ],
+    es: [
+      `El abrazo<br />
+      Fotograma de video<br />
+      2021`
+    ]
+  },
 
   sections: [
     {
       id: "reflexiones",
       title: {
-        en: "Thoughts on the work of Ingrid Pumayalla",
-        es: "Reflexiones sobre la obra de Ingrid Pumayalla"
+        en: "Thoughts on the work of Ingrid Pumayalla By Roger Orwell",
+        es: "Reflexiones sobre la obra de Ingrid Pumayalla por Roger Orwell"
       },
-      text: {
+     text: {
         en: `
-<p><em>A is for Andes, Atacama, altiplano, alpaca, ayahuasca . . .<br />
-B is for blood, burden, betrayal . . .<br />
-C is charm, chant . . .</em></p>
-
-<p><strong>Thoughts on the work of Ingrid Pumayalla</strong></p>
+<p><em><strong>A</strong> is for <strong>A</strong>ndes, <strong>A</strong>tacama, <strong>a</strong>ltiplano, <strong>a</strong>lpaca, <strong>a</strong>yahuasca . . .<br />
+<strong>B</strong> is for <strong>b</strong>lood, <strong>b</strong>urden, <strong>b</strong>etrayal . . .<br />
+<strong>C</strong> is <strong>c</strong>harm, <strong>c</strong>hant . . .</em></p>
 
 <p>Ingrid the puma is a contemporary artist, a land artist from the land of Peru. She is a friend of mine. She walks the earth and labours and wonders and wanders and sometimes she makes artworks, concoctions that are spell-bound and binding. Sometimes she sings. You might call her a witch or a shaman or a dryad. I wouldn't though.</p>
 
@@ -2416,13 +2447,18 @@ London, June 2026</p>
 <p><sup>1</sup> In relation to this and digressing far from a critique of contemporary art, the adjectival 'performative' has latterly become a pejorative/negative term in media punditry. This is perhaps emanating from the visceral attacks by far right-wing US politics on gender theory and critical theory more widely. (Someone needs to tell Fox News anchors they need to go back to grad school and gen up on the normative/un marked meaning)</p>
 
 <p>© Roger Orwell. All rights reserved. Please do not use without permission.</p>
+
+<p><strong>Author profile:</strong><br />
+Roger Orwell is a writer and a tutor at University of the Arts London. He has an academic background in Linguistics, English Literature and Critical Theory with post graduate research in the interstices of Philosophy, Visual literature and Contemporary art.</p>
+
+<p><strong>Abstract</strong><br />
+In this text of 2026 the author builds a creative and critical fugue on the work of Peruvian artist Ingrid Pumayalla.</p>
         `,
         es: `
-<p><em>A de Andes, Atacama, altiplano, alpaca, ayahuasca...<br />
-B de brote, bulto, brecha...<br />
-C de canto, contacto, curación...</em></p>
+<p><em><strong>A</strong> de <strong>A</strong>ndes, <strong>A</strong>tacama, <strong>a</strong>ltiplano, <strong>a</strong>lpaca, <strong>a</strong>yahuasca...<br />
+<strong>B</strong> de <strong>b</strong>rote, <strong>b</strong>ulto, <strong>b</strong>recha...<br />
+<strong>C</strong> de <strong>c</strong>anto, <strong>c</strong>ontacto, <strong>c</strong>uración...</em></p>
 
-<p><strong>Reflexiones sobre la obra de Ingrid Pumayalla</strong></p>
 
 <p>Ingrid la puma es una artista contemporánea, una artista del territorio proveniente del territorio del Perú. Es amiga mía. Camina la tierra, trabaja, se maravilla y deambula; y a veces crea obras de arte, elaboraciones cargadas de hechizo y de vínculo. A veces canta. Podrías llamarla bruja, chamana o dríade. Yo no lo haría.</p>
 
@@ -2452,6 +2488,12 @@ Londres, junio de 2026</p>
 <p><sup>1</sup> En relación con esto, y alejándome de la crítica al arte contemporáneo, el término adjetival «performativo» se ha convertido últimamente en un término peyorativo o negativo dentro de la crítica mediática. Esto proviene quizás de los ataques viscerales lanzados por la política de extrema derecha estadounidense contra la teoría de género y, más ampliamente, contra la teoría crítica. (Alguien debería decirle a los presentadores de Fox News que vuelvan a la universidad y se pongan al día con el significado normativo/no marcado.)</p>
 
 <p>© Roger Orwell. Todos los derechos reservados. Por favor, no usar sin permiso.</p>
+
+<p><strong>Perfil del autor:</strong><br />
+Roger Orwell es escritor y profesor en la University of the Arts London. Tiene formación académica en Lingüística, Literatura Inglesa y Teoría Crítica, con investigación de posgrado en los intersticios entre Filosofía, literatura visual y arte contemporáneo.</p>
+
+<p><strong>Resumen</strong><br />
+En este texto de 2026, el autor construye una fuga creativa y crítica sobre la obra de la artista peruana Ingrid Pumayalla.</p>
         `
       }
     },
@@ -2555,6 +2597,47 @@ Londres, junio de 2026</p>
   }
 ],
 
+      artworkDetails: {
+        en: [
+          `Ehwaz<br />
+          Giclée photographic print on satin paper<br />
+          60 × 60 cm<br />
+          Edition of 10<br />
+          2022`,
+
+          `White Horse Prayer I<br />
+          Giclée photographic print on satin paper<br />
+          60 × 60 cm<br />
+          Edition of 10<br />
+          2022`,
+
+          `White Horse Prayer II<br />
+          Giclée photographic print on satin paper<br />
+          100 × 100 cm<br />
+          Edition of 10<br />
+          2022`
+        ],
+        es: [
+          `Ehwaz<br />
+          Impresión fotográfica giclée sobre papel satinado<br />
+          60 × 60 cm<br />
+          Edición de 10<br />
+          2022`,
+
+          `Plegaria al caballo blanco I<br />
+          Impresión fotográfica giclée sobre papel satinado<br />
+          60 × 60 cm<br />
+          Edición de 10<br />
+          2022`,
+
+          `Plegaria al caballo blanco II<br />
+          Impresión fotográfica giclée sobre papel satinado<br />
+          100 × 100 cm<br />
+          Edición de 10<br />
+          2022`
+        ]
+      },
+
 videoData: [
   {
     id: "plegaria-al-caballo-blanco",
@@ -2564,7 +2647,11 @@ videoData: [
     duration: "00:29"
   }
 ]
+
     },
+
+    
+
 
     {
   id: "the-hair-cut",
@@ -2637,7 +2724,7 @@ videoData: [
 
     },
 
-    {
+ {
       id: "yuraq-warmi-yana-warmi",
       title: "Yuraq Warmi, Yana Warmi",
 
@@ -2649,31 +2736,58 @@ videoData: [
       },
 
       text: {
-        es: `
-<p>Texto introductorio de Yuraq Warmi, Yana Warmi.</p>
-        `,
         en: `
-<p>Introductory text for Yuraq Warmi, Yana Warmi.</p>
+<p>6'24" video<br />
+Filmed on the Isle of Arran, Scotland, 2015</p>
+
+<p>On 24 December 2015, I visited the Machrie Moor standing stones on the Isle of Arran, Scotland. The stones date from the Neolithic period, between 3500 and 1500 BC. I went there at a moment of transition in my own life. I had just received permission to remain in the UK for the following four years, and I wanted to acknowledge the land I was about to inhabit.</p>
+
+<p>I cut my hair among the stones and offered it to the landscape. My hair was part of my body, but also part of my personal history. Cutting it became a way of marking a change, leaving something behind and entering into a relationship with a new territory.</p>
+
+<p>The gesture also connects with my relationship to Peruvian traditions of hair and weaving. Hair and thread carry memories of the body, of identity and of where we come from. Through this action, I brought together two places and two cultural experiences, using the act of offering as a way of connecting them.</p>
+
+<p>For me, the work is about arrival and belonging. It is about entering a place that has its own history and asking how I might become part of it without forgetting where I came from.</p>
+
+<p>The performance became a small personal ritual: an acknowledgement of the land, of the stones, and of the possibility of beginning a new cycle.</p>
+        `,
+        es: `
+<p>Video de 6'24"<br />
+Filmado en la Isla de Arran, Escocia, 2015</p>
+
+<p>El 24 de diciembre de 2015, visité las piedras verticales de Machrie Moor en la Isla de Arran, Escocia. Las piedras datan del periodo Neolítico, entre 3500 y 1500 a. C. Fui allí en un momento de transición en mi propia vida. Acababa de recibir permiso para permanecer en el Reino Unido durante los siguientes cuatro años, y quería reconocer la tierra que estaba por habitar.</p>
+
+<p>Me corté el cabello entre las piedras y lo ofrecí al paisaje. Mi cabello era parte de mi cuerpo, pero también parte de mi historia personal. Cortármelo se convirtió en una forma de marcar un cambio, dejar algo atrás y entrar en relación con un nuevo territorio.</p>
+
+<p>El gesto también se conecta con mi relación con las tradiciones peruanas del cabello y el tejido. El cabello y el hilo llevan memorias del cuerpo, de la identidad y de dónde venimos. A través de esta acción, uní dos lugares y dos experiencias culturales, usando el acto de ofrenda como una forma de conectarlos.</p>
+
+<p>Para mí, la obra trata sobre la llegada y la pertenencia. Se trata de entrar en un lugar que tiene su propia historia y preguntarme cómo puedo formar parte de él sin olvidar de dónde vengo.</p>
+
+<p>La performance se convirtió en un pequeño ritual personal: un reconocimiento de la tierra, de las piedras y de la posibilidad de comenzar un nuevo ciclo.</p>
         `
       },
 
       artworkDetails: {
-  es: [
-    ``,
+        en: [
+          `Drawing an Infinite Line in Arran<br />
+          Giclée photographic print<br />
+          50 × 50 cm<br />
+          Edition of 20<br />
+          2016`,
 
-    `Yuraq Warmi, Yana Warmi<br />
-    Video<br />
-    3'23"<br />`
-    ],
+          `Yuraq Warmi, Yana Warmi<br />
+          Video`
+        ],
+        es: [
+          `Dibujando una línea infinita en Arran<br />
+          Impresión fotográfica giclée<br />
+          50 × 50 cm<br />
+          Edición de 20<br />
+          2016`,
 
-    en: [
-    ``,
-
-    `Yuraq Warmi, Yana Warmi<br />
-     Video<br /> 
-     3'23"<br />`
-     ]
-     },
+          `Yuraq Warmi, Yana Warmi<br />
+          Video`
+        ]
+      },
 
   mediaData: [
         {
