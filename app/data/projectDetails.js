@@ -88,6 +88,18 @@ Curator of the exhibition
     poster: "/adonde-fueron-las-criaturas-del-bosque-cover.webp",
     duration: "00:26"
   },
+  {
+    id: "creatures-and-foxes",
+    title: "Creatures and Foxes",
+    duration: "13'20\"",
+    vimeoUrl: "https://vimeo.com/1219647261"
+  },
+  {
+    id: "where-did-the-creatures-from-the-forest-go",
+    title: "Where Did the Creatures from the Forest Go?",
+    duration: "21'20\"",
+    vimeoUrl: "https://vimeo.com/121964408"
+  },
     ], 
 
    artworkDetails: {
@@ -910,6 +922,18 @@ artworkDetails: {
         `Cantos Matrios<br />
         Performance documentation<br />
         Photograph by Lucio Mora<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Detail of installation<br />
+        Projection on wood<br />
+        Dimensions variable<br />
+        Photo by Lucio Mora<br />
+        2021`,
+
+        `Nuevas Criaturas<br />
+        Still from the video<br />
+        7'18"<br />
         2021`
       ],
       es: [
@@ -970,6 +994,18 @@ artworkDetails: {
         `Cantos Matrios<br />
         Documentación de performance<br />
         Fotografía de Lucio Mora<br />
+        2021`,
+
+        `Cantos Matrios<br />
+        Detalle de instalación<br />
+        Proyección sobre madera<br />
+        Dimensiones variables<br />
+        Foto de Lucio Mora<br />
+        2021`,
+
+        `Nuevas Criaturas<br />
+        Fotograma del video<br />
+        7'18"<br />
         2021`
       ]
     },
@@ -988,6 +1024,14 @@ artworkDetails: {
       { id: "11", src: "/Cantos11.webp", width: 1200, height: 800 },
       { id: "12", src: "/Cantos12.webp", width: 1200, height: 800 },
       { id: "13", src: "/Cantos13.webp", width: 1200, height: 800 }
+    ],
+
+    videoData: [
+      {
+        id: "nuevas-criaturas",
+        title: "Nuevas Criaturas",
+        vimeoUrl: "https://vimeo.com/499457970"
+      }
     ]
   },
 
@@ -1005,6 +1049,12 @@ artworkDetails: {
 <p>The work draws inspiration from Ursula K. Le Guin's <em>The Carrier Bag Theory of Fiction</em>, in which the carrier bag is proposed as one of humanity's first technologies: a container used not for conquest, but for gathering, holding, and sustaining life. In this sense, Curiwarmi's textile becomes a carrier bag of memory and transformation. It collects traces of different worlds, allowing stories, knowledge, and care to travel across time and geography.</p>
 
 <p>Rather than narrating a heroic journey, the work imagines survival through connection. Curiwarmi carries with her fragments of the Amazon, weaving them into new landscapes and new narratives, where the possibility of collective futures can still be imagined.</p>
+
+<p>Curiwarmi is a hybrid creature who journeys from the Amazon to Europe, carrying memories, stories, and ancestral knowledge across landscapes. Set within a speculative world shaped by ecological transformation and uncertainty, the work imagines new possibilities emerging from the ruins of existing systems.</p>
+
+<p>Throughout the triptych, Curiwarmi's body and the textile she creates become vessels for communication, weaving together different territories, species, and temporalities. The textile functions as a carrier of songs, memories, and relationships, proposing alternative ways of inhabiting the world.</p>
+
+<p>Inspired by Ursula K. Le Guin's The Carrier Bag Theory of Fiction, the work understands storytelling as an act of gathering rather than conquest. Curiwarmi's woven forms collect traces of multiple worlds, carrying them toward futures grounded in care, connection, and collective survival.</p>
   `,
 
   es: `
@@ -1017,50 +1067,68 @@ artworkDetails: {
 <p>La obra se inspira en <em>The Carrier Bag Theory of Fiction</em> de Ursula K. Le Guin, donde la bolsa contenedora es propuesta como una de las primeras tecnologías de la humanidad: un recipiente utilizado no para la conquista, sino para reunir, contener y sostener la vida. En este sentido, el textil de Curiwarmi se convierte en una bolsa portadora de memoria y transformación. Recoge rastros de distintos mundos, permitiendo que historias, conocimientos y cuidados viajen a través del tiempo y la geografía.</p>
 
 <p>Más que narrar un viaje heroico, la obra imagina la supervivencia a través de la conexión. Curiwarmi lleva consigo fragmentos de la Amazonía, entretejiéndolos en nuevos paisajes y nuevas narrativas, donde la posibilidad de futuros colectivos aún puede ser imaginada.</p>
+
+<p>Curiwarmi es una criatura híbrida que viaja desde la Amazonía hasta Europa, portando memorias, historias y conocimiento ancestral a través de los paisajes. Situada dentro de un mundo especulativo moldeado por la transformación ecológica y la incertidumbre, la obra imagina nuevas posibilidades que emergen de las ruinas de los sistemas existentes.</p>
+
+<p>A lo largo del tríptico, el cuerpo de Curiwarmi y el textil que crea se convierten en vehículos de comunicación, entrelazando distintos territorios, especies y temporalidades. El textil funciona como portador de cantos, memorias y relaciones, proponiendo formas alternativas de habitar el mundo.</p>
+
+<p>Inspirada en The Carrier Bag Theory of Fiction de Ursula K. Le Guin, la obra entiende la narración como un acto de recolección más que de conquista. Las formas tejidas de Curiwarmi recogen rastros de múltiples mundos, llevándolos hacia futuros fundados en el cuidado, la conexión y la supervivencia colectiva.</p>
   `
 },
 
 artworkDetails: {
-  en: [
-    `Curiwarmi Lunar I<br />
-    Giclee photographic print on metallic paper<br />
-    120 × 150 cm<br />
-    Edition of 10<br />
-    2022`,
+    en: [
+      `Curiwarmi Lunar I<br />
+      Giclée photographic print on metallic paper<br />
+      150 × 120 cm<br />
+      Edition of 10<br />
+      2022`,
 
-    `Curiwarmi Lunar II<br />
-    Giclee photographic print on metallic paper<br />
-    120 × 150 cm<br />
-    Edition of 10<br />
-    2022`,
+      `Curiwarmi Lunar II<br />
+      Giclée photographic print on metallic paper<br />
+      150 × 120 cm<br />
+      Edition of 10<br />
+      2022`,
 
-    `Curiwarmi Lunar III<br />
-    Giclee photographic print on metallic paper<br />
-    120 × 150 cm<br />
-    Edition of 10<br />
-    2022`
-  ],
+      `Curiwarmi Lunar III<br />
+      Giclée photographic print on metallic paper<br />
+      150 × 120 cm<br />
+      Edition of 10<br />
+      2022`,
 
-  es: [
-    `Curiwarmi Lunar I<br />
-    Impresión fotográfica giclée sobre papel metálico<br />
-    120 × 150 cm<br />
-    Edición de 10<br />
-    2022`,
+      `Curiwarmi Lunar<br />
+      Installation view<br />
+      Giclée prints on metallic paper, knitted plaits, Chimú vessel huaco, caliza stone, monitor, video<br />
+      Dimensions variable<br />
+      2024`
+    ],
 
-    `Curiwarmi Lunar II<br />
-    Impresión fotográfica giclée sobre papel metálico<br />
-    120 × 150 cm<br />
-    Edición de 10<br />
-    2022`,
+    es: [
+      `Curiwarmi Lunar I<br />
+      Impresión fotográfica giclée sobre papel metálico<br />
+      150 × 120 cm<br />
+      Edición de 10<br />
+      2022`,
 
-    `Curiwarmi Lunar III<br />
-    Impresión fotográfica giclée sobre papel metálico<br />
-    120 × 150 cm<br />
-    Edición de 10<br />
-    2022`
-  ]
-},
+      `Curiwarmi Lunar II<br />
+      Impresión fotográfica giclée sobre papel metálico<br />
+      150 × 120 cm<br />
+      Edición de 10<br />
+      2022`,
+
+      `Curiwarmi Lunar III<br />
+      Impresión fotográfica giclée sobre papel metálico<br />
+      150 × 120 cm<br />
+      Edición de 10<br />
+      2022`,
+
+      `Curiwarmi Lunar<br />
+      Vista de instalación<br />
+      Impresiones giclée sobre papel metálico, trenzas tejidas, huaco vasija Chimú, piedra caliza, monitor, video<br />
+      Dimensiones variables<br />
+      2024`
+    ]
+  },
 
     imageData: [
       { id: "1", src: "/CuriwarmiLunar2.webp", width: 1200, height: 800 },
@@ -1134,7 +1202,13 @@ artworkDetails: {
     Giclee photographic print on satin paper<br />
     70 × 50 cm<br />
     Edition of 15<br />
-    2023`
+    2023`,
+
+      `Dancing with Gauze on the Sombreiro Tree<br />
+      Giclée printed photograph on satin paper<br />
+      77 × 51 cm<br />
+      Edition of 10<br />
+      2022`
   ],
 
   es: [
@@ -1160,7 +1234,13 @@ artworkDetails: {
     Impresión fotográfica giclée sobre papel satinado<br />
     70 × 50 cm<br />
     Edición de 15<br />
-    2023`
+    2023`,
+
+      `Dancing with Gauze on the Sombreiro Tree<br />
+      Fotografía impresa en giclée sobre papel satinado<br />
+      77 × 51 cm<br />
+      Edición de 10<br />
+      2022`
   ]
 },
 
@@ -1636,160 +1716,100 @@ videoData: [
     },
 
      artworkDetails: {
-  es: [
-    `
-    <em>Giving birth to a Pomegranate I</em><br/>
-    70 × 70 cm<br/>
-    Impresión fotográfica giclée sobre papel metálico.<br/>
-    Ed. 15
-    `,
+    en: [
+      `Giving birth to a Pomegranate I<br/>
+      70 × 70 cm<br/>
+      Giclée photographic print on metallic paper<br/>
+      Ed. 15`,
 
-    `
-    <em>Giving birth to a Pomegranate II</em><br/>
-    70 × 70 cm<br/>
-    Impresión fotográfica giclée sobre papel Awagami Unryu.<br/>
-    Ed. 10
-    `,
+      `Giving birth to a Pomegranate II<br/>
+      70 × 70 cm<br/>
+      Giclée photographic print on Awagami Unryu paper<br/>
+      Ed. 10`,
 
-    `
-    <em>Giving birth to a Pomegranate III</em><br/>
-    70 × 70 cm<br/>
-    Impresión fotográfica giclée sobre papel Awagami Unryu.<br/>
-    Ed. 10
-    `,
+      `Giving birth to a Pomegranate III<br/>
+      70 × 70 cm<br/>
+      Giclée photographic print on Awagami Unryu paper<br/>
+      Ed. 10`,
 
-    `
-    <em>Giving birth to a Pomegranate IV</em><br/>
-    70 × 70 cm<br/>
-    Impresión fotográfica giclée sobre papel Awagami Unryu.<br/>
-    Ed. 10
-    `,
+      `Giving birth to a Pomegranate IV<br/>
+      70 × 70 cm<br/>
+      Giclée photographic print on Awagami Unryu paper<br/>
+      Ed. 10`,
 
-    `
-    Documentación de performance<br/>
-    <em>Yo elijo lo que quiero</em><br/>
-    IESA, París<br/>
-    2024
-    `,
+      `Giving birth to a Pomegranate V<br/>
+      70 × 70 cm<br/>
+      Giclée photographic print on Awagami Unryu paper<br/>
+      Ed. 10`,
 
-    `
-    Vista de instalación<br/>
-    Performance <em>Giving birth to a pomegranate</em><br/>
-    Gasa, impresiones fotográficas giclée sobre papel Awagami,
-    jugo de granada, corteza de fresno,
-    semillas de huayruro y agujas metálicas.<br/>
-    Dimensiones variables.<br/>
-    2024
-    `,
+      `Giving birth to a pomegranate<br/>
+      Installation view<br/>
+      Gauze, giclée photographic prints on Awagami paper, pomegranate juice, ash bark, huayruro seeds, metal needles<br/>
+      Dimensions variable<br/>
+      2024`,
 
-    `
-    Vista de instalación<br/>
-    Performance <em>Giving birth to a pomegranate</em><br/>
-    Gasa, impresiones fotográficas giclée sobre papel Awagami,
-    jugo de granada, corteza de fresno,
-    semillas de huayruro y agujas metálicas.<br/>
-    Dimensiones variables.<br/>
-    2024
-    `,
+      `Performance Documentation<br/>
+      Yo elijo lo que quiero exhibition<br/>
+      2024`,
 
-    `
-    Vista de instalación<br/>
-    Performance <em>Giving birth to a pomegranate</em><br/>
-    Gasa, impresiones fotográficas giclée sobre papel Awagami,
-    jugo de granada, corteza de fresno,
-    semillas de huayruro y agujas metálicas.<br/>
-    Dimensiones variables.<br/>
-    2024
-    `,
+      `Performance Giving birth to a pomegranate<br/>
+      Gauze, giclée photographic prints on Awagami paper, pomegranate juice, ash bark, huayruro seeds, metal needles<br/>
+      Dimensions variable<br/>
+      2024`,
 
-    `
-    Vista de instalación<br/>
-    Performance <em>Giving birth to a pomegranate</em><br/>
-    Gasa, impresiones fotográficas giclée sobre papel Awagami,
-    jugo de granada, corteza de fresno,
-    semillas de huayruro y agujas metálicas.<br/>
-    Dimensiones variables.<br/>
-    2024
-    `
-  ],
+      `Installation view<br/>
+      Gauze, giclée photographic prints on Awagami paper, pomegranate juice, ash bark, huayruro seeds, metal needles<br/>
+      Dimensions variable<br/>
+      2024`
+    ],
 
-  en: [
-    `
-    <em>Giving birth to a Pomegranate I</em><br/>
-    70 × 70 cm<br/>
-    Giclée photographic print on metallic paper.<br/>
-    Ed. 15
-    `,
+    es: [
+      `Giving birth to a Pomegranate I<br/>
+      70 × 70 cm<br/>
+      Impresión fotográfica giclée sobre papel metálico<br/>
+      Ed. 15`,
 
-    `
-    <em>Giving birth to a Pomegranate II</em><br/>
-    70 × 70 cm<br/>
-    Giclée photographic print on Awagami Unryu paper.<br/>
-    Ed. 10
-    `,
+      `Giving birth to a Pomegranate II<br/>
+      70 × 70 cm<br/>
+      Impresión fotográfica giclée sobre papel Awagami Unryu<br/>
+      Ed. 10`,
 
-    `
-    <em>Giving birth to a Pomegranate III</em><br/>
-    70 × 70 cm<br/>
-    Giclée photographic print on Awagami Unryu paper.<br/>
-    Ed. 10
-    `,
+      `Giving birth to a Pomegranate III<br/>
+      70 × 70 cm<br/>
+      Impresión fotográfica giclée sobre papel Awagami Unryu<br/>
+      Ed. 10`,
 
-    `
-    <em>Giving birth to a Pomegranate IV</em><br/>
-    70 × 70 cm<br/>
-    Giclée photographic print on Awagami Unryu paper.<br/>
-    Ed. 10
-    `,
+      `Giving birth to a Pomegranate IV<br/>
+      70 × 70 cm<br/>
+      Impresión fotográfica giclée sobre papel Awagami Unryu<br/>
+      Ed. 10`,
 
-    `
-    Performance Documentation<br/>
-    <em>Yo elijo lo que quiero</em><br/>
-    IESA, Paris<br/>
-    2024
-    `,
+      `Giving birth to a Pomegranate V<br/>
+      70 × 70 cm<br/>
+      Impresión fotográfica giclée sobre papel Awagami Unryu<br/>
+      Ed. 10`,
 
-    `
-    Installation View<br/>
-    Performance <em>Giving birth to a pomegranate</em><br/>
-    Gauze, giclée photographic prints on Awagami paper,
-    pomegranate juice, ash bark,
-    huayruro seeds, metal needles.<br/>
-    Dimensions variable.<br/>
-    2024
-    `,
+      `Giving birth to a pomegranate<br/>
+      Vista de instalación<br/>
+      Gasa, impresiones fotográficas giclée sobre papel Awagami, jugo de granada, corteza de fresno, semillas de huayruro y agujas metálicas<br/>
+      Dimensiones variables<br/>
+      2024`,
 
-    `
-    Installation View<br/>
-    Performance <em>Giving birth to a pomegranate</em><br/>
-    Gauze, giclée photographic prints on Awagami paper,
-    pomegranate juice, ash bark,
-    huayruro seeds, metal needles.<br/>
-    Dimensions variable.<br/>
-    2024
-    `,
+      `Documentación de performance<br/>
+      Exposición Yo elijo lo que quiero<br/>
+      2024`,
 
-    `
-    Installation View<br/>
-    Performance <em>Giving birth to a pomegranate</em><br/>
-    Gauze, giclée photographic prints on Awagami paper,
-    pomegranate juice, ash bark,
-    huayruro seeds, metal needles.<br/>
-    Dimensions variable.<br/>
-    2024
-    `,
+      `Performance Giving birth to a pomegranate<br/>
+      Gasa, impresiones fotográficas giclée sobre papel Awagami, jugo de granada, corteza de fresno, semillas de huayruro y agujas metálicas<br/>
+      Dimensiones variables<br/>
+      2024`,
 
-    `
-    Installation View<br/>
-    Performance <em>Giving birth to a pomegranate</em><br/>
-    Gauze, giclée photographic prints on Awagami paper,
-    pomegranate juice, ash bark,
-    huayruro seeds, metal needles.<br/>
-    Dimensions variable.<br/>
-    2024
-    `
-  ]
-},
+      `Vista de instalación<br/>
+      Gasa, impresiones fotográficas giclée sobre papel Awagami, jugo de granada, corteza de fresno, semillas de huayruro y agujas metálicas<br/>
+      Dimensiones variables<br/>
+      2024`
+    ]
+  },
 
 
     imageData: [
@@ -1971,12 +1991,24 @@ es: `
     title: "Matoaka is my name. Matoaka es mi nombre.",
 
     text: {
-      es: `<p>Este proyecto de video y fotografía sigue el recorrido de Matoaka, una joven nativa americana conocida después como Pocahontas. Fue casada a temprana edad con John Rolfe, bautizada como Rebecca, y llevada a Inglaterra, donde murió alrededor de los diecisiete años y fue enterrada en Gravesend, al oeste de Inglaterra. Su historia se hizo ampliamente conocida y más tarde fue adaptada en una película de Disney, contribuyendo a su reconocimiento global bajo el nombre de Pocahontas.</p>
-<p>En este trabajo, regreso a los lugares vinculados a su vida y desplazamiento, incluyendo sitios donde probablemente ocurrió violencia y desarraigo. Al nombrarla Matoaka y recorrer nuevamente estos lugares, busco restituir su presencia más allá de las narrativas mitificadas. Abordando la obra como un acto de hermandad y memoria, creo un espacio ritual de reflexión y sanación, dialogando con aquello que fue borrado, transformado o silenciado en el relato de su historia.</p>
-<p>Este proyecto fue presentado como parte de la exposición colectiva Contemporary American Arts Prize 2022 en el Instituto Cultural Peruano Norteamericano (ICPNA) en Lima (2022).</p>`,
-      en: `<p>This video and photography project follows the journey of Matoaka, a Native American girl later known as Pocahontas. She was married at a young age to John Rolfe, baptized as Rebecca, and taken to England, where she died at around seventeen years old and was buried in Gravesend, in the west of England. Her story became widely known and was later adapted into a Disney film, contributing to her global recognition under the name Pocahontas.</p>
-<p>In this work, I revisit the places connected to her life and movement, including sites where violence and displacement likely occurred. By naming her Matoaka and retracing these locations, I seek to restore her presence beyond mythologized narratives. Approaching the work as a sisterly act of remembrance, I create a ritual space of reflection and healing, engaging with what was erased, transformed, or silenced in the telling of her story.</p>
-<p>This project was presented as part of the Contemporary American Arts Prize 2022 group exhibition at the American Institute in Lima (2022).</p>`
+      en: `
+<p>As a Peruvian migrant living in England, I was often referred to as a 'Pocahontas.' This comparison prompted me to revisit the story of Matoaka, the Powhatan woman whose life was transformed through colonial encounter and later mythologised under the name Pocahontas.</p>
+
+<p>I followed her journey from the place of her birth in Virginia to Gravesend in England, where she died in 1617. Through photography, video, performance, and handmade objects, I retrace these landscapes and create a space for reflection on displacement, colonial memory, and the transformation of women's identities through history.</p>
+
+<p>By returning to the name Matoaka, I seek to move away from the familiar, romanticised image of Pocahontas and toward the person behind the myth. The journey becomes both a historical investigation and a personal act of identification. As a Peruvian migrant navigating England, I reflect on how women who cross territories can be renamed, represented, and understood through narratives created by others.</p>
+
+<p>The work takes the form of a sisterly act of remembrance. Through ritual gestures and encounters with the landscape, I consider what might be recovered from stories that have been erased, displaced, or transformed, and how the body can become a vessel for remembering across distance and time.</p>
+      `,
+      es: `
+<p>Como migrante peruana viviendo en Inglaterra, a menudo me comparaban con «Pocahontas». Esta comparación me llevó a revisitar la historia de Matoaka, la mujer Powhatan cuya vida fue transformada por el encuentro colonial y posteriormente mitificada bajo el nombre de Pocahontas.</p>
+
+<p>Seguí su recorrido desde el lugar de su nacimiento en Virginia hasta Gravesend, en Inglaterra, donde murió en 1617. A través de la fotografía, el video, la performance y objetos hechos a mano, recorro nuevamente estos paisajes y creo un espacio de reflexión sobre el desplazamiento, la memoria colonial y la transformación de las identidades femeninas a través de la historia.</p>
+
+<p>Al regresar al nombre Matoaka, busco alejarme de la imagen familiar y romantizada de Pocahontas para acercarme a la persona detrás del mito. El recorrido se convierte tanto en una investigación histórica como en un acto personal de identificación. Como migrante peruana navegando Inglaterra, reflexiono sobre cómo las mujeres que cruzan territorios pueden ser renombradas, representadas y comprendidas a través de narrativas creadas por otros.</p>
+
+<p>La obra toma la forma de un acto de hermandad y memoria. A través de gestos rituales y encuentros con el paisaje, considero qué podría recuperarse de historias que han sido borradas, desplazadas o transformadas, y cómo el cuerpo puede convertirse en un vehículo para recordar a través de la distancia y el tiempo.</p>
+      `
     },
 
     imageData: [
@@ -1987,9 +2019,9 @@ es: `
       { id: "5", src: "/matoaka5.webp", width: 1200, height: 800 }
     ],
 
-   artworkDetails: {
+    artworkDetails: {
       en: [
-        `Matoaka Is My Name<br />
+        `Matoaka Is My Name / Matoaka es mi nombre<br />
         Giclée photographic print on cotton paper, tarot card, knitted wool piece, huayruro seed<br />
         74 × 74 cm<br />
         Edition of 1<br />
@@ -2007,17 +2039,21 @@ es: `
         Edition of 10<br />
         2022`,
 
+        `Matoaka Is My Name II<br />
+        Giclée photographic print on cotton paper<br />
+        60 × 60 cm<br />
+        Edition of 10<br />
+        2022`,
+
         `The Rope for Matoaka in Gravesend<br />
         Giclée photographic print on cotton paper<br />
         60 × 60 cm<br />
         Edition of 10<br />
         2022`
-
-
       ],
 
       es: [
-        ` Matoaka es mi nombre<br />
+        `Matoaka es mi nombre<br />
         Impresión fotográfica giclée sobre papel de algodón, carta de tarot, pieza tejida de lana, semilla de huayruro<br />
         74 × 74 cm<br />
         Edición de 1<br />
@@ -2030,6 +2066,12 @@ es: `
         2022`,
 
         `Matoaka es mi nombre<br />
+        Impresión fotográfica giclée sobre papel de algodón<br />
+        60 × 60 cm<br />
+        Edición de 10<br />
+        2022`,
+
+        `Matoaka es mi nombre II<br />
         Impresión fotográfica giclée sobre papel de algodón<br />
         60 × 60 cm<br />
         Edición de 10<br />
@@ -2529,6 +2571,23 @@ En este texto de 2026, el autor construye una fuga creativa y crítica sobre la 
     `
   },
 
+
+  artworkDetails: {
+    en: [
+      `Cantos al agua<br />
+      Still from Video<br />
+      Giclée photographic print on cotton paper<br />
+      50 × 30 cm<br />
+      2019`
+    ],
+    es: [
+      `Cantos al agua<br />
+      Fotograma de video<br />
+      Impresión fotográfica giclée sobre papel de algodón<br />
+      50 × 30 cm<br />
+      2019`
+    ]
+  },
   mediaData: [
     {
       id: "1",
@@ -2545,7 +2604,7 @@ En este texto de 2026, el autor construye una fuga creativa y crítica sobre la 
     title: "Cantos al Agua",
     src: "/cantos-al-agua-preview.mp4",
     poster: "/cantos-al-agua-cover2.webp",
-    duration: "13:48",
+    duration: "13:12",
     driveUrl: "https://drive.google.com/file/d/1vBQL0DRXrp3RwgueDdzYcLHiDSXqlyET/preview"
   }
 ],
@@ -2820,7 +2879,7 @@ Filmado en la Isla de Arran, Escocia, 2015</p>
         {
           id: "yuraq-warmi-yana-warmi",
           title: "Yuraq Warmi, Yana Warmi",
-          duration: "06:23",
+          duration: "03:23",
           vimeoUrl: "https://vimeo.com/294742910?fl=tl&fe=ec"
         }
       ]

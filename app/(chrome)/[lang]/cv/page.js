@@ -17,6 +17,7 @@ const cvContent = {
       items: [
         "Daniel Ford International Prize — MA Fine Arts, 2015, UK.",
         "R C Sherriff Trust — Elmbridge, 2018, UK.",
+        "Grant Recipient, Ministry of Culture of Peru — Huaca Viva, Solo Exhibition, Trujillo, Peru. Recipient of a 2026 Ministry of Culture of Peru grant supporting the production and presentation of Huaca Viva.",
       ],
     },
     {
@@ -32,7 +33,7 @@ const cvContent = {
     {
       title: "Solo Exhibitions",
       items: [
-        "2026 — Huacas del Norte, Museum of Modern Art of Trujillo, Peru. (Upcoming).",
+        "2026 — Huaca Viva, Museum of Modern Art of Trujillo, Peru. (Upcoming).",
         "2022 — Where Did the Creatures from the Forest Go?, Museo de Arte de San Marcos, Lima, Peru.",
         "2021 — Cantos Matrios, Paijan Gallery, Trujillo, Peru.",
         "2020 — Nuna, the Exercise to Climb a Tree, ABRIR Gallery, Online Exhibition.",
@@ -96,6 +97,7 @@ const cvContent = {
       items: [
         "Daniel Ford International Prize — MA Fine Arts, 2015, Reino Unido.",
         "R C Sherriff Trust — Elmbridge, 2018, Reino Unido.",
+        "Becaria del Ministerio de Cultura del Perú — Huaca Viva, exposición individual, Trujillo, Perú. Beneficiaria de una beca 2026 del Ministerio de Cultura del Perú que respalda la producción y presentación de Huaca Viva.",
       ],
     },
     {
@@ -111,7 +113,7 @@ const cvContent = {
     {
       title: "Exposiciones individuales",
       items: [
-        "2026 — Huacas del Norte, Museo de Arte Moderno de Trujillo, Perú. (Próximamente).",
+        "2026 — Huaca Viva, Museo de Arte Moderno de Trujillo, Perú. (Próximamente).",
         "2022 — Where Did the Creatures from the Forest Go?, Museo de Arte de San Marcos, Lima, Perú.",
         "2021 — Cantos Matrios, Paijan Gallery, Trujillo, Perú.",
         "2020 — Nuna, the Exercise to Climb a Tree, ABRIR Gallery, exposición online.",

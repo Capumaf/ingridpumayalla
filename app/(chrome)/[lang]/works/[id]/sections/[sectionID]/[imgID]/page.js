@@ -83,6 +83,11 @@ export default function SectionMediaPage() {
 
   const description = artworkDetails[currentIndex] || "";
 
+  const brRegex = /<br\s*\/?>/i;
+  const descParts = description.split(brRegex);
+  const descTitle = descParts[0] || "";
+  const descRest = descParts.slice(1).join("<br />");
+
   const sectionTitle =
     typeof section.title === "string"
       ? section.title
@@ -187,12 +192,17 @@ export default function SectionMediaPage() {
             <p className="text-xs text-neutral-400 tracking-widest mb-1">
               {sectionTitle}
             </p>
+            {descTitle && (
+              <p className="text-xs text-neutral-700 font-medium mb-1">
+                {descTitle}
+              </p>
+            )}
 
-            {description && (
+            {descRest && (
               <div
-                className="text-xs text-neutral-600 leading-relaxed"
+                className="text-xs text-neutral-600 leading-relaxed pl-3"
                 dangerouslySetInnerHTML={{
-                  __html: description,
+                  __html: descRest,
                 }}
               />
             )}
@@ -222,14 +232,20 @@ export default function SectionMediaPage() {
                 {sectionTitle}
               </h2>
 
-              {description && (
-                <div
-                  className="mb-6 text-sm leading-relaxed text-neutral-600"
-                  dangerouslySetInnerHTML={{
-                    __html: description,
-                  }}
-                />
-              )}
+                {descTitle && (
+                  <p className="text-sm text-neutral-700 font-medium mb-1">
+                    {descTitle}
+                  </p>
+                )}
+
+                {descRest && (
+                  <div
+                    className="mb-6 text-sm leading-relaxed text-neutral-600 pl-3"
+                    dangerouslySetInnerHTML={{
+                      __html: descRest,
+                    }}
+                  />
+                )}
             </div>
           </div>
 
