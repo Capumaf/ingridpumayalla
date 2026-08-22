@@ -139,17 +139,17 @@ Curator of the exhibition
         Edition 1/15<br />
         2019`,
 
-        `Installation View<br />
-        Pine tree, monitor, lens, Moche River water, celluloid<br />
-        Dimensions variable<br />
-        2022`,
-
-        `Installation View<br />
+         `Installation View<br />
         Dimensions variable<br />
         2022`,
 
         `Installation View<br />
         Maguey log, celluloid, Shipibo–Conibo Kené textile<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
+        Maguey log, 35mm camera body, San Pedro cactus<br />
         Dimensions variable<br />
         2022`,
 
@@ -337,7 +337,10 @@ En la antigüedad clásica y frecuente en pueblos originarios de América, como 
 
 <p>
 Cantos Matrios es una declaración de libertad y un lazo de unión desde el afecto al calor materno de la tierra.
-</p>`,
+</p>`
+
+
+,
       en: `<p><em>These chants are melodies that recount a descent.</em></p>
 
 <p>
@@ -1585,7 +1588,7 @@ videoData: [
         Dimensions variable<br />
         2016`,
 
-        `The Haircut<br />
+        `The haircut<br />
         Log, monitor, chair, glass jar, camera lens<br />
         2016`
       ],
@@ -2644,8 +2647,12 @@ videoData: [
     title: "Plegaria al caballo blanco",
     src: "/plegaria-al-caballo-blanco-preview.mp4",
     poster: "/plegaria-al-caballo-blanco-cover.webp",
-    duration: "00:29"
+    duration: "00:29",
+    description: {
+      en: "To watch the full video get in touch by email.",
+      es: "Para ver el video completo, escríbeme por correo."
   }
+}
 ]
 
     },
@@ -2655,7 +2662,7 @@ videoData: [
 
     {
   id: "the-hair-cut",
-  title: "The Hair Cut",
+  title: "The haircut",
 
   cover: {
     type: "image",
@@ -2665,64 +2672,74 @@ videoData: [
   },
 
   text: {
-    es: `
-<p>Texto introductorio de The Hair Cut.</p>
-    `,
     en: `
-<p>Introductory text for The Hair Cut.</p>
+<p>When I moved to London, I was always drawn to parks and green spaces. My first home was close to Regent's Park, which became part of my everyday life during my first two years in the city. In 2016, while completing my studies, I chose the Spring Equinox, which was also my birthday, as a moment for transition and renewal.</p>
+
+<p>I found a place in the park where I could sit, carefully plait my hair, and prepare to cut it. In the Andean world, a woman's long plait is deeply connected to identity, femininity, ancestry, and belonging. Cutting mine was therefore not simply a change of appearance, but an intimate act of transformation: a way of marking the passage between what I had carried with me and the life I was beginning to build in London.</p>
+
+<p>I allowed the cut plait to fall onto the ground, offering a part of myself to the place that had witnessed my first years in the UK. I wore a yellow shirt, echoing the daffodils of early spring and connecting my body to the landscape.</p>
+
+<p>Sitting on a recently cut tree trunk, I experienced it as an extension of my own body. It became my legs, my roots, and the ground from which I could grow. My body was not separate from nature, but emerging from it, becoming part of this new landscape.</p>
+
+<p>The Haircut is a ritual of migration, belonging, transformation, and renewal.</p>
+    `,
+    es: `
+<p>Cuando me mudé a Londres, siempre me sentí atraída por los parques y los espacios verdes. Mi primer hogar estaba cerca de Regent's Park, que se convirtió en parte de mi vida cotidiana durante mis primeros dos años en la ciudad. En 2016, mientras terminaba mis estudios, elegí el Equinoccio de Primavera, que también era mi cumpleaños, como un momento de transición y renovación.</p>
+
+<p>Encontré un lugar en el parque donde pude sentarme, trenzar cuidadosamente mi cabello y prepararme para cortarlo. En el mundo andino, la trenza larga de una mujer está profundamente conectada con la identidad, la feminidad, la ascendencia y la pertenencia. Cortarme la mía no fue entonces simplemente un cambio de apariencia, sino un acto íntimo de transformación: una forma de marcar el paso entre lo que había llevado conmigo y la vida que estaba comenzando a construir en Londres.</p>
+
+<p>Dejé que la trenza cortada cayera al suelo, ofreciendo una parte de mí misma al lugar que había sido testigo de mis primeros años en el Reino Unido. Vestí una camisa amarilla, haciendo eco de los narcisos de la primavera temprana y conectando mi cuerpo con el paisaje.</p>
+
+<p>Sentada sobre un tronco de árbol recién cortado, lo experimenté como una extensión de mi propio cuerpo. Se convirtió en mis piernas, mis raíces, y la tierra desde la cual podía crecer. Mi cuerpo no estaba separado de la naturaleza, sino que emergía de ella, formando parte de este nuevo paisaje.</p>
+
+<p>The Haircut es un ritual de migración, pertenencia, transformación y renovación.</p>
     `
   },
 
   artworkDetails: {
-    es: [
-      `The Hair Cut<br />
-Impresión fotográfica giclée sobre papel de algodón<br />
-50 × 50 cm<br />
-Ed. 15<br />
-2016`,
-
-      `The Hair Cut<br />
-Video<br />
-2'56" min / 3'08" min / 4'34" min<br />
-2016`
-    ],
     en: [
-      `The Hair Cut<br />
-Giclée photographic print on cotton paper<br />
-50 × 50 cm<br />
-Ed. 15<br />
-2016`,
+      `The haircut<br />
+      Giclée photographic print on cotton paper<br />
+      50 × 50 cm<br />
+      Edition of 15<br />
+      2016`,
 
-      `The Hair Cut<br />
-Video<br />
-2'56" min / 3'08" min / 4'34" min<br />
-2016`
+      `The haircut II<br />
+      Still from Video<br />
+      2016`
+    ],
+    es: [
+      `The haircut<br />
+      Impresión fotográfica giclée sobre papel de algodón<br />
+      50 × 50 cm<br />
+      Edición de 15<br />
+      2016`,
+
+      `The haircut II<br />
+      Fotograma de video<br />
+      2016`
     ]
   },
 
   mediaData: [
-  {
-    id: "1",
-    type: "image",
-    src: "/haircut1.webp",
-    width: 1200,
-    height: 800
-  },
+    {
+      id: "1",
+      type: "image",
+      src: "/haircut1.webp",
+      width: 1200,
+      height: 800
+    }
+  ],
 
-],
+  videoData: [
+    {
+      id: "the-haircut",
+      title: "The haircut II",
+      vimeoUrl: "https://vimeo.com/225779897"
+    }
+  ]
 
-videoData: [
-  {
-    id: "the-haircut",
-    title: "The Hair Cut",
-    src: "/the-haircut-preview.mp4",
-    poster: "/the-haircut-cover.webp",
-    duration: "00:31",
-    driveUrl: "https://drive.google.com/file/d/1gRqVjGjgtZBPpzgYB3RRG8BJ0sh2pVMj/preview"
-  }
-]
-
-    },
+      },
 
  {
       id: "yuraq-warmi-yana-warmi",
