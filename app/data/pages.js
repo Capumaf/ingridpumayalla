@@ -108,7 +108,7 @@ items: [
     {
       year: "2021",
       title: "Cantos Matrios — Terremoto",
-      link: "https://terremoto.mx/en/online/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/",
+      link: "https://terremoto.mx/blog/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/?lang=en",
     },
 
     {

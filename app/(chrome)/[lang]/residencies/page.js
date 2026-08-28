@@ -13,7 +13,7 @@ const residencies = [
   },
   {
     id: "bledfa-center",
-    title: "Bledfa Center",
+    title: "Bleddfa Center",
   },
   {
     id: "chain-in-reaction",

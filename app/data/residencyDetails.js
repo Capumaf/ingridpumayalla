@@ -125,7 +125,7 @@ y saldré al encuentro de tus aguas.</p>
   },
   
   "bledfa-center": {
-    title: "Bledfa Center",
+    title: "Bleddfa Center",
 
     text: {
       en: `

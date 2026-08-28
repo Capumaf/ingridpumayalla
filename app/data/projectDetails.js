@@ -152,6 +152,15 @@ Curator of the exhibition
         2019`,
 
          `Installation View<br />
+        Pine tree, monitor, lens, Moche's river water, celluloid<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
+        Dimensions variable<br />
+        2022`,
+
+        `Installation View<br />
         Dimensions variable<br />
         2022`,
 
@@ -162,11 +171,6 @@ Curator of the exhibition
 
         `Installation View<br />
         Maguey log, 35mm camera body, San Pedro cactus<br />
-        Dimensions variable<br />
-        2022`,
-
-        `Installation View<br />
-        Maguey log, camera body, San Pedro cactus<br />
         Dimensions variable<br />
         2022`,
 
@@ -188,12 +192,7 @@ Curator of the exhibition
         `Creatures and Foxes<br />
         Film still<br />
         13'20"<br />
-        2022`,
-
-        `Where Did the Creatures from the Forest Go?<br />
-        Single-channel film<br />
-        21'20"<br />
-        2019` ],
+        2022` ],
 
 
         es: [  `The Arrival I<br />
@@ -254,12 +253,16 @@ Curator of the exhibition
         2022`,
 
         `Vista de instalación<br />
+        Dimensiones variables<br />
+        2022`,
+
+        `Vista de instalación<br />
         Tronco de maguey, celuloide, textil Kené Shipibo–Conibo<br />
         Dimensiones variables<br />
         2022`,
 
         `Vista de instalación<br />
-        Tronco de maguey, cuerpo de cámara, cactus San Pedro<br />
+        Tronco de maguey, cuerpo de cámara de 35mm, cactus San Pedro<br />
         Dimensiones variables<br />
         2022`,
 
@@ -281,12 +284,7 @@ Curator of the exhibition
         `Creatures and Foxes<br />
         Fotograma de película<br />
         13'20"<br />
-        2022`,
-
-        `¿A dónde fueron las criaturas del bosque?<br />
-        Película monocanal<br />
-        21'20"<br />
-        2019` ],
+        2022` ],
 
   },
 
@@ -349,6 +347,11 @@ En la antigüedad clásica y frecuente en pueblos originarios de América, como 
 
 <p>
 Cantos Matrios es una declaración de libertad y un lazo de unión desde el afecto al calor materno de la tierra.
+</p>
+
+<p class="mt-8">
+Gerardo Chávez Maza<br/>
+Curador de la muestra — 2021
 </p>`
 
 
@@ -417,6 +420,11 @@ As in Classical antiquity and frequent in native people of America, such as Mapu
 
 <p>
 In this sense, Cantos Matrios is a declaration of freedom and a bond of union from the affection to the maternal warmth of the earth.
+</p>
+
+<p class="mt-8">
+Gerardo Chávez Maza<br/>
+Curator of the exhibition — 2021
 </p>`
     },
 
@@ -1685,7 +1693,7 @@ videoData: [
         Dimensiones variables<br />
         2016`,
 
-        `The Haircut<br />
+        `The haircut<br />
         Tronco, monitor, silla, frasco de vidrio, lente de cámara<br />
         2016`
       ]
@@ -2413,6 +2421,35 @@ como un huaco gigante que vigila.</p>
     },
   ],
 
+    epigraph: {
+    en: `
+<p><em>"Poderes mágicos"</em></p>
+
+<p>No importa la hora ni el día<br/>
+se cierran los ojos<br/>
+se dan tres golpes con el<br/>
+pie en el suelo,<br/>
+se abren los ojos<br/>
+y todo sigue exactamente igual.</p>
+
+<p>Blanca Varela<br/>
+<em>Valses y otras confesiones</em>, 1972.</p>
+    `,
+    es: `
+<p><em>"Poderes mágicos"</em></p>
+
+<p>No importa la hora ni el día<br/>
+se cierran los ojos<br/>
+se dan tres golpes con el<br/>
+pie en el suelo,<br/>
+se abren los ojos<br/>
+y todo sigue exactamente igual.</p>
+
+<p>Blanca Varela<br/>
+<em>Valses y otras confesiones</em>, 1972.</p>
+    `
+  },
+
   text: {
   en: `
 <p>This series of videos has been made over the course of ten years, between Peru and the United Kingdom, from Parcate in the Andes to the Isle of Arran in Scotland.</p>
@@ -2740,7 +2777,7 @@ videoData: [
 
 <p>Sitting on a recently cut tree trunk, I experienced it as an extension of my own body. It became my legs, my roots, and the ground from which I could grow. My body was not separate from nature, but emerging from it, becoming part of this new landscape.</p>
 
-<p>The Haircut is a ritual of migration, belonging, transformation, and renewal.</p>
+<p>The haircut is a ritual of migration, belonging, transformation, and renewal.</p>
     `,
     es: `
 <p>Cuando me mudé a Londres, siempre me sentí atraída por los parques y los espacios verdes. Mi primer hogar estaba cerca de Regent's Park, que se convirtió en parte de mi vida cotidiana durante mis primeros dos años en la ciudad. En 2016, mientras terminaba mis estudios, elegí el Equinoccio de Primavera, que también era mi cumpleaños, como un momento de transición y renovación.</p>
@@ -2751,7 +2788,7 @@ videoData: [
 
 <p>Sentada sobre un tronco de árbol recién cortado, lo experimenté como una extensión de mi propio cuerpo. Se convirtió en mis piernas, mis raíces, y la tierra desde la cual podía crecer. Mi cuerpo no estaba separado de la naturaleza, sino que emergía de ella, formando parte de este nuevo paisaje.</p>
 
-<p>The Haircut es un ritual de migración, pertenencia, transformación y renovación.</p>
+<p>The haircut es un ritual de migración, pertenencia, transformación y renovación.</p>
     `
   },
 

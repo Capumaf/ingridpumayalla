@@ -200,7 +200,7 @@ export default function SectionMediaPage() {
 
             {descRest && (
               <div
-                className="text-xs text-neutral-600 leading-relaxed pl-3"
+                className="text-xs text-neutral-600 leading-relaxed text-left"
                 dangerouslySetInnerHTML={{
                   __html: descRest,
                 }}
@@ -240,7 +240,7 @@ export default function SectionMediaPage() {
 
                 {descRest && (
                   <div
-                    className="mb-6 text-sm leading-relaxed text-neutral-600 pl-3"
+                    className="mb-6 text-sm leading-relaxed text-neutral-600 text-left"
                     dangerouslySetInnerHTML={{
                       __html: descRest,
                     }}
