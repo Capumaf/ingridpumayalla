@@ -240,6 +240,9 @@ y saldré al encuentro de tus aguas.</p>
           en: "The Fifth Stone",
           es: "La Quinta Piedra"
         },
+        audio: {
+          src: "/Bledfaaudio.m4a"
+        },
         text: {
           es: `
 <p>Seré entonces yo, la quinta piedra. Me pregunto<br/>

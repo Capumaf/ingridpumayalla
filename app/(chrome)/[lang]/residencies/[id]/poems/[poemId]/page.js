@@ -66,6 +66,14 @@ export default function ResidencyPoemPage() {
           />
         )}
 
+        {poem.audio && (
+          <div className="mt-8">
+            <audio controls className="w-full">
+              <source src={poem.audio.src} type="audio/mp4" />
+            </audio>
+          </div>
+        )}
+
       </div>
     </div>
   );
