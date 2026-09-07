@@ -88,61 +88,89 @@ es: `
   },
 
   press: {
-    title: {
-      en: "Press",
-      es: "Prensa",
-    },
+  title: {
+    en: "Press & Publications",
+    es: "Prensa y publicaciones",
+  },
 
-    text: {
-      en: "Read about my work in the media and publications.",
-      es: "Lee sobre mi trabajo en medios y publicaciones.",
-    },
-items: [
-  
-        {
-      year: "2021",
-      title: "Cantos Matrios — Artishock Revista",
-      link: "https://artishockrevista.com/2021/02/22/ingrid-pumayalla-cantos-matrios/",
-    },
+  text: {
+    en: "Selected articles, publications, catalogues, and features documenting my artistic practice.",
+    es: "Selección de artículos, publicaciones, catálogos y reseñas sobre mi práctica artística.",
+  },
 
-    {
-      year: "2021",
-      title: "Cantos Matrios — Terremoto",
-      link: "https://terremoto.mx/blog/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/?lang=en",
-    },
-
-    {
-      year: "2022", 
-      title: "Hilos que resisten, hilos que subvierten. — Artishock Revista",
-      link: "https://artishockrevista.com/2022/10/18/hilos-que-resisten-arte-textil-peruano/",
-    },
-
-    {
-      year: "2022",
-      title: "¿A dónde fueron las criaturas del bosque? — Artishock Revista",
-      link: "https://artishockrevista.com/2022/11/29/ingrid-pumayalla/",
-    },
-
-      {
-      title: "Accesos - Revista de investigación artística",
-      year: "2024",
-      link: "https://www.accesos.info/sofia-alvarez-capunay/",
-    },
-
+  items: [
     {
       year: "2025",
       title: "ADDA by Ankita Mukherji — Issue 2",
       link: "https://ankitamukherji.info/adda-2",
     },
-
     {
       year: "2025",
       title: "Loop End 2025 — LOOP.END.",
       link: "https://drive.google.com/file/d/1cmz_inxEfLho7iMfvhEpzc4W_X20KAhy/view?usp=sharing",
     },
-
+    {
+      year: "2025",
+      title: "La tierra, un futuro incierto — Bienal de La Habana, Cuba",
+      link: "https://art.escaner.cl/2025/expotierra/",
+    },
+    {
+      year: "2025",
+      title: "Chain in Reaction — Residencies 2025",
+      link: "https://drive.google.com/file/d/1tiyYiE0pF30wTeTPvDlELyZTpUK8ggPO/view?usp=share_link",
+    },
+    {
+      year: "2024",
+      title: "Accesos - Revista de investigación artística",
+      link: "https://www.accesos.info/sofia-alvarez-capunay/",
+    },
+    {
+      year: "2022",
+      title: "Hilos que resisten, hilos que subvierten. — Artishock Revista",
+      link: "https://artishockrevista.com/2022/10/18/hilos-que-resisten-arte-textil-peruano/",
+    },
+    {
+      year: "2022",
+      title: "¿A dónde fueron las criaturas del bosque? — Artishock Revista",
+      link: "https://artishockrevista.com/2022/11/29/ingrid-pumayalla/",
+    },
+    {
+      year: "2021",
+      title: "Cantos Matrios — Artishock Revista",
+      link: "https://artishockrevista.com/2021/02/22/ingrid-pumayalla-cantos-matrios/",
+    },
+    {
+      year: "2021",
+      title: "Cantos Matrios — Terremoto",
+      link: "https://terremoto.mx/blog/ingrid-pumayalla-presenta-cantos-matrios-en-paijan-peru/?lang=en",
+    },
+    {
+      year: "2020",
+      title: "Ingrid Pumayalla — LaONG",
+      link: "https://laong.org/ingrid-pumayalla/",
+    },
+    {
+      year: "2019",
+      title: "Stokkøya Art Residency — Stokkøya Art",
+      link: "https://www.stokkoyart.com",
+    },
+    {
+      year: "2016",
+      title: "Solace Project — Project publication",
+      link: "https://drive.google.com/file/d/189k_4J-TxMmLHGv8UMlI5Qp22a53Mguz/view?usp=sharing",
+    },
+    {
+      year: "2015",
+      title: "Interrupted Landscape — Sensing Site",
+      link: "https://sensingsite.blogspot.com/p/blog-page_6.html",
+    },
+    {
+      year: "2013",
+      title: "Gathering the Land to Fertilize the Ground — Sensing Site",
+      link: "https://sensingsite.blogspot.com/2020/01/composting-estate-seminar-ingrid.html",
+    },
   ],
-  }, 
+},
 
   works: {
     title: {
