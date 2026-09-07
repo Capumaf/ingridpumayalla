@@ -332,7 +332,6 @@ I am the one that travels, transforms, and becomes today this blue thread that c
       { id: "7", src: "/bledfa7.webp", width: 1200, height: 800 },
       { id: "8", src: "/bledfa8.webp", width: 1200, height: 800 },
       { id: "9", src: "/bledfa9.webp", width: 1200, height: 800 },
-      { id: "10", src: "/bledfa10.webp", width: 1200, height: 800 },
     ],
   },
 
