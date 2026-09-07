@@ -391,33 +391,85 @@ The project functioned as a living homage to chicha morada and the communities t
 
   residencyDetails: {
     es: [
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`
+      `<p>Saco rojo para el maíz<br />
+      Impresión fotográfica giclée sobre papel de algodón<br />
+      50 × 30 cm<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentación de una performance<br />
+      2025</p>`,
+      `<p>Memoria del Maíz Morado<br />
+      Impronta de maíz morado sobre papel tisú, lana, impresión fotográfica giclée, vasija de barro, maíz morado<br />
+      Vista de instalación<br />
+      2025</p>`
     ],
 
     en: [
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`,
-      `<p></p>`
+      `<p>Saco rojo para el maíz<br />
+      Giclée photographic print on cotton paper<br />
+      50 × 30 cm<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>La Chichera & Other Hits<br />
+      Documentation of a performance<br />
+      2025</p>`,
+      `<p>Memory of Purple Corn<br />
+      Purple corn imprint on tissue paper, wool, giclée photographic print, clay pot, purple corn<br />
+      Installation view<br />
+      2025</p>`
     ]
   },
 
