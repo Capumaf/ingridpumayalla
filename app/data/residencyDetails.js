@@ -167,8 +167,7 @@ y saldré al encuentro de tus aguas.</p>
         Sidney Nolan Trust<br />
         2023`,
 
-        `Cultivated Workshop Youth Programme<br />
-        Sidney Nolan Trust<br />
+        `Quipu and Storytelling Workshop<br />
         2023`,
 
         `From My Mouth Snakes Come Out<br />
@@ -177,10 +176,12 @@ y saldré al encuentro de tus aguas.</p>
         Dimensions variable<br />
         2022`,
 
-        `Presentation at The Rodd<br />
+        `Cultivated Workshop Youth Programme<br />
+        Sidney Nolan Trust<br />
         2023`,
 
-        `Quipu and Storytelling Workshop<br />
+        `La Mesa<br />
+        Wool, needles, agua florida, stone, linen sheet<br />
         2023`,
 
         `Knitting in the Landscape with Yellow Thread<br />
@@ -203,8 +204,7 @@ y saldré al encuentro de tus aguas.</p>
         Sidney Nolan Trust<br />
         2023`,
 
-        `Cultivated Workshop Youth Programme<br />
-        Sidney Nolan Trust<br />
+        `Taller de Quipu y Narración Oral<br />
         2023`,
 
         `From My Mouth Snakes Come Out<br />
@@ -213,10 +213,12 @@ y saldré al encuentro de tus aguas.</p>
         Dimensiones variables<br />
         2022`,
 
-        `Presentación en The Rodd<br />
+        `Cultivated Workshop Youth Programme<br />
+        Sidney Nolan Trust<br />
         2023`,
 
-        `Taller de Quipu y Narración Oral<br />
+        `La Mesa<br />
+        Lana, agujas, agua florida, piedra, sábana de lino<br />
         2023`,
 
         `Tejiendo en el Paisaje con Hilo Amarillo<br />
