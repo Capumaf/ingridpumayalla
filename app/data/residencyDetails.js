@@ -605,14 +605,13 @@ El taller generó un espacio para la escucha, la narración y la creación colec
         `<p>Documentation of the Quipu Workshop.<br/>2025.</p>`,
         `<p>Documentation of the Quipu Workshop.<br/>2025.</p>`,
         `<p>Documentation of the Quipu Workshop.<br/>2025.</p>`,
-        `<p>Documentation of the Quipu Workshop.<br/>2025.</p>`,
         `<p>Participant activating the collective Quipu through the gesture of knotting during the oral storytelling workshop.<br/>2025.</p>`,
         `<p>Documentation of the Quipu Workshop.<br/>2025.</p>`,
         `<p>Documentation of the Quipu Workshop.<br/>2025.</p>`,
+        `<p>Activation of the performance.<br/>2025.</p>`,
         `<p>Documentation of the Quipu Workshop.<br/>2025.</p>`,
-        `<p>Activation of the performance.<br/>2025.</p>`,
-        `<p>Activation of the performance.<br/>2025.</p>`,
-        `<p>Participants holding the collective Quipu, woven through shared oral narratives during the workshop.<br/>2025.</p>`
+        `<p>Participants holding the collective Quipu, woven through shared oral narratives during the workshop.<br/>2025.</p>`,
+        `<p>Activation of the performance.<br/>2025.</p>`
       ],
 
       es: [
@@ -621,14 +620,13 @@ El taller generó un espacio para la escucha, la narración y la creación colec
         `<p>Documentación del Taller de Quipu.<br/>2025.</p>`,
         `<p>Documentación del Taller de Quipu.<br/>2025.</p>`,
         `<p>Documentación del Taller de Quipu.<br/>2025.</p>`,
-        `<p>Documentación del Taller de Quipu.<br/>2025.</p>`,
         `<p>Participante activando el Quipu colectivo a través del gesto de anudar durante el taller de narración oral.<br/>2025.</p>`,
         `<p>Documentación del Taller de Quipu.<br/>2025.</p>`,
         `<p>Documentación del Taller de Quipu.<br/>2025.</p>`,
+        `<p>Activación de la performance.<br/>2025.</p>`,
         `<p>Documentación del Taller de Quipu.<br/>2025.</p>`,
-        `<p>Activación de la performance.<br/>2025.</p>`,
-        `<p>Activación de la performance.<br/>2025.</p>`,
-        `<p>Participantes sosteniendo el Quipu colectivo, tejido a través de las narrativas orales compartidas durante el taller.<br/>2025.</p>`
+        `<p>Participantes sosteniendo el Quipu colectivo, tejido a través de las narrativas orales compartidas durante el taller.<br/>2025.</p>`,
+        `<p>Activación de la performance.<br/>2025.</p>`
       ]
     },
 
