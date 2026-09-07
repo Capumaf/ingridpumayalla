@@ -183,10 +183,6 @@ y saldré al encuentro de tus aguas.</p>
         `Quipu and Storytelling Workshop<br />
         2023`,
 
-        `La Mesa<br />
-        Wool, needles, agua florida, stone, linen sheet<br />
-        2023`,
-
         `Knitting in the Landscape with Yellow Thread<br />
         2023`,
 
@@ -221,10 +217,6 @@ y saldré al encuentro de tus aguas.</p>
         2023`,
 
         `Taller de Quipu y Narración Oral<br />
-        2023`,
-
-        `La Mesa<br />
-        Lana, agujas, agua florida, piedra, sábana de lino<br />
         2023`,
 
         `Tejiendo en el Paisaje con Hilo Amarillo<br />
