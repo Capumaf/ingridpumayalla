@@ -103,192 +103,193 @@ Curator of the exhibition
     ], 
 
    artworkDetails: {
-      en: [ `The Arrival I<br />
-        Giclée photographic print on cotton paper<br />
-        60 × 60 cm<br />
-        Edition 1/15<br />
-        2019`,
+  en: [
+    `The Arrival I<br />
+    Giclée photographic print on cotton paper<br />
+    60 × 60 cm<br />
+    Edition 1/15<br />
+    2019`,
 
-        `The Arrival II<br />
-        Giclée photographic print on cotton paper<br />
-        60 × 60 cm<br />
-        Edition 1/15<br />
-        2019`,
+    `The Arrival II<br />
+    Giclée photographic print on cotton paper<br />
+    60 × 60 cm<br />
+    Edition 1/15<br />
+    2019`,
 
-        `The Arrival III<br />
-        Giclée photographic print on cotton paper<br />
-        60 × 60 cm<br />
-        Edition 1/15<br />
-        2019`,
+    `The Arrival III<br />
+    Giclée photographic print on cotton paper<br />
+    60 × 60 cm<br />
+    Edition 1/15<br />
+    2019`,
 
-        `The Arrival IV<br />
-        Giclée photographic print on cotton paper<br />
-        60 × 60 cm<br />
-        Edition 1/15<br />
-        2019`,
+    `The Arrival IV<br />
+    Giclée photographic print on cotton paper<br />
+    60 × 60 cm<br />
+    Edition 1/15<br />
+    2019`,
 
-        `Curiwarmi and Stone I<br />
-        Giclée photographic print on cotton paper<br />
-        80 × 80 cm<br />
-        Edition 1/15<br />
-        2019`,
+    `Curiwarmi and Stone I<br />
+    Giclée photographic print on cotton paper<br />
+    80 × 80 cm<br />
+    Edition 1/15<br />
+    2019`,
 
-        `Lying on a Stone in Leipzig<br />
-        Giclée photographic print on cotton paper<br />
-        80 × 80 cm<br />
-        Edition 1/10<br />
-        2019`,
+    `Lying on a Stone in Leipzig<br />
+    Giclée photographic print on cotton paper<br />
+    80 × 80 cm<br />
+    Edition 1/10<br />
+    2019`,
 
-        `Ñuqa<br />
-        Giclée photographic print on cotton paper<br />
-        80 × 80 cm<br />
-        Edition 1/10<br />
-        2019`,
+    `Ñuqa<br />
+    Giclée photographic print on cotton paper<br />
+    80 × 80 cm<br />
+    Edition 1/10<br />
+    2019`,
 
-        `Curiwarmi<br />
-        Giclée photographic print on cotton paper<br />
-        50 × 70 cm<br />
-        Edition 1/15<br />
-        2019`,
+    `Curiwarmi<br />
+    Giclée photographic print on cotton paper<br />
+    50 × 70 cm<br />
+    Edition 1/15<br />
+    2019`,
 
-         `Installation View<br />
-        Pine tree, monitor, lens, Moche's river water, celluloid<br />
-        Dimensions variable<br />
-        2022`,
+    `Installation View<br />
+    Pine tree, monitor, lens, Moche River water, celluloid<br />
+    Dimensions variable<br />
+    2022`,
 
-        `Installation View<br />
-        Dimensions variable<br />
-        2022`,
+    `Installation View<br />
+    Dimensions variable<br />
+    2022`,
 
-        `Installation View<br />
-        Dimensions variable<br />
-        2022`,
+    `Installation View<br />
+    Dimensions variable<br />
+    2022`,
 
-        `Installation View<br />
-        Maguey log, celluloid, Shipibo–Conibo Kené textile<br />
-        Dimensions variable<br />
-        2022`,
+    `Installation View<br />
+    Maguey log, celluloid, Shipibo–Konibo Kené textile<br />
+    Dimensions variable<br />
+    2022`,
 
-        `Installation View<br />
-        Maguey log, 35mm camera body, San Pedro cactus<br />
-        Dimensions variable<br />
-        2022`,
+    `Installation View<br />
+    Maguey log, 35 mm camera body, San Pedro cactus<br />
+    Dimensions variable<br />
+    2022`,
 
-        `Installation View<br />
-        Crochet knitted ropes, giclée photographic prints, glass jar container, Chicama River water, monitor, celluloid<br />
-        Dimensions variable<br />
-        2022`,
+    `Installation View<br />
+    Crochet-knitted ropes, giclée photographic prints, glass jar container, Chicama River water, monitor, celluloid<br />
+    Dimensions variable<br />
+    2022`,
 
-        `Installation View<br />
-        Crochet knitted ropes, giclée photographic prints, Chimú vase<br />
-        Dimensions variable<br />
-        2022`,
+    `Installation View<br />
+    Crochet-knitted ropes, giclée photographic prints, Chimú vase<br />
+    Dimensions variable<br />
+    2022`,
 
-        `Installation View<br />
-        Maguey logs, camera body, light glass jar, San Pedro cactus<br />
-        Dimensions variable<br />
-        2022`,
+    `Installation View<br />
+    Maguey logs, camera body, glass jar with light, San Pedro cactus<br />
+    Dimensions variable<br />
+    2022`,
 
-        `Creatures and Foxes<br />
-        Film still<br />
-        13'20"<br />
-        2022` ],
+    `Creatures and Foxes<br />
+    Film still<br />
+    13'20"<br />
+    2022`
+  ],
 
+  es: [
+    `The Arrival I<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    60 × 60 cm<br />
+    Edición 1/15<br />
+    2019`,
 
-        es: [  `The Arrival I<br />
-        Impresión fotográfica giclée sobre papel de algodón<br />
-        60 × 60 cm<br />
-        Edición 1/15<br />
-        2019`,
+    `The Arrival II<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    60 × 60 cm<br />
+    Edición 1/15<br />
+    2019`,
 
-        `The Arrival II<br />
-        Impresión fotográfica giclée sobre papel de algodón<br />
-        60 × 60 cm<br />
-        Edición 1/15<br />
-        2019`,
+    `The Arrival III<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    60 × 60 cm<br />
+    Edición 1/15<br />
+    2019`,
 
-        `The Arrival III<br />
-        Impresión fotográfica giclée sobre papel de algodón<br />
-        60 × 60 cm<br />
-        Edición 1/15<br />
-        2019`,
+    `The Arrival IV<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    60 × 60 cm<br />
+    Edición 1/15<br />
+    2019`,
 
-        `The Arrival IV<br />
-        Impresión fotográfica giclée sobre papel de algodón<br />
-        60 × 60 cm<br />
-        Edición 1/15<br />
-        2019`,
+    `Curiwarmi and Stone I<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    80 × 80 cm<br />
+    Edición 1/15<br />
+    2019`,
 
-        `Curiwarmi and Stone I<br />
-        Impresión fotográfica giclée sobre papel de algodón<br />
-        80 × 80 cm<br />
-        Edición 1/15<br />
-        2019`,
+    `Lying on a Stone in Leipzig<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    80 × 80 cm<br />
+    Edición 1/10<br />
+    2019`,
 
-        `Lying on a Stone in Leipzig<br />
-        Impresión fotográfica giclée sobre papel de algodón<br />
-        80 × 80 cm<br />
-        Edición 1/10<br />
-        2019`,
+    `Ñuqa<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    80 × 80 cm<br />
+    Edición 1/10<br />
+    2019`,
 
-        `Ñuqa<br />
-        Impresión fotográfica giclée sobre papel de algodón<br />
-        80 × 80 cm<br />
-        Edición 1/10<br />
-        2019`,
+    `Curiwarmi<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    50 × 70 cm<br />
+    Edición 1/15<br />
+    2019`,
 
-        `Curiwarmi<br />
-        Impresión fotográfica giclée sobre papel de algodón<br />
-        50 × 70 cm<br />
-        Edición 1/15<br />
-        2019`,
+    `Vista de instalación<br />
+    Pino, monitor, lente, agua del río Moche, celuloide<br />
+    Dimensiones variables<br />
+    2022`,
 
-        `Vista de instalación<br />
-        Pino, monitor, lente, agua del río Moche, celuloide<br />
-        Dimensiones variables<br />
-        2022`,
+    `Vista de instalación<br />
+    Dimensiones variables<br />
+    2022`,
 
-        `Vista de instalación<br />
-        Dimensiones variables<br />
-        2022`,
+    `Vista de instalación<br />
+    Dimensiones variables<br />
+    2022`,
 
-        `Vista de instalación<br />
-        Dimensiones variables<br />
-        2022`,
+    `Vista de instalación<br />
+    Tronco de maguey, celuloide, textil Kené Shipibo–Konibo<br />
+    Dimensiones variables<br />
+    2022`,
 
-        `Vista de instalación<br />
-        Tronco de maguey, celuloide, textil Kené Shipibo–Conibo<br />
-        Dimensiones variables<br />
-        2022`,
+    `Vista de instalación<br />
+    Tronco de maguey, cuerpo de cámara de 35 mm, cactus San Pedro<br />
+    Dimensiones variables<br />
+    2022`,
 
-        `Vista de instalación<br />
-        Tronco de maguey, cuerpo de cámara de 35mm, cactus San Pedro<br />
-        Dimensiones variables<br />
-        2022`,
+    `Vista de instalación<br />
+    Cuerdas tejidas a crochet, impresiones fotográficas giclée, recipiente de vidrio, agua del río Chicama, monitor, celuloide<br />
+    Dimensiones variables<br />
+    2022`,
 
-        `Vista de instalación<br />
-        Cuerdas tejidas a crochet, impresiones fotográficas giclée, recipiente de vidrio, agua del río Chicama, monitor, celuloide<br />
-        Dimensiones variables<br />
-        2022`,
+    `Vista de instalación<br />
+    Cuerdas tejidas a crochet, impresiones fotográficas giclée, vasija Chimú<br />
+    Dimensiones variables<br />
+    2022`,
 
-        `Vista de instalación<br />
-        Cuerdas tejidas a crochet, impresiones fotográficas giclée, vasija Chimú<br />
-        Dimensiones variables<br />
-        2022`,
+    `Vista de instalación<br />
+    Troncos de maguey, cuerpo de cámara, frasco de vidrio con luz, cactus San Pedro<br />
+    Dimensiones variables<br />
+    2022`,
 
-        `Vista de instalación<br />
-        Troncos de maguey, cuerpo de cámara, frasco de vidrio con luz, cactus San Pedro<br />
-        Dimensiones variables<br />
-        2022`,
-
-        `Creatures and Foxes<br />
-        Fotograma de película<br />
-        13'20"<br />
-        2022` ],
-
-  },
-
-    },
+    `Creatures and Foxes<br />
+    Fotograma<br />
+    13'20"<br />
+    2022`
+  ],
+},
+},
   
 
   "cantos-matrios": {
@@ -2285,7 +2286,13 @@ como un huaco gigante que vigila.</p>
   artworkDetails: {
       en: [
         `Nostalgias Imperiales<br />
+        The Shaman's Dream<br />
         Video still<br />
+        21'21"<br />
+        2020<br />
+        Documentation by José Carlos Orrillo.`,
+
+        `Video still<br />
         21'21"<br />
         2020<br />
         Documentation by José Carlos Orrillo.`,
@@ -2331,16 +2338,23 @@ como un huaco gigante que vigila.</p>
         `Nostalgias Imperiales<br />
         Knitted wool plaits, wool bag, shells<br />
         Dimensions variable<br />
-        2020<br />
-        Photos by Juan Pablo Murrugarra`,
+        2020`,
 
-        `The Shaman's Dream<br />
-        Film still<br />
-        Documentation by José Carlos Orrillo.`
+        `Nostalgias Imperiales<br />
+        Knitted wool plaits, wool bag, shells<br />
+        Dimensions variable<br />
+        2020<br />
+        Photos by Juan Pablo Murrugarra`
       ],
       es: [
         `Nostalgias Imperiales<br />
+        El Sueño del Chamán<br />
         Fotograma de video<br />
+        21'21"<br />
+        2020<br />
+        Documentación de José Carlos Orrillo.`,
+
+        `Fotograma de video<br />
         21'21"<br />
         2020<br />
         Documentación de José Carlos Orrillo.`,
@@ -2386,12 +2400,13 @@ como un huaco gigante que vigila.</p>
         `Nostalgias Imperiales<br />
         Trenzas de lana tejidas, bolsa de lana, conchas<br />
         Dimensiones variables<br />
-        2020<br />
-        Fotos de Juan Pablo Murrugarra`,
+        2020`,
 
-        `El Sueño del Chamán<br />
-        Fotograma de película<br />
-        Documentación de José Carlos Orrillo.`
+        `Nostalgias Imperiales<br />
+        Trenzas de lana tejidas, bolsa de lana, conchas<br />
+        Dimensiones variables<br />
+        2020<br />
+        Fotos de Juan Pablo Murrugarra`
       ]
     },
 
@@ -2930,7 +2945,7 @@ Filmado en la Isla de Arran, Escocia, 2015</p>
   text: {
     es: `
 <p>
-MatiIde regresó a su pueblo natal de Pantipata, ubicado en la provincia de Anta, Cusco, Perú, después de veintidós años de ausencia. Migró sola a Lima a la edad de nueve años, hablando únicamente quechua, su lengua materna. A los veintiséis años volvió a conectarse con su familia tras escuchar un anuncio radial informando sobre el funeral de su madre.
+Matilde regresó a su pueblo natal de Pantipata, ubicado en la provincia de Anta, Cusco, Perú, después de veintidós años de ausencia. Migró sola a Lima a la edad de nueve años, hablando únicamente quechua, su lengua materna. A los veintiséis años volvió a conectarse con su familia tras escuchar un anuncio radial informando sobre el funeral de su madre.
 </p>
 
 <p>
@@ -2940,7 +2955,7 @@ En 2017 regresó a Pantipata junto a su hermana Francisca. Este reencuentro con 
 
     en: `
 <p>
-MatiIde returned home to her native village of Pantipata, located in the Province of Anta, Cuzco, Peru, after twenty-two years away. She had migrated alone to Lima, the capital city, at the age of nine, speaking only Quechua, her mother tongue. At the age of twenty-six, she reconnected with her family after hearing a radio broadcast announcing her mother’s funeral.
+Matilde returned home to her native village of Pantipata, located in the Province of Anta, Cuzco, Peru, after twenty-two years away. She had migrated alone to Lima, the capital city, at the age of nine, speaking only Quechua, her mother tongue. At the age of twenty-six, she reconnected with her family after hearing a radio broadcast announcing her mother’s funeral.
 </p>
 
 <p>
@@ -2949,6 +2964,26 @@ In 2017, she returned to Pantipata with her sister Francisca. This reunion with 
     `
   },
 
+    artworkDetails: {
+      en: [
+        `Still from Video<br />
+        13'02"<br />
+        2018`,
+
+        `Still from Video<br />
+        13'02"<br />
+        2018`
+      ],
+      es: [
+        `Fotograma de video<br />
+        13'02"<br />
+        2018`,
+
+        `Fotograma de video<br />
+        13'02"<br />
+        2018`
+      ]
+    },
 
     imageData: [
       { id: "1", src: "/otrasmadres1.webp", width: 1200, height: 800 },
@@ -2994,6 +3029,10 @@ es: `
 
 <p>A través de estas fotografías exploro el desarraigo, la memoria y la pertenencia. Al mismo tiempo, construyo un testimonio visual que invita a conocer la intimidad de una familia atravesada por la migración y, con ella, una experiencia que forma parte de la diversidad cultural de mi país.</p>
 
+<p>La fotografía se convierte en una forma de regresar: no simplemente a un lugar o a mi familia, sino a una relación que ha sido transformada por la distancia. Al fotografiar, vuelvo a entrar en estos espacios, escucho sus historias y me ubico dentro de ellas.</p>
+
+<p>En este sentido, la cámara se convierte en una forma de reconexión: un medio a través del cual empiezo a pertenecer nuevamente.</p>
+
   `,
 
   en: `
@@ -3015,6 +3054,10 @@ es: `
 
 
 <p>Through these photographs, I explore displacement, memory, and belonging. At the same time, I create a visual testimony that invites viewers into the intimacy of a family shaped by migration and, through it, an experience that forms part of my country's cultural diversity.</p>
+
+<p>Photography becomes a way of returning—not simply to a place or to my family, but to a relationship that has been altered by distance. By photographing, I enter these spaces again, listen to their stories and locate myself within them.</p>
+
+<p>In this sense, the camera becomes a way of reconnecting: a means through which I begin to belong again.</p>
 
   `
 
@@ -3088,6 +3131,31 @@ artworkDetails: {
     `Autorretrato en el jardín<br />
     Giclée photographic print on cotton paper<br />
     30 × 30 cm<br />
+    2012`,
+
+    `Mami Enma<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Manuelito<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Tía María y tío Tito<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Manuelito y el Gallo<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Yennifer<br />
+    Giclée photographic print on cotton paper<br />
+    30 × 30 cm<br />
     2012`
   ],
 
@@ -3138,6 +3206,31 @@ artworkDetails: {
     2012`,
 
     `Autorretrato en el jardín<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Mami Enma<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Manuelito<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Tía María y tío Tito<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Manuelito y el Gallo<br />
+    Impresión fotográfica giclée sobre papel de algodón<br />
+    30 × 30 cm<br />
+    2012`,
+
+    `Yennifer<br />
     Impresión fotográfica giclée sobre papel de algodón<br />
     30 × 30 cm<br />
     2012`
