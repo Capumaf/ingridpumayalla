@@ -29,6 +29,11 @@ export default function WorkPage() {
       ? project.title
       : project.title?.[lang] || project.title?.es || "";
 
+  const epigraph =
+    typeof project.epigraph === "string"
+      ? project.epigraph
+      : project.epigraph?.[lang] || project.epigraph?.es || "";
+
   const text =
     typeof project.text === "string"
       ? project.text
@@ -46,6 +51,8 @@ export default function WorkPage() {
 
       <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
         <div className="w-full max-w-5xl md:pl-[100px] lg:pl-[120px]">
+
+          {/* BACK BUTTON */}
           <div className="mb-6">
             <Link
               href={`/${lang}/works`}
@@ -55,19 +62,51 @@ export default function WorkPage() {
             </Link>
           </div>
 
-          <WorkCover id={id} lang={lang} cover={cover} title={title} />
+          {/* WORK COVER */}
+          <WorkCover
+            id={id}
+            lang={lang}
+            cover={cover}
+            title={title}
+          />
 
+          {/* WORK CONTENT */}
           <div className="max-w-[620px] mx-auto mt-16 md:mt-28 px-2">
+
+            {/* TITLE */}
             <h1 className="text-[28px] leading-tight tracking-[0.04em] mb-6 md:mb-10 text-center">
               {title}
             </h1>
 
+            {/* EPIGRAPH / POEM */}
+            {epigraph && (
+              <div
+                className="
+                  body-text
+                  max-w-[420px]
+                  mb-12
+                  text-[13.5px]
+                  leading-[2]
+                  text-left
+                  md:ml-16
+                  lg:ml-24
+                "
+                dangerouslySetInnerHTML={{
+                  __html: epigraph,
+                }}
+              />
+            )}
+
+            {/* MAIN TEXT */}
             {text && (
               <div
                 className="body-text max-w-[620px] text-[13.5px] leading-[2] text-justify"
-                dangerouslySetInnerHTML={{ __html: text }}
+                dangerouslySetInnerHTML={{
+                  __html: text,
+                }}
               />
             )}
+
           </div>
         </div>
       </div>
