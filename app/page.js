@@ -63,7 +63,7 @@ export default function Page() {
           bottom-8
           left-8
           md:left-16
-          text-white/75
+          text-[#d4bd47]/75
           text-sm
           tracking-[0.08em]
           pointer-events-none
