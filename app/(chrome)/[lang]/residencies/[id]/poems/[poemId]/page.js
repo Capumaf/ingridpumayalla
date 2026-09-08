@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -11,13 +12,55 @@ export default function ResidencyPoemPage() {
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
 
+  const [hasReachedEnd, setHasReachedEnd] = useState(false);
+  const endRef = useRef(null);
+
   const residency = residencyDetails[id];
   const poem = residency?.poems?.find((p) => p.id === poemId);
+
+  const poemIndex =
+    residency?.poems?.findIndex((p) => p.id === poemId) ?? -1;
+
+  const prevPoem = poemIndex > 0 ? residency?.poems?.[poemIndex - 1] : null;
+
+  const residencyHref = `/${lang}/residencies/${id}`;
+
+  const firstImage = residency?.imageData?.[0];
+  const imageHref = firstImage
+    ? `/${lang}/residencies/${id}/${firstImage.id}`
+    : residencyHref;
 
   const getLocalizedText = (value) => {
     if (typeof value === "string") return value;
     return value?.[lang] || value?.es || value?.en || "";
   };
+
+  const residencyTitle = getLocalizedText(residency?.title);
+
+  const prevHref = prevPoem
+    ? `/${lang}/residencies/${id}/poems/${prevPoem.id}`
+    : residencyHref;
+
+  const prevLabel = prevPoem
+    ? getLocalizedText(prevPoem.title)
+    : residencyTitle;
+
+  useEffect(() => {
+    setHasReachedEnd(false);
+
+    if (!endRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setHasReachedEnd(true);
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(endRef.current);
+
+    return () => observer.disconnect();
+  }, [poemId]);
 
   if (!residency || !poem) {
     return (
@@ -29,7 +72,6 @@ export default function ResidencyPoemPage() {
     );
   }
 
-  const residencyTitle = getLocalizedText(residency.title);
   const poemTitle = getLocalizedText(poem.title);
   const poemText = getLocalizedText(poem.text);
 
@@ -39,10 +81,10 @@ export default function ResidencyPoemPage() {
 
         <div className="mb-8">
           <Link
-            href={`/${lang}/residencies/${id}`}
+            href={prevHref}
             className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b] transition-colors"
           >
-            ← {residencyTitle}
+            ← {prevLabel}
           </Link>
         </div>
 
@@ -66,11 +108,24 @@ export default function ResidencyPoemPage() {
           />
         )}
 
+        <div ref={endRef} />
+
         {poem.audio && (
           <div className="mt-8">
             <audio controls className="w-full">
               <source src={poem.audio.src} type="audio/mp4" />
             </audio>
+          </div>
+        )}
+
+        {hasReachedEnd && (
+          <div className="mt-12 flex justify-end">
+            <Link
+              href={imageHref}
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b] transition-colors"
+            >
+              {lang === "es" ? "Ver obra" : "View work"} →
+            </Link>
           </div>
         )}
 

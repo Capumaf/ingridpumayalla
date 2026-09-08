@@ -48,6 +48,12 @@ export default function ResidencyImagePage() {
   const img = images[currentIndex];
   const prevImg = images[currentIndex - 1] || null;
   const nextImg = images[currentIndex + 1] || null;
+  const firstPoem = residency.poems?.[0] || null;
+
+  const nextPoemHref =
+    firstPoem && !nextImg
+      ? `/${lang}/residencies/${id}/poems/${firstPoem.id}`
+      : null;
 
   useEffect(() => {
     [prevImg?.src, nextImg?.src].forEach((src) => {
@@ -121,14 +127,7 @@ export default function ResidencyImagePage() {
               ←
             </button>
 
-            {!nextImg ? (
-              <Link
-                href={`/${lang}/residencies`}
-                className="z-50 px-4 py-3 text-xs tracking-widest text-gray-500 hover:text-black"
-              >
-                {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
-              </Link>
-            ) : (
+            {nextImg ? (
               <button
                 type="button"
                 onClick={() => router.push(`/${lang}/residencies/${id}/${nextImg.id}`)}
@@ -136,6 +135,21 @@ export default function ResidencyImagePage() {
               >
                 →
               </button>
+            ) : nextPoemHref ? (
+              <button
+                type="button"
+                onClick={() => router.push(nextPoemHref)}
+                className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
+              >
+                →
+              </button>
+            ) : (
+              <Link
+                href={`/${lang}/residencies`}
+                className="z-50 px-4 py-3 text-xs tracking-widest text-gray-500 hover:text-black"
+              >
+                {lang === "es" ? "Volver a residencias" : "Back to residencies"} →
+              </Link>
             )}
           </div>
 
@@ -231,16 +245,18 @@ export default function ResidencyImagePage() {
               onClick={() =>
                 nextImg
                   ? router.push(`/${lang}/residencies/${id}/${nextImg.id}`)
+                  : nextPoemHref
+                  ? router.push(nextPoemHref)
                   : router.push(`/${lang}/residencies/${id}`)
               }
               className={`absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-                nextImg ? "opacity-100" : "opacity-0 pointer-events-none"
+                nextImg || nextPoemHref ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
               ›
             </button>
 
-            {!nextImg && (
+            {!nextImg && !nextPoemHref && (
               <Link
                 href={`/${lang}/residencies`}
                 className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
