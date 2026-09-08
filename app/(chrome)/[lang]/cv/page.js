@@ -17,7 +17,7 @@ const cvContent = {
       items: [
         "Daniel Ford International Prize — MA Fine Arts, 2015, UK.",
         "R C Sherriff Trust — Elmbridge, 2018, UK.",
-        "Grant Recipient, Ministry of Culture of Peru — Huaca Viva, Solo Exhibition, Trujillo, Peru. Recipient of a 2026 Ministry of Culture of Peru grant supporting the production and presentation of Huaca Viva.",
+        "Grant Recipient, Ministry of Culture of Peru — Huaca Viva, 2026.",
       ],
     },
     {
@@ -97,7 +97,7 @@ const cvContent = {
       items: [
         "Daniel Ford International Prize — MA Fine Arts, 2015, Reino Unido.",
         "R C Sherriff Trust — Elmbridge, 2018, Reino Unido.",
-        "Becaria del Ministerio de Cultura del Perú — Huaca Viva, exposición individual, Trujillo, Perú. Beneficiaria de una beca 2026 del Ministerio de Cultura del Perú que respalda la producción y presentación de Huaca Viva.",
+        "Becaria del Ministerio de Cultura del Perú — Huaca Viva, 2026.",
       ],
     },
     {
