@@ -52,7 +52,7 @@ export default function WorkSectionPage() {
 
   const nextSectionHref = nextSection
     ? `/${lang}/works/${id}/sections/${nextSection.id}`
-    : null;
+    : `/${lang}/works`;
 
   const coverSrc =
     section.cover?.type !== "video" ? section.cover?.src : null;
@@ -99,13 +99,13 @@ export default function WorkSectionPage() {
               />
             )}
 
-            {!mediaHref && nextSectionHref && (
-              <div className="mt-12 text-right">
+            {!section.cover && (
+              <div className="mt-12 md:mt-16 text-center">
                 <Link
                   href={nextSectionHref}
                   className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b] transition-colors"
                 >
-                  {lang === "es" ? "Siguiente sección" : "Next section"} →
+                  {lang === "es" ? "Continuar" : "Continue"} →
                 </Link>
               </div>
             )}

@@ -24,6 +24,11 @@ export default function WorkPage() {
 
   const cover = project.imageData?.[0];
 
+  const firstSection = project.sections?.[0] || null;
+  const seriesHref = firstSection
+    ? `/${lang}/works/${id}/sections/${firstSection.id}`
+    : null;
+
   const title =
     typeof project.title === "string"
       ? project.title
@@ -68,6 +73,7 @@ export default function WorkPage() {
             lang={lang}
             cover={cover}
             title={title}
+            seriesHref={seriesHref}
           />
 
           {/* WORK CONTENT */}

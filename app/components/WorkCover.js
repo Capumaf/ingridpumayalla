@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function WorkCover({ id, lang, cover, title }) {
+export default function WorkCover({ id, lang, cover, title, seriesHref }) {
   const router = useRouter();
 
   const [isHovered, setIsHovered] = useState(false);
@@ -27,7 +27,7 @@ export default function WorkCover({ id, lang, cover, title }) {
 
   if (!cover) return null;
 
-  const href = `/${lang}/works/${id}/${cover.id}`;
+  const href = seriesHref || `/${lang}/works/${id}/${cover.id}`;
 
   const detectLabelTone = () => {
     const img = imgRef.current;
