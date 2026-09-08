@@ -12,6 +12,8 @@ const images = [
   "/Home6.webp",
   "/Home7.webp",
   "/Home8.webp",
+  "/Home9.webp",
+  "/Home10.webp",
 ];
 
 const SLIDE_DURATION_FIRST = 1200;
@@ -30,7 +32,7 @@ const VDEFS = [
 ];
 
 // Hilos un poco más largos
-const LENGTHS = [74, 96, 70, 112, 84, 64, 100, 78];
+const LENGTHS = [74, 96, 70, 112, 84, 64, 100, 78, 90, 68];
 
 const TWIST_PERIOD_BASE = 8;
 const TWIST_AMP_BASE    = 1.5;
