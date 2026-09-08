@@ -1,14 +1,68 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
+
 import { projectDetails } from "@/data/projectDetails";
 
-export default async function PoemPage({ params }) {
-  const { lang, id, poemsID } = await params;
+export default function PoemPage() {
+  const { id, poemsID } = useParams();
+  const pathname = usePathname();
+
+  const lang = pathname.startsWith("/es") ? "es" : "en";
+
+  const [hasReachedEnd, setHasReachedEnd] = useState(false);
+  const endRef = useRef(null);
 
   const project = projectDetails[id];
 
   const poem = project?.poems?.find(
     (item) => item.id === poemsID
   );
+
+  const poemIndex =
+    project?.poems?.findIndex((item) => item.id === poemsID) ?? -1;
+
+  const prevPoem = poemIndex > 0 ? project?.poems?.[poemIndex - 1] : null;
+
+  const workHref = `/${lang}/works/${id}`;
+  const prevHref = prevPoem
+    ? `/${lang}/works/${id}/poems/${prevPoem.id}`
+    : workHref;
+
+  const firstImage = project?.imageData?.[0];
+  const imageHref = firstImage
+    ? `/${lang}/works/${id}/${firstImage.id}`
+    : workHref;
+
+  const getLocalizedText = (value) => {
+    if (typeof value === "string") return value;
+    return value?.[lang] || value?.es || value?.en || "";
+  };
+
+  const prevLabel = prevPoem
+    ? getLocalizedText(prevPoem.title)
+    : lang === "es"
+      ? "Volver a obra"
+      : "Back to work";
+
+  useEffect(() => {
+    setHasReachedEnd(false);
+
+    if (!endRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setHasReachedEnd(true);
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(endRef.current);
+
+    return () => observer.disconnect();
+  }, [poemsID]);
 
   if (!project || !poem) {
     return (
@@ -42,7 +96,7 @@ export default async function PoemPage({ params }) {
       {/* BACK BUTTON */}
       <div className="px-6 md:ml-[20rem]">
         <Link
-          href={`/${lang}/works`}
+          href={prevHref}
           className="
             text-[11px]
             tracking-[0.18em]
@@ -51,9 +105,7 @@ export default async function PoemPage({ params }) {
             transition-colors
           "
         >
-          ← {lang === "es"
-            ? "Volver a obras"
-            : "Back to works"}
+          ← {prevLabel}
         </Link>
       </div>
 
@@ -105,6 +157,25 @@ export default async function PoemPage({ params }) {
             __html: text,
           }}
         />
+
+        <div ref={endRef} />
+
+        {hasReachedEnd && (
+          <div className="mt-12 flex justify-end">
+            <Link
+              href={imageHref}
+              className="
+                text-[11px]
+                tracking-[0.18em]
+                text-neutral-500
+                hover:text-[#b7623b]
+                transition-colors
+              "
+            >
+              {lang === "es" ? "Ver obra" : "View work"} →
+            </Link>
+          </div>
+        )}
 
       </div>
 

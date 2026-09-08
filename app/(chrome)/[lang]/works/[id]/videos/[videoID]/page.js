@@ -21,6 +21,12 @@ export default function WorkVideoPage() {
   const nextVideo = videoIndex > -1 ? project?.videoData?.[videoIndex + 1] : null;
   const nextVideoHref = nextVideo ? `/${lang}/works/${id}/videos/${nextVideo.id}` : null;
 
+  const firstPoem = project?.poems?.[0] || null;
+  const nextPoemHref =
+    !nextVideo && firstPoem
+      ? `/${lang}/works/${id}/poems/${firstPoem.id}`
+      : null;
+
   const workHref = `/${lang}/works/${id}`;
   const firstImage = project?.imageData?.[0] || project?.mediaData?.[0];
 
@@ -139,14 +145,21 @@ export default function WorkVideoPage() {
           </div>
 
           <div className="flex flex-col items-end gap-3 shrink-0">
-            {nextVideoHref && (
+            {nextVideoHref ? (
               <Link
                 href={nextVideoHref}
                 className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
               >
                 {lang === "es" ? "Siguiente video" : "Next video"} →
               </Link>
-            )}
+            ) : nextPoemHref ? (
+              <Link
+                href={nextPoemHref}
+                className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+              >
+                {lang === "es" ? "Leer poema" : "Read poem"} →
+              </Link>
+            ) : null}
 
             <Link
               href={`/${lang}/works`}

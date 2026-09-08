@@ -46,10 +46,16 @@ export default function ImagePage() {
   const prevImg = images[currentIndex - 1] || null;
   const nextImg = images[currentIndex + 1] || null;
   const firstVideo = project.videoData?.[0] || null;
+  const firstPoem = project.poems?.[0] || null;
 
   const nextVideoHref =
     firstVideo && !nextImg
       ? `/${lang}/works/${id}/videos/${firstVideo.id}`
+      : null;
+
+  const nextPoemHref =
+    !nextVideoHref && firstPoem && !nextImg
+      ? `/${lang}/works/${id}/poems/${firstPoem.id}`
       : null;
 
   const externalVideoHref =
@@ -148,6 +154,14 @@ export default function ImagePage() {
               >
                 →
               </button>
+            ) : nextPoemHref ? (
+              <button
+                type="button"
+                onClick={() => router.push(nextPoemHref)}
+                className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
+              >
+                →
+              </button>
             ) : (
               <Link
                 href={`/${lang}/works`}
@@ -241,18 +255,20 @@ export default function ImagePage() {
                   ? router.push(`/${lang}/works/${id}/${nextImg.id}`)
                   : nextVideoHref
                   ? router.push(nextVideoHref)
+                  : nextPoemHref
+                  ? router.push(nextPoemHref)
                   : externalVideoHref
                   ? window.open(externalVideoHref, "_blank")
                   : router.push(`/${lang}/works/${id}`)
               }
               className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-                nextImg || nextVideoHref || externalVideoHref ? "opacity-100" : "opacity-0 pointer-events-none"
+                nextImg || nextVideoHref || nextPoemHref || externalVideoHref ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
               ›
             </button>
 
-            {!nextImg && !nextVideoHref && (
+            {!nextImg && !nextVideoHref && !nextPoemHref && (
               <Link
                 href={`/${lang}/works`}
                 className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
