@@ -7,27 +7,19 @@ export const pages = {
 
     text: {
       en: `
-<p>Ingrid Pumayalla (b. 1989, Trujillo, Peru) is an artist working across moving image, photography, and performance. Her work explores memory, place, and how stories are shaped by landscape, often bringing together personal and collective histories.</p>
+<p>Ingrid Pumayalla (b. 1989, Trujillo, Peru) is a Peruvian visual artist based in London. Working across installation, performance, moving image, photography, textiles and text, her practice explores the relationships between landscape, migration and memory through embodied encounters with place.</p>
 
-<p>Educated at Centro de la Imagen in Lima and later at Central Saint Martins in London — where she received the Daniel Ford International Prize for Innovation — Pumayalla developed a practice that moves between poetic inquiry and critical reflection. Her projects trace fragile connections between landscape, history, and identity, exploring processes of disappearance, transformation, and resistance.</p>
+<p>Raised in the northern Andes of Peru, Pumayalla draws from Indigenous Andean understandings of reciprocity, where landscape is a living presence that carries memory, knowledge and ancestral relationships. Through walking, attentive listening and lived experience, her works emerge as dialogues with place rather than representations of it. Performance, ritual, projection, knitting and storytelling become interconnected methods through which she explores transformation, belonging and repair.</p>
 
-<p>Her work has been presented internationally through exhibitions and residencies, including Stokkøya (Norway), Pilotenkueche (Leipzig), and the Sidney Nolan Trust (UK). In 2024, she presented a duo exhibition in Paris with Les Egusquiza, expanding her engagement with transnational dialogues; and in 2025 she participated in Chain in Reaction (Lisbon), marking a new phase in her practice oriented toward collaborative and process-based approaches.</p>
-
-<p>Recent projects include <em>Matoaka is My Name, Matoaka es Mi Nombre</em> (2022), shortlisted for the Contemporary Arts Prize of the American Peruvian Institute, and <em>Rastreando</em> (2022), a photographic installation examining acts of tracing and erasure. This inquiry continues in her moving image work <em>Where Did the Creatures from the Forest Go?</em>, presented as part of the 15th Havana Biennial (2025).</p>
-
-<p>Pumayalla's first institutional solo exhibition took place at the Museum of San Marcos, Lima (2022). In 2026, she will present a new solo exhibition at the Museum of Modern Art of Trujillo, further consolidating her research-led practice within an international context.</p>
+<p>Educated at Centro de la Imagen in Lima and later at Central Saint Martins, University of the Arts London, where she received the Daniel Ford International Prize for Innovation, Pumayalla has exhibited internationally across Peru, the United Kingdom and Europe. Her work has been presented through exhibitions and residencies, including the Museum of San Marcos (Lima), the 15th Havana Biennial, Cuba, the Sidney Nolan Trust, Pilotenkueche (Leipzig) and Stokkøya (Norway).</p>
 `,
 
 es: `
-<p>Ingrid Pumayalla (Trujillo, Perú, 1989) es una artista que trabaja entre la imagen en movimiento, la fotografía y la performance. Su práctica explora la memoria, el territorio y las formas en que las historias son moldeadas por el paisaje, articulando memorias personales y colectivas.</p>
+<p>Ingrid Pumayalla (n. 1989, Trujillo, Perú) es una artista visual peruana radicada en Londres. Trabaja con instalación, performance, imagen en movimiento, fotografía, textiles y texto. Su práctica explora las relaciones entre paisaje, migración y memoria a través de encuentros corporales y vivenciales con el lugar.</p>
 
-<p>Formada en el Centro de la Imagen en Lima y posteriormente en Central Saint Martins en Londres — donde recibió el Daniel Ford International Prize for Innovation — Pumayalla ha desarrollado una obra que se mueve entre la investigación poética y la reflexión crítica. Sus proyectos trazan conexiones frágiles entre paisaje, historia e identidad, explorando procesos de desaparición, transformación y resistencia.</p>
+<p>Criada en los Andes del norte del Perú, Pumayalla parte de concepciones indígenas andinas de la reciprocidad, donde el paisaje se entiende como una presencia viva que contiene memoria, conocimiento y relaciones ancestrales. A través de la caminata, la escucha profunda y la experiencia vivida, su trabajo se desarrolla como un diálogo con el lugar, más que como una representación del mismo. La performance, el ritual, la proyección, el tejido y la narración se convierten en métodos interconectados mediante los cuales explora la pertenencia, la memoria cultural, la transformación y la reparación.</p>
 
-<p>Su trabajo ha sido presentado internacionalmente a través de exposiciones y residencias, incluyendo Stokkøya (Noruega), Pilotenkueche (Leipzig) y Sidney Nolan Trust (Reino Unido). En 2024 presentó una exposición a dúo en París junto a Les Egusquiza, ampliando su interés por los diálogos transnacionales; y en 2025 participó en Chain in Reaction (Lisboa), marcando una nueva etapa orientada hacia enfoques colaborativos y procesuales.</p>
-
-<p>Entre sus proyectos recientes destacan <em>Matoaka is My Name, Matoaka es Mi Nombre</em> (2022), seleccionado para el Premio de Arte Contemporáneo del Instituto Cultural Peruano Norteamericano, y <em>Rastreando</em> (2022), una instalación fotográfica centrada en actos de huella y borramiento. Esta investigación continúa en su obra audiovisual <em>Where Did the Creatures from the Forest Go?</em>, presentada en la 15 Bienal de La Habana (2025).</p>
-
-<p>Su primera exposición individual institucional se realizó en el Museo de San Marcos, Lima (2022). En 2026 presentará una nueva exposición individual en el Museo de Arte Moderno de Trujillo, consolidando una práctica artística basada en la investigación y el diálogo internacional.</p>
+<p>Pumayalla estudió en el Centro de la Imagen de Lima y posteriormente en Central Saint Martins, University of the Arts London, donde recibió el Daniel Ford International Prize for Innovation. Su trabajo ha sido presentado internacionalmente, incluyendo en el Museo de San Marcos, Lima; la 15.ª Bienal de La Habana; Sidney Nolan Trust; Pilotenkueche, Leipzig; y Stokkøya, Noruega.</p>
 `,
     },
 
@@ -41,20 +33,38 @@ es: `
     },
 
     text: {
-     en: `
-<p>As a Peruvian visual and performance artist, I am interested in bringing into the narratives of my work stories and myths around nature, the consequences of its continual loss, and the impact on the native communities who inhabit it. Within this framework, the female figure holds a central place: I explore women's empowerment within pre-Colombian cultures in the north of Peru, using these references to create modern myths that address contemporary issues of displacement and loss.</p>
+      en: `
+<p>As a Peruvian artist, I understand artistic practice as a way of communicating with forms of knowledge that have been interrupted through colonisation, but never entirely erased. Growing up in the northern Andes of Peru shaped my understanding of the world through the principle of reciprocity, where landscapes are not passive settings but living presences that carry memory, knowledge, and relationships.</p>
 
-<p>My practice looks into the internal and external migrations in Peru to understand their causes and consequences on the identity of the land and its communities. Through my own experience of migration from the northern Andes towards bigger cities like Lima and London, I have come to understand how a collective state of mourning arises from displacement as a consequence of colonization — a mourning for a loss of home, and a wider impermanence of culture and identity linked to an imperial past and present.</p>
+<p>My migration from the Andes to Lima and later to London has led me to reflect on displacement as both a personal and collective condition. I am interested in how migration and its consequences, shaped by colonial and imperial histories, creates experiences of mourning—the loss of home, language, and cultural continuity. Rather than (re)presenting this loss, I explore how artistic practice can become a space for transformation, repair, and renewal.</p>
 
-<p>In response to these issues, I turn to performance art as a transformative process. The performances I create are a modern cry, a dialogue informed by the spiritual relationship that native peoples of the Andes and the Amazon develop with their surroundings. Through this, I seek to bring the world of the shamans and healers into my work and share it with a wider audience. Within the cosmic vision of these communities, art is the language and power learned from nature to heal and protect — and it is precisely this understanding that guides my practice: to use art as an experience capable of transforming loss and activating a collective process of decolonization.</p>
+<p>Working with installation, performance, photography, video, poetry, and textiles, my works emerge from encounters and collisions rather than predetermined concepts. Walking, listening, and remaining attentive to space/time and to a place are essential to my process. I invite/allow landscape, architecture, and territory to shape the work before I begin to shape it. Deep listening, both literally and metaphorically, is both a methodology and an ethical position within my practice.</p>
+
+<p>Performance, ritual, knitting, hair, stone, seeds, soil, water, and found-objects form an ongoing semiosis/symbolism through which I make relationships between bodies, landscapes, memories, and histories visible. Textiles, particularly knitting, become gestures of care, connection, and the transfer of memory across places.</p>
+
+<p>I do not seek to represent landscapes; I enter into dialogue with them.<br/>
+I walk before I make.<br/>
+I listen before I speak.</p>
+
+<p>Through these encounters, I understand art as a living practice of reciprocity—a way of carrying the weight of cultural memory, responding to place, and (re)imagining forms of belonging beyond borders.</p>
 `,
 
-es: `
-<p>Como artista visual y performer peruana, me interesa incorporar en las narrativas de mi trabajo historias y mitos alrededor de la naturaleza, las consecuencias de su pérdida continua y el impacto en las comunidades nativas que la habitan. En este marco, la figura femenina ocupa un lugar central: exploro el empoderamiento de la mujer dentro de las culturas precolombinas del norte del Perú, usando estas referencias para crear mitos modernos que abordan problemáticas contemporáneas de desplazamiento y pérdida.</p>
+      es: `
+<p>Como artista peruana, entiendo la práctica artística como una forma de entrar en relación con formas de conocimiento interrumpidas por la colonización, pero nunca completamente borradas. Crecer en los Andes del norte del Perú ha configurado mi manera de comprender el mundo desde el principio de reciprocidad: una relación en la que el territorio no constituye un escenario pasivo, sino una presencia viva que contiene memoria, conocimiento, agencia y vínculos.</p>
 
-<p>Mi práctica observa las migraciones internas y externas en el Perú para comprender sus causas y consecuencias en la identidad de la tierra y sus comunidades. A través de mi propia experiencia de migración desde los Andes del norte hacia ciudades más grandes como Lima y Londres, he comprendido cómo un estado colectivo de duelo surge del desplazamiento como consecuencia de la colonización — un duelo por la pérdida del hogar y por una impermanencia más amplia de la cultura y la identidad, vinculada a un pasado y presente imperial.</p>
+<p>Mi migración de los Andes a Lima y, posteriormente, a Londres ha situado el desplazamiento en el centro de mi práctica como una experiencia simultáneamente íntima, histórica y colectiva. Me interesa explorar cómo las migraciones, atravesadas por historias coloniales e imperiales, producen formas de duelo asociadas a la pérdida del hogar, la lengua, los vínculos y la continuidad cultural. Sin embargo, mi trabajo no busca representar la pérdida ni fijarla como una condición de ausencia. Me interesa, en cambio, explorar el potencial del arte como espacio de transformación, reparación y renovación; como una práctica capaz de generar nuevas formas de relación y pertenencia.</p>
 
-<p>En respuesta a estas problemáticas, recurro a la performance como proceso transformador. Las performances que creo son un llanto moderno, un diálogo informado por la relación espiritual que los pueblos nativos de los Andes y la Amazonía desarrollan con su entorno. A través de esto, busco traer el mundo de los chamanes y sanadores a mi trabajo y compartirlo con una audiencia más amplia. Dentro de la visión cósmica de estas comunidades, el arte es el lenguaje y el poder aprendido de la naturaleza para sanar y protegerse — y es precisamente esta comprensión la que guía mi práctica: usar el arte como una experiencia capaz de transformar la pérdida y activar un proceso colectivo de descolonización.</p>
+<p>Trabajo con instalación, performance, fotografía, video, poesía y textiles. Mi práctica surge de encuentros, desplazamientos y colisiones más que de conceptos predeterminados. Caminar, escuchar y permanecer atenta al espacio, al tiempo y a las particularidades de un lugar son fundamentales en mi proceso. Antes de intervenir, observo; antes de producir, escucho. Permito que el paisaje, la arquitectura y el territorio informen y condicionen la obra antes de comenzar a darle forma.</p>
+
+<p>La escucha profunda —entendida tanto en su dimensión literal como metafórica— constituye una metodología y, al mismo tiempo, una posición ética. Escuchar implica reconocer que el conocimiento no siempre se presenta como algo que puede ser explicado, poseído o traducido, sino que también puede habitar los cuerpos, los materiales, los territorios, los silencios y las relaciones.</p>
+
+<p>La performance, el ritual, el tejido, el cabello, la piedra, las semillas, la tierra, el agua y los objetos encontrados aparecen recurrentemente en mi trabajo. Estos elementos conforman una semiosis material y simbólica a través de la cual exploro las relaciones entre cuerpo, territorio, memoria e historia. Los textiles, y particularmente el tejido a mano, funcionan como gestos de cuidado y conexión, pero también como formas de transmisión: maneras de transportar memoria, tiempo y conocimiento entre cuerpos y geografías.</p>
+
+<p>No busco representar los paisajes; entro en diálogo con ellos.<br/>
+Camino antes de hacer.<br/>
+Escucho antes de hablar.</p>
+
+<p>A través de estos encuentros, concibo el arte como una práctica viva de reciprocidad: una forma de sostener y transformar la memoria cultural, responder al lugar y abrir posibilidades para imaginar otras formas de pertenencia más allá de las fronteras.</p>
 `,
     },
   },
