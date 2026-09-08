@@ -58,11 +58,6 @@ export default function ImagePage() {
       ? `/${lang}/works/${id}/poems/${firstPoem.id}`
       : null;
 
-  const externalVideoHref =
-    firstVideo && !nextImg && firstVideo.externalOnly
-      ? firstVideo.fullVideoUrl
-      : null;
-
   const artworkDetails =
     project.artworkDetails?.[lang] ||
     project.artworkDetails?.en ||
@@ -257,12 +252,10 @@ export default function ImagePage() {
                   ? router.push(nextVideoHref)
                   : nextPoemHref
                   ? router.push(nextPoemHref)
-                  : externalVideoHref
-                  ? window.open(externalVideoHref, "_blank")
                   : router.push(`/${lang}/works/${id}`)
               }
               className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-                nextImg || nextVideoHref || nextPoemHref || externalVideoHref ? "opacity-100" : "opacity-0 pointer-events-none"
+                nextImg || nextVideoHref || nextPoemHref ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
               ›
