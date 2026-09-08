@@ -36,6 +36,15 @@ export default function SectionVideoPage() {
     ? `/${lang}/works/${id}/sections/${sectionID}/videos/${prevVideo.id}`
     : imageHref;
 
+  const sectionIndex = project?.sections?.findIndex(
+    (item) => item.id === sectionID
+  ) ?? -1;
+  const nextSection =
+    sectionIndex > -1 ? project?.sections?.[sectionIndex + 1] : null;
+  const nextSectionHref = nextSection
+    ? `/${lang}/works/${id}/sections/${nextSection.id}`
+    : null;
+
   useEffect(() => {
     const footer = document.querySelector("footer");
 
@@ -159,12 +168,21 @@ export default function SectionVideoPage() {
               </Link>
             )}
 
-            <Link
-              href={`/${lang}/works`}
-              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
-            >
-              {lang === "es" ? "Volver a obras" : "Back to works"} →
-            </Link>
+            {!nextVideoHref && nextSectionHref ? (
+              <Link
+                href={nextSectionHref}
+                className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+              >
+                {lang === "es" ? "Siguiente sección" : "Next section"} →
+              </Link>
+            ) : (
+              <Link
+                href={`/${lang}/works`}
+                className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+              >
+                {lang === "es" ? "Volver a obras" : "Back to works"} →
+              </Link>
+            )}
 
             {(video.fullVideoUrl || video.vimeoUrl) && (
               <a

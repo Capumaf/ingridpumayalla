@@ -47,6 +47,7 @@ export default function ImagePage() {
   const nextImg = images[currentIndex + 1] || null;
   const firstVideo = project.videoData?.[0] || null;
   const firstPoem = project.poems?.[0] || null;
+  const firstSection = project.sections?.[0] || null;
 
   const nextVideoHref =
     firstVideo && !nextImg
@@ -56,6 +57,11 @@ export default function ImagePage() {
   const nextPoemHref =
     !nextVideoHref && firstPoem && !nextImg
       ? `/${lang}/works/${id}/poems/${firstPoem.id}`
+      : null;
+
+  const nextSectionHref =
+    !nextVideoHref && !nextPoemHref && firstSection && !nextImg
+      ? `/${lang}/works/${id}/sections/${firstSection.id}`
       : null;
 
   const artworkDetails =
@@ -159,10 +165,16 @@ export default function ImagePage() {
               </button>
             ) : (
               <Link
-                href={`/${lang}/works`}
+                href={nextSectionHref || `/${lang}/works`}
                 className="z-50 px-4 py-3 text-xs tracking-widest text-gray-500 hover:text-black"
               >
-                {lang === "es" ? "Volver a obras" : "Back to works"} →
+                {nextSectionHref
+                  ? lang === "es"
+                    ? "Ver serie"
+                    : "View Series"
+                  : lang === "es"
+                  ? "Volver a obras"
+                  : "Back to works"} →
               </Link>
             )}
           </div>
@@ -252,10 +264,12 @@ export default function ImagePage() {
                   ? router.push(nextVideoHref)
                   : nextPoemHref
                   ? router.push(nextPoemHref)
+                  : nextSectionHref
+                  ? router.push(nextSectionHref)
                   : router.push(`/${lang}/works/${id}`)
               }
               className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
-                nextImg || nextVideoHref || nextPoemHref ? "opacity-100" : "opacity-0 pointer-events-none"
+                nextImg || nextVideoHref || nextPoemHref || nextSectionHref ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
               ›
@@ -263,10 +277,16 @@ export default function ImagePage() {
 
             {!nextImg && !nextVideoHref && !nextPoemHref && (
               <Link
-                href={`/${lang}/works`}
+                href={nextSectionHref || `/${lang}/works`}
                 className="absolute right-0 -bottom-8 text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
               >
-                {lang === "es" ? "Volver a obras" : "Back to works"} →
+                {nextSectionHref
+                  ? lang === "es"
+                    ? "Ver serie"
+                    : "View Series"
+                  : lang === "es"
+                  ? "Volver a obras"
+                  : "Back to works"} →
               </Link>
             )}
           </div>

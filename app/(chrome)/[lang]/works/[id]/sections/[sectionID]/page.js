@@ -45,6 +45,15 @@ export default function WorkSectionPage() {
     ? `/${lang}/works/${id}/sections/${sectionID}/${firstMedia.id}`
     : null;
 
+  const sectionIndex = project.sections.findIndex(
+    (item) => item.id === sectionID
+  );
+  const nextSection = project.sections[sectionIndex + 1] || null;
+
+  const nextSectionHref = nextSection
+    ? `/${lang}/works/${id}/sections/${nextSection.id}`
+    : null;
+
   const coverSrc =
     section.cover?.type !== "video" ? section.cover?.src : null;
 
@@ -88,6 +97,17 @@ export default function WorkSectionPage() {
                 className="body-text max-w-[520px] text-[13.5px] leading-[2] text-justify"
                 dangerouslySetInnerHTML={{ __html: text }}
               />
+            )}
+
+            {!mediaHref && nextSectionHref && (
+              <div className="mt-12 text-right">
+                <Link
+                  href={nextSectionHref}
+                  className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b] transition-colors"
+                >
+                  {lang === "es" ? "Siguiente sección" : "Next section"} →
+                </Link>
+              </div>
             )}
           </div>
         </div>
