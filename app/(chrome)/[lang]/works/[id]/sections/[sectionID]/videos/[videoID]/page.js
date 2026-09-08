@@ -18,12 +18,23 @@ export default function SectionVideoPage() {
   const section = project?.sections?.find((item) => item.id === sectionID);
   const video = section?.videoData?.find((item) => item.id === videoID);
 
+  const videoIndex = section?.videoData?.findIndex((item) => item.id === videoID) ?? -1;
+  const nextVideo = videoIndex > -1 ? section?.videoData?.[videoIndex + 1] : null;
+  const nextVideoHref = nextVideo
+    ? `/${lang}/works/${id}/sections/${sectionID}/videos/${nextVideo.id}`
+    : null;
+
   const sectionHref = `/${lang}/works/${id}/sections/${sectionID}`;
   const firstImage = section?.mediaData?.[0];
 
   const imageHref = firstImage
     ? `/${lang}/works/${id}/sections/${sectionID}/${firstImage.id}`
     : sectionHref;
+
+  const prevVideo = videoIndex > 0 ? section?.videoData?.[videoIndex - 1] : null;
+  const prevVideoHref = prevVideo
+    ? `/${lang}/works/${id}/sections/${sectionID}/videos/${prevVideo.id}`
+    : imageHref;
 
   useEffect(() => {
     const footer = document.querySelector("footer");
@@ -70,10 +81,16 @@ export default function SectionVideoPage() {
       <div className="w-full h-full px-5 md:px-10 py-6 md:py-10 flex flex-col">
         <div className="max-w-6xl mx-auto w-full flex items-center justify-between mb-6">
           <Link
-            href={imageHref}
+            href={prevVideo ? prevVideoHref : imageHref}
             className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
-            ← {lang === "es" ? "Volver a imagen" : "Back to image"}
+            ← {prevVideo
+              ? lang === "es"
+                ? "Video anterior"
+                : "Previous video"
+              : lang === "es"
+                ? "Volver a imagen"
+                : "Back to image"}
           </Link>
 
           {video.duration && (
@@ -133,6 +150,15 @@ export default function SectionVideoPage() {
           </div>
 
           <div className="flex flex-col items-end gap-3 shrink-0">
+            {nextVideoHref && (
+              <Link
+                href={nextVideoHref}
+                className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+              >
+                {lang === "es" ? "Siguiente video" : "Next video"} →
+              </Link>
+            )}
+
             <Link
               href={`/${lang}/works`}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
