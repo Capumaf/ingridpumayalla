@@ -28,6 +28,11 @@ export default function WorkVideoPage() {
     ? `/${lang}/works/${id}/${firstImage.id}`
     : workHref;
 
+  const prevVideo = videoIndex > 0 ? project?.videoData?.[videoIndex - 1] : null;
+  const prevVideoHref = prevVideo
+    ? `/${lang}/works/${id}/videos/${prevVideo.id}`
+    : imageHref;
+
   useEffect(() => {
     const footer = document.querySelector("footer");
 
@@ -73,10 +78,16 @@ export default function WorkVideoPage() {
       <div className="w-full h-full px-5 md:px-10 py-6 md:py-10 flex flex-col">
         <div className="max-w-6xl mx-auto w-full flex items-center justify-between mb-6">
           <Link
-            href={imageHref}
+            href={prevVideo ? prevVideoHref : imageHref}
             className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
           >
-            ← {lang === "es" ? "Volver a imagen" : "Back to image"}
+            ← {prevVideo
+              ? lang === "es"
+                ? "Video anterior"
+                : "Previous video"
+              : lang === "es"
+                ? "Volver a imagen"
+                : "Back to image"}
           </Link>
 
           {video.duration && (
