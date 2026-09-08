@@ -43,7 +43,7 @@ export default function Page() {
           md:left-16
           top-28
           md:top-36
-          text-white
+          text-[#d4bd47]
           text-[40px]
           md:text-[64px]
           leading-[0.95]
