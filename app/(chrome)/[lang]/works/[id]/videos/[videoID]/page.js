@@ -17,6 +17,10 @@ export default function WorkVideoPage() {
 
   const video = project?.videoData?.find((item) => item.id === videoID);
 
+  const videoIndex = project?.videoData?.findIndex((item) => item.id === videoID) ?? -1;
+  const nextVideo = videoIndex > -1 ? project?.videoData?.[videoIndex + 1] : null;
+  const nextVideoHref = nextVideo ? `/${lang}/works/${id}/videos/${nextVideo.id}` : null;
+
   const workHref = `/${lang}/works/${id}`;
   const firstImage = project?.imageData?.[0] || project?.mediaData?.[0];
 
@@ -124,6 +128,15 @@ export default function WorkVideoPage() {
           </div>
 
           <div className="flex flex-col items-end gap-3 shrink-0">
+            {nextVideoHref && (
+              <Link
+                href={nextVideoHref}
+                className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+              >
+                {lang === "es" ? "Siguiente video" : "Next video"} →
+              </Link>
+            )}
+
             <Link
               href={`/${lang}/works`}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"

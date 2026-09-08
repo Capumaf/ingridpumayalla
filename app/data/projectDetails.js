@@ -82,13 +82,6 @@ Curator of the exhibition
 
     videoData: [
   {
-    id: "adonde-fueron-las-criaturas-del-bosque",
-    title: "A dónde fueron las criaturas del bosque?",
-    src: "/adonde-fueron-las-criaturas-del-bosque-preview.mp4",
-    poster: "/adonde-fueron-las-criaturas-del-bosque-cover.webp",
-    duration: "00:26"
-  },
-  {
     id: "creatures-and-foxes",
     title: "Creatures and Foxes",
     duration: "13'20\"",
