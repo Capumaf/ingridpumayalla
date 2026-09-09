@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { projectDetails } from "@/data/projectDetails";
 import { WORK_ORDER } from "@/data/worksOrder";
@@ -12,6 +12,11 @@ export default function WorksPage() {
   const lang = pathname.startsWith("/es") ? "es" : "en";
 
   const [openId, setOpenId] = useState(null);
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    setIsTouch(window.matchMedia("(hover: none), (pointer: coarse)").matches);
+  }, []);
 
   const getLocalizedText = (value) => {
     if (typeof value === "string") return value;
@@ -46,10 +51,10 @@ export default function WorksPage() {
               <li
                 key={id}
                 onMouseEnter={() => {
-                  if (hasDropdown) setOpenId(id);
+                  if (hasDropdown && !isTouch) setOpenId(id);
                 }}
                 onMouseLeave={() => {
-                  if (hasDropdown) setOpenId(null);
+                  if (hasDropdown && !isTouch) setOpenId(null);
                 }}
               >
                 <Link
@@ -59,7 +64,7 @@ export default function WorksPage() {
                   {getLocalizedText(project.title)}
                 </Link>
 
-                {hasDropdown && (
+                {hasDropdown && !isTouch && (
                   <div
                     className={`
                       overflow-hidden
