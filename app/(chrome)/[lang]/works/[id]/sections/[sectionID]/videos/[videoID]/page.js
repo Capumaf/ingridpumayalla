@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams, usePathname } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -9,6 +9,7 @@ import { projectDetails } from "@/data/projectDetails";
 export default function SectionVideoPage() {
   const { id, sectionID, videoID } = useParams();
   const pathname = usePathname();
+  const router = useRouter();
 
   const [visible, setVisible] = useState(false);
 
@@ -30,6 +31,14 @@ export default function SectionVideoPage() {
   const imageHref = firstImage
     ? `/${lang}/works/${id}/sections/${sectionID}/${firstImage.id}`
     : sectionHref;
+
+  const goBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push(imageHref);
+    }
+  };
 
   const prevVideo = videoIndex > 0 ? section?.videoData?.[videoIndex - 1] : null;
   const prevVideoHref = prevVideo
@@ -89,18 +98,22 @@ export default function SectionVideoPage() {
     >
       <div className="w-full h-full px-5 md:px-10 py-6 md:py-10 flex flex-col">
         <div className="max-w-6xl mx-auto w-full flex items-center justify-between mb-6">
-          <Link
-            href={prevVideo ? prevVideoHref : imageHref}
-            className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
-          >
-            ← {prevVideo
-              ? lang === "es"
-                ? "Video anterior"
-                : "Previous video"
-              : lang === "es"
-                ? "Volver a imagen"
-                : "Back to image"}
-          </Link>
+          {prevVideo ? (
+            <Link
+              href={prevVideoHref}
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+            >
+              ← {lang === "es" ? "Video anterior" : "Previous video"}
+            </Link>
+          ) : (
+            <button
+              type="button"
+              onClick={goBack}
+              className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
+            >
+              ← {lang === "es" ? "Atrás" : "Back"}
+            </button>
+          )}
 
           {video.duration && (
             <p className="text-xs tracking-widest text-neutral-400">

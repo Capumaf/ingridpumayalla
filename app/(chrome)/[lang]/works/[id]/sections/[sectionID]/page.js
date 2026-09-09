@@ -1,7 +1,7 @@
 "use client";
 
 import SectionCover from "@/components/SectionCover";
-import { useParams, usePathname } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -10,8 +10,17 @@ import { projectDetails } from "@/data/projectDetails";
 export default function WorkSectionPage() {
   const { id, sectionID } = useParams();
   const pathname = usePathname();
+  const router = useRouter();
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
+
+  const goBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push(`/${lang}/works/${id}`);
+    }
+  };
 
   const project = projectDetails[id];
 
@@ -68,12 +77,13 @@ export default function WorkSectionPage() {
       <div className="w-full flex justify-center px-6 pt-10 pb-24 overflow-hidden">
         <div className="w-full max-w-5xl md:pl-[100px] lg:pl-[120px]">
           <div className="mb-6">
-            <Link
-              href={`/${lang}/works`}
+            <button
+              type="button"
+              onClick={goBack}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b] transition-colors"
             >
-              ← {lang === "es" ? "Volver a obras" : "Back to works"}
-            </Link>
+              ← {lang === "es" ? "Atrás" : "Back"}
+            </button>
           </div>
 
           {section.cover && mediaHref && (

@@ -64,6 +64,14 @@ export default function ImagePage() {
       ? `/${lang}/works/${id}/sections/${firstSection.id}`
       : null;
 
+  const goBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push(`/${lang}/works/${id}`);
+    }
+  };
+
   const artworkDetails =
     project.artworkDetails?.[lang] ||
     project.artworkDetails?.en ||
@@ -100,12 +108,13 @@ export default function ImagePage() {
         {/* MOBILE */}
         <div className="flex md:hidden flex-col w-full h-full px-5 pt-6 pb-8 justify-center gap-3">
           <div className="flex items-center justify-between">
-            <Link
-              href={`/${lang}/works/${id}`}
+            <button
+              type="button"
+              onClick={goBack}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
-              ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
-            </Link>
+              ← {lang === "es" ? "Atrás" : "Back"}
+            </button>
           </div>
 
           <div
@@ -206,12 +215,13 @@ export default function ImagePage() {
               transition: "opacity 400ms ease 100ms, transform 400ms ease 100ms",
             }}
           >
-            <Link
-              href={`/${lang}/works/${id}`}
+            <button
+              type="button"
+              onClick={goBack}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
-              ← {lang === "es" ? "Volver al proyecto" : "Back to project"}
-            </Link>
+              ← {lang === "es" ? "Atrás" : "Back"}
+            </button>
 
             {description && (
               <div className="mt-6 max-w-[340px]">

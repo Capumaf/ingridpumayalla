@@ -54,6 +54,14 @@ export default function SectionMediaPage() {
 
   const sectionHref = `/${lang}/works/${id}/sections/${sectionID}`;
 
+  const goBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push(sectionHref);
+    }
+  };
+
   const goToItem = (target) => {
     router.push(`/${lang}/works/${id}/sections/${sectionID}/${target.id}`);
   };
@@ -131,12 +139,13 @@ export default function SectionMediaPage() {
         {/* MOBILE */}
         <div className="flex md:hidden flex-col w-full h-full px-5 pt-6 pb-8 justify-center gap-3">
           <div className="flex items-center justify-between">
-            <Link
-              href={sectionHref}
+            <button
+              type="button"
+              onClick={goBack}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
-              ← {lang === "es" ? "Volver a sección" : "Back to section"}
-            </Link>
+              ← {lang === "es" ? "Atrás" : "Back"}
+            </button>
           </div>
 
           <div
@@ -220,12 +229,13 @@ export default function SectionMediaPage() {
               transition: "opacity 400ms ease 100ms, transform 400ms ease 100ms",
             }}
           >
-            <Link
-              href={sectionHref}
+            <button
+              type="button"
+              onClick={goBack}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b]"
             >
-              ← {lang === "es" ? "Volver a sección" : "Back to section"}
-            </Link>
+              ← {lang === "es" ? "Atrás" : "Back"}
+            </button>
 
             <div className="mt-6">
               <h2 className="text-base font-semibold mb-1">

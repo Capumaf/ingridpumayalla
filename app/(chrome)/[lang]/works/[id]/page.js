@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams, usePathname } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -10,9 +10,18 @@ import WorkCover from "@/components/WorkCover";
 export default function WorkPage() {
   const { id } = useParams();
   const pathname = usePathname();
+  const router = useRouter();
 
   const lang = pathname.startsWith("/es") ? "es" : "en";
   const project = projectDetails[id];
+
+  const goBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push(`/${lang}/works`);
+    }
+  };
 
   if (!project) {
     return (
@@ -59,12 +68,13 @@ export default function WorkPage() {
 
           {/* BACK BUTTON */}
           <div className="mb-6">
-            <Link
-              href={`/${lang}/works`}
+            <button
+              type="button"
+              onClick={goBack}
               className="text-xs tracking-widest text-gray-500 hover:text-[#b7623b] transition-colors"
             >
-              ← {lang === "es" ? "Volver a obras" : "Back to works"}
-            </Link>
+              ← {lang === "es" ? "Atrás" : "Back"}
+            </button>
           </div>
 
           {/* WORK COVER */}
