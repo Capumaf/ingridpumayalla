@@ -1,5 +1,27 @@
 import { pages } from "../../../data/pages";
 import BioCover from "@/components/BioCover";
+import {
+  getLocalizedText,
+  stripHtml,
+  truncate,
+  buildAlternates,
+} from "@/lib/metadata";
+
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  const title = getLocalizedText(pages.bio.title, lang);
+  const description = truncate(
+    stripHtml(getLocalizedText(pages.bio.text, lang)),
+    160
+  );
+
+  return {
+    title,
+    description,
+    alternates: buildAlternates(lang, "/bio"),
+    openGraph: { title, description },
+  };
+}
 
 export default async function Bio({ params, searchParams }) {
   const { lang } = await params;

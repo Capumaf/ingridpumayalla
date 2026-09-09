@@ -1,4 +1,18 @@
 import { pages } from "../../../data/pages";
+import { getLocalizedText, buildAlternates } from "@/lib/metadata";
+
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  const title = getLocalizedText(pages.contact.title, lang);
+  const description = getLocalizedText(pages.contact.text, lang);
+
+  return {
+    title,
+    description,
+    alternates: buildAlternates(lang, "/contact"),
+    openGraph: { title, description },
+  };
+}
 
 export default async function Contact({ params }) {
   const { lang } = await params;

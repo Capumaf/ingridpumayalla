@@ -1,4 +1,12 @@
 import HomeTransmutationImage from "@/components/HomeTransmutationImage";
+import { buildAlternates } from "@/lib/metadata";
+
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  return {
+    alternates: buildAlternates(lang, "/home"),
+  };
+}
 
 export default async function HomePage({ params }) {
   const { lang } = await params;
