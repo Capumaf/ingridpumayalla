@@ -25,14 +25,16 @@ export default async function Press({ params }) {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-xs tracking-[0.04em] text-neutral-600 hover:text-[#b7623b] transition-colors"
+                className="flex gap-3 text-xs tracking-[0.04em] text-neutral-600 hover:text-[#b7623b] transition-colors"
               >
                 {item.year && (
-                  <span className="mr-2 text-neutral-400">
+                  <span className="w-10 shrink-0 text-neutral-400">
                     {item.year}
                   </span>
                 )}
-                {item.title}
+                <span>
+                  {item.title} <span aria-hidden="true">↗</span>
+                </span>
               </a>
             </li>
           ))}
