@@ -27,7 +27,7 @@ export default function WorkCover({ id, lang, cover, title, seriesHref }) {
 
   if (!cover) return null;
 
-  const href = seriesHref || `/${lang}/works/${id}/${cover.id}`;
+  const href = `/${lang}/works/${id}/${cover.id}`;
 
   const detectLabelTone = () => {
     const img = imgRef.current;
