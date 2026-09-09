@@ -511,11 +511,11 @@ The project functioned as a living homage to chicha morada and the communities t
     text: {
       es: `
 <p>
-Stokkøya, Norway, experienced a landslide in September 2019 that temporarily separated the island from the mainland for approximately one month. The Bygda 2.0 project, in collaboration with Åfjord municipality, invites three artists annually to develop site-responsive works engaging with the island’s landscape and social context.
+Stokkøya, Noruega, sufrió un deslizamiento de tierra en septiembre de 2019 que separó temporalmente la isla del continente durante aproximadamente un mes. El proyecto Bygda 2.0, en colaboración con el municipio de Åfjord, invita cada año a tres artistas a desarrollar obras site-specific que dialogan con el paisaje y el contexto social de la isla.
 </p>
 
 <p>
-This work responds to the event and its wider environmental and infrastructural conditions, including increasing industrialisation and the expansion of wind energy infrastructure, which local residents have associated with shifts in ecological balance. Materials recovered from the landslide site, including deformed crash barriers, were repurposed to construct a public sculpture installed along the road opposite Bygda 2.0. The installation is accompanied by a sound work incorporating readings of local social media posts documenting residents’ efforts to access the island during the disruption.
+Esta obra responde a ese evento y a sus condiciones ambientales e infraestructurales más amplias, incluyendo la creciente industrialización y la expansión de la infraestructura eólica, que los residentes locales han asociado con cambios en el equilibrio ecológico. Materiales recuperados del sitio del derrumbe, entre ellos barreras de contención deformadas, fueron reutilizados para construir una escultura pública instalada junto al camino frente a Bygda 2.0. La instalación va acompañada de una obra sonora que incorpora lecturas de publicaciones locales en redes sociales que documentan los esfuerzos de los residentes por acceder a la isla durante la interrupción.
 </p>
       `,
 
