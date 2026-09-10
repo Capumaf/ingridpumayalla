@@ -37,7 +37,7 @@ export default function CookieConsent() {
         <div
           className="
             fixed bottom-0 inset-x-0 z-[200]
-            bg-[#faf8f5] border-t border-neutral-200
+            bg-white
             px-5 py-4 md:px-8 md:py-4
             flex flex-col md:flex-row md:items-center md:justify-between
             gap-3
@@ -53,7 +53,7 @@ export default function CookieConsent() {
             <button
               type="button"
               onClick={() => handleChoice("rejected")}
-              className="text-xs tracking-widest text-neutral-500 hover:text-black transition-colors"
+              className="text-xs tracking-widest text-[#d4bd47] hover:opacity-70 transition-opacity"
             >
               {lang === "es" ? "Rechazar" : "Reject"}
             </button>
@@ -61,7 +61,7 @@ export default function CookieConsent() {
             <button
               type="button"
               onClick={() => handleChoice("accepted")}
-              className="text-xs tracking-widest text-white bg-[#b7623b] px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
+              className="text-xs tracking-widest text-[#d4bd47] hover:opacity-70 transition-opacity"
             >
               {lang === "es" ? "Aceptar" : "Accept"}
             </button>
