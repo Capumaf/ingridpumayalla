@@ -127,6 +127,7 @@ export default function ResidencyImagePage() {
             <button
               type="button"
               onClick={() => prevImg && router.push(`/${lang}/residencies/${id}/${prevImg.id}`)}
+              aria-label={lang === "es" ? "Imagen anterior" : "Previous image"}
               className={`z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b] ${
                 prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
@@ -138,6 +139,7 @@ export default function ResidencyImagePage() {
               <button
                 type="button"
                 onClick={() => router.push(`/${lang}/residencies/${id}/${nextImg.id}`)}
+                aria-label={lang === "es" ? "Imagen siguiente" : "Next image"}
                 className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
               >
                 →
@@ -146,6 +148,7 @@ export default function ResidencyImagePage() {
               <button
                 type="button"
                 onClick={() => router.push(nextPoemHref)}
+                aria-label={lang === "es" ? "Siguiente poema" : "Next poem"}
                 className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
               >
                 →
@@ -234,6 +237,7 @@ export default function ResidencyImagePage() {
           >
             <button
               onClick={() => prevImg && router.push(`/${lang}/residencies/${id}/${prevImg.id}`)}
+              aria-label={lang === "es" ? "Imagen anterior" : "Previous image"}
               className={`absolute left-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
                 prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
@@ -260,6 +264,7 @@ export default function ResidencyImagePage() {
                   ? router.push(nextPoemHref)
                   : router.push(`/${lang}/residencies/${id}`)
               }
+              aria-label={lang === "es" ? "Imagen siguiente" : "Next image"}
               className={`absolute right-[-60px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
                 nextImg || nextPoemHref ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}

@@ -172,6 +172,7 @@ export default function SectionMediaPage() {
             <button
               type="button"
               onClick={() => prevItem && goToItem(prevItem)}
+              aria-label={lang === "es" ? "Anterior" : "Previous"}
               className={`z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b] ${
                 prevItem ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
@@ -183,6 +184,7 @@ export default function SectionMediaPage() {
               videoHref ? (
                 <Link
                   href={videoHref}
+                  aria-label={lang === "es" ? "Siguiente video" : "Next video"}
                   className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
                 >
                   →
@@ -199,6 +201,7 @@ export default function SectionMediaPage() {
               <button
                 type="button"
                 onClick={() => goToItem(nextItem)}
+                aria-label={lang === "es" ? "Siguiente" : "Next"}
                 className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
               >
                 →
@@ -279,6 +282,7 @@ export default function SectionMediaPage() {
           >
             <button
               onClick={() => prevItem && goToItem(prevItem)}
+              aria-label={lang === "es" ? "Anterior" : "Previous"}
               className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
                 prevItem ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
@@ -296,6 +300,7 @@ export default function SectionMediaPage() {
                   ? router.push(videoHref)
                   : router.push(sectionHref)
               }
+              aria-label={lang === "es" ? "Siguiente" : "Next"}
               className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
                 nextItem || videoHref ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}

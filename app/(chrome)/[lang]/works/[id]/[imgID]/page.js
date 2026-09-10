@@ -146,6 +146,7 @@ export default function ImagePage() {
               onClick={() => {
                 if (prevImg) router.push(`/${lang}/works/${id}/${prevImg.id}`);
               }}
+              aria-label={lang === "es" ? "Imagen anterior" : "Previous image"}
               className={`z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b] ${
                 prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
@@ -159,6 +160,7 @@ export default function ImagePage() {
                 onClick={() => {
                   router.push(`/${lang}/works/${id}/${nextImg.id}`);
                 }}
+                aria-label={lang === "es" ? "Imagen siguiente" : "Next image"}
                 className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
               >
                 →
@@ -167,6 +169,7 @@ export default function ImagePage() {
               <button
                 type="button"
                 onClick={() => router.push(nextVideoHref)}
+                aria-label={lang === "es" ? "Siguiente video" : "Next video"}
                 className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
               >
                 →
@@ -175,6 +178,7 @@ export default function ImagePage() {
               <button
                 type="button"
                 onClick={() => router.push(nextPoemHref)}
+                aria-label={lang === "es" ? "Siguiente poema" : "Next poem"}
                 className="z-50 px-4 py-3 text-2xl leading-none text-gray-500 hover:text-[#b7623b]"
               >
                 →
@@ -259,6 +263,7 @@ export default function ImagePage() {
               onClick={() =>
                 prevImg && router.push(`/${lang}/works/${id}/${prevImg.id}`)
               }
+              aria-label={lang === "es" ? "Imagen anterior" : "Previous image"}
               className={`absolute left-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
                 prevImg ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
@@ -289,6 +294,7 @@ export default function ImagePage() {
                   ? router.push(nextSectionHref)
                   : router.push(`/${lang}/works/${id}`)
               }
+              aria-label={lang === "es" ? "Imagen siguiente" : "Next image"}
               className={`absolute right-[-52px] top-1/2 -translate-y-1/2 text-5xl text-gray-600 hover:text-[#b7623b] ${
                 nextImg || nextVideoHref || nextPoemHref || nextSectionHref ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
