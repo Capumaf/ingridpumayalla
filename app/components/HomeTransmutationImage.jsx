@@ -366,10 +366,6 @@ export default function HomeTransmutationImage() {
   }, []);
 
   useEffect(() => {
-    images.forEach(src => {
-      const img = new window.Image();
-      img.src = src;
-    });
     return () => clearTimeout(timeoutRef.current);
   }, []);
 
