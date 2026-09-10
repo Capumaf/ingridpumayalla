@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { projectDetails } from "../../../../../data/projectDetails";
 import { getImageDims } from "@/lib/imageDimensions";
+import { stripHtml } from "@/lib/metadata";
 
 export default function ImagePage() {
   const { id, imgID } = useParams();
@@ -82,6 +83,13 @@ export default function ImagePage() {
   const description = artworkDetails[currentIndex] || "";
   const { width: imgWidth, height: imgHeight } = getImageDims(img.src);
 
+  const projectTitle =
+    typeof project.title === "string"
+      ? project.title
+      : project.title?.[lang] || project.title?.en || "";
+
+  const imageAlt = stripHtml(description) || projectTitle || "Artwork image";
+
   useEffect(() => {
     [prevImg?.src, nextImg?.src].forEach((src) => {
       if (!src) return;
@@ -130,7 +138,7 @@ export default function ImagePage() {
           >
             <Image
               src={img.src}
-              alt="Artwork image"
+              alt={imageAlt}
               width={imgWidth}
               height={imgHeight}
               draggable={false}
@@ -273,7 +281,7 @@ export default function ImagePage() {
 
             <Image
               src={img.src}
-              alt="Artwork image"
+              alt={imageAlt}
               width={imgWidth}
               height={imgHeight}
               draggable={false}

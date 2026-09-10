@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { projectDetails } from "@/data/projectDetails";
 import { getImageDims } from "@/lib/imageDimensions";
+import { stripHtml } from "@/lib/metadata";
 
 export default function SectionMediaPage() {
   const { id, sectionID, imgID } = useParams();
@@ -103,6 +104,8 @@ export default function SectionMediaPage() {
       ? section.title
       : section.title?.[lang] || section.title?.es || "";
 
+  const imageAlt = stripHtml(description) || sectionTitle || "Artwork image";
+
   const isVideo = item.src?.endsWith(".mp4");
   const { width: itemWidth, height: itemHeight } = isVideo
     ? { width: 0, height: 0 }
@@ -121,7 +124,7 @@ export default function SectionMediaPage() {
     ) : (
       <Image
         src={item.src}
-        alt={description || sectionTitle}
+        alt={imageAlt}
         width={itemWidth}
         height={itemHeight}
         priority

@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { residencyDetails } from "@/data/residencyDetails";
 import { getImageDims } from "@/lib/imageDimensions";
+import { stripHtml } from "@/lib/metadata";
 
 export default function ResidencyImagePage() {
   const { id, imgID } = useParams();
@@ -79,6 +80,9 @@ export default function ResidencyImagePage() {
     lang === "es" ? "Detalles de la residencia" : "Residency Details";
   const { width: imgWidth, height: imgHeight } = getImageDims(img.src);
 
+  const imageAlt =
+    stripHtml(residencyDetail) || residencyTitle || "Residency image";
+
   return (
     <>
       <Head>
@@ -113,7 +117,7 @@ export default function ResidencyImagePage() {
           >
             <Image
               src={img.src}
-              alt={residencyTitle || "Residency image"}
+              alt={imageAlt}
               width={imgWidth}
               height={imgHeight}
               draggable={false}
@@ -247,7 +251,7 @@ export default function ResidencyImagePage() {
 
             <Image
               src={img.src}
-              alt={residencyTitle || "Residency image"}
+              alt={imageAlt}
               width={imgWidth}
               height={imgHeight}
               draggable={false}
