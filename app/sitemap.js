@@ -5,7 +5,7 @@ export default function sitemap() {
   const base = "https://ingridpumayalla.com";
   const langs = ["es", "en"];
 
-  const staticPaths = ["/home", "/works", "/bio", "/press", "/cv", "/contact", "/residencies"];
+  const staticPaths = ["/home", "/works", "/bio", "/press", "/cv", "/contact", "/residencies", "/privacy", "/terms"];
 
   const staticEntries = [
     { url: base, lastModified: new Date() },

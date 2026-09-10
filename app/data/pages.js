@@ -182,6 +182,72 @@ Escucho antes de hablar.</p>
   ],
 },
 
+  privacy: {
+    title: {
+      en: "Privacy Policy",
+      es: "Política de Privacidad",
+    },
+
+    text: {
+      en: `
+<p><em>Last updated: September 2026.</em></p>
+
+<p>This website (ingridpumayalla.com) is a personal portfolio. It does not require account registration, does not process payments, and does not collect personal data through any form — the "Contact" page opens your own email client via a mailto: link, so any message you send goes directly to my inbox and is never stored on this site or its server.</p>
+
+<p>This site uses Vercel Speed Insights to measure basic performance (load times). It also uses Vercel Analytics to count anonymous page visits, but only if you actively accept it in the banner shown on your first visit. Your choice is remembered locally in your browser, not as a tracking cookie, and can be changed at any time by clearing this site's data in your browser settings. Vercel Analytics is cookieless and does not use any identifier to track you across other sites.</p>
+
+<p>The site is hosted on Vercel Inc. Basic technical data (such as IP address) is processed by Vercel as part of serving the site, in line with Vercel's own privacy policy at vercel.com/legal/privacy-policy.</p>
+
+<p>If you have any question about this policy, you can reach me at ingridpumayalla@gmail.com.</p>
+`,
+
+      es: `
+<p><em>Última actualización: septiembre de 2026.</em></p>
+
+<p>Este sitio web (ingridpumayalla.com) es un portafolio personal. No requiere crear una cuenta, no procesa pagos y no recopila datos personales a través de ningún formulario — la página de "Contacto" abre tu propio cliente de correo mediante un enlace mailto:, así que cualquier mensaje que envíes llega directo a mi bandeja de entrada y nunca queda almacenado en este sitio ni en su servidor.</p>
+
+<p>Este sitio usa Vercel Speed Insights para medir el rendimiento básico (tiempos de carga). También usa Vercel Analytics para contar visitas de forma anónima, pero solo si lo aceptas activamente en el aviso que aparece en tu primera visita. Tu elección se guarda localmente en tu navegador, no como una cookie de rastreo, y puedes cambiarla en cualquier momento borrando los datos de este sitio en la configuración de tu navegador. Vercel Analytics no usa cookies ni ningún identificador para rastrearte en otros sitios.</p>
+
+<p>El sitio está alojado en Vercel Inc. Datos técnicos básicos (como la dirección IP) son procesados por Vercel como parte del funcionamiento del sitio, conforme a su propia política de privacidad en vercel.com/legal/privacy-policy.</p>
+
+<p>Si tienes alguna duda sobre esta política, puedes escribirme a ingridpumayalla@gmail.com.</p>
+`,
+    },
+  },
+
+  terms: {
+    title: {
+      en: "Terms of Use",
+      es: "Términos de Uso",
+    },
+
+    text: {
+      en: `
+<p><em>Last updated: September 2026.</em></p>
+
+<p>All artwork, photographs, texts, videos and other content published on this site are © Ingrid Pumayalla, except where another author or source is explicitly credited (such as press articles or publications). You are welcome to view this site and share links to it, but reproducing, distributing or using any content for commercial purposes without prior written permission is not allowed.</p>
+
+<p>This site is provided as a portfolio for informational purposes only, without warranties of any kind regarding its availability, accuracy or fitness for a particular purpose.</p>
+
+<p>Some pages link to external sites — press articles, Instagram, or video platforms used to host artwork documentation. I am not responsible for the content, availability or privacy practices of those external sites.</p>
+
+<p>For permissions, press enquiries, or any other request, contact me at ingridpumayalla@gmail.com.</p>
+`,
+
+      es: `
+<p><em>Última actualización: septiembre de 2026.</em></p>
+
+<p>Todas las obras, fotografías, textos, videos y demás contenido publicado en este sitio son © Ingrid Pumayalla, salvo donde se acredite explícitamente otra autoría o fuente (como artículos de prensa o publicaciones). Eres bienvenido/a a ver este sitio y compartir enlaces a él, pero no está permitido reproducir, distribuir ni usar ningún contenido con fines comerciales sin autorización previa por escrito.</p>
+
+<p>Este sitio se ofrece como portafolio, con fines exclusivamente informativos, sin garantías de ningún tipo respecto a su disponibilidad, exactitud o idoneidad para un propósito particular.</p>
+
+<p>Algunas páginas enlazan a sitios externos — artículos de prensa, Instagram, o plataformas de video usadas para alojar documentación de obras. No soy responsable del contenido, disponibilidad ni las prácticas de privacidad de esos sitios externos.</p>
+
+<p>Para permisos, consultas de prensa, o cualquier otra solicitud, escríbeme a ingridpumayalla@gmail.com.</p>
+`,
+    },
+  },
+
   works: {
     title: {
       en: "Works",

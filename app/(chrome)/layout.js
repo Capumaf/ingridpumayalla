@@ -129,7 +129,7 @@ export default function ChromeLayout({ children }) {
               : children}
           </div>
           <div className="pb-4 pt-2 md:pb-6 md:pt-3 text-center">
-            <Footer />
+            <Footer lang={lang} />
           </div>
         </div>
 
@@ -141,7 +141,7 @@ export default function ChromeLayout({ children }) {
         : children}
     </main>
     <div className="pb-6 pt-2 text-center">
-      <Footer />
+      <Footer lang={lang} />
     </div>
   </div>
 
@@ -155,7 +155,7 @@ export default function ChromeLayout({ children }) {
             </div>
           </main>
           <div className="pb-6 pt-2 text-center">
-            <Footer />
+            <Footer lang={lang} />
           </div>
         </div>
       )}
