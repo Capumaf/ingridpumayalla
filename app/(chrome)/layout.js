@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 const AUTOHIDE_MS = 10000;
 
@@ -97,6 +98,8 @@ export default function ChromeLayout({ children }) {
 
   return (
     <div className="min-h-dvh bg-white text-black">
+
+      <CookieConsent />
 
       {/* MOBILE — oculto en work detail */}
       <div className={`md:hidden ${isWorkDetail ? "hidden" : ""}`}>
