@@ -6,6 +6,12 @@ import Link from "next/link";
 
 import { projectDetails } from "@/data/projectDetails";
 
+const buildVimeoSrc = (vimeoUrl) => {
+  const base = vimeoUrl.replace("vimeo.com/", "player.vimeo.com/video/");
+  const separator = base.includes("?") ? "&" : "?";
+  return `${base}${separator}color=b7623b&title=0&byline=0&portrait=0&dnt=1`;
+};
+
 export default function WorkVideoPage() {
   const { id, videoID } = useParams();
   const pathname = usePathname();
@@ -104,24 +110,26 @@ export default function WorkVideoPage() {
         </div>
 
         <div className="flex-1 flex items-center justify-center px-5">
-          {video.vimeoUrl ? (
-  <iframe
-    src={video.vimeoUrl.replace("vimeo.com/", "player.vimeo.com/video/")}
-    title={videoTitle}
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowFullScreen
-    className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
-  />
-) : (
-  <video
-    src={video.src}
-    controls
-    playsInline
-    preload="metadata"
-    poster={video.poster}
-    className="w-full max-w-full md:max-w-6xl max-h-[42vh] md:max-h-[78vh] object-cover aspect-video"
-  />
-   )}
+          <div className="w-full max-w-[820px] mx-auto rounded-xl md:rounded-2xl overflow-hidden bg-black shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
+            {video.vimeoUrl ? (
+              <iframe
+                src={buildVimeoSrc(video.vimeoUrl)}
+                title={videoTitle}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="w-full aspect-video block"
+              />
+            ) : (
+              <video
+                src={video.src}
+                controls
+                playsInline
+                preload="metadata"
+                poster={video.poster}
+                className="w-full aspect-video block"
+              />
+            )}
+          </div>
         </div>
 
         <div className="mt-4 max-w-6xl mx-auto w-full flex items-start justify-between gap-6">
