@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { getImageDims } from "@/lib/imageDimensions";
 
 export default function WorkCover({ id, lang, cover, title, seriesHref }) {
   const router = useRouter();
@@ -28,6 +30,7 @@ export default function WorkCover({ id, lang, cover, title, seriesHref }) {
   if (!cover) return null;
 
   const href = `/${lang}/works/${id}/${cover.id}`;
+  const { width: coverWidth, height: coverHeight } = getImageDims(cover.src);
 
   const detectLabelTone = () => {
     const img = imgRef.current;
@@ -250,14 +253,16 @@ export default function WorkCover({ id, lang, cover, title, seriesHref }) {
         className="relative inline-block overflow-hidden max-w-[92vw] md:max-w-[640px]"
         aria-label={lang === "es" ? "Ver serie" : "View series"}
       >
-        <img
+        <Image
           ref={imgRef}
           src={cover.src}
           alt={title || ""}
+          width={coverWidth}
+          height={coverHeight}
           draggable={false}
           onLoad={handleImageReady}
-          loading="eager"
-          fetchPriority="high"
+          priority
+          sizes="(max-width: 768px) 92vw, 640px"
           style={{ opacity: 0 }}
           className={`
             w-full  md:max-w-[640px]

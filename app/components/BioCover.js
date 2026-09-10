@@ -1,10 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { getImageDims } from "@/lib/imageDimensions";
 
 export default function BioCover({ href, label, imageSrc, imageAlt }) {
+  const { width: imgWidth, height: imgHeight } = getImageDims(imageSrc);
+
   const [isHovered, setIsHovered] = useState(false);
   const [isEntering, setIsEntering] = useState(false);
   const [showHint, setShowHint] = useState(false);
@@ -194,12 +198,14 @@ export default function BioCover({ href, label, imageSrc, imageAlt }) {
         className="relative block overflow-hidden w-full md:w-auto"
         aria-label={label}
       >
-        <img
+        <Image
           src={imageSrc}
           alt={imageAlt}
+          width={imgWidth}
+          height={imgHeight}
           onLoad={buildPerimeter}
-          loading="eager"
-          fetchPriority="high"
+          priority
+          sizes="(max-width: 768px) 100vw, 760px"
           className={`
             w-full
             h-auto

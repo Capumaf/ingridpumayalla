@@ -4,8 +4,10 @@ import { useParams, useRouter, usePathname } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 import { residencyDetails } from "@/data/residencyDetails";
+import { getImageDims } from "@/lib/imageDimensions";
 
 export default function ResidencyImagePage() {
   const { id, imgID } = useParams();
@@ -75,6 +77,7 @@ export default function ResidencyImagePage() {
 
   const detailsTitle =
     lang === "es" ? "Detalles de la residencia" : "Residency Details";
+  const { width: imgWidth, height: imgHeight } = getImageDims(img.src);
 
   return (
     <>
@@ -108,10 +111,14 @@ export default function ResidencyImagePage() {
               transition: "opacity 400ms ease 80ms, transform 400ms ease 80ms",
             }}
           >
-            <img
+            <Image
               src={img.src}
               alt={residencyTitle || "Residency image"}
+              width={imgWidth}
+              height={imgHeight}
               draggable={false}
+              priority
+              sizes="100vw"
               className="object-contain w-full max-h-[55vh] select-none"
             />
           </div>
@@ -234,10 +241,14 @@ export default function ResidencyImagePage() {
               ‹
             </button>
 
-            <img
+            <Image
               src={img.src}
               alt={residencyTitle || "Residency image"}
+              width={imgWidth}
+              height={imgHeight}
               draggable={false}
+              priority
+              sizes="(max-width: 768px) 100vw, 720px"
               className="object-contain max-h-[85vh] rounded-lg w-full select-none"
             />
 

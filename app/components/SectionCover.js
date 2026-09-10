@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { getImageDims } from "@/lib/imageDimensions";
 
 export default function SectionCover({ href, cover, title, lang }) {
   const router = useRouter();
@@ -27,6 +29,9 @@ export default function SectionCover({ href, cover, title, lang }) {
   const isMultiTouchRef = useRef(false);
 
   if (!cover) return null;
+
+  const { width: coverWidth, height: coverHeight } =
+    cover.type !== "video" ? getImageDims(cover.src) : { width: 0, height: 0 };
 
   const detectLabelTone = () => {
     const img = mediaRef.current;
@@ -281,13 +286,15 @@ export default function SectionCover({ href, cover, title, lang }) {
             `}
           />
         ) : (
-          <img
+          <Image
             ref={mediaRef}
             src={cover.src}
             alt={title || ""}
+            width={coverWidth}
+            height={coverHeight}
             draggable={false}
-            loading="eager"
-            fetchPriority="high"
+            priority
+            sizes="(max-width: 768px) 100vw, 640px"
             style={{ opacity: 0 }}
             onLoad={handleMediaReady}
             className={`

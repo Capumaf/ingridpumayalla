@@ -4,8 +4,10 @@ import { useParams, useRouter, usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 import { projectDetails } from "@/data/projectDetails";
+import { getImageDims } from "@/lib/imageDimensions";
 
 export default function SectionMediaPage() {
   const { id, sectionID, imgID } = useParams();
@@ -102,8 +104,11 @@ export default function SectionMediaPage() {
       : section.title?.[lang] || section.title?.es || "";
 
   const isVideo = item.src?.endsWith(".mp4");
+  const { width: itemWidth, height: itemHeight } = isVideo
+    ? { width: 0, height: 0 }
+    : getImageDims(item.src);
 
-  const renderMedia = (className) =>
+  const renderMedia = (className, sizes) =>
     isVideo ? (
       <video
         src={item.src}
@@ -114,9 +119,13 @@ export default function SectionMediaPage() {
         className={className}
       />
     ) : (
-      <img
+      <Image
         src={item.src}
         alt={description || sectionTitle}
+        width={itemWidth}
+        height={itemHeight}
+        priority
+        sizes={sizes}
         className={className}
       />
     );
@@ -156,7 +165,7 @@ export default function SectionMediaPage() {
               transition: "opacity 400ms ease 80ms, transform 400ms ease 80ms",
             }}
           >
-            {renderMedia("object-contain w-full max-h-[55vh]")}
+            {renderMedia("object-contain w-full max-h-[55vh]", "100vw")}
           </div>
 
           <div className="flex items-center justify-between">
@@ -277,7 +286,7 @@ export default function SectionMediaPage() {
               ‹
             </button>
 
-            {renderMedia("object-contain max-h-[78vh] w-auto max-w-full")}
+            {renderMedia("object-contain max-h-[78vh] w-auto max-w-full", "80vw")}
 
             <button
               onClick={() =>

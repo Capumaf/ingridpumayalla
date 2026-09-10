@@ -4,8 +4,10 @@ import { useParams, useRouter, usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 import { projectDetails } from "../../../../../data/projectDetails";
+import { getImageDims } from "@/lib/imageDimensions";
 
 export default function ImagePage() {
   const { id, imgID } = useParams();
@@ -78,6 +80,7 @@ export default function ImagePage() {
     [];
 
   const description = artworkDetails[currentIndex] || "";
+  const { width: imgWidth, height: imgHeight } = getImageDims(img.src);
 
   useEffect(() => {
     [prevImg?.src, nextImg?.src].forEach((src) => {
@@ -125,10 +128,14 @@ export default function ImagePage() {
               transition: "opacity 400ms ease 80ms, transform 400ms ease 80ms",
             }}
           >
-            <img
+            <Image
               src={img.src}
               alt="Artwork image"
+              width={imgWidth}
+              height={imgHeight}
               draggable={false}
+              priority
+              sizes="100vw"
               className="object-contain w-full max-h-[55vh] select-none"
             />
           </div>
@@ -259,10 +266,14 @@ export default function ImagePage() {
               ‹
             </button>
 
-            <img
+            <Image
               src={img.src}
               alt="Artwork image"
+              width={imgWidth}
+              height={imgHeight}
               draggable={false}
+              priority
+              sizes="80vw"
               className="object-contain max-h-[78vh] w-auto max-w-full select-none"
             />
 
